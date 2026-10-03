@@ -60,7 +60,7 @@ sahifasiga olib borishi kerak (`pageHref("blog", lang)` → `/ru/blog`). Bosh sa
 `sectionHref()` (bosh sahifada `#faq`, boshqa sahifalarda `/ru#faq`).
 - Header: boshqa sahifaga olib boradigan havolalar ochiq turadi (`NAV_PRIMARY`), bosh sahifa
   bo'limlariga skroll qiladiganlari "Yana" ichida (`NAV_MORE`). Bu qoidani buzmang.
-- Mobil menyuda faqat `NAV_PRIMARY` (sahifalar) — bosh sahifa bo'limlariga (`NAV_MORE`) havolalar yo'q.
+- Mobil menyu: faqat `NAV_PRIMARY` (sahifa havolalari); bosh sahifa bo'limlari (`NAV_MORE`) mobilda ko'rsatilmaydi.
 - Ichki sahifada qaysi punkt faol bo'lishi — `NAV_KEY_BY_GROUP` (routes.ts dagi `group` bo'yicha).
 
 ## Yangi sahifa qo'shilsa

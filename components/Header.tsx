@@ -155,8 +155,8 @@ export default function Header({
             </button>
           </div>
           <nav className="mt-8" aria-label={t.mobileNav}>
-            {/* Mobilda faqat sahifalar: bosh sahifa bo'limlariga (#faq va h.k.) skroll havolalari kerak emas */}
             <ul className="space-y-1">
+              {/* Mobilda faqat sahifa havolalari — bosh sahifa bo'limlariga skroll (NAV_MORE) kerak emas */}
               {primary.map((n) => (
                 <li key={n.key}>
                   <a
