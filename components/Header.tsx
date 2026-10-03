@@ -156,7 +156,8 @@ export default function Header({
           </div>
           <nav className="mt-8" aria-label={t.mobileNav}>
             <ul className="space-y-1">
-              {[...primary, ...more].map((n) => (
+              {/* Mobilda faqat sahifa havolalari — bosh sahifa bo'limlariga skroll (NAV_MORE) kerak emas */}
+              {primary.map((n) => (
                 <li key={n.key}>
                   <a
                     href={n.href}
