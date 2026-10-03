@@ -19,3 +19,4 @@ npm run build && npm start
 1. **Narxlar taxminiy** — `lib/data.ts` dagi `priceFrom` qiymatlarini app.onlaynhamshira.uz dagi haqiqiy narxlar bilan almashtiring.
 2. Rasmlar hozircha tildacdn.net va prod.onlaynhamshira.uz dan yuklanadi. Tilda'dan ko'chsangiz, ularni `/public` ga yuklab, `lib/data.ts` dagi URL'larni yangilang.
 3. `LINKS.download` hozir `onlaynhamshira.uz/qr` ga yo'naltiradi — to'g'ridan-to'g'ri App Store / Google Play havolalarini qo'yish tavsiya etiladi.
+# onlaynhamshira-demo
