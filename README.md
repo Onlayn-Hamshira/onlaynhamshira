@@ -21,3 +21,4 @@ npm run build && npm start
 3. `LINKS.download` hozir `onlaynhamshira.uz/qr` ga yo'naltiradi — to'g'ridan-to'g'ri App Store / Google Play havolalarini qo'yish tavsiya etiladi.
 # onlaynhamshira-demo
 # onlaynhamshira-demo
+# onlaynhamshira-demo
