@@ -77,16 +77,22 @@ function watchDocHeight(cb: () => void) {
 const scrollMax = () => docHeight - window.innerHeight;
 
 /**
- * Sahifa bo'ylab scroll progress (0..1) → :root dagi --scroll-p CSS o'zgaruvchisi.
+ * Sahifa bo'ylab scroll progress (0..1) → [data-scroll-p] elementlardagi --scroll-p CSS o'zgaruvchisi.
  * React state emas: progress chizig'i/halqasi CSS orqali yangilanadi, komponentlar
  * har skroll kadrida qayta render bo'lmaydi. Bir marta (SmoothScroll ichida) ulanadi.
+ * :root'ga yozilmaydi: meros o'tadigan o'zgaruvchi har kadrda butun sahifa (2000+ element) stilini
+ * qayta hisoblatardi va keyingi scrollY o'qishi ~450ms forced reflow berardi (PageSpeed).
  */
 function trackScrollProgress() {
   let raf = 0;
+  let last = "";
   const update = () => {
     raf = 0;
     const max = scrollMax();
-    document.documentElement.style.setProperty("--scroll-p", String(max > 0 ? Math.min(1, window.scrollY / max) : 0));
+    const p = String(max > 0 ? Math.min(1, window.scrollY / max) : 0);
+    if (p === last) return;
+    last = p;
+    document.querySelectorAll<HTMLElement>("[data-scroll-p]").forEach((el) => el.style.setProperty("--scroll-p", p));
   };
   const onScroll = () => { if (!raf) raf = requestAnimationFrame(update); };
   // Birinchi o'lchov ResizeObserver'dan (layout tayyor bo'lgach) — majburiy reflow yo'q
@@ -143,6 +149,7 @@ export function BackToTop({ label }: { label: string }) {
   const C = 2 * Math.PI * R;
   return (
     <button
+      data-scroll-p
       onClick={scrollToTop}
       aria-label={label}
       tabIndex={show ? 0 : -1}

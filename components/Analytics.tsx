@@ -39,19 +39,32 @@ ym(${TRACKING.yandexMetrika}, "init", {clickmap:true,trackLinks:true,accurateTra
     var s=document.createElement('script'); s.async=true; s.src=src; document.head.appendChild(s); }
   function load(){
     if (done) return; done = true;
-    evs.forEach(function(e){ removeEventListener(e, load, true); });
+    evs.forEach(function(e){ removeEventListener(e, onEvent, true); });
     add('https://www.googletagmanager.com/gtag/js?id=${TRACKING.ga4}');
     add('https://mc.yandex.ru/metrika/tag.js');
   }
+  function onEvent(e){ if (window.__ohRealInteraction(e)) load(); }
   window.__ohLoadAnalytics = load;
-  evs.forEach(function(e){ addEventListener(e, load, {capture:true, passive:true, once:true}); });
+  evs.forEach(function(e){ addEventListener(e, onEvent, {capture:true, passive:true}); });
 })();`;
+
+// Faqat haqiqiy foydalanuvchi harakati. PageSpeed (headless Chrome) foydalanuvchisiz ham "scroll"
+// (siljishsiz) va soxta "mousemove" (layout o'zgarganda, movementX/Y = 0) yuboradi — avval shular sabab
+// test paytida Metrika/gtag/Yandex xarita yuklanib, Performance ~73, Best Practices tushardi.
+// Xuddi shu tekshiruv ContactMap.tsx da (isRealInteraction) ham bor.
+const realInteraction = `
+window.__ohRealInteraction = function(e){
+  if (!e.isTrusted) return false;
+  if (e.type === 'scroll') return (window.scrollY || document.documentElement.scrollTop) > 0;
+  if (e.type === 'mousemove') return e.movementX !== 0 || e.movementY !== 0;
+  return true;
+};`;
 
 export function Analytics() {
   return (
     <>
       <Script id="analytics-init" strategy="afterInteractive">
-        {init}
+        {realInteraction + init}
       </Script>
       <noscript>
         {/* eslint-disable-next-line @next/next/no-img-element */}

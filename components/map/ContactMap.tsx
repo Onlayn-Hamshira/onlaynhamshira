@@ -8,6 +8,15 @@ import type { Dict } from "@/lib/i18n/dictionaries/uz";
 
 const MapView = dynamic(() => import("./MapView"), { ssr: false });
 
+// Faqat haqiqiy foydalanuvchi harakati (Analytics.tsx dagi bilan bir xil): PageSpeed foydalanuvchisiz ham
+// siljishsiz "scroll" va soxta "mousemove" (movementX/Y = 0) yuboradi — xarita test paytida yuklanib qolmasin
+function isRealInteraction(e: Event) {
+  if (!e.isTrusted) return false;
+  if (e.type === "scroll") return (window.scrollY || document.documentElement.scrollTop) > 0;
+  if (e.type === "mousemove") return (e as MouseEvent).movementX !== 0 || (e as MouseEvent).movementY !== 0;
+  return true;
+}
+
 /** Xarita bo'limi: kutubxona ekranga yaqinlashganda va foydalanuvchi harakatidan keyin yuklanadi; ustida manzil kartochkasi */
 export function ContactMap({ t, address, className = "" }: { t: Dict["map"]; address: string; className?: string }) {
   const ref = useRef<HTMLDivElement>(null);
@@ -28,7 +37,8 @@ export function ContactMap({ t, address, className = "" }: { t: Dict["map"]; add
         setLoad(true);
       }
     };
-    const onInteract = () => {
+    const onInteract = (e: Event) => {
+      if (!isRealInteraction(e)) return;
       interacted = true;
       evs.forEach((e) => removeEventListener(e, onInteract, true));
       tryLoad();

@@ -126,6 +126,7 @@ export default function Header({
         {/* Scroll progress */}
         <div
           aria-hidden
+          data-scroll-p
           className={`absolute inset-x-0 bottom-0 h-[3px] origin-left bg-gradient-to-r from-brand via-brand-teal to-brand-blue transition-opacity ${scrolled ? "opacity-100" : "opacity-0"}`}
           style={{ transform: "scaleX(var(--scroll-p, 0))" }}
         />
