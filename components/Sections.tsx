@@ -119,7 +119,7 @@ export function AppBand({ t }: { t: Dict["app"] }) {
           <div className="relative mx-auto flex w-full max-w-[500px] justify-center lg:-mt-[175px] lg:self-start">
             <div aria-hidden className="absolute bottom-[10%] left-1/2 size-[360px] -translate-x-1/2 rounded-full bg-white/25 blur-[70px]" />
             {/* drop-shadow har video kadrida qayta hisoblanadi — mobilda o'chiq (GPU yuklamasi) */}
-            <AppPhone alt={t.phoneAlt} className="relative w-[78%] max-w-[420px] transition duration-700 hover:-translate-y-1 hover:-rotate-2 sm:drop-shadow-[0_40px_50px_rgb(0_0_0/0.35)] lg:w-[420px]" />
+            <AppPhone alt={t.phoneAlt} className="relative w-[78%] max-w-[420px] sm:drop-shadow-[0_40px_50px_rgb(0_0_0/0.35)] lg:w-[420px]" />
             <div aria-hidden className="absolute top-[38%] -left-2 hidden animate-float items-center gap-2.5 rounded-2xl bg-white py-2 pr-4 pl-2 text-ink shadow-xl sm:flex">
               <Icon name="chat" size={36} tone="tile" className="ring-0!" />
               <span className="text-sm leading-tight"><strong className="block">{t.aiChat}</strong><span className="text-ink-soft">{t.aiChatSub}</span></span>
