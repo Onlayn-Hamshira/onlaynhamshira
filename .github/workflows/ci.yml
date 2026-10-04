@@ -3,19 +3,188 @@ name: ci
 # Every push to `production` builds the image and rolls it out to
 # demo.onlaynhamshira.uz (Swarm service hamshira_landing on the prod server).
 # `main` is not deployed: merge main into production to release.
+#
+# Self-contained on purpose. The organisation's shared pipeline lives in a
+# private repository (ci-templates), and GitHub does not let a public
+# repository call a reusable workflow from a private one. The steps below
+# mirror it: build -> ghcr.io -> rolling update over SSH -> confirm -> tag.
+#
+# Only `push` to production and a manual run trigger this — both need write
+# access — so a pull request from a fork never runs with the deploy secrets.
 on:
   push:
     branches: [production]
   workflow_dispatch:
 
+# One deploy at a time; a second push waits instead of racing the first.
+concurrency:
+  group: deploy-${{ github.ref_name }}
+  cancel-in-progress: false
+
+env:
+  IMAGE: ghcr.io/onlayn-hamshira/landing
+  SWARM_SERVICE: hamshira_landing
+
 jobs:
-  pipeline:
-    uses: Onlayn-Hamshira/ci-templates/.github/workflows/deploy.yml@main
-    secrets: inherit
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    outputs:
+      tag: ${{ steps.meta.outputs.tag }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # the version is worked out from the tag history
+
+      - id: meta
+        name: Work out the version
+        env:
+          REF_NAME: ${{ github.ref_name }}
+        run: |
+          set -euo pipefail
+          if [ "$REF_NAME" = "production" ]; then
+            # auto-semver: patch by default, [minor]/[major] in the commit title
+            LAST=$(git tag -l 'v*.*.*' --sort=-v:refname | head -1)
+            LAST=${LAST:-v0.0.0}
+            MSG=$(git log -1 --pretty=%B | tr 'A-Z' 'a-z')
+            IFS=. read -r MAJ MIN PAT <<< "${LAST#v}"
+            case "$MSG" in
+              *'[major]'*) MAJ=$((MAJ+1)); MIN=0; PAT=0 ;;
+              *'[minor]'*) MIN=$((MIN+1)); PAT=0 ;;
+              *)           PAT=$((PAT+1)) ;;
+            esac
+            echo "tag=v${MAJ}.${MIN}.${PAT}" >> "$GITHUB_OUTPUT"
+          else
+            echo "tag=dev-${GITHUB_SHA::8}" >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: docker/setup-buildx-action@v3
+
+      - uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      # NEXT_PUBLIC_* are inlined into the bundle at build time, so they have
+      # to be in the build context. Optional: without the secret the site
+      # builds with its defaults (the map falls back to the keyless version).
+      - name: Build-time env
+        env:
+          FRONTEND_ENV: ${{ secrets.FRONTEND_ENV }}
+        run: |
+          printf '%s' "$FRONTEND_ENV" > .env.production
+          [ -s .env.production ] || rm -f .env.production
+
+      - uses: docker/build-push-action@v6
+        with:
+          context: .
+          file: Dockerfile
+          push: true
+          tags: |
+            ${{ env.IMAGE }}:${{ steps.meta.outputs.tag }}
+            ${{ env.IMAGE }}:${{ github.ref_name == 'production' && 'latest' || 'dev' }}
+          cache-from: |
+            type=gha,scope=landing
+            type=registry,ref=${{ env.IMAGE }}:buildcache
+          cache-to: |
+            type=gha,scope=landing,mode=max
+            type=registry,ref=${{ env.IMAGE }}:buildcache,mode=max
+
+  deploy:
+    if: github.ref_name == 'production'
+    needs: build
+    runs-on: ubuntu-latest
+    environment: production # supplies DEPLOY_HOST / DEPLOY_USER / DEPLOY_SSH_KEY
+    env:
+      TAG: ${{ needs.build.outputs.tag }}
+    steps:
+      - name: Set up SSH
+        env:
+          DEPLOY_SSH_KEY: ${{ secrets.DEPLOY_SSH_KEY }}
+          DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
+          DEPLOY_USER: ${{ secrets.DEPLOY_USER }}
+        run: |
+          set -euo pipefail
+          mkdir -p ~/.ssh
+          printf '%s\n' "$DEPLOY_SSH_KEY" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          cat >> ~/.ssh/config <<EOF
+          Host target
+            HostName $DEPLOY_HOST
+            User $DEPLOY_USER
+            IdentityFile ~/.ssh/deploy_key
+            IdentitiesOnly yes
+            BatchMode yes
+            StrictHostKeyChecking accept-new
+            ServerAliveInterval 30
+          EOF
+          ssh target 'echo "connected to $(hostname)"'
+
+      - name: Fail if the service is not in the stack
+        run: |
+          ssh target "docker service inspect $SWARM_SERVICE >/dev/null 2>&1" \
+            || { echo "::error::$SWARM_SERVICE is not in the stack"; exit 1; }
+
+      - name: Rolling update
+        run: |
+          set -e
+          ssh target "docker service update \
+            --image '$IMAGE:$TAG' \
+            --update-order start-first \
+            --update-failure-action rollback \
+            --with-registry-auth \
+            --detach=false $SWARM_SERVICE"
+
+      # Swarm rolls a failed update back to the previous image and
+      # `service update` still exits 0, so a green step proves nothing. The
+      # tasks themselves are the only trustworthy signal: every task Swarm
+      # wants running must be on the image this run built.
+      - name: Confirm converged
+        run: |
+          want="$IMAGE:$TAG"
+          n=$(ssh target "docker service inspect $SWARM_SERVICE --format '{{.Spec.Mode.Replicated.Replicas}}'")
+          [ -n "$n" ] || { echo "::error::$SWARM_SERVICE is not a replicated service"; exit 1; }
+          for i in $(seq 1 60); do
+            spec=$(ssh target "docker service inspect $SWARM_SERVICE --format '{{.Spec.TaskTemplate.ContainerSpec.Image}}'")
+            case "$spec" in
+              "$want"*) ;;
+              *)
+                echo "::error::$SWARM_SERVICE is specced for $spec, not $want - rolled back, or another deploy overtook this one"
+                ssh target "docker service ps $SWARM_SERVICE --no-trunc" | head -8
+                exit 1
+                ;;
+            esac
+            set -- $(ssh target "docker service ps $SWARM_SERVICE --filter desired-state=running --format '{{.CurrentState}}|{{.Image}}'" \
+              | awk -F'|' -v want="$want" '$1 ~ /^Running/ { live++; if (index($2, want) == 1) mine++ } END { print live+0, mine+0 }')
+            if [ "$1" = "$n" ] && [ "$2" = "$n" ]; then
+              echo "$SWARM_SERVICE converged: $n/$n running on $want"
+              exit 0
+            fi
+            echo "$SWARM_SERVICE: $2/$n on the new image ($1 running in total) - waiting"
+            sleep 10
+          done
+          echo "::error::$SWARM_SERVICE did not converge within 10 minutes"
+          ssh target "docker service ps $SWARM_SERVICE --no-trunc" | head -8
+          exit 1
+
+  # A version tag means "this is what shipped": only after the rollout held.
+  release:
+    if: github.ref_name == 'production'
+    needs: [build, deploy]
+    runs-on: ubuntu-latest
     permissions:
       contents: write
-      packages: write
-    with:
-      service: landing
-      dockerfile: Dockerfile
-      run_migrations: false
+    steps:
+      - uses: actions/checkout@v4
+      - name: Tag and release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TAG: ${{ needs.build.outputs.tag }}
+        run: |
+          gh release create "$TAG" \
+            --title "landing $TAG" \
+            --notes "Automated release from ${GITHUB_SHA::8}" \
+            --target "$GITHUB_SHA" || echo "release already exists"
