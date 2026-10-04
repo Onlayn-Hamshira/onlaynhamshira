@@ -9,10 +9,10 @@
   "ogDescription": "Tibbiy yordam uyingizda - tez, qulay, xavfsiz!",
   "ogImage": "https://static.tildacdn.net/tild3462-3165-4335-b732-383031326461/photo.jpg",
   "hreflang": {
-   "uz": "https://onlaynhamshira.uz/",
+   "uz": "https://onlaynhamshira.uz",
    "ru": "https://onlaynhamshira.uz/ru",
    "en": "https://onlaynhamshira.uz/en",
-   "x-default": "https://onlaynhamshira.uz/"
+   "x-default": "https://onlaynhamshira.uz"
   }
  },
  "/expert": {
@@ -25,10 +25,10 @@
   "ogDescription": "Qulay paytda ishlang va Onlayn Hamshira bilan daromad toping!",
   "ogImage": "https://static.tildacdn.net/tild3462-3165-4335-b732-383031326461/photo.jpg",
   "hreflang": {
-   "uz": "https://onlaynhamshira.uz/",
-   "ru": "https://onlaynhamshira.uz/ru",
-   "en": "https://onlaynhamshira.uz/en",
-   "x-default": "https://onlaynhamshira.uz/"
+   "uz": "https://onlaynhamshira.uz/expert",
+   "ru": "https://onlaynhamshira.uz/ru/expert",
+   "en": "https://onlaynhamshira.uz/en/expert",
+   "x-default": "https://onlaynhamshira.uz/expert"
   }
  },
  "/certificates": {
@@ -41,10 +41,10 @@
   "ogDescription": "Лечитесь с нами дома!",
   "ogImage": "https://static.tildacdn.net/tild3962-6663-4561-a431-316635613264/Mobile.jpg",
   "hreflang": {
-   "uz": "https://onlaynhamshira.uz/",
-   "ru": "https://onlaynhamshira.uz/ru",
-   "en": "https://onlaynhamshira.uz/en",
-   "x-default": "https://onlaynhamshira.uz/"
+   "uz": "https://onlaynhamshira.uz/certificates",
+   "ru": "https://onlaynhamshira.uz/ru/certificates",
+   "en": "https://onlaynhamshira.uz/en/certificates",
+   "x-default": "https://onlaynhamshira.uz/certificates"
   }
  },
  "/privacy-policy": {
@@ -57,26 +57,26 @@
   "ogDescription": "Лечитесь с нами дома!",
   "ogImage": "https://static.tildacdn.net/tild3962-6663-4561-a431-316635613264/Mobile.jpg",
   "hreflang": {
-   "uz": "https://onlaynhamshira.uz/",
-   "ru": "https://onlaynhamshira.uz/ru",
-   "en": "https://onlaynhamshira.uz/en",
-   "x-default": "https://onlaynhamshira.uz/"
+   "uz": "https://onlaynhamshira.uz/privacy-policy",
+   "ru": "https://onlaynhamshira.uz/ru/privacy-policy",
+   "en": "https://onlaynhamshira.uz/en/privacy-policy",
+   "x-default": "https://onlaynhamshira.uz/privacy-policy"
   }
  },
  "/hamshirapolitic": {
   "title": "«ONLAYN HAMSHIRA» МЧЖнинг тиббий хизмат кўрсатиш тўғрисида Оммавий оферта шартномаси",
-  "description": null,
+  "description": "«ONLAYN HAMSHIRA» MCHJning mustaqil tibbiy mutaxassislar (hamshiralar) uchun ommaviy oferta shartnomasi: platformadan foydalanish tartibi, xizmat ko‘rsatish shartlari, to‘lovlar, tomonlarning majburiyatlari va bemor ma’lumotlarini himoya qilish.",
   "keywords": null,
   "canonical": "https://onlaynhamshira.uz/hamshirapolitic",
   "ogUrl": "https://onlaynhamshira.uz/hamshirapolitic",
   "ogTitle": "«ONLAYN HAMSHIRA» МЧЖнинг тиббий хизмат кўрсатиш тўғрисида Оммавий оферта шартномаси",
-  "ogDescription": "",
+  "ogDescription": "«ONLAYN HAMSHIRA» MCHJning mustaqil tibbiy mutaxassislar (hamshiralar) uchun ommaviy oferta shartnomasi: platformadan foydalanish tartibi, xizmat ko‘rsatish shartlari, to‘lovlar, tomonlarning majburiyatlari va bemor ma’lumotlarini himoya qilish.",
   "ogImage": "https://static.tildacdn.net/tild3962-6663-4561-a431-316635613264/Mobile.jpg",
   "hreflang": {
-   "uz": "https://onlaynhamshira.uz/",
-   "ru": "https://onlaynhamshira.uz/ru",
-   "en": "https://onlaynhamshira.uz/en",
-   "x-default": "https://onlaynhamshira.uz/"
+   "uz": "https://onlaynhamshira.uz/hamshirapolitic",
+   "ru": "https://onlaynhamshira.uz/ru/politichamshira",
+   "en": "https://onlaynhamshira.uz/nurse-politic",
+   "x-default": "https://onlaynhamshira.uz/hamshirapolitic"
   }
  },
  "/contacts": {
@@ -88,12 +88,7 @@
   "ogTitle": "Kontaktlar",
   "ogDescription": "Лечитесь с нами дома!",
   "ogImage": "https://static.tildacdn.net/tild3962-6663-4561-a431-316635613264/Mobile.jpg",
-  "hreflang": {
-   "uz": "https://onlaynhamshira.uz/",
-   "ru": "https://onlaynhamshira.uz/ru",
-   "en": "https://onlaynhamshira.uz/en",
-   "x-default": "https://onlaynhamshira.uz/"
-  }
+  "hreflang": {}
  },
  "/ilova": {
   "title": "Onlayn Hamshira",
@@ -104,12 +99,7 @@
   "ogTitle": "Onlayn Hamshira",
   "ogDescription": "Лечитесь с нами дома!",
   "ogImage": "https://static.tildacdn.net/tild3462-3165-4335-b732-383031326461/photo.jpg",
-  "hreflang": {
-   "uz": "https://onlaynhamshira.uz/",
-   "ru": "https://onlaynhamshira.uz/ru",
-   "en": "https://onlaynhamshira.uz/en",
-   "x-default": "https://onlaynhamshira.uz/"
-  }
+  "hreflang": {}
  },
  "/onlayn-hamshira-vs-ananaviy": {
   "title": "Onlayn hamshira vs an’anaviy xizmatlar | Qaysi biri yaxshiroq?",
@@ -121,10 +111,10 @@
   "ogDescription": "OnlaynHamshira.uz orqali hamshiralarni uyga tez va oson chaqiring. Onlayn hamshiralik va an’anaviy xizmatlarni solishtiring shaffof narxlar, tasdiqlangan hamshiralar, 24/7 bron qilish.",
   "ogImage": "https://static.tildacdn.net/tild6161-6633-4835-b434-646338303239/image.png",
   "hreflang": {
-   "uz": "https://onlaynhamshira.uz/",
-   "ru": "https://onlaynhamshira.uz/ru",
-   "en": "https://onlaynhamshira.uz/en",
-   "x-default": "https://onlaynhamshira.uz/"
+   "uz": "https://onlaynhamshira.uz/onlayn-hamshira-vs-ananaviy",
+   "ru": "https://onlaynhamshira.uz/onlayn-uhod-vs-tradicionnyj",
+   "en": "https://onlaynhamshira.uz/online-nursing-vs-traditional",
+   "x-default": "https://onlaynhamshira.uz/onlayn-hamshira-vs-ananaviy"
   }
  },
  "/blog": {
@@ -137,10 +127,10 @@
   "ogDescription": "Onlayn Hamshira blogida sog‘liqni saqlash, tibbiy xizmatlar, uyda hamshira yordami va foydali maslahatlar haqida eng so‘nggi yangiliklar va maqolalarni toping.",
   "ogImage": "https://static.tildacdn.net/tild3134-3961-4635-b561-633663333837/image.png",
   "hreflang": {
-   "uz": "https://onlaynhamshira.uz/",
-   "ru": "https://onlaynhamshira.uz/ru",
-   "en": "https://onlaynhamshira.uz/en",
-   "x-default": "https://onlaynhamshira.uz/"
+   "uz": "https://onlaynhamshira.uz/blog",
+   "ru": "https://onlaynhamshira.uz/ru/blog",
+   "en": "https://onlaynhamshira.uz/en/blog",
+   "x-default": "https://onlaynhamshira.uz/blog"
   }
  },
  "/blog/hamshira-uyga-chaqirish-toshkent": {
@@ -153,10 +143,10 @@
   "ogDescription": "OnlaynHamshira orqali Toshkentda hamshira chaqiring: ukol, sistemaga ulash, qon olish, yarani bog‘lash va boshqalar. Narxlar, to‘lov turlari va buyurtma tartibi.",
   "ogImage": "https://static.tildacdn.net/tild6161-6633-4835-b434-646338303239/image.png",
   "hreflang": {
-   "uz": "https://onlaynhamshira.uz/",
-   "ru": "https://onlaynhamshira.uz/ru",
-   "en": "https://onlaynhamshira.uz/en",
-   "x-default": "https://onlaynhamshira.uz/"
+   "uz": "https://onlaynhamshira.uz/blog/hamshira-uyga-chaqirish-toshkent",
+   "ru": "https://onlaynhamshira.uz/ru/blog/medsestra-na-dom-tashkent",
+   "en": "https://onlaynhamshira.uz/en/blog/nurse-at-home-tashkent-services-prices",
+   "x-default": "https://onlaynhamshira.uz/blog/hamshira-uyga-chaqirish-toshkent"
   }
  },
  "/uyda-qon-bosimini-olchash-va-nazorat-qilish": {
@@ -169,10 +159,10 @@
   "ogDescription": "Qon bosimini to‘g‘ri o‘lchash usullari, keng tarqalgan xatolar va nazorat qilish bo‘yicha mutaxassis tavsiyalari. Sog‘lom yurak va uzoq umr uchun bilib oling.",
   "ogImage": "https://static.tildacdn.net/tild6161-6633-4835-b434-646338303239/image.png",
   "hreflang": {
-   "uz": "https://onlaynhamshira.uz/",
-   "ru": "https://onlaynhamshira.uz/ru",
-   "en": "https://onlaynhamshira.uz/en",
-   "x-default": "https://onlaynhamshira.uz/"
+   "uz": "https://onlaynhamshira.uz/uyda-qon-bosimini-olchash-va-nazorat-qilish",
+   "ru": "https://onlaynhamshira.uz/ru/blog/kak-izmerit-i-kontrolirovat-davlenie-doma",
+   "en": "https://onlaynhamshira.uz/en/blog/how-to-measure-and-control-blood-pressure-at-home",
+   "x-default": "https://onlaynhamshira.uz/uyda-qon-bosimini-olchash-va-nazorat-qilish"
   }
  },
  "/blog/ayollar-bolalar-massaji-toshkentda": {
@@ -185,10 +175,10 @@
   "ogDescription": "Toshkentda massaj qayerda yaxshi? Spa markazlari, uyga keladigan massaj xizmati va real narxlarni bilib oling. Massaj bolalar va ayollar uchun",
   "ogImage": "https://static.tildacdn.net/tild6161-6633-4835-b434-646338303239/image.png",
   "hreflang": {
-   "uz": "https://onlaynhamshira.uz/",
-   "ru": "https://onlaynhamshira.uz/ru",
-   "en": "https://onlaynhamshira.uz/en",
-   "x-default": "https://onlaynhamshira.uz/"
+   "uz": "https://onlaynhamshira.uz/blog/ayollar-bolalar-massaji-toshkentda",
+   "ru": "https://onlaynhamshira.uz/ru/blog/massazh-dlya-zhenshchin-i-detey-v-tashkente",
+   "en": "https://onlaynhamshira.uz/en/blog/massage-in-tashkent-women-baby",
+   "x-default": "https://onlaynhamshira.uz/blog/ayollar-bolalar-massaji-toshkentda"
   }
  },
  "/blog/uyda-ukol-qildirish-toshkentda": {
@@ -201,10 +191,10 @@
   "ogDescription": "Toshkentda uyda ukol qildirish xizmati: antibiotik, vitamin, og‘riq qoldiruvchi ukollar, sistem qo‘yish, narxlar va xavfsizlik bo‘yicha to‘liq qo‘llanma. Professional hamshira uyga keladi.",
   "ogImage": "https://static.tildacdn.net/tild6161-6633-4835-b434-646338303239/image.png",
   "hreflang": {
-   "uz": "https://onlaynhamshira.uz/",
-   "ru": "https://onlaynhamshira.uz/ru",
-   "en": "https://onlaynhamshira.uz/en",
-   "x-default": "https://onlaynhamshira.uz/"
+   "uz": "https://onlaynhamshira.uz/blog/uyda-ukol-qildirish-toshkentda",
+   "ru": "https://onlaynhamshira.uz/ru/blog/ukoly-na-domu-v-tashkente",
+   "en": "https://onlaynhamshira.uz/en/blog/injection-service-at-home-tashkent",
+   "x-default": "https://onlaynhamshira.uz/blog/uyda-ukol-qildirish-toshkentda"
   }
  },
  "/blog/uyga-hamshira-chaqirish-tibbiy-yordam": {
@@ -217,10 +207,10 @@
   "ogDescription": "Sog‘liq muammo bo‘lishini kutmang. Sertifikatlangan hamshira va shifokorlar uy sharoitida xavfsiz, aniq va professional tibbiy yordam ko‘rsatadi.",
   "ogImage": "https://static.tildacdn.net/tild6161-6633-4835-b434-646338303239/image.png",
   "hreflang": {
-   "uz": "https://onlaynhamshira.uz/",
-   "ru": "https://onlaynhamshira.uz/ru",
-   "en": "https://onlaynhamshira.uz/en",
-   "x-default": "https://onlaynhamshira.uz/"
+   "uz": "https://onlaynhamshira.uz/blog/uyga-hamshira-chaqirish-tibbiy-yordam",
+   "ru": "https://onlaynhamshira.uz/ru/blog/vyzov-medsestry-na-dom-meditsinskaya-pomoshch",
+   "en": "https://onlaynhamshira.uz/en/blog/home-nurse-visit-medical-care",
+   "x-default": "https://onlaynhamshira.uz/blog/uyga-hamshira-chaqirish-tibbiy-yordam"
   }
  },
  "/blog/kasallikni-oldini-olish-9-kunlik-odatlar": {
@@ -233,10 +223,10 @@
   "ogDescription": "Har kuni bajariladigan oddiy 9 ta sog‘lom odat orqali kasalliklarning 70% ini oldini olish mumkin. Uyqu, ovqatlanish, suv balansi, stress va fizik faollik bo‘yicha aniq tavsiyalar.",
   "ogImage": "https://static.tildacdn.net/tild6161-6633-4835-b434-646338303239/image.png",
   "hreflang": {
-   "uz": "https://onlaynhamshira.uz/",
-   "ru": "https://onlaynhamshira.uz/ru",
-   "en": "https://onlaynhamshira.uz/en",
-   "x-default": "https://onlaynhamshira.uz/"
+   "uz": "https://onlaynhamshira.uz/blog/kasallikni-oldini-olish-9-kunlik-odatlar",
+   "ru": "https://onlaynhamshira.uz/ru/blog/profilaktika-9-ezhednevnyh-privychek",
+   "en": "https://onlaynhamshira.uz/en/blog/daily-habits-to-prevent-illness",
+   "x-default": "https://onlaynhamshira.uz/blog/kasallikni-oldini-olish-9-kunlik-odatlar"
   }
  },
  "/uzbekistan": {
@@ -248,12 +238,7 @@
   "ogTitle": "OnlaynHamshira - O‘zbekiston bo‘ylab uyga tibbiy xizmatlar",
   "ogDescription": "OnlaynHamshira orqali O‘zbekiston bo‘ylab uyga hamshira, pediatr, terapevt va massaj xizmatlarini chaqiring. Tez, xavfsiz va professional yordam.",
   "ogImage": "https://static.tildacdn.net/tild6161-6633-4835-b434-646338303239/image.png",
-  "hreflang": {
-   "uz": "https://onlaynhamshira.uz/",
-   "ru": "https://onlaynhamshira.uz/ru",
-   "en": "https://onlaynhamshira.uz/en",
-   "x-default": "https://onlaynhamshira.uz/"
-  }
+  "hreflang": {}
  },
  "/blog/uyda-hamshira-xizmati": {
   "title": "Uyda hamshira xizmati | OnlaynHamshira.uz",
@@ -264,12 +249,7 @@
   "ogTitle": "Uyda hamshira xizmati | OnlaynHamshira.uz",
   "ogDescription": "Uyda hamshira xizmati orqali shifoxonaga bormasdan tibbiy yordam oling. OnlaynHamshira.uz bilan malakali hamshiralarni uyga chaqirish oson va ishonchli.",
   "ogImage": "https://static.tildacdn.net/tild6438-3631-4838-a439-326264353264/t.svg",
-  "hreflang": {
-   "uz": "https://onlaynhamshira.uz/",
-   "ru": "https://onlaynhamshira.uz/ru",
-   "en": "https://onlaynhamshira.uz/en",
-   "x-default": "https://onlaynhamshira.uz/"
-  }
+  "hreflang": {}
  },
  "/saraton-bemor-uyda-parvarish-tavsiyalar": {
   "title": "Saraton va uyda parvarish: Bemorga yordam berishning 7 usuli | Palliativ yordam",
@@ -281,10 +261,10 @@
   "ogDescription": "Onkologik kasallikka chalingan bemorlarni uyda parvarish qilish bo'yicha to'liq qo'llanma. Og'riqni kamaytirish, ovqatlanish rejimi va palliativ yordamning muhim jihatlari haqida mutaxassis tavsiyalari bilan tanishing.",
   "ogImage": "https://thb.tildacdn.net/tild6636-3063-4435-a562-613438663134/-/resize/504x/Patiant-Care.webp",
   "hreflang": {
-   "uz": "https://onlaynhamshira.uz/",
-   "ru": "https://onlaynhamshira.uz/ru",
-   "en": "https://onlaynhamshira.uz/en",
-   "x-default": "https://onlaynhamshira.uz/"
+   "uz": "https://onlaynhamshira.uz/saraton-bemor-uyda-parvarish-tavsiyalar",
+   "ru": "https://onlaynhamshira.uz/podderzhka-onkologicheskih-pacientov-doma",
+   "en": "https://onlaynhamshira.uz/home-palliative-care-symptom-management",
+   "x-default": "https://onlaynhamshira.uz/saraton-bemor-uyda-parvarish-tavsiyalar"
   }
  },
  "/blog/uy-sharoitida-detoks": {
@@ -297,10 +277,10 @@
   "ogDescription": "Uy sharoitida detoksni tibbiy nuqtai nazardan tushuntiramiz: xavfsiz odatlar, suyuqlik balansi, ovqatlanish, uyqu, hamda qachon mutaxassisga murojaat qilish kerak.",
   "ogImage": "https://thb.tildacdn.net/tild3866-6530-4134-b064-353031366262/-/resize/504x/1731389393_detoks-oc.webp",
   "hreflang": {
-   "uz": "https://onlaynhamshira.uz/",
-   "ru": "https://onlaynhamshira.uz/ru",
-   "en": "https://onlaynhamshira.uz/en",
-   "x-default": "https://onlaynhamshira.uz/"
+   "uz": "https://onlaynhamshira.uz/blog/uy-sharoitida-detoks",
+   "ru": "https://onlaynhamshira.uz/detoks-v-domashnih-usloviyah",
+   "en": "https://onlaynhamshira.uz/home-detox",
+   "x-default": "https://onlaynhamshira.uz/blog/uy-sharoitida-detoks"
   }
  },
  "/blog/operatsiyadan-keyingi-parvarish": {
@@ -313,10 +293,10 @@
   "ogDescription": "Operatsiyadan keyingi parvarish qanday bo‘lishi kerak? Yara parvarishi, infeksiya belgilari va uyda hamshira yordami haqida to‘liq qo‘llanma",
   "ogImage": "https://thb.tildacdn.net/tild3265-6231-4431-a563-306535376230/-/resize/504x/Operatsiyadan_keying.webp",
   "hreflang": {
-   "uz": "https://onlaynhamshira.uz/",
-   "ru": "https://onlaynhamshira.uz/ru",
-   "en": "https://onlaynhamshira.uz/en",
-   "x-default": "https://onlaynhamshira.uz/"
+   "uz": "https://onlaynhamshira.uz/blog/operatsiyadan-keyingi-parvarish",
+   "ru": "https://onlaynhamshira.uz/posleoperatsionnyy-uhod-doma",
+   "en": "https://onlaynhamshira.uz/postoperative-care-at-home",
+   "x-default": "https://onlaynhamshira.uz/blog/operatsiyadan-keyingi-parvarish"
   }
  },
  "/blog/chaqaloq-parvarishi-yangi-onalar-uchun": {
@@ -329,10 +309,10 @@
   "ogDescription": "Yangi tug‘ilgan chaqaloq parvarishi bo‘yicha muhim tavsiyalar: emizish, gigiyena, uyqu xavfsizligi va pediatr maslahatlari.",
   "ogImage": "https://thb.tildacdn.net/tild3935-3130-4430-b831-313666303733/-/resize/504x/chaqaloq-parvarishi-.webp",
   "hreflang": {
-   "uz": "https://onlaynhamshira.uz/",
-   "ru": "https://onlaynhamshira.uz/ru",
-   "en": "https://onlaynhamshira.uz/en",
-   "x-default": "https://onlaynhamshira.uz/"
+   "uz": "https://onlaynhamshira.uz/blog/chaqaloq-parvarishi-yangi-onalar-uchun",
+   "ru": "https://onlaynhamshira.uz/ru/blog/uhod-za-novorozhdyonnym",
+   "en": "https://onlaynhamshira.uz/en/blog/newborn-care-home-guide",
+   "x-default": "https://onlaynhamshira.uz/blog/chaqaloq-parvarishi-yangi-onalar-uchun"
   }
  },
  "/blog/infeksiyadan-himoyalanish-uy-gigiyenasi": {
@@ -345,10 +325,10 @@
   "ogDescription": "Uy sharoitida viruslardan himoyalanish bo‘yicha amaliy qo‘llanma: qo‘l yuvish, shamollatish, dezinfeksiya va immunitetni qo‘llab-quvvatlash.",
   "ogImage": "https://thb.tildacdn.net/tild6536-6131-4039-a635-613230663033/-/resize/504x/Infection_Prevention.webp",
   "hreflang": {
-   "uz": "https://onlaynhamshira.uz/",
-   "ru": "https://onlaynhamshira.uz/ru",
-   "en": "https://onlaynhamshira.uz/en",
-   "x-default": "https://onlaynhamshira.uz/"
+   "uz": "https://onlaynhamshira.uz/blog/infeksiyadan-himoyalanish-uy-gigiyenasi",
+   "ru": "https://onlaynhamshira.uz/ru/blog/kak-zashchititsya-ot-infektsii-doma",
+   "en": "https://onlaynhamshira.uz/en/blog/home-infection-protection-guide",
+   "x-default": "https://onlaynhamshira.uz/blog/infeksiyadan-himoyalanish-uy-gigiyenasi"
   }
  },
  "/blog/immunitetni-kotarish-mavsumiy-kasalliklar": {
@@ -361,10 +341,10 @@
   "ogDescription": "Immunitetni qanday mustahkamlash mumkin? Ovqatlanish, uyqu, gigiyena va stressni boshqarish orqali mavsumiy kasalliklardan himoyalanish yo‘llari.",
   "ogImage": "https://thb.tildacdn.net/tild6364-3938-4264-b836-336338386436/-/resize/504x/immunitet-mavsumiy-k.webp",
   "hreflang": {
-   "uz": "https://onlaynhamshira.uz/",
-   "ru": "https://onlaynhamshira.uz/ru",
-   "en": "https://onlaynhamshira.uz/en",
-   "x-default": "https://onlaynhamshira.uz/"
+   "uz": "https://onlaynhamshira.uz/blog/immunitetni-kotarish-mavsumiy-kasalliklar",
+   "ru": "https://onlaynhamshira.uz/ru/blog/kak-ukrepit-immunitet-profilaktika",
+   "en": "https://onlaynhamshira.uz/en/blog/boosting-immunity-preventing-illness",
+   "x-default": "https://onlaynhamshira.uz/blog/immunitetni-kotarish-mavsumiy-kasalliklar"
   }
  },
  "/blog/qon-bosimi-yuqori-bolsa-nima-qilish-kerak": {
@@ -377,10 +357,10 @@
   "ogDescription": "Qon bosimi ko‘tarilganda uy sharoitida birinchi yordam, to‘g‘ri o‘lchash qoidalari va xavfli belgilar haqida bilib oling. Professional hamshira yordami.",
   "ogImage": "https://thb.tildacdn.net/tild3032-6365-4265-b734-626431383161/-/resize/504x/Blood_pressure_monit.webp",
   "hreflang": {
-   "uz": "https://onlaynhamshira.uz/",
-   "ru": "https://onlaynhamshira.uz/ru",
-   "en": "https://onlaynhamshira.uz/en",
-   "x-default": "https://onlaynhamshira.uz/"
+   "uz": "https://onlaynhamshira.uz/blog/qon-bosimi-yuqori-bolsa-nima-qilish-kerak",
+   "ru": "https://onlaynhamshira.uz/blog/chto-delat-esli-povysilos-davlenie",
+   "en": "https://onlaynhamshira.uz/blog/what-to-do-high-blood-pressure",
+   "x-default": "https://onlaynhamshira.uz/blog/qon-bosimi-yuqori-bolsa-nima-qilish-kerak"
   }
  },
  "/blog/what-to-do-high-blood-pressure": {
@@ -393,26 +373,26 @@
   "ogDescription": "High blood pressure (hypertension) often has no symptoms. Learn how to measure it correctly, manage it at home, and when to call a nurse or emergency services.",
   "ogImage": "https://thb.tildacdn.net/tild3032-6365-4265-b734-626431383161/-/resize/504x/Blood_pressure_monit.webp",
   "hreflang": {
-   "uz": "https://onlaynhamshira.uz/",
-   "ru": "https://onlaynhamshira.uz/ru",
-   "en": "https://onlaynhamshira.uz/en",
-   "x-default": "https://onlaynhamshira.uz/"
+   "uz": "https://onlaynhamshira.uz/blog/qon-bosimi-yuqori-bolsa-nima-qilish-kerak",
+   "ru": "https://onlaynhamshira.uz/blog/chto-delat-esli-povysilos-davlenie",
+   "en": "https://onlaynhamshira.uz/blog/what-to-do-high-blood-pressure",
+   "x-default": "https://onlaynhamshira.uz/blog/qon-bosimi-yuqori-bolsa-nima-qilish-kerak"
   }
  },
  "/home-detox": {
   "title": "Detox and Hydration: Is Water Enough? Recovery Timeline, Weakness Causes, and Health Tips",
   "description": "Learn whether drinking water is enough to detox the body, why weakness can happen during detox, and how long recovery really takes. Discover hydration tips, nutrition advice, and safe ways to support your body’s natural detox process.",
   "keywords": "uy sharoitida detoks, detoks nima, detoks uyda, organizmni tozalash",
-  "canonical": "https://onlaynhamshira.uz/blog/uy-sharoitida-detoks",
+  "canonical": "https://onlaynhamshira.uz/home-detox",
   "ogUrl": "https://onlaynhamshira.uz/home-detox",
   "ogTitle": "Home Detox: Supporting Your Body, Hydration Balance, and Safety Rules",
   "ogDescription": "A medical view on at-home detox: safe habits, hydration balance, nutrition, sleep, stress, plus red flags and when it’s better to consult a healthcare professional.",
   "ogImage": "https://thb.tildacdn.net/tild3866-6530-4134-b064-353031366262/-/resize/504x/1731389393_detoks-oc.webp",
   "hreflang": {
-   "uz": "https://onlaynhamshira.uz/",
-   "ru": "https://onlaynhamshira.uz/ru",
-   "en": "https://onlaynhamshira.uz/en",
-   "x-default": "https://onlaynhamshira.uz/"
+   "uz": "https://onlaynhamshira.uz/blog/uy-sharoitida-detoks",
+   "ru": "https://onlaynhamshira.uz/detoks-v-domashnih-usloviyah",
+   "en": "https://onlaynhamshira.uz/home-detox",
+   "x-default": "https://onlaynhamshira.uz/blog/uy-sharoitida-detoks"
   }
  },
  "/home-palliative-care-symptom-management": {
@@ -425,10 +405,10 @@
   "ogDescription": "Learn how palliative care improves quality of life for patients with serious illnesses. Discover home care tips, symptom management, and the role of oncology nurses.",
   "ogImage": "https://thb.tildacdn.net/tild6636-3063-4435-a562-613438663134/-/resize/504x/Patiant-Care.webp",
   "hreflang": {
-   "uz": "https://onlaynhamshira.uz/",
-   "ru": "https://onlaynhamshira.uz/ru",
-   "en": "https://onlaynhamshira.uz/en",
-   "x-default": "https://onlaynhamshira.uz/"
+   "uz": "https://onlaynhamshira.uz/saraton-bemor-uyda-parvarish-tavsiyalar",
+   "ru": "https://onlaynhamshira.uz/podderzhka-onkologicheskih-pacientov-doma",
+   "en": "https://onlaynhamshira.uz/home-palliative-care-symptom-management",
+   "x-default": "https://onlaynhamshira.uz/saraton-bemor-uyda-parvarish-tavsiyalar"
   }
  },
  "/en": {
@@ -441,10 +421,10 @@
   "ogDescription": "Medical care at your home — fast, convenient, and safe!",
   "ogImage": "https://static.tildacdn.net/tild3462-3165-4335-b732-383031326461/photo.jpg",
   "hreflang": {
-   "uz": "https://onlaynhamshira.uz/",
+   "uz": "https://onlaynhamshira.uz",
    "ru": "https://onlaynhamshira.uz/ru",
    "en": "https://onlaynhamshira.uz/en",
-   "x-default": "https://onlaynhamshira.uz/"
+   "x-default": "https://onlaynhamshira.uz"
   }
  },
  "/en/expert": {
@@ -457,10 +437,10 @@
   "ogDescription": "Work when it’s convenient and earn with Onlayn Hamshira!",
   "ogImage": "https://static.tildacdn.net/tild3462-3165-4335-b732-383031326461/photo.jpg",
   "hreflang": {
-   "uz": "https://onlaynhamshira.uz/",
-   "ru": "https://onlaynhamshira.uz/ru",
-   "en": "https://onlaynhamshira.uz/en",
-   "x-default": "https://onlaynhamshira.uz/"
+   "uz": "https://onlaynhamshira.uz/expert",
+   "ru": "https://onlaynhamshira.uz/ru/expert",
+   "en": "https://onlaynhamshira.uz/en/expert",
+   "x-default": "https://onlaynhamshira.uz/expert"
   }
  },
  "/en/certificates": {
@@ -473,10 +453,10 @@
   "ogDescription": "Get treatment at home with us!",
   "ogImage": "https://static.tildacdn.net/tild3962-6663-4561-a431-316635613264/Mobile.jpg",
   "hreflang": {
-   "uz": "https://onlaynhamshira.uz/",
-   "ru": "https://onlaynhamshira.uz/ru",
-   "en": "https://onlaynhamshira.uz/en",
-   "x-default": "https://onlaynhamshira.uz/"
+   "uz": "https://onlaynhamshira.uz/certificates",
+   "ru": "https://onlaynhamshira.uz/ru/certificates",
+   "en": "https://onlaynhamshira.uz/en/certificates",
+   "x-default": "https://onlaynhamshira.uz/certificates"
   }
  },
  "/en/privacy-policy": {
@@ -489,10 +469,10 @@
   "ogDescription": "Get treatment at home with us!",
   "ogImage": "https://static.tildacdn.net/tild3962-6663-4561-a431-316635613264/Mobile.jpg",
   "hreflang": {
-   "uz": "https://onlaynhamshira.uz/",
-   "ru": "https://onlaynhamshira.uz/ru",
-   "en": "https://onlaynhamshira.uz/en",
-   "x-default": "https://onlaynhamshira.uz/"
+   "uz": "https://onlaynhamshira.uz/privacy-policy",
+   "ru": "https://onlaynhamshira.uz/ru/privacy-policy",
+   "en": "https://onlaynhamshira.uz/en/privacy-policy",
+   "x-default": "https://onlaynhamshira.uz/privacy-policy"
   }
  },
  "/en/blog": {
@@ -505,10 +485,10 @@
   "ogDescription": "Explore healthcare insights, medical tips, and home nursing services on the Online Nurse blog. Expert advice for patient care, health management, and professional nursing support.",
   "ogImage": "https://static.tildacdn.net/tild6134-3534-4565-b235-366139383463/image.png",
   "hreflang": {
-   "uz": "https://onlaynhamshira.uz/",
-   "ru": "https://onlaynhamshira.uz/ru",
-   "en": "https://onlaynhamshira.uz/en",
-   "x-default": "https://onlaynhamshira.uz/"
+   "uz": "https://onlaynhamshira.uz/blog",
+   "ru": "https://onlaynhamshira.uz/ru/blog",
+   "en": "https://onlaynhamshira.uz/en/blog",
+   "x-default": "https://onlaynhamshira.uz/blog"
   }
  },
  "/en/blog/nurse-at-home-tashkent-services-prices": {
@@ -521,10 +501,10 @@
   "ogDescription": "Book a professional nurse in Tashkent via OnlaynHamshira: injections, IV therapy, blood draws, wound care. See pricing, payment options and how to order.",
   "ogImage": "https://static.tildacdn.net/tild3133-6632-4364-a530-663131393530/image.png",
   "hreflang": {
-   "uz": "https://onlaynhamshira.uz/",
-   "ru": "https://onlaynhamshira.uz/ru",
-   "en": "https://onlaynhamshira.uz/en",
-   "x-default": "https://onlaynhamshira.uz/"
+   "uz": "https://onlaynhamshira.uz/blog/hamshira-uyga-chaqirish-toshkent",
+   "ru": "https://onlaynhamshira.uz/ru/blog/medsestra-na-dom-tashkent",
+   "en": "https://onlaynhamshira.uz/en/blog/nurse-at-home-tashkent-services-prices",
+   "x-default": "https://onlaynhamshira.uz/blog/hamshira-uyga-chaqirish-toshkent"
   }
  },
  "/en/blog/how-to-measure-and-control-blood-pressure-at-home": {
@@ -537,10 +517,10 @@
   "ogDescription": "Learn how to measure your blood pressure at home the right way. Avoid common mistakes and follow proven tips to maintain heart health and prevent hypertension.",
   "ogImage": "https://static.tildacdn.net/tild3133-6632-4364-a530-663131393530/image.png",
   "hreflang": {
-   "uz": "https://onlaynhamshira.uz/",
-   "ru": "https://onlaynhamshira.uz/ru",
-   "en": "https://onlaynhamshira.uz/en",
-   "x-default": "https://onlaynhamshira.uz/"
+   "uz": "https://onlaynhamshira.uz/uyda-qon-bosimini-olchash-va-nazorat-qilish",
+   "ru": "https://onlaynhamshira.uz/ru/blog/kak-izmerit-i-kontrolirovat-davlenie-doma",
+   "en": "https://onlaynhamshira.uz/en/blog/how-to-measure-and-control-blood-pressure-at-home",
+   "x-default": "https://onlaynhamshira.uz/uyda-qon-bosimini-olchash-va-nazorat-qilish"
   }
  },
  "/en/blog/massage-in-tashkent-women-baby": {
@@ -553,10 +533,10 @@
   "ogDescription": "Massage Tashkent best spas, home massage options, and prices. Learn how to find trusted therapists and enjoy stress-free relaxation in Uzbekistan.",
   "ogImage": "https://static.tildacdn.net/tild3133-6632-4364-a530-663131393530/image.png",
   "hreflang": {
-   "uz": "https://onlaynhamshira.uz/",
-   "ru": "https://onlaynhamshira.uz/ru",
-   "en": "https://onlaynhamshira.uz/en",
-   "x-default": "https://onlaynhamshira.uz/"
+   "uz": "https://onlaynhamshira.uz/blog/ayollar-bolalar-massaji-toshkentda",
+   "ru": "https://onlaynhamshira.uz/ru/blog/massazh-dlya-zhenshchin-i-detey-v-tashkente",
+   "en": "https://onlaynhamshira.uz/en/blog/massage-in-tashkent-women-baby",
+   "x-default": "https://onlaynhamshira.uz/blog/ayollar-bolalar-massaji-toshkentda"
   }
  },
  "/online-nursing-vs-traditional": {
@@ -569,10 +549,10 @@
   "ogDescription": "Compare online nursing with traditional home care in Uzbekistan. Book verified nurses online with transparent pricing, fast scheduling, and digital support only at OnlaynHamshira.uz.",
   "ogImage": "https://static.tildacdn.net/tild3133-6632-4364-a530-663131393530/image.png",
   "hreflang": {
-   "uz": "https://onlaynhamshira.uz/",
-   "ru": "https://onlaynhamshira.uz/ru",
-   "en": "https://onlaynhamshira.uz/en",
-   "x-default": "https://onlaynhamshira.uz/"
+   "uz": "https://onlaynhamshira.uz/onlayn-hamshira-vs-ananaviy",
+   "ru": "https://onlaynhamshira.uz/onlayn-uhod-vs-tradicionnyj",
+   "en": "https://onlaynhamshira.uz/online-nursing-vs-traditional",
+   "x-default": "https://onlaynhamshira.uz/onlayn-hamshira-vs-ananaviy"
   }
  },
  "/en/blog/injection-service-at-home-tashkent": {
@@ -585,10 +565,10 @@
   "ogDescription": "Home injection service in Tashkent: antibiotic shots, vitamin injections, pain-relief, IV drip, pricing, and safety checklist. Certified nurse available for home visits.",
   "ogImage": "https://static.tildacdn.net/tild3133-6632-4364-a530-663131393530/image.png",
   "hreflang": {
-   "uz": "https://onlaynhamshira.uz/",
-   "ru": "https://onlaynhamshira.uz/ru",
-   "en": "https://onlaynhamshira.uz/en",
-   "x-default": "https://onlaynhamshira.uz/"
+   "uz": "https://onlaynhamshira.uz/blog/uyda-ukol-qildirish-toshkentda",
+   "ru": "https://onlaynhamshira.uz/ru/blog/ukoly-na-domu-v-tashkente",
+   "en": "https://onlaynhamshira.uz/en/blog/injection-service-at-home-tashkent",
+   "x-default": "https://onlaynhamshira.uz/blog/uyda-ukol-qildirish-toshkentda"
   }
  },
  "/en/blog/home-nurse-visit-medical-care": {
@@ -601,10 +581,10 @@
   "ogDescription": "Stop waiting until health problems become serious. Get safe, professional medical care at home with certified nurses and doctors. Fast diagnostics, maximum comfort, and no clinic queues.",
   "ogImage": "https://static.tildacdn.net/tild3133-6632-4364-a530-663131393530/image.png",
   "hreflang": {
-   "uz": "https://onlaynhamshira.uz/",
-   "ru": "https://onlaynhamshira.uz/ru",
-   "en": "https://onlaynhamshira.uz/en",
-   "x-default": "https://onlaynhamshira.uz/"
+   "uz": "https://onlaynhamshira.uz/blog/uyga-hamshira-chaqirish-tibbiy-yordam",
+   "ru": "https://onlaynhamshira.uz/ru/blog/vyzov-medsestry-na-dom-meditsinskaya-pomoshch",
+   "en": "https://onlaynhamshira.uz/en/blog/home-nurse-visit-medical-care",
+   "x-default": "https://onlaynhamshira.uz/blog/uyga-hamshira-chaqirish-tibbiy-yordam"
   }
  },
  "/en/blog/daily-habits-to-prevent-illness": {
@@ -617,26 +597,26 @@
   "ogDescription": "Around 70% of illnesses can be prevented with simple lifestyle habits. Discover 9 daily practices that improve immunity, energy, mood, and long-term wellness.",
   "ogImage": "https://static.tildacdn.net/tild3133-6632-4364-a530-663131393530/image.png",
   "hreflang": {
-   "uz": "https://onlaynhamshira.uz/",
-   "ru": "https://onlaynhamshira.uz/ru",
-   "en": "https://onlaynhamshira.uz/en",
-   "x-default": "https://onlaynhamshira.uz/"
+   "uz": "https://onlaynhamshira.uz/blog/kasallikni-oldini-olish-9-kunlik-odatlar",
+   "ru": "https://onlaynhamshira.uz/ru/blog/profilaktika-9-ezhednevnyh-privychek",
+   "en": "https://onlaynhamshira.uz/en/blog/daily-habits-to-prevent-illness",
+   "x-default": "https://onlaynhamshira.uz/blog/kasallikni-oldini-olish-9-kunlik-odatlar"
   }
  },
  "/postoperative-care-at-home": {
-  "title": "Detox and Hydration: Is Water Enough? Recovery Timeline, Weakness Causes, and Health Tips",
-  "description": "Learn whether drinking water is enough to detox the body, why weakness can happen during detox, and how long recovery really takes. Discover hydration tips, nutrition advice, and safe ways to support your body’s natural detox process.",
-  "keywords": "uy sharoitida detoks, detoks nima, detoks uyda, organizmni tozalash",
-  "canonical": "https://onlaynhamshira.uz/blog/uy-sharoitida-detoks",
+  "title": "Postoperative Care at Home: Safe Recovery Guide",
+  "description": "How to care for a patient at home after surgery: wound care and dressing changes, hygiene, medication schedule, pain control, signs of infection and when to call a doctor.",
+  "keywords": "postoperative care at home, care after surgery, wound care at home, dressing change, signs of infection after surgery, recovery after surgery",
+  "canonical": "https://onlaynhamshira.uz/postoperative-care-at-home",
   "ogUrl": "https://onlaynhamshira.uz/postoperative-care-at-home",
   "ogTitle": "Postoperative Care at Home: Safe Recovery Guide",
-  "ogDescription": "A medical view on at-home detox: safe habits, hydration balance, nutrition, sleep, stress, plus red flags and when it’s better to consult a healthcare professional.",
+  "ogDescription": "How to care for a patient at home after surgery: wound care and dressing changes, hygiene, medication schedule, pain control, signs of infection and when to call a doctor.",
   "ogImage": "https://thb.tildacdn.net/tild3265-6231-4431-a563-306535376230/-/resize/504x/Operatsiyadan_keying.webp",
   "hreflang": {
-   "uz": "https://onlaynhamshira.uz/",
-   "ru": "https://onlaynhamshira.uz/ru",
-   "en": "https://onlaynhamshira.uz/en",
-   "x-default": "https://onlaynhamshira.uz/"
+   "uz": "https://onlaynhamshira.uz/blog/operatsiyadan-keyingi-parvarish",
+   "ru": "https://onlaynhamshira.uz/posleoperatsionnyy-uhod-doma",
+   "en": "https://onlaynhamshira.uz/postoperative-care-at-home",
+   "x-default": "https://onlaynhamshira.uz/blog/operatsiyadan-keyingi-parvarish"
   }
  },
  "/en/blog/boosting-immunity-preventing-illness": {
@@ -649,10 +629,10 @@
   "ogDescription": "Learn how to boost immunity naturally with nutrition, sleep, stress control, hygiene, and vaccination to prevent seasonal illnesses.",
   "ogImage": "https://thb.tildacdn.net/tild6364-3938-4264-b836-336338386436/-/resize/504x/immunitet-mavsumiy-k.webp",
   "hreflang": {
-   "uz": "https://onlaynhamshira.uz/",
-   "ru": "https://onlaynhamshira.uz/ru",
-   "en": "https://onlaynhamshira.uz/en",
-   "x-default": "https://onlaynhamshira.uz/"
+   "uz": "https://onlaynhamshira.uz/blog/immunitetni-kotarish-mavsumiy-kasalliklar",
+   "ru": "https://onlaynhamshira.uz/ru/blog/kak-ukrepit-immunitet-profilaktika",
+   "en": "https://onlaynhamshira.uz/en/blog/boosting-immunity-preventing-illness",
+   "x-default": "https://onlaynhamshira.uz/blog/immunitetni-kotarish-mavsumiy-kasalliklar"
   }
  },
  "/en/blog/newborn-care-home-guide": {
@@ -665,10 +645,10 @@
   "ogDescription": "Learn how to care for a newborn at home: breastfeeding, hygiene, safe sleep, and when to consult a pediatrician.",
   "ogImage": "https://thb.tildacdn.net/tild3935-3130-4430-b831-313666303733/-/resize/504x/chaqaloq-parvarishi-.webp",
   "hreflang": {
-   "uz": "https://onlaynhamshira.uz/",
-   "ru": "https://onlaynhamshira.uz/ru",
-   "en": "https://onlaynhamshira.uz/en",
-   "x-default": "https://onlaynhamshira.uz/"
+   "uz": "https://onlaynhamshira.uz/blog/chaqaloq-parvarishi-yangi-onalar-uchun",
+   "ru": "https://onlaynhamshira.uz/ru/blog/uhod-za-novorozhdyonnym",
+   "en": "https://onlaynhamshira.uz/en/blog/newborn-care-home-guide",
+   "x-default": "https://onlaynhamshira.uz/blog/chaqaloq-parvarishi-yangi-onalar-uchun"
   }
  },
  "/en/blog/home-infection-protection-guide": {
@@ -681,10 +661,10 @@
   "ogDescription": "Learn how to protect your family from infections at home with hygiene, ventilation, masks, vaccination, and daily habits.",
   "ogImage": "https://thb.tildacdn.net/tild6536-6131-4039-a635-613230663033/-/resize/504x/Infection_Prevention.webp",
   "hreflang": {
-   "uz": "https://onlaynhamshira.uz/",
-   "ru": "https://onlaynhamshira.uz/ru",
-   "en": "https://onlaynhamshira.uz/en",
-   "x-default": "https://onlaynhamshira.uz/"
+   "uz": "https://onlaynhamshira.uz/blog/infeksiyadan-himoyalanish-uy-gigiyenasi",
+   "ru": "https://onlaynhamshira.uz/ru/blog/kak-zashchititsya-ot-infektsii-doma",
+   "en": "https://onlaynhamshira.uz/en/blog/home-infection-protection-guide",
+   "x-default": "https://onlaynhamshira.uz/blog/infeksiyadan-himoyalanish-uy-gigiyenasi"
   }
  },
  "/nurse-politic": {
@@ -697,10 +677,10 @@
   "ogDescription": "Official Public Offer Agreement for nurses and independent medical specialists working through ONLAYN HAMSHIRA. Terms of service, payments, responsibilities, patient data protection, platform rules and legal conditions.",
   "ogImage": "https://static.tildacdn.net/tild3962-6663-4561-a431-316635613264/Mobile.jpg",
   "hreflang": {
-   "uz": "https://onlaynhamshira.uz/",
-   "ru": "https://onlaynhamshira.uz/ru",
-   "en": "https://onlaynhamshira.uz/en",
-   "x-default": "https://onlaynhamshira.uz/"
+   "uz": "https://onlaynhamshira.uz/hamshirapolitic",
+   "ru": "https://onlaynhamshira.uz/ru/politichamshira",
+   "en": "https://onlaynhamshira.uz/nurse-politic",
+   "x-default": "https://onlaynhamshira.uz/hamshirapolitic"
   }
  },
  "/detoks-v-domashnih-usloviyah": {
@@ -713,10 +693,10 @@
   "ogDescription": "Узнайте, как безопасно провести детокс дома. Медицинский подход к очищению организма, советы по питанию, сну и когда стоит обратиться к специалисту.",
   "ogImage": "https://thb.tildacdn.net/tild3866-6530-4134-b064-353031366262/-/resize/504x/1731389393_detoks-oc.webp",
   "hreflang": {
-   "uz": "https://onlaynhamshira.uz/",
-   "ru": "https://onlaynhamshira.uz/ru",
-   "en": "https://onlaynhamshira.uz/en",
-   "x-default": "https://onlaynhamshira.uz/"
+   "uz": "https://onlaynhamshira.uz/blog/uy-sharoitida-detoks",
+   "ru": "https://onlaynhamshira.uz/detoks-v-domashnih-usloviyah",
+   "en": "https://onlaynhamshira.uz/home-detox",
+   "x-default": "https://onlaynhamshira.uz/blog/uy-sharoitida-detoks"
   }
  },
  "/podderzhka-onkologicheskih-pacientov-doma": {
@@ -729,10 +709,10 @@
   "ogDescription": "Поддержка онкологических пациентов дома: онкологический уход, паллиативная помощь и рекомендации по облегчению симптомов. Практичные советы.",
   "ogImage": "https://thb.tildacdn.net/tild6636-3063-4435-a562-613438663134/-/resize/504x/Patiant-Care.webp",
   "hreflang": {
-   "uz": "https://onlaynhamshira.uz/",
-   "ru": "https://onlaynhamshira.uz/ru",
-   "en": "https://onlaynhamshira.uz/en",
-   "x-default": "https://onlaynhamshira.uz/"
+   "uz": "https://onlaynhamshira.uz/saraton-bemor-uyda-parvarish-tavsiyalar",
+   "ru": "https://onlaynhamshira.uz/podderzhka-onkologicheskih-pacientov-doma",
+   "en": "https://onlaynhamshira.uz/home-palliative-care-symptom-management",
+   "x-default": "https://onlaynhamshira.uz/saraton-bemor-uyda-parvarish-tavsiyalar"
   }
  },
  "/ru": {
@@ -745,10 +725,10 @@
   "ogDescription": "Вызов врача и медсестры на дом в Ташкенте, Нукусе, Фергане, Самарканде и Маргилане. Медицинская помощь и услуги медсестры на дому 24/7.",
   "ogImage": "https://static.tildacdn.net/tild3462-3165-4335-b732-383031326461/photo.jpg",
   "hreflang": {
-   "uz": "https://onlaynhamshira.uz/",
+   "uz": "https://onlaynhamshira.uz",
    "ru": "https://onlaynhamshira.uz/ru",
    "en": "https://onlaynhamshira.uz/en",
-   "x-default": "https://onlaynhamshira.uz/"
+   "x-default": "https://onlaynhamshira.uz"
   }
  },
  "/ru/expert": {
@@ -761,10 +741,10 @@
   "ogDescription": "Работайте, когда удобно, и зарабатывайте с Onlayn Hamshira!",
   "ogImage": "https://static.tildacdn.net/tild3462-3165-4335-b732-383031326461/photo.jpg",
   "hreflang": {
-   "uz": "https://onlaynhamshira.uz/",
-   "ru": "https://onlaynhamshira.uz/ru",
-   "en": "https://onlaynhamshira.uz/en",
-   "x-default": "https://onlaynhamshira.uz/"
+   "uz": "https://onlaynhamshira.uz/expert",
+   "ru": "https://onlaynhamshira.uz/ru/expert",
+   "en": "https://onlaynhamshira.uz/en/expert",
+   "x-default": "https://onlaynhamshira.uz/expert"
   }
  },
  "/ru/privacy-policy": {
@@ -777,10 +757,10 @@
   "ogDescription": "Лечитесь с нами дома!",
   "ogImage": "https://static.tildacdn.net/tild3962-6663-4561-a431-316635613264/Mobile.jpg",
   "hreflang": {
-   "uz": "https://onlaynhamshira.uz/",
-   "ru": "https://onlaynhamshira.uz/ru",
-   "en": "https://onlaynhamshira.uz/en",
-   "x-default": "https://onlaynhamshira.uz/"
+   "uz": "https://onlaynhamshira.uz/privacy-policy",
+   "ru": "https://onlaynhamshira.uz/ru/privacy-policy",
+   "en": "https://onlaynhamshira.uz/en/privacy-policy",
+   "x-default": "https://onlaynhamshira.uz/privacy-policy"
   }
  },
  "/ru/politichamshira": {
@@ -793,10 +773,10 @@
   "ogDescription": "Лечитесь с нами дома!",
   "ogImage": "https://static.tildacdn.net/tild3962-6663-4561-a431-316635613264/Mobile.jpg",
   "hreflang": {
-   "uz": "https://onlaynhamshira.uz/",
-   "ru": "https://onlaynhamshira.uz/ru",
-   "en": "https://onlaynhamshira.uz/en",
-   "x-default": "https://onlaynhamshira.uz/"
+   "uz": "https://onlaynhamshira.uz/hamshirapolitic",
+   "ru": "https://onlaynhamshira.uz/ru/politichamshira",
+   "en": "https://onlaynhamshira.uz/nurse-politic",
+   "x-default": "https://onlaynhamshira.uz/hamshirapolitic"
   }
  },
  "/ru/certificates": {
@@ -809,10 +789,10 @@
   "ogDescription": "Лечитесь с нами дома!",
   "ogImage": "https://static.tildacdn.net/tild3962-6663-4561-a431-316635613264/Mobile.jpg",
   "hreflang": {
-   "uz": "https://onlaynhamshira.uz/",
-   "ru": "https://onlaynhamshira.uz/ru",
-   "en": "https://onlaynhamshira.uz/en",
-   "x-default": "https://onlaynhamshira.uz/"
+   "uz": "https://onlaynhamshira.uz/certificates",
+   "ru": "https://onlaynhamshira.uz/ru/certificates",
+   "en": "https://onlaynhamshira.uz/en/certificates",
+   "x-default": "https://onlaynhamshira.uz/certificates"
   }
  },
  "/ru/blog": {
@@ -825,10 +805,10 @@
   "ogDescription": "Читайте актуальные статьи про вызов медсестры на дом в Ташкенте, цены и преимущества, советы по здоровью и уходу, а также полезные гиды по медицинским услугам.",
   "ogImage": "https://static.tildacdn.net/tild3164-3136-4130-a664-393939323035/image.png",
   "hreflang": {
-   "uz": "https://onlaynhamshira.uz/",
-   "ru": "https://onlaynhamshira.uz/ru",
-   "en": "https://onlaynhamshira.uz/en",
-   "x-default": "https://onlaynhamshira.uz/"
+   "uz": "https://onlaynhamshira.uz/blog",
+   "ru": "https://onlaynhamshira.uz/ru/blog",
+   "en": "https://onlaynhamshira.uz/en/blog",
+   "x-default": "https://onlaynhamshira.uz/blog"
   }
  },
  "/ru/blog/medsestra-na-dom-tashkent": {
@@ -841,10 +821,10 @@
   "ogDescription": "Вызов медсестры на дом через OnlaynHamshira: уколы, подключение капельницы, забор крови, перевязки. Условия оплаты и порядок заказа.",
   "ogImage": "https://static.tildacdn.net/tild6531-3534-4037-b632-373035316365/image.png",
   "hreflang": {
-   "uz": "https://onlaynhamshira.uz/",
-   "ru": "https://onlaynhamshira.uz/ru",
-   "en": "https://onlaynhamshira.uz/en",
-   "x-default": "https://onlaynhamshira.uz/"
+   "uz": "https://onlaynhamshira.uz/blog/hamshira-uyga-chaqirish-toshkent",
+   "ru": "https://onlaynhamshira.uz/ru/blog/medsestra-na-dom-tashkent",
+   "en": "https://onlaynhamshira.uz/en/blog/nurse-at-home-tashkent-services-prices",
+   "x-default": "https://onlaynhamshira.uz/blog/hamshira-uyga-chaqirish-toshkent"
   }
  },
  "/ru/blog/kak-izmerit-i-kontrolirovat-davlenie-doma": {
@@ -857,10 +837,10 @@
   "ogDescription": "Пошаговое руководство по измерению артериального давления дома. Распространённые ошибки, полезные советы и контроль здоровья сердца.",
   "ogImage": "https://static.tildacdn.net/tild6531-3534-4037-b632-373035316365/image.png",
   "hreflang": {
-   "uz": "https://onlaynhamshira.uz/",
-   "ru": "https://onlaynhamshira.uz/ru",
-   "en": "https://onlaynhamshira.uz/en",
-   "x-default": "https://onlaynhamshira.uz/"
+   "uz": "https://onlaynhamshira.uz/uyda-qon-bosimini-olchash-va-nazorat-qilish",
+   "ru": "https://onlaynhamshira.uz/ru/blog/kak-izmerit-i-kontrolirovat-davlenie-doma",
+   "en": "https://onlaynhamshira.uz/en/blog/how-to-measure-and-control-blood-pressure-at-home",
+   "x-default": "https://onlaynhamshira.uz/uyda-qon-bosimini-olchash-va-nazorat-qilish"
   }
  },
  "/ru/blog/massazh-dlya-zhenshchin-i-detey-v-tashkente": {
@@ -873,10 +853,10 @@
   "ogDescription": "Ищете массаж в Ташкенте? Узнайте, где лучшие салоны, сколько стоит массаж на дому, и какие виды процедур действительно работают. Полный гид для релакса.",
   "ogImage": "https://static.tildacdn.net/tild6531-3534-4037-b632-373035316365/image.png",
   "hreflang": {
-   "uz": "https://onlaynhamshira.uz/",
-   "ru": "https://onlaynhamshira.uz/ru",
-   "en": "https://onlaynhamshira.uz/en",
-   "x-default": "https://onlaynhamshira.uz/"
+   "uz": "https://onlaynhamshira.uz/blog/ayollar-bolalar-massaji-toshkentda",
+   "ru": "https://onlaynhamshira.uz/ru/blog/massazh-dlya-zhenshchin-i-detey-v-tashkente",
+   "en": "https://onlaynhamshira.uz/en/blog/massage-in-tashkent-women-baby",
+   "x-default": "https://onlaynhamshira.uz/blog/ayollar-bolalar-massaji-toshkentda"
   }
  },
  "/onlayn-uhod-vs-tradicionnyj": {
@@ -889,10 +869,10 @@
   "ogDescription": "Сравните онлайн-медсестер и традиционные услуги в Узбекистане. OnlaynHamshira.uz проверенные медсёстры, прозрачные цены, удобное онлайн-бронирование и поддержка 24/7.",
   "ogImage": "https://static.tildacdn.net/tild6531-3534-4037-b632-373035316365/image.png",
   "hreflang": {
-   "uz": "https://onlaynhamshira.uz/",
-   "ru": "https://onlaynhamshira.uz/ru",
-   "en": "https://onlaynhamshira.uz/en",
-   "x-default": "https://onlaynhamshira.uz/"
+   "uz": "https://onlaynhamshira.uz/onlayn-hamshira-vs-ananaviy",
+   "ru": "https://onlaynhamshira.uz/onlayn-uhod-vs-tradicionnyj",
+   "en": "https://onlaynhamshira.uz/online-nursing-vs-traditional",
+   "x-default": "https://onlaynhamshira.uz/onlayn-hamshira-vs-ananaviy"
   }
  },
  "/ru/blog/ukoly-na-domu-v-tashkente": {
@@ -905,10 +885,10 @@
   "ogDescription": "Уколы на дому в Ташкенте: антибиотики, витамины, обезболивающие, капельницы, цены и правила безопасности. Профессиональная медсестра приезжает домой.",
   "ogImage": "https://static.tildacdn.net/tild6531-3534-4037-b632-373035316365/image.png",
   "hreflang": {
-   "uz": "https://onlaynhamshira.uz/",
-   "ru": "https://onlaynhamshira.uz/ru",
-   "en": "https://onlaynhamshira.uz/en",
-   "x-default": "https://onlaynhamshira.uz/"
+   "uz": "https://onlaynhamshira.uz/blog/uyda-ukol-qildirish-toshkentda",
+   "ru": "https://onlaynhamshira.uz/ru/blog/ukoly-na-domu-v-tashkente",
+   "en": "https://onlaynhamshira.uz/en/blog/injection-service-at-home-tashkent",
+   "x-default": "https://onlaynhamshira.uz/blog/uyda-ukol-qildirish-toshkentda"
   }
  },
  "/ru/blog/vyzov-medsestry-na-dom-meditsinskaya-pomoshch": {
@@ -921,10 +901,10 @@
   "ogDescription": "Хватит ждать, пока проблемы со здоровьем станут серьёзными. Получайте безопасную и профессиональную помощь на дому от сертифицированных медсестер и врачей.",
   "ogImage": "https://static.tildacdn.net/tild6531-3534-4037-b632-373035316365/image.png",
   "hreflang": {
-   "uz": "https://onlaynhamshira.uz/",
-   "ru": "https://onlaynhamshira.uz/ru",
-   "en": "https://onlaynhamshira.uz/en",
-   "x-default": "https://onlaynhamshira.uz/"
+   "uz": "https://onlaynhamshira.uz/blog/uyga-hamshira-chaqirish-tibbiy-yordam",
+   "ru": "https://onlaynhamshira.uz/ru/blog/vyzov-medsestry-na-dom-meditsinskaya-pomoshch",
+   "en": "https://onlaynhamshira.uz/en/blog/home-nurse-visit-medical-care",
+   "x-default": "https://onlaynhamshira.uz/blog/uyga-hamshira-chaqirish-tibbiy-yordam"
   }
  },
  "/ru/blog/profilaktika-9-ezhednevnyh-privychek": {
@@ -937,26 +917,26 @@
   "ogDescription": "До 70% болезней можно предотвратить с помощью простых ежедневных привычек. Узнайте, как сон, питание, вода, стресс и движение укрепляют организм.",
   "ogImage": "https://static.tildacdn.net/tild6531-3534-4037-b632-373035316365/image.png",
   "hreflang": {
-   "uz": "https://onlaynhamshira.uz/",
-   "ru": "https://onlaynhamshira.uz/ru",
-   "en": "https://onlaynhamshira.uz/en",
-   "x-default": "https://onlaynhamshira.uz/"
+   "uz": "https://onlaynhamshira.uz/blog/kasallikni-oldini-olish-9-kunlik-odatlar",
+   "ru": "https://onlaynhamshira.uz/ru/blog/profilaktika-9-ezhednevnyh-privychek",
+   "en": "https://onlaynhamshira.uz/en/blog/daily-habits-to-prevent-illness",
+   "x-default": "https://onlaynhamshira.uz/blog/kasallikni-oldini-olish-9-kunlik-odatlar"
   }
  },
  "/posleoperatsionnyy-uhod-doma": {
-  "title": "Детокс дома: безопасный медицинский подход, восстановление и когда нужен специалист",
-  "description": "Разбираем детокс дома с медицинской точки зрения: безопасные привычки, водный баланс, питание, сон, стресс и ситуации, когда лучше обратиться к специалисту.",
-  "keywords": "очищение организма детокс дома безопасный детокс как правильно делать детокс детокс и печень симптомы при детоксе когда нужен врач при детоксе вред детокса",
-  "canonical": "https://onlaynhamshira.uz/detoks-v-domashnih-usloviyah",
+  "title": "Послеоперационный период дома: правила ухода за пациентом",
+  "description": "Как правильно ухаживать за пациентом после операции дома: перевязка, признаки инфекции, контроль боли и рекомендации по восстановлению.",
+  "keywords": "послеоперационный уход дома, уход после операции, перевязка дома, признаки инфекции после операции, восстановление после операции, медсестра на дом",
+  "canonical": "https://onlaynhamshira.uz/posleoperatsionnyy-uhod-doma",
   "ogUrl": "https://onlaynhamshira.uz/posleoperatsionnyy-uhod-doma",
   "ogTitle": "Послеоперационный период дома: правила ухода за пациентом",
   "ogDescription": "Как правильно ухаживать за пациентом после операции дома: перевязка, признаки инфекции, контроль боли и рекомендации по восстановлению.",
   "ogImage": "https://thb.tildacdn.net/tild3265-6231-4431-a563-306535376230/-/resize/504x/Operatsiyadan_keying.webp",
   "hreflang": {
-   "uz": "https://onlaynhamshira.uz/",
-   "ru": "https://onlaynhamshira.uz/ru",
-   "en": "https://onlaynhamshira.uz/en",
-   "x-default": "https://onlaynhamshira.uz/"
+   "uz": "https://onlaynhamshira.uz/blog/operatsiyadan-keyingi-parvarish",
+   "ru": "https://onlaynhamshira.uz/posleoperatsionnyy-uhod-doma",
+   "en": "https://onlaynhamshira.uz/postoperative-care-at-home",
+   "x-default": "https://onlaynhamshira.uz/blog/operatsiyadan-keyingi-parvarish"
   }
  },
  "/ru/blog/kak-ukrepit-immunitet-profilaktika": {
@@ -969,10 +949,10 @@
   "ogDescription": "Как укрепить иммунитет естественно: питание, сон, стресс, гигиена и вакцинация для профилактики сезонных заболеваний.",
   "ogImage": "https://thb.tildacdn.net/tild6364-3938-4264-b836-336338386436/-/resize/504x/immunitet-mavsumiy-k.webp",
   "hreflang": {
-   "uz": "https://onlaynhamshira.uz/",
-   "ru": "https://onlaynhamshira.uz/ru",
-   "en": "https://onlaynhamshira.uz/en",
-   "x-default": "https://onlaynhamshira.uz/"
+   "uz": "https://onlaynhamshira.uz/blog/immunitetni-kotarish-mavsumiy-kasalliklar",
+   "ru": "https://onlaynhamshira.uz/ru/blog/kak-ukrepit-immunitet-profilaktika",
+   "en": "https://onlaynhamshira.uz/en/blog/boosting-immunity-preventing-illness",
+   "x-default": "https://onlaynhamshira.uz/blog/immunitetni-kotarish-mavsumiy-kasalliklar"
   }
  },
  "/ru/blog/kak-zashchititsya-ot-infektsii-doma": {
@@ -985,10 +965,10 @@
   "ogDescription": "Как снизить риск заражения дома: мытьё рук, проветривание, маски, вакцинация и уход при болезни. Практическое руководство для семьи.",
   "ogImage": "https://thb.tildacdn.net/tild6536-6131-4039-a635-613230663033/-/resize/504x/Infection_Prevention.webp",
   "hreflang": {
-   "uz": "https://onlaynhamshira.uz/",
-   "ru": "https://onlaynhamshira.uz/ru",
-   "en": "https://onlaynhamshira.uz/en",
-   "x-default": "https://onlaynhamshira.uz/"
+   "uz": "https://onlaynhamshira.uz/blog/infeksiyadan-himoyalanish-uy-gigiyenasi",
+   "ru": "https://onlaynhamshira.uz/ru/blog/kak-zashchititsya-ot-infektsii-doma",
+   "en": "https://onlaynhamshira.uz/en/blog/home-infection-protection-guide",
+   "x-default": "https://onlaynhamshira.uz/blog/infeksiyadan-himoyalanish-uy-gigiyenasi"
   }
  },
  "/ru/blog/uhod-za-novorozhdyonnym": {
@@ -1001,10 +981,10 @@
   "ogDescription": "Практическое руководство по уходу за новорождённым: кормление, гигиена, сон и помощь педиатра для молодых мам.",
   "ogImage": "https://thb.tildacdn.net/tild3935-3130-4430-b831-313666303733/-/resize/504x/chaqaloq-parvarishi-.webp",
   "hreflang": {
-   "uz": "https://onlaynhamshira.uz/",
-   "ru": "https://onlaynhamshira.uz/ru",
-   "en": "https://onlaynhamshira.uz/en",
-   "x-default": "https://onlaynhamshira.uz/"
+   "uz": "https://onlaynhamshira.uz/blog/chaqaloq-parvarishi-yangi-onalar-uchun",
+   "ru": "https://onlaynhamshira.uz/ru/blog/uhod-za-novorozhdyonnym",
+   "en": "https://onlaynhamshira.uz/en/blog/newborn-care-home-guide",
+   "x-default": "https://onlaynhamshira.uz/blog/chaqaloq-parvarishi-yangi-onalar-uchun"
   }
  },
  "/qr": {
@@ -1016,12 +996,7 @@
   "ogTitle": "QR",
   "ogDescription": "Лечитесь с нами дома!",
   "ogImage": "https://static.tildacdn.net/tild3962-6663-4561-a431-316635613264/Mobile.jpg",
-  "hreflang": {
-   "uz": "https://onlaynhamshira.uz/",
-   "ru": "https://onlaynhamshira.uz/ru",
-   "en": "https://onlaynhamshira.uz/en",
-   "x-default": "https://onlaynhamshira.uz/"
-  }
+  "hreflang": {}
  },
  "/qr2": {
   "title": "QR (Expert)",
@@ -1032,12 +1007,7 @@
   "ogTitle": "QR (Expert)",
   "ogDescription": "Лечитесь с нами дома!",
   "ogImage": "https://static.tildacdn.net/tild3962-6663-4561-a431-316635613264/Mobile.jpg",
-  "hreflang": {
-   "uz": "https://onlaynhamshira.uz/",
-   "ru": "https://onlaynhamshira.uz/ru",
-   "en": "https://onlaynhamshira.uz/en",
-   "x-default": "https://onlaynhamshira.uz/"
-  }
+  "hreflang": {}
  },
  "/qr3": {
   "title": "QR (Визитка)",
@@ -1048,12 +1018,7 @@
   "ogTitle": "QR (Визитка)",
   "ogDescription": "Лечитесь с нами дома!",
   "ogImage": "https://static.tildacdn.net/tild3962-6663-4561-a431-316635613264/Mobile.jpg",
-  "hreflang": {
-   "uz": "https://onlaynhamshira.uz/",
-   "ru": "https://onlaynhamshira.uz/ru",
-   "en": "https://onlaynhamshira.uz/en",
-   "x-default": "https://onlaynhamshira.uz/"
-  }
+  "hreflang": {}
  },
  "/qr4": {
   "title": "QR (Флайер)",
@@ -1064,12 +1029,7 @@
   "ogTitle": "QR (Флайер)",
   "ogDescription": "Лечитесь с нами дома!",
   "ogImage": "https://static.tildacdn.net/tild3962-6663-4561-a431-316635613264/Mobile.jpg",
-  "hreflang": {
-   "uz": "https://onlaynhamshira.uz/",
-   "ru": "https://onlaynhamshira.uz/ru",
-   "en": "https://onlaynhamshira.uz/en",
-   "x-default": "https://onlaynhamshira.uz/"
-  }
+  "hreflang": {}
  },
  "/qr5": {
   "title": "QR (Дорхенгер)",
@@ -1080,12 +1040,7 @@
   "ogTitle": "QR (Дорхенгер)",
   "ogDescription": "Лечитесь с нами дома!",
   "ogImage": "https://static.tildacdn.net/tild3962-6663-4561-a431-316635613264/Mobile.jpg",
-  "hreflang": {
-   "uz": "https://onlaynhamshira.uz/",
-   "ru": "https://onlaynhamshira.uz/ru",
-   "en": "https://onlaynhamshira.uz/en",
-   "x-default": "https://onlaynhamshira.uz/"
-  }
+  "hreflang": {}
  },
  "/qr6": {
   "title": "QR (Воблер)",
@@ -1096,12 +1051,7 @@
   "ogTitle": "QR (Воблер)",
   "ogDescription": "Лечитесь с нами дома!",
   "ogImage": "https://static.tildacdn.net/tild3962-6663-4561-a431-316635613264/Mobile.jpg",
-  "hreflang": {
-   "uz": "https://onlaynhamshira.uz/",
-   "ru": "https://onlaynhamshira.uz/ru",
-   "en": "https://onlaynhamshira.uz/en",
-   "x-default": "https://onlaynhamshira.uz/"
-  }
+  "hreflang": {}
  },
  "/qr7": {
   "title": "QR (Наклейка)",
@@ -1112,12 +1062,7 @@
   "ogTitle": "QR (Наклейка)",
   "ogDescription": "Лечитесь с нами дома!",
   "ogImage": "https://static.tildacdn.net/tild3962-6663-4561-a431-316635613264/Mobile.jpg",
-  "hreflang": {
-   "uz": "https://onlaynhamshira.uz/",
-   "ru": "https://onlaynhamshira.uz/ru",
-   "en": "https://onlaynhamshira.uz/en",
-   "x-default": "https://onlaynhamshira.uz/"
-  }
+  "hreflang": {}
  },
  "/qr8": {
   "title": "QR (Паук)",
@@ -1128,12 +1073,7 @@
   "ogTitle": "QR (Паук)",
   "ogDescription": "Лечитесь с нами дома!",
   "ogImage": "https://static.tildacdn.net/tild3962-6663-4561-a431-316635613264/Mobile.jpg",
-  "hreflang": {
-   "uz": "https://onlaynhamshira.uz/",
-   "ru": "https://onlaynhamshira.uz/ru",
-   "en": "https://onlaynhamshira.uz/en",
-   "x-default": "https://onlaynhamshira.uz/"
-  }
+  "hreflang": {}
  },
  "/blog/chto-delat-esli-povysilos-davlenie": {
   "title": "Что делать, если повысилось давление? | Onlayn Hamshira",
@@ -1145,10 +1085,10 @@
   "ogDescription": "Узнайте, как правильно измерять давление дома, когда вызывать скорую помощь и какие привычки помогут контролировать гипертонию.",
   "ogImage": "https://thb.tildacdn.net/tild3032-6365-4265-b734-626431383161/-/resize/504x/Blood_pressure_monit.webp",
   "hreflang": {
-   "uz": "https://onlaynhamshira.uz/",
-   "ru": "https://onlaynhamshira.uz/ru",
-   "en": "https://onlaynhamshira.uz/en",
-   "x-default": "https://onlaynhamshira.uz/"
+   "uz": "https://onlaynhamshira.uz/blog/qon-bosimi-yuqori-bolsa-nima-qilish-kerak",
+   "ru": "https://onlaynhamshira.uz/blog/chto-delat-esli-povysilos-davlenie",
+   "en": "https://onlaynhamshira.uz/blog/what-to-do-high-blood-pressure",
+   "x-default": "https://onlaynhamshira.uz/blog/qon-bosimi-yuqori-bolsa-nima-qilish-kerak"
   }
  },
  "/kapelnitsa-nima-qachon-kerak": {
@@ -1160,12 +1100,7 @@
   "ogTitle": "Kapelnitsa nima va qachon kerak? Foydasi, xavfi va to‘g‘ri qo‘llash",
   "ogDescription": "Kapelnitsa nima, qachon kerak bo‘ladi va qachon zararli? Uy sharoitida kapelnitsa qilish, foydasi, xavflari va qachon shifokorga murojaat qilish kerakligini sodda va aniq bilib oling.",
   "ogImage": "https://thb.tildacdn.net/tild3663-6536-4734-b830-636234353161/-/resize/504x/Kapelnitsa_nima_va_q.webp",
-  "hreflang": {
-   "uz": "https://onlaynhamshira.uz/",
-   "ru": "https://onlaynhamshira.uz/ru",
-   "en": "https://onlaynhamshira.uz/en",
-   "x-default": "https://onlaynhamshira.uz/"
-  }
+  "hreflang": {}
  },
  "/onlayn-hamshira-prezidentga-taqdim-etildi": {
   "title": "“Onlayn Hamshira” loyihasi Prezident Shavkat Mirziyoyevga taqdim etildi",
@@ -1176,12 +1111,7 @@
   "ogTitle": "“Onlayn Hamshira” loyihasi Prezident Shavkat Mirziyoyevga taqdim etildi",
   "ogDescription": "“Onlayn Hamshira” loyihasi Farg‘ona Digital Hub’da Prezident Shavkat Mirziyoyevga taqdim etildi. Platforma uyda tibbiy xizmatlarni raqamlashtirib, bemorlar va hamshiralar uchun yangi imkoniyatlar yaratmoqda.",
   "ogImage": "https://static.tildacdn.net/tild6136-3736-4933-b932-393063623035/Onlayn_Hamshira_loyi.webp",
-  "hreflang": {
-   "uz": "https://onlaynhamshira.uz/",
-   "ru": "https://onlaynhamshira.uz/ru",
-   "en": "https://onlaynhamshira.uz/en",
-   "x-default": "https://onlaynhamshira.uz/"
-  }
+  "hreflang": {}
  },
  "/home-nurse-chilanzar": {
   "title": "Home Nurse Chilanzar: 24/7 Medical Care | Onlayn Hamshira",
@@ -1193,10 +1123,10 @@
   "ogDescription": "Need a qualified home nurse in Chilanzar? Book Onlayn Hamshira for 24/7 IV drips, injections, blood sampling, and post-op care. Call +998 78 113 96 16!",
   "ogImage": null,
   "hreflang": {
-   "uz": "https://onlaynhamshira.uz/",
-   "ru": "https://onlaynhamshira.uz/ru",
-   "en": "https://onlaynhamshira.uz/en",
-   "x-default": "https://onlaynhamshira.uz/"
+   "uz": "https://onlaynhamshira.uz/uyga-hamshira-chilonzor",
+   "ru": "https://onlaynhamshira.uz/ru/medsestra-na-dom-chilanzar",
+   "en": "https://onlaynhamshira.uz/home-nurse-chilanzar",
+   "x-default": "https://onlaynhamshira.uz/uyga-hamshira-chilonzor"
   }
  },
  "/ru/medsestra-na-dom-chilanzar": {
@@ -1209,10 +1139,10 @@
   "ogDescription": "Вызов медсестры на дом в Чиланзарском районе. Капельница, уколы, забор крови, перевязки и уход за пациентом через Onlayn Hamshira. Быстро, безопасно и круглосуточно.",
   "ogImage": null,
   "hreflang": {
-   "uz": "https://onlaynhamshira.uz/",
-   "ru": "https://onlaynhamshira.uz/ru",
-   "en": "https://onlaynhamshira.uz/en",
-   "x-default": "https://onlaynhamshira.uz/"
+   "uz": "https://onlaynhamshira.uz/uyga-hamshira-chilonzor",
+   "ru": "https://onlaynhamshira.uz/ru/medsestra-na-dom-chilanzar",
+   "en": "https://onlaynhamshira.uz/home-nurse-chilanzar",
+   "x-default": "https://onlaynhamshira.uz/uyga-hamshira-chilonzor"
   }
  },
  "/uyga-hamshira-chilonzor": {
@@ -1225,10 +1155,10 @@
   "ogDescription": "Chilonzor tumanida uyga hamshira chaqirish xizmati. Kapelnitsa, ukol, qon olish, yara bog‘lash va bemor parvarishi uchun Onlayn Hamshira orqali tez va qulay buyurtma bering.",
   "ogImage": null,
   "hreflang": {
-   "uz": "https://onlaynhamshira.uz/",
-   "ru": "https://onlaynhamshira.uz/ru",
-   "en": "https://onlaynhamshira.uz/en",
-   "x-default": "https://onlaynhamshira.uz/"
+   "uz": "https://onlaynhamshira.uz/uyga-hamshira-chilonzor",
+   "ru": "https://onlaynhamshira.uz/ru/medsestra-na-dom-chilanzar",
+   "en": "https://onlaynhamshira.uz/home-nurse-chilanzar",
+   "x-default": "https://onlaynhamshira.uz/uyga-hamshira-chilonzor"
   }
  },
  "/en/onlayn-hamshira-2-0-app-update": {
@@ -1241,10 +1171,10 @@
   "ogDescription": "Onlayn Hamshira 2.0 is out! Discover the new modern interface, direct card payments, faster matching, Karakalpak language support, and a special 20% promo code.",
   "ogImage": null,
   "hreflang": {
-   "uz": "https://onlaynhamshira.uz/",
-   "ru": "https://onlaynhamshira.uz/ru",
-   "en": "https://onlaynhamshira.uz/en",
-   "x-default": "https://onlaynhamshira.uz/"
+   "uz": "https://onlaynhamshira.uz/onlayn-hamshira-2-0-app-update",
+   "ru": "https://onlaynhamshira.uz/ru/onlayn-hamshira-2-0-app-update",
+   "en": "https://onlaynhamshira.uz/en/onlayn-hamshira-2-0-app-update",
+   "x-default": "https://onlaynhamshira.uz/onlayn-hamshira-2-0-app-update"
   }
  },
  "/onlayn-hamshira-2-0-app-update": {
@@ -1257,10 +1187,10 @@
   "ogDescription": "Onlayn Hamshira ilovasining yangi 2.0 versiyasi ishga tushdi! Tubdan yangilangan interfeys, karta orqali to‘lov, qoraqalpoq tili va SALOM20 chegirma promokodi.",
   "ogImage": null,
   "hreflang": {
-   "uz": "https://onlaynhamshira.uz/",
-   "ru": "https://onlaynhamshira.uz/ru",
-   "en": "https://onlaynhamshira.uz/en",
-   "x-default": "https://onlaynhamshira.uz/"
+   "uz": "https://onlaynhamshira.uz/onlayn-hamshira-2-0-app-update",
+   "ru": "https://onlaynhamshira.uz/ru/onlayn-hamshira-2-0-app-update",
+   "en": "https://onlaynhamshira.uz/en/onlayn-hamshira-2-0-app-update",
+   "x-default": "https://onlaynhamshira.uz/onlayn-hamshira-2-0-app-update"
   }
  },
  "/ru/onlayn-hamshira-2-0-app-update": {
@@ -1273,10 +1203,10 @@
   "ogDescription": "Встречайте Onlayn Hamshira 2.0! Обновленный дизайн, оплата картой, выбор пола специалиста, каракалпакский язык и промокод SALOM20 на первую услугу.",
   "ogImage": null,
   "hreflang": {
-   "uz": "https://onlaynhamshira.uz/",
-   "ru": "https://onlaynhamshira.uz/ru",
-   "en": "https://onlaynhamshira.uz/en",
-   "x-default": "https://onlaynhamshira.uz/"
+   "uz": "https://onlaynhamshira.uz/onlayn-hamshira-2-0-app-update",
+   "ru": "https://onlaynhamshira.uz/ru/onlayn-hamshira-2-0-app-update",
+   "en": "https://onlaynhamshira.uz/en/onlayn-hamshira-2-0-app-update",
+   "x-default": "https://onlaynhamshira.uz/onlayn-hamshira-2-0-app-update"
   }
  },
  "/chaqaloqni-uyda-chomiltirish": {
@@ -1289,10 +1219,10 @@
   "ogDescription": "Chaqaloqni uyda to‘g‘ri cho‘miltirish va parvarish qilish qoidalari: suv harorati, xavfsizlik, kindik parvarishi va chaqaloq terisi gigiyenasi.",
   "ogImage": null,
   "hreflang": {
-   "uz": "https://onlaynhamshira.uz/",
-   "ru": "https://onlaynhamshira.uz/ru",
-   "en": "https://onlaynhamshira.uz/en",
-   "x-default": "https://onlaynhamshira.uz/"
+   "uz": "https://onlaynhamshira.uz/chaqaloqni-uyda-chomiltirish",
+   "ru": "https://onlaynhamshira.uz/ru/kak-kupat-novorozhdennogo-doma",
+   "en": "https://onlaynhamshira.uz/en/how-to-bathe-a-newborn-at-home",
+   "x-default": "https://onlaynhamshira.uz/chaqaloqni-uyda-chomiltirish"
   }
  },
  "/ru/kak-kupat-novorozhdennogo-doma": {
@@ -1305,10 +1235,10 @@
   "ogDescription": "Как правильно купать новорождённого дома: температура воды, безопасность, уход за пупком и кожей, одежда после купания и советы родителям.",
   "ogImage": null,
   "hreflang": {
-   "uz": "https://onlaynhamshira.uz/",
-   "ru": "https://onlaynhamshira.uz/ru",
-   "en": "https://onlaynhamshira.uz/en",
-   "x-default": "https://onlaynhamshira.uz/"
+   "uz": "https://onlaynhamshira.uz/chaqaloqni-uyda-chomiltirish",
+   "ru": "https://onlaynhamshira.uz/ru/kak-kupat-novorozhdennogo-doma",
+   "en": "https://onlaynhamshira.uz/en/how-to-bathe-a-newborn-at-home",
+   "x-default": "https://onlaynhamshira.uz/chaqaloqni-uyda-chomiltirish"
   }
  },
  "/en/how-to-bathe-a-newborn-at-home": {
@@ -1321,10 +1251,10 @@
   "ogDescription": "Learn how to safely bathe a newborn at home: water temperature, bath safety, umbilical cord care, baby skin care and practical tips for parents.",
   "ogImage": null,
   "hreflang": {
-   "uz": "https://onlaynhamshira.uz/",
-   "ru": "https://onlaynhamshira.uz/ru",
-   "en": "https://onlaynhamshira.uz/en",
-   "x-default": "https://onlaynhamshira.uz/"
+   "uz": "https://onlaynhamshira.uz/chaqaloqni-uyda-chomiltirish",
+   "ru": "https://onlaynhamshira.uz/ru/kak-kupat-novorozhdennogo-doma",
+   "en": "https://onlaynhamshira.uz/en/how-to-bathe-a-newborn-at-home",
+   "x-default": "https://onlaynhamshira.uz/chaqaloqni-uyda-chomiltirish"
   }
  },
  "/yotib-qolgan-bemorlarni-uyda-parvarish-qilish": {
@@ -1337,10 +1267,10 @@
   "ogDescription": "Yotib qolgan bemorlarni uyda to‘g‘ri parvarish qilish va yotoq yaralarining oldini olish: tana holati, teri gigiyenasi, namlik, ovqatlanish va mutaxassis yordami.",
   "ogImage": null,
   "hreflang": {
-   "uz": "https://onlaynhamshira.uz/",
-   "ru": "https://onlaynhamshira.uz/ru",
-   "en": "https://onlaynhamshira.uz/en",
-   "x-default": "https://onlaynhamshira.uz/"
+   "uz": "https://onlaynhamshira.uz/yotib-qolgan-bemorlarni-uyda-parvarish-qilish",
+   "ru": "https://onlaynhamshira.uz/ru/uhod-za-lezhachimi-bolnymi-doma",
+   "en": "https://onlaynhamshira.uz/en/home-care-for-bedridden-patients",
+   "x-default": "https://onlaynhamshira.uz/yotib-qolgan-bemorlarni-uyda-parvarish-qilish"
   }
  },
  "/en/home-care-for-bedridden-patients": {
@@ -1353,10 +1283,10 @@
   "ogDescription": "Learn how to care for a bedridden patient at home and prevent pressure ulcers with repositioning, skin checks, hygiene, nutrition and professional support.",
   "ogImage": null,
   "hreflang": {
-   "uz": "https://onlaynhamshira.uz/",
-   "ru": "https://onlaynhamshira.uz/ru",
-   "en": "https://onlaynhamshira.uz/en",
-   "x-default": "https://onlaynhamshira.uz/"
+   "uz": "https://onlaynhamshira.uz/yotib-qolgan-bemorlarni-uyda-parvarish-qilish",
+   "ru": "https://onlaynhamshira.uz/ru/uhod-za-lezhachimi-bolnymi-doma",
+   "en": "https://onlaynhamshira.uz/en/home-care-for-bedridden-patients",
+   "x-default": "https://onlaynhamshira.uz/yotib-qolgan-bemorlarni-uyda-parvarish-qilish"
   }
  },
  "/ru/uhod-za-lezhachimi-bolnymi-doma": {
@@ -1369,10 +1299,10 @@
   "ogDescription": "Как правильно ухаживать за лежачим больным дома и предотвратить пролежни: смена положения тела, уход за кожей, гигиена, питание и помощь специалиста.",
   "ogImage": null,
   "hreflang": {
-   "uz": "https://onlaynhamshira.uz/",
-   "ru": "https://onlaynhamshira.uz/ru",
-   "en": "https://onlaynhamshira.uz/en",
-   "x-default": "https://onlaynhamshira.uz/"
+   "uz": "https://onlaynhamshira.uz/yotib-qolgan-bemorlarni-uyda-parvarish-qilish",
+   "ru": "https://onlaynhamshira.uz/ru/uhod-za-lezhachimi-bolnymi-doma",
+   "en": "https://onlaynhamshira.uz/en/home-care-for-bedridden-patients",
+   "x-default": "https://onlaynhamshira.uz/yotib-qolgan-bemorlarni-uyda-parvarish-qilish"
   }
  }
 }

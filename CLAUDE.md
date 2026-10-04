@@ -70,10 +70,15 @@ uni `lib/seo/routes.ts` ga qo'shing (sitemap'ga shundan tushadi) va `seo:check`d
 Menyuda ko'rinishi kerak bo'lsa: `lib/nav.ts` → `PAGES` ga uch tildagi manzilini, lug'atlarga
 (`header`) nomini qo'shing va `NAV_PRIMARY` ga joylang (sahifa havolasi bo'lgani uchun).
 
-## Ataylab qoldirilgan Tilda xatolari (marketing qarori kutilmoqda — o'zboshimchalik bilan tuzatmang)
+## Tuzatilgan Tilda xatolari (marketing talabi bilan, 2026-10)
 
-`/home-detox`, `/postoperative-care-at-home`, `/posleoperatsionnyy-uhod-doma` — canonical va title
-detoks maqolasiga ko'rsatadi (Tilda'da ham shunday). Tuzatish faqat marketing roziligi bilan.
+- Canonical har doim sahifaning o'z URL'i (`app/[lang]/[...slug]/page.tsx`). Avval `/home-detox`,
+  `/postoperative-care-at-home`, `/posleoperatsionnyy-uhod-doma` detoks maqolasiga ko'rsatardi; ikki
+  postoperatsion sahifaning title/description'i ham o'z mavzusiga tuzatildi.
+- hreflang — sahifaning haqiqiy tarjimalari (`hreflangAlternates()` → `lib/nav.ts` dagi `TRANSLATIONS`/`PAGES`).
+  Tilda har ichki sahifada bosh sahifalarni ko'rsatardi. Yangi tarjima juftligi `TRANSLATIONS` ga qo'shiladi.
+- Doimiy redirectlar aynan `301` (`statusCode: 301`, `permanent: true` emas — u 308 beradi).
+- `seo:check` canonical o'z URL'i ekanini va hreflang ikki tomonlama ekanini ham tekshiradi.
 
 ## Git
 

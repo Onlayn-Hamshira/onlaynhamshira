@@ -46,6 +46,7 @@ function readHead(html) {
 
 const errors = [];
 const fail = (p, msg) => errors.push(`${p}: ${msg}`);
+const heads = new Map();
 
 for (const [p, exp] of Object.entries(expected)) {
   let res;
@@ -53,6 +54,9 @@ for (const [p, exp] of Object.entries(expected)) {
   if (res.status !== 200) { fail(p, `status ${res.status} (200 kutilgan)`); continue; }
   const html = await res.text();
   const got = readHead(html);
+  heads.set(abs(SITE + p), got);
+  // Tilda'dagi xato qaytmasin: canonical boshqa sahifaga ko'rsatmasin
+  if (got.canonical !== abs(SITE + p)) fail(p, `canonical o'z URL'i emas: ${got.canonical}`);
   for (const k of ["title", "description", "keywords", "ogTitle", "ogDescription"]) if ((exp[k] || null) !== got[k]) fail(p, `${k}: kutilgan ${JSON.stringify(exp[k])} | bor ${JSON.stringify(got[k])}`);
   for (const k of ["canonical", "ogUrl"]) if (abs(exp[k]) !== got[k]) fail(p, `${k}: kutilgan ${exp[k]} | bor ${got[k]}`);
   if (exp.ogImage && exp.ogImage !== got.ogImage) fail(p, `og:image: kutilgan ${exp.ogImage} | bor ${got.ogImage}`);
@@ -68,6 +72,21 @@ for (const [p, exp] of Object.entries(expected)) {
     try { JSON.parse(m[1]); } catch { fail(p, "yaroqsiz JSON-LD"); }
   }
   if (!p.startsWith("/qr") && !/<h1[\s>]/.test(html)) fail(p, "H1 yo'q");
+}
+
+// hreflang: o'zini o'z ichiga olsin, har bir alternativ tekshirilgan sahifa bo'lsin va xuddi shu to'plamni
+// qaytarsin (ikki tomonlama — aks holda Google hreflang'ni e'tiborsiz qoldiradi)
+for (const [url, h] of heads) {
+  const entries = Object.entries(h.hreflang).filter(([k]) => k !== "x-default");
+  if (!entries.length) continue;
+  const p = url.replace(SITE, "") || "/";
+  if (!entries.some(([, u]) => u === url)) fail(p, "hreflang sahifaning o'zini ko'rsatmaydi");
+  for (const [lang, u] of entries) {
+    const other = heads.get(u);
+    if (!other) { fail(p, `hreflang ${lang} → ${u} tekshirilgan sahifa emas`); continue; }
+    if (JSON.stringify(Object.entries(other.hreflang).sort()) !== JSON.stringify(Object.entries(h.hreflang).sort()))
+      fail(p, `hreflang ${lang} → ${u} bilan ikki tomonlama emas`);
+  }
 }
 
 // sitemap: asl 86 URL kamaymasligi kerak
