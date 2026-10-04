@@ -1,0 +1,21 @@
+name: ci
+
+# Every push to `production` builds the image and rolls it out to
+# demo.onlaynhamshira.uz (Swarm service hamshira_landing on the prod server).
+# `main` is not deployed: merge main into production to release.
+on:
+  push:
+    branches: [production]
+  workflow_dispatch:
+
+jobs:
+  pipeline:
+    uses: Onlayn-Hamshira/ci-templates/.github/workflows/deploy.yml@main
+    secrets: inherit
+    permissions:
+      contents: write
+      packages: write
+    with:
+      service: landing
+      dockerfile: Dockerfile
+      run_migrations: false
