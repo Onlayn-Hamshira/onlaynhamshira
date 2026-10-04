@@ -1,32 +1,39 @@
-// "Nega biz?" — taqqoslash sahifalari (/onlayn-hamshira-vs-ananaviy, /onlayn-uhod-vs-tradicionnyj,
+// "Nega biz?" sahifalari (/onlayn-hamshira-vs-ananaviy, /onlayn-uhod-vs-tradicionnyj,
 // /online-nursing-vs-traditional). Matnlar Tilda sahifalaridan (content/legacy/*.json) olingan.
 // ⚠️ h1 — Tilda'dagi birinchi H1 bilan aynan bir xil (SEO). Metadata va JSON-LD o'sha JSON'da qoladi.
-// Tilda'da sahifadagi ikkinchi H1 bu yerda bo'lim sarlavhasi (H2) bo'lib turadi.
+// Bo'lim sarlavhasi (H2, advantagesTitle) Tilda'da "...an'anaviy usullardan yaxshiroq" edi — egasi qarori bilan
+// betaraf qilingan ("Nega OnlaynHamshira.uz?"): sahifa offline usulni yomonlamasligi kerak.
+//
+// Tilda'dagi 17 qatorli "biz ✓ / offline ✗" jadvali ATAYLAB olib tashlangan: har mezonda an'anaviy usulni
+// yomonlayotgandek ko'rinardi. O'rniga faqat o'z ustunliklarimiz: hero'da 4 ta qisqa (highlights), bo'limda
+// 6 ta kartochka (benefits). Jadvalning "biz" tomonidagi da'volar kartochka izohlariga ko'chirilgan, ichki
+// havolalar (blog maqolalari) saqlangan. Offline usul haqida salbiy gap qo'shmang.
 
 import type { IconName } from "@/components/Icon";
 import type { Locale } from "@/lib/i18n/config";
 
-type Row = { feature: string; us: string; old: string; href?: string };
-type Item = { title: string; text?: string };
+type Link = { label: string; href: string };
+type Item = { title: string; text?: string; links?: Link[] };
+type Highlight = { label: string; text: string };
 
 export type WhyDict = {
   eyebrow: string;
   h1: string;
   lead: string;
   cta: string;
-  toCompare: string;
+  toAdvantages: string;
   chipVerified: string;
   chipFast: string;
-  /** Hero'dagi qisqa taqqoslash kartasi sarlavhasi */
-  keyDiff: string;
-  /** Mobil: qolgan taqqoslash qatorlarini ochish, {n} — soni */
-  showMore: string;
-  compareTitle: string;
-  compareCaption: string;
-  cols: { feature: string; us: string; old: string };
-  rows: Row[];
+  brand: string;
+  /** Hero'dagi qisqa ustunliklar paneli */
+  highlightsTitle: string;
+  highlights: Highlight[];
+  /** Ustunliklar bo'limi: betaraf sarlavha (H2) va an'anaviy usulni yomonlamaydigan qisqa kirish */
+  advantagesTitle: string;
+  advantagesText: string;
   benefitsLabel: string;
-  benefitsTitle: string;
+  /** Kartochkalar ustidagi qo'shimcha sarlavha (faqat Tilda'da alohida matn bo'lgan tilda) */
+  benefitsTitle?: string;
   benefits: Item[];
   forWhoTitle: string;
   forWho: string[];
@@ -45,44 +52,37 @@ export const WHY_FORWHO_ICONS: IconName[] = ["heart", "bandage", "people", "cale
 const uz: WhyDict = {
   eyebrow: "Nega biz?",
   h1: "Onlayn hamshiralik vs an’anaviy hamshiralik Qaysi biri yaxshiroq O‘zbekistonda?",
-  lead: "Tanishlar orqali izlash, noaniq narxlar va kafolatsiz xizmat o‘rniga — tekshirilgan mutaxassislar, aniq narxlar va bir necha daqiqada onlayn buyurtma.",
+  lead: "Tekshirilgan mutaxassislar, aniq narxlar va bir necha daqiqada onlayn buyurtma — hammasi bitta platformada.",
   cta: "Hamshira chaqirish",
-  toCompare: "Taqqoslashni ko‘rish",
+  toAdvantages: "Ustunliklarni ko‘rish",
   chipVerified: "Tekshirilgan mutaxassislar",
   chipFast: "Bir necha daqiqada",
-  keyDiff: "Asosiy farqlar",
-  showMore: "Yana {n} ta mezonni ko‘rish",
-  compareTitle: "Nega OnlaynHamshira.uz an'anaviy usullardan yaxshiroq",
-  compareCaption: "Taqqoslash",
-  cols: { feature: "Xususiyat", us: "OnlaynHamshira.uz", old: "Eski / Offline usullar" },
-  rows: [
-    { feature: "Mutaxassis topish", us: "Tezkor online qidiruv", old: "Tanishlar orqali, guruhlarda izlash" },
-    { feature: "Tekshiruv", us: "Shaxs va tajriba tasdiqlangan", old: "Hech qanday tekshiruv yo‘q" },
-    { feature: "Fikrlar", us: "Haqiqiy mijoz sharhlari", old: "Mavjud emas" },
-    { feature: "Xavfsizlik", us: "Platforma kafolati va yordam", old: "Hech qanday kafolat yo‘q" },
-    { feature: "Mavjudlik", us: "24/7 bron qilish", old: "Faqat javob bersa" },
-    { feature: "Tezlik", us: "Bir necha daqiqada", old: "Soatlar yoki kunlar" },
-    { feature: "Filtrlar", us: "Hudud, narx, jins, xizmat turi", old: "Filtrlar yo‘q" },
-    { feature: "Aloqa", us: "Platforma orqali xavfsiz yozish/qo‘ng‘iroq", old: "Tasodifiy raqamlar, DM" },
-    { feature: "Mutaxassislar turi", us: "Hamshira, shifokor, massaj, parvarish, postpartum xizmat", old: "Juda cheklangan", href: "/blog/ayollar-bolalar-massaji-toshkentda" },
-    { feature: "Narxlar", us: "Ochig‘i ko‘rsatiladi", old: "Noaniq, savdolashish" },
-    { feature: "To‘lov", us: "Xavfsiz to‘lov tizimi", old: "Naqd, xavfli" },
-    { feature: "Kafolat", us: "Muammo bo‘lsa yordam", old: "Hammasi o‘zingizda" },
-    { feature: "Almashtirish", us: "Oson almashtirish", old: "Yana boshidan qidirish" },
-    { feature: "Qulaylik", us: "Uyga kelish, qulay xizmat", old: "Borib kelish, qo‘ng‘iroqlar", href: "/blog/hamshira-uyga-chaqirish-toshkent" },
-    { feature: "Ishonch", us: "Tekshirilgan mutaxassislar", old: "Tasodifiy odamlar" },
-    { feature: "Tarix", us: "Buyurtmalar saqlanadi", old: "Yo‘q" },
-    { feature: "Tajriba", us: "Zamonaviy onlayn", old: "Stress va noaniqlik" },
+  brand: "OnlaynHamshira.uz",
+  highlightsTitle: "Asosiy ustunliklar",
+  highlights: [
+    { label: "Tekshiruv", text: "Shaxs va tajriba tasdiqlangan" },
+    { label: "Narxlar", text: "Ochig‘i ko‘rsatiladi" },
+    { label: "Tezlik", text: "Bir necha daqiqada" },
+    { label: "Kafolat", text: "Muammo bo‘lsa yordam" },
   ],
+  advantagesTitle: "Nega OnlaynHamshira.uz?",
+  advantagesText: "An’anaviy usulda hamshira odatda tanishlar orqali topiladi. Platforma shu jarayonni tezroq, shaffofroq va qulayroq qiladi.",
   benefitsLabel: "Afzalliklar",
-  benefitsTitle: "Afzalliklar",
   benefits: [
-    { title: "Tekshirilgan tibbiy mutaxassislar" },
-    { title: "Bir necha daqiqada onlayn buyurtma" },
-    { title: "Aniq narxlar" },
-    { title: "Xizmatdan so‘ng elektron hisobot" },
-    { title: "O‘zbekiston bo‘ylab xizmat" },
-    { title: "Qulay grafik va qo‘llab-quvvatlash" },
+    {
+      title: "Tekshirilgan tibbiy mutaxassislar",
+      text: "Shaxsi va tajribasi tasdiqlangan mutaxassislar, profilida haqiqiy mijoz sharhlari.",
+      links: [{ label: "Hamshira, shifokor, massaj, parvarish, postpartum xizmat", href: "/blog/ayollar-bolalar-massaji-toshkentda" }],
+    },
+    { title: "Bir necha daqiqada onlayn buyurtma", text: "Hudud, narx va xizmat turi bo‘yicha tanlaysiz — bron qilish 24/7 ochiq." },
+    { title: "Aniq narxlar", text: "Narxlar ochiq ko‘rsatiladi, to‘lov xavfsiz tizim orqali." },
+    { title: "Xizmatdan so‘ng elektron hisobot", text: "Tashrifdan so‘ng hisobot olasiz, buyurtmalar tarixi saqlanadi." },
+    {
+      title: "O‘zbekiston bo‘ylab xizmat",
+      text: "Mutaxassis uyingizga keladi.",
+      links: [{ label: "Uyga kelish, qulay xizmat", href: "/blog/hamshira-uyga-chaqirish-toshkent" }],
+    },
+    { title: "Qulay grafik va qo‘llab-quvvatlash", text: "Muammo bo‘lsa platforma yordam beradi, mutaxassisni almashtirish oson." },
   ],
   forWhoTitle: "Kimlar uchun mos",
   forWho: [
@@ -103,44 +103,37 @@ const uz: WhyDict = {
 const ru: WhyDict = {
   eyebrow: "Почему мы?",
   h1: "Онлайн ухаживание vs традиционный уход что лучше в Узбекистане?",
-  lead: "Вместо поиска через знакомых, непонятных цен и отсутствия гарантий — проверенные специалисты, прозрачные цены и онлайн-заказ за несколько минут.",
+  lead: "Проверенные специалисты, прозрачные цены и онлайн-заказ за несколько минут — всё на одной платформе.",
   cta: "Вызвать медсестру",
-  toCompare: "Смотреть сравнение",
+  toAdvantages: "Смотреть преимущества",
   chipVerified: "Проверенные специалисты",
   chipFast: "Заказ за минуты",
-  keyDiff: "Ключевые отличия",
-  showMore: "Показать ещё {n} критериев",
-  compareTitle: "Почему выбирают OnlaynHamshira.uz вместо традиционного поиска медицинского персонала",
-  compareCaption: "Быстрое сравнение",
-  cols: { feature: "Параметр", us: "OnlaynHamshira.uz", old: "Старые/офлайн способы" },
-  rows: [
-    { feature: "Поиск специалистов", us: "Мгновенный онлайн поиск", old: "Просьбы знакомым, поиск в чатах, удача" },
-    { feature: "Верификация", us: "Проверенные профили и документы", old: "Нет проверки, высокий риск" },
-    { feature: "Отзывы", us: "Настоящие отзывы клиентов", old: "Отсутствуют" },
-    { feature: "Безопасность", us: "Поддержка платформы", old: "Нет гарантий" },
-    { feature: "Доступность", us: "24/7 бронирование", old: "Зависит от ответа человека" },
-    { feature: "Скорость", us: "Подбор и заказ за минуты", old: "Часы или дни" },
-    { feature: "Фильтры", us: "Навыки, цена, район, пол", old: "Нет фильтров" },
-    { feature: "Связь", us: "Безопасный контакт через платформу", old: "Личные звонки, сообщения" },
-    { feature: "Специалисты", us: "Медсёстры, врачи, массаж, сиделки, послеродовые специалисты", old: "Обычно только один вариант", href: "/ru/blog/massazh-dlya-zhenshchin-i-detey-v-tashkente" },
-    { feature: "Цены", us: "Чёткие и прозрачные", old: "Неясные, зависит от договорённости" },
-    { feature: "Оплата", us: "Безопасные платежи", old: "Наличные, риск" },
-    { feature: "Гарантии", us: "Поддержка при проблемах", old: "Решаете сами" },
-    { feature: "Замена", us: "Лёгкий поиск альтернативы", old: "Нужно искать заново" },
-    { feature: "Комфорт", us: "Услуги на дому", old: "Поездки и звонки", href: "/ru/blog/medsestra-na-dom-tashkent" },
-    { feature: "Доверие", us: "Проверенный персонал", old: "Случайные люди" },
-    { feature: "История заказов", us: "Сохраняется", old: "Нет записей" },
-    { feature: "Опыт", us: "Современная онлайн-платформа", old: "Сложности и стресс" },
+  brand: "OnlaynHamshira.uz",
+  highlightsTitle: "Ключевые преимущества",
+  highlights: [
+    { label: "Верификация", text: "Проверенные профили и документы" },
+    { label: "Цены", text: "Чёткие и прозрачные" },
+    { label: "Скорость", text: "Подбор и заказ за минуты" },
+    { label: "Гарантии", text: "Поддержка при проблемах" },
   ],
+  advantagesTitle: "Почему выбирают OnlaynHamshira.uz",
+  advantagesText: "Традиционно медсестру ищут через знакомых. Платформа делает этот процесс быстрее, прозрачнее и удобнее.",
   benefitsLabel: "Преимущества",
-  benefitsTitle: "Преимущества",
   benefits: [
-    { title: "Проверенные медицинские сотрудники" },
-    { title: "Онлайн-бронирование за несколько минут" },
-    { title: "Прозрачные цены" },
-    { title: "Электронные записи после визита" },
-    { title: "Доступно по всему Узбекистану" },
-    { title: "Гибкий график и поддержка" },
+    {
+      title: "Проверенные медицинские сотрудники",
+      text: "Профили и документы проверены, в профиле — настоящие отзывы клиентов.",
+      links: [{ label: "Медсёстры, врачи, массаж, сиделки, послеродовые специалисты", href: "/ru/blog/massazh-dlya-zhenshchin-i-detey-v-tashkente" }],
+    },
+    { title: "Онлайн-бронирование за несколько минут", text: "Выбор по навыкам, цене, району и полу — бронирование доступно 24/7." },
+    { title: "Прозрачные цены", text: "Цены чёткие и прозрачные, оплата — через безопасные платежи." },
+    { title: "Электронные записи после визита", text: "После визита вы получаете отчёт, история заказов сохраняется." },
+    {
+      title: "Доступно по всему Узбекистану",
+      text: "Специалист приезжает к вам домой.",
+      links: [{ label: "Услуги на дому", href: "/ru/blog/medsestra-na-dom-tashkent" }],
+    },
+    { title: "Гибкий график и поддержка", text: "Поддержка при проблемах и лёгкий поиск замены специалиста." },
   ],
   forWhoTitle: "Для кого подходит",
   forWho: [
@@ -160,43 +153,37 @@ const ru: WhyDict = {
 const en: WhyDict = {
   eyebrow: "Why us?",
   h1: "Online Nursing vs Traditional Nursing in Uzbekistan What’s Better?",
-  lead: "Instead of asking around, unclear prices and no guarantees — verified professionals, transparent costs and online booking in minutes.",
+  lead: "Verified professionals, transparent costs and online booking in minutes — all on one platform.",
   cta: "Call a nurse",
-  toCompare: "See the comparison",
+  toAdvantages: "See the advantages",
   chipVerified: "Verified specialists",
   chipFast: "Booked in minutes",
-  keyDiff: "Key differences",
-  showMore: "Show {n} more criteria",
-  compareTitle: "Why Choose OnlaynHamshira.uz vs Traditional Nursing Services",
-  compareCaption: "Quick comparison",
-  cols: { feature: "Feature / Benefit", us: "OnlaynHamshira.uz", old: "Old / Offline / Random Search" },
-  rows: [
-    { feature: "Finding specialists", us: "Instant online search", old: "Ask friends, scroll channels, hope for luck" },
-    { feature: "Verification", us: "Verified specialists, profiles, IDs", old: "No verification risky" },
-    { feature: "Reviews & ratings", us: "Transparent client reviews", old: "Zero feedback" },
-    { feature: "Safety", us: "Platform protection & support", old: "No guarantee, no support" },
-    { feature: "Availability", us: "24/7 booking", old: "Only when someone answers your call" },
-    { feature: "Speed", us: "Match & book in minutes", old: "Hours or days of searching" },
-    { feature: "Profiles & filters", us: "Filter by skills, location, price, gender", old: "No filters just guesswork" },
-    { feature: "Communication", us: "Secure in-app contact", old: "Random DMs / calls" },
-    { feature: "Specialist variety", us: "Nurses, doctors, massage, caregivers, postpartum specialists, etc.", old: "Usually only one type (if lucky)", href: "/en/blog/massage-in-tashkent-women-baby" },
-    { feature: "Pricing", us: "Clear rates", old: "Confusing, “depends”, negotiations" },
-    { feature: "Payment safety", us: "Secure payments", old: "Cash only / risky transfers" },
-    { feature: "Platform guarantee", us: "Support if something goes wrong", old: "You’re on your own" },
-    { feature: "Replacement service", us: "Easy to find another pro", old: "Start search again from zero" },
-    { feature: "Convenience", us: "Home service + comfort", old: "Leave home / long calls / paperwork", href: "/en/blog/nurse-at-home-tashkent-services-prices" },
-    { feature: "Trust", us: "Verified medical workers", old: "“My cousin knows a lady…”" },
-    { feature: "Record keeping", us: "Booking history saved", old: "No tracking" },
-    { feature: "User experience", us: "Browsing like ordering Uber for healthcare", old: "Chaos & stress" },
+  brand: "OnlaynHamshira.uz",
+  highlightsTitle: "Key advantages",
+  highlights: [
+    { label: "Verification", text: "Verified specialists, profiles, IDs" },
+    { label: "Pricing", text: "Clear rates" },
+    { label: "Speed", text: "Match & book in minutes" },
+    { label: "Platform guarantee", text: "Support if something goes wrong" },
   ],
+  advantagesTitle: "Why Choose OnlaynHamshira.uz",
+  advantagesText: "Traditionally, a nurse is found through people you know. The platform makes that process faster, more transparent and more convenient.",
   benefitsLabel: "Benefits",
   benefitsTitle: "What makes OnlaynHamshira.uz stand out",
   benefits: [
-    { title: "Verified professionals", text: "Every nurse on OnlaynHamshira.uz is fully credentialed and profiled. You see their experience, specialties, and ratings before booking." },
-    { title: "Seamless Online Booking", text: "Go online, pick your service type, nurse, date & time in minutes no long calls. This speed gives you peace of mind fast." },
+    {
+      title: "Verified professionals",
+      text: "Every nurse on OnlaynHamshira.uz is fully credentialed and profiled. You see their experience, specialties, and ratings before booking.",
+      links: [{ label: "Nurses, doctors, massage, caregivers, postpartum specialists, etc.", href: "/en/blog/massage-in-tashkent-women-baby" }],
+    },
+    { title: "Seamless Online Booking", text: "Go online, pick your service type, nurse, date & time in minutes. This speed gives you peace of mind fast." },
     { title: "Transparent Pricing", text: "We believe you should know the price upfront. You choose the service, see cost, and confirm. No surprise bills later." },
     { title: "Digital Records & Reports", text: "After the visit, you receive a digital report. All notes are stored securely and accessible anytime." },
-    { title: "Wide Coverage Across Uzbekistan", text: "In Tashkent areas OnlaynHamshira.uz can handle it." },
+    {
+      title: "Wide Coverage Across Uzbekistan",
+      text: "In Tashkent areas OnlaynHamshira.uz can handle it.",
+      links: [{ label: "Home service + comfort", href: "/en/blog/nurse-at-home-tashkent-services-prices" }],
+    },
     { title: "Flexible Scheduling & Follow-up", text: "Need to shift time, extend service, or ask questions later? We’ve got your back with online support and follow-ups." },
   ],
   forWhoTitle: "Who is this great for?",
@@ -205,7 +192,7 @@ const en: WhyDict = {
     "Post-surgery patients requiring short-term care at home",
     "Families wanting flexible, reliable nursing support",
     "Busy professionals who want booking and tracking done online",
-    "Anyone in Uzbekistan who values modern, digital service vs old-school agency calls",
+    "Anyone in Uzbekistan who values a modern, digital service",
   ],
   howTitle: "How it works (3 easy steps)",
   steps: ["Choose your service and nurse.", "Select date & time, fill in the details.", "Nurse arrives, you get service and the digital report afterwards."],
@@ -226,7 +213,7 @@ const en: WhyDict = {
     { q: "How fast can I find a specialist?", a: "Most users find and book a suitable specialist within minutes. You can filter by location, service type, availability, and price to speed up the process." },
     { q: "Is the service available outside Tashkent?", a: "Yes. Onlaynhamshira.uz provides coverage across Uzbekistan, including major cities and regional centers. Availability continues to expand as more specialists join the platform." },
     { q: "Do specialists provide services at home?", a: "Yes. All services are offered at your home or preferred location. Simply select your area, time, and the type of specialist needed." },
-    { q: "How do payments work?", a: "Payments are processed securely through the platform. This protects both clients and specialists and eliminates risks linked to cash transactions or private transfers." },
+    { q: "How do payments work?", a: "Payments are processed securely through the platform. This protects both clients and specialists." },
     { q: "Can I book long-term care?", a: "Yes. Options include short-term visits, long-term care, night shifts, daily support, and extended recovery services. You can discuss schedules directly with the specialist." },
     { q: "How are prices set?", a: "Each specialist sets their own pricing. You can view and compare prices transparently before booking. There are no hidden charges imposed by the platform." },
     { q: "Can I read reviews and ratings?", a: "Yes. Every specialist profile includes reviews and ratings from previous clients. This helps you make confident, informed decisions." },
@@ -234,12 +221,12 @@ const en: WhyDict = {
     { q: "Can I change specialists if I am not satisfied?", a: "Yes. You are free to book another specialist at any time. Your comfort and confidence are a priority." },
     { q: "Are there extra fees for using the platform?", a: "No. You only pay for the services provided by the specialist. Onlaynhamshira.uz does not add hidden fees." },
     { q: "Can family members book on behalf of a patient?", a: "Yes. Many clients book services for relatives such as parents, children, and elderly family members." },
-    { q: "Is the service safe and legitimate?", a: "Yes. Onlaynhamshira.uz is a legally operating platform that verifies specialists, secures payments, and protects user data. The platform offers a safer and more reliable alternative to informal search methods." },
+    { q: "Is the service safe and legitimate?", a: "Yes. Onlaynhamshira.uz is a legally operating platform that verifies specialists, secures payments, and protects user data." },
     { q: "What if I need help or have questions before booking?", a: "Our support team is available to assist you with inquiries, help you navigate the platform, and provide guidance before or after booking." },
   ],
   conclusionTitle: "Closing statement",
   conclusion:
-    "Finding reliable healthcare or personal care support should be simple and secure. Onlaynhamshira.uz provides a structured, transparent, and safe way to book qualified specialists without the uncertainty of informal search channels. If you’re tired of the hassle, uncertainty and wait times of traditional nursing services OnlaynHamshira.uz is the upgrade. Fast online booking, verified professionals, transparent costs, country-wide coverage, and a digital experience built for you.",
+    "Finding reliable healthcare or personal care support should be simple and secure. Onlaynhamshira.uz provides a structured, transparent, and safe way to book qualified specialists. Fast online booking, verified professionals, transparent costs, country-wide coverage, and a digital experience built for you.",
 };
 
 export const WHY: Record<Locale, WhyDict> = { uz, ru, en };

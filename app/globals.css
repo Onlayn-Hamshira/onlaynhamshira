@@ -320,6 +320,37 @@ body {
 .blog-prose .yt-facade:focus-visible { outline: 3px solid var(--color-brand-teal); outline-offset: 3px; }
 .blog-prose .yt-frame { display: block; width: 100%; aspect-ratio: 16 / 9; height: auto; border: 0; border-radius: 24px; margin-block: 2rem; }
 
+/* Ochiladigan blok (lib/blog.ts): rangli to'rtburchak sarlavha + uchburchak; ochilganda punktlar birin-ketin chiqadi */
+.blog-prose .acc { margin-block: 0.6rem; border-radius: 16px; background: var(--color-mist); interpolate-size: allow-keywords; }
+.blog-prose .acc summary {
+  display: flex; align-items: center; gap: 0.8rem; padding: 0.85rem 1.1rem; border-radius: 16px;
+  background: var(--color-mint); color: var(--color-ink); font-weight: 650; line-height: 1.35;
+  list-style: none; user-select: none; transition: background-color .2s;
+}
+.blog-prose .acc summary::-webkit-details-marker { display: none; }
+.blog-prose .acc summary:hover { background: #c3f3c8; }
+.blog-prose .acc-num {
+  flex: none; display: grid; place-items: center; width: 1.9rem; height: 1.9rem; border-radius: 10px;
+  background: #fff; color: var(--color-brand-deep); font-size: 0.9rem; font-weight: 700;
+}
+.blog-prose .acc-title { flex: 1; min-width: 0; }
+.blog-prose .acc-arrow {
+  flex: none; width: 0; height: 0; border-inline: 7px solid transparent; border-top: 9px solid var(--color-brand-deep);
+  transition: transform .3s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.blog-prose .acc[open] .acc-arrow { transform: rotate(180deg); }
+.blog-prose .acc > :is(ul, ol) { margin: 0; padding: 0.7rem 1.1rem 0.9rem; }
+/* Balandlik silliq ochiladi/yopiladi (qo'llamaydigan brauzerda — darhol) */
+.blog-prose .acc::details-content { block-size: 0; overflow: clip; transition: block-size .35s ease, content-visibility .35s allow-discrete; }
+.blog-prose .acc[open]::details-content { block-size: auto; }
+.blog-prose .acc[open] li { animation: acc-item .45s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+.blog-prose .acc[open] li:nth-child(2) { animation-delay: .09s; }
+.blog-prose .acc[open] li:nth-child(3) { animation-delay: .18s; }
+.blog-prose .acc[open] li:nth-child(4) { animation-delay: .27s; }
+.blog-prose .acc[open] li:nth-child(5) { animation-delay: .36s; }
+.blog-prose .acc[open] li:nth-child(n + 6) { animation-delay: .45s; }
+@keyframes acc-item { from { opacity: 0; transform: translateY(-8px); } }
+
 @media (max-width: 639.98px) {
   .blog-prose { font-size: 17px; }
   .blog-prose h2 { margin-top: 2.25rem; }
