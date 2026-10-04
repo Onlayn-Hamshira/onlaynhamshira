@@ -4,6 +4,7 @@ import dynamic from "next/dynamic";
 import { useEffect, useRef, useState } from "react";
 import { MapPin, Navigation } from "lucide-react";
 import { OFFICE, directionsUrl } from "./office";
+import { loadYmaps, preconnectYmaps } from "./ymaps";
 import type { Dict } from "@/lib/i18n/dictionaries/uz";
 
 const MapView = dynamic(() => import("./MapView"), { ssr: false });
@@ -17,7 +18,8 @@ function isRealInteraction(e: Event) {
   return true;
 }
 
-/** Xarita bo'limi: kutubxona ekranga yaqinlashganda va foydalanuvchi harakatidan keyin yuklanadi; ustida manzil kartochkasi */
+/** Xarita bo'limi: darhol statik rasm (public/img/map, Yandex Static API'dan olingan, zoom 16), interaktiv xarita
+ *  ekranga yaqinlashganda va foydalanuvchi harakatidan keyin yuklanib, ustiga silliq chiqadi; ustida manzil kartochkasi */
 export function ContactMap({ t, address, className = "" }: { t: Dict["map"]; address: string; className?: string }) {
   const ref = useRef<HTMLDivElement>(null);
   const [load, setLoad] = useState(false);
@@ -34,12 +36,15 @@ export function ContactMap({ t, address, className = "" }: { t: Dict["map"]; add
     const tryLoad = () => {
       if (visible && interacted) {
         io.disconnect();
+        // Skript MapView chunk'ini kutmasdan, u bilan parallel yuklanadi
+        loadYmaps(t.apiLang).catch(() => {});
         setLoad(true);
       }
     };
     const onInteract = (e: Event) => {
       if (!isRealInteraction(e)) return;
       interacted = true;
+      preconnectYmaps();
       evs.forEach((e) => removeEventListener(e, onInteract, true));
       tryLoad();
     };
@@ -48,7 +53,7 @@ export function ContactMap({ t, address, className = "" }: { t: Dict["map"]; add
         visible = e.isIntersecting;
         tryLoad();
       },
-      { rootMargin: "300px 0px" },
+      { rootMargin: "1000px 0px" },
     );
     io.observe(el);
     evs.forEach((e) => addEventListener(e, onInteract, { capture: true, passive: true }));
@@ -56,12 +61,31 @@ export function ContactMap({ t, address, className = "" }: { t: Dict["map"]; add
       io.disconnect();
       evs.forEach((e) => removeEventListener(e, onInteract, true));
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- til sahifa umri davomida o'zgarmaydi
   }, []);
 
   return (
     <div ref={ref} className={`relative overflow-hidden bg-[#eef1f3] ${className}`}>
-      {/* Yuklanguncha yumshoq skelet */}
-      <div aria-hidden className="absolute inset-0 animate-pulse bg-[radial-gradient(circle_at_50%_55%,#e3e8eb,transparent_60%)]" />
+      {/* Interaktiv xarita yuklanguncha statik rasm + belgi (markazi — ofis, o'lchami 650×450) */}
+      <div aria-hidden className="absolute inset-0">
+        {/* eslint-disable-next-line @next/next/no-img-element -- kichik statik webp, optimizatsiya kerak emas */}
+        <img
+          src={`/img/map/static-${t.apiLang.slice(0, 2)}.webp`}
+          alt=""
+          width={650}
+          height={450}
+          loading="lazy"
+          decoding="async"
+          className="oh-ymap-static size-full object-cover"
+        />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-full">
+          <div className="oh-pin">
+            <span className="oh-pin-pulse" />
+            {/* eslint-disable-next-line @next/next/no-img-element -- SVG belgi */}
+            <img src="/img/map-pin.svg" alt="" width={46} height={57} draggable={false} />
+          </div>
+        </div>
+      </div>
       {load && <MapView t={t} address={address} />}
 
       {/* Manzil kartochkasi */}
