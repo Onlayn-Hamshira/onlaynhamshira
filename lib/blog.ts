@@ -80,6 +80,20 @@ export function parseArticle(pg: LegacyPage): Parsed {
     );
   });
 
+  // Raqamlangan sarlavha + ro'yxat ("1. Ukol qilish" + <ul>) → ochiladigan blok (<details>, JS'siz ishlaydi).
+  // Matn DOM'da qoladi (SEO), ko'rinishi — globals.css dagi .acc
+  html = html.replace(
+    /<p>\s*(<strong>(?:(?!<\/p>)[\s\S])*?)<\/p>\s*(?:<div>\s*)?<(ul|ol)>((?:(?!<\/\2>)[\s\S])*)<\/\2>(?:\s*<\/div>)?/g,
+    (all, head: string, tag: string, items: string) => {
+      const m = plain(head).match(/^(\d+)\.\s*(.+)$/);
+      if (!m) return all;
+      return (
+        `<details class="acc"><summary><span class="acc-num">${m[1]}</span><span class="acc-title">${m[2]}</span>` +
+        `<span class="acc-arrow" aria-hidden="true"></span></summary><${tag}>${items}</${tag}></details>`
+      );
+    },
+  );
+
   // Bo'sh qolgan o'ram div'lar (Tilda bloklari) — oraliq bo'shliq bermasin
   for (let prev = ""; prev !== html; ) {
     prev = html;
