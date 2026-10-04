@@ -16,7 +16,7 @@ const uz = {
     callNurse: "Hamshira chaqirish",
     callNurseOnline: "Hamshirani onlayn chaqirish",
     order: "Buyurtma berish",
-    onlineApp: "Onlayn ilova",
+    onlineApp: "Web ilova",
     skipToContent: "Asosiy mazmunga o‘tish",
     backToTop: "Sahifa boshiga qaytish",
     close: "Yopish",
@@ -443,7 +443,7 @@ const uz = {
     ios: "iPhone",
     scan: "Telefon kamerasi bilan skanerlang",
     webTitle: "Ilovani o‘rnatmasdan ham bo‘ladi",
-    webText: "Onlayn ilova brauzerda ishlaydi — hamshirani bir necha daqiqada chaqiring.",
+    webText: "Web ilova brauzerda ishlaydi — hamshirani bir necha daqiqada chaqiring.",
     featuresLabel: "Ilova imkoniyatlari",
   },
   mobileCta: {
