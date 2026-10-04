@@ -66,10 +66,6 @@ function StoreLinks({ className = "" }: { className?: string }) {
 
 /* ───────── Hero ───────── */
 function Hero({ t }: { t: ExpertDict }) {
-  const links = [
-    ["instructions", t.nav.steps], ["advantages", t.nav.benefits], ["requirements", t.nav.requirements],
-    ["income", t.nav.income], ["faq", t.nav.faq],
-  ] as const;
   return (
     <section className="relative overflow-hidden px-3 pt-[calc(80px+env(safe-area-inset-top))] sm:px-4">
       <div className="relative mx-auto max-w-[1400px] overflow-hidden rounded-[36px] bg-[linear-gradient(160deg,#eefbf0_0%,#e8f7fb_60%,#f3f8fa_100%)]">
@@ -120,15 +116,6 @@ function Hero({ t }: { t: ExpertDict }) {
           ))}
         </dl>
       </div>
-
-      {/* Sahifa ichidagi navigatsiya */}
-      <nav aria-label={t.eyebrow} className="no-scrollbar mx-auto mt-4 flex max-w-[1400px] gap-2 overflow-x-auto px-1 pb-1">
-        {links.map(([id, label]) => (
-          <a key={id} href={`#${id}`} className="shrink-0 rounded-full bg-mist px-4 py-2.5 text-sm font-semibold transition hover:bg-mint hover:text-brand-deep">
-            {label}
-          </a>
-        ))}
-      </nav>
     </section>
   );
 }

@@ -39,7 +39,6 @@ export type ExpertDict = {
   floatOrderSub: string;
   floatPaid: string;
   floatPaidSub: string;
-  nav: { steps: string; benefits: string; requirements: string; income: string; faq: string };
   steps: { label: string; title: string; text: string; stepWord: string; items: Item[] };
   benefits: { label: string; title: string; text: string; items: Item[] };
   requirements: { label: string; title: string; text: string; items: Item[] };
@@ -81,7 +80,6 @@ const uz: ExpertDict = {
   floatOrderSub: "Sizning hududingizda",
   floatPaid: "To‘lov olindi",
   floatPaidSub: "Xizmatdan so‘ng darhol",
-  nav: { steps: "Qanday boshlash", benefits: "Imtiyozlar", requirements: "Talablar", income: "Daromad", faq: "FAQ" },
   steps: {
     label: "Yo‘riqnoma",
     title: "Onlayn Hamshira bilan ishlashni qanday boshlash mumkin?",
@@ -176,7 +174,6 @@ const ru: ExpertDict = {
   floatOrderSub: "В вашем районе",
   floatPaid: "Оплата получена",
   floatPaidSub: "Сразу после услуги",
-  nav: { steps: "Как начать", benefits: "Преимущества", requirements: "Требования", income: "Доход", faq: "FAQ" },
   steps: {
     label: "Инструкция",
     title: "Как начать работать с Onlayn Hamshira?",
@@ -271,7 +268,6 @@ const en: ExpertDict = {
   floatOrderSub: "In your area",
   floatPaid: "Payment received",
   floatPaidSub: "Right after the visit",
-  nav: { steps: "How to start", benefits: "Advantages", requirements: "Requirements", income: "Income", faq: "FAQ" },
   steps: {
     label: "Instructions",
     title: "How to start working with Onlayn Hamshira?",
