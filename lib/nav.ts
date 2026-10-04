@@ -61,6 +61,18 @@ export const pageAlternates = (path: string, group?: string): Record<Locale, str
   TRANSLATIONS.find((t) => Object.values(t).includes(path)) ??
   (group && BLOG_GROUPS.has(group) ? PAGES.blog : undefined);
 
+/**
+ * <head>dagi hreflang uchun: faqat sahifaning HAQIQIY tarjimalari (+ x-default = o'zbekchasi).
+ * Tilda har sahifada bosh sahifalarni ko'rsatardi (xato, Google e'tiborsiz qoldiradi). Juftligi yo'q
+ * sahifa — hreflang yo'q (blogga zaxira yoki "/ru#contact" kabi bo'lim havolalari hreflang bo'la olmaydi).
+ */
+export const hreflangAlternates = (path: string): Record<Locale | "x-default", string> | undefined => {
+  const set = [...Object.values(PAGES), ...TRANSLATIONS].find(
+    (t) => Object.values(t).includes(path) && !Object.values(t).some((p) => p.includes("#")),
+  );
+  return set && { ...set, "x-default": set.uz };
+};
+
 /** Build vaqtida: TRANSLATIONS dagi har bir yo'l haqiqiy sahifa bo'lishi shart (xato yozilsa build to'xtaydi) */
 export const translationPaths = () => TRANSLATIONS.flatMap((t) => Object.values(t));
 

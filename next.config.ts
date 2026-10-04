@@ -31,13 +31,14 @@ const nextConfig: NextConfig = {
   async rewrites() {
     return [{ source: "/", destination: "/uz" }, ...legacy.rewrites];
   },
+  // Doimiy redirectlar aynan 301 (Next.js'ning permanent: true standarti 308 beradi; SEO talabi — 301)
   async redirects() {
     return [
-      { source: "/uz", destination: "/", permanent: true },
+      { source: "/uz", destination: "/", statusCode: 301 },
       ...legacy.redirects,
-      ...BROKEN_TILDA_LINKS.map((r) => ({ ...r, permanent: true })),
+      ...BROKEN_TILDA_LINKS.map((r) => ({ ...r, statusCode: 301 as const })),
       // Tilda'ning /page{ID}.html manzillari → asl sahifa
-      ...Object.entries(TILDA_PAGE_IDS).map(([id, destination]) => ({ source: `/page${id}.html`, destination, permanent: true })),
+      ...Object.entries(TILDA_PAGE_IDS).map(([id, destination]) => ({ source: `/page${id}.html`, destination, statusCode: 301 as const })),
     ];
   },
   async headers() {

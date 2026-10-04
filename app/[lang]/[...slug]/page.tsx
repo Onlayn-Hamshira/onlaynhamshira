@@ -7,7 +7,7 @@ import { MobileCTA } from "@/components/MobileCTA";
 import { LegacyCta, QrRedirect } from "@/components/LegacyPage";
 import { LOCALES, OG_LOCALE, hasLocale, localePath, type Locale } from "@/lib/i18n/config";
 import { getDictionary } from "@/lib/i18n/get-dictionary";
-import { NAV_KEY_BY_GROUP, pageAlternates, pageHref, translationPaths } from "@/lib/nav";
+import { NAV_KEY_BY_GROUP, hreflangAlternates, pageAlternates, pageHref, translationPaths } from "@/lib/nav";
 import { LEGACY_ROUTES } from "@/lib/seo/routes";
 import { findLegacyPage, legacyPages, slugOf } from "@/lib/seo/legacy";
 import { EXPERT } from "@/lib/expert";
@@ -73,9 +73,11 @@ export async function generateMetadata({ params }: PageProps<"/[lang]/[...slug]"
     description: meta.description,
     keywords: meta.keywords,
     robots: parseRobots(meta.robots),
+    // Canonical — har doim sahifaning o'z URL'i; hreflang — sahifaning haqiqiy tarjimalari (lib/nav.ts).
+    // Tilda'dagi qiymatlar (boshqa maqolaga canonical, har sahifada bosh sahifa hreflang'i) xato edi.
     alternates: {
-      canonical: meta.canonical ?? pg.path,
-      languages: Object.keys(meta.hreflang).length ? meta.hreflang : undefined,
+      canonical: pg.path,
+      languages: hreflangAlternates(pg.path),
     },
     openGraph: {
       url: meta.og.url ?? pg.path,

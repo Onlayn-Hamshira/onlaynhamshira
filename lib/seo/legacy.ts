@@ -70,7 +70,7 @@ export function legacyRouting() {
   if (missing.length) throw new Error(`Legacy pages missing: ${missing.map((r) => r.path).join(", ")}`);
   const seen = new Map<string, string>();
   const rewrites: { source: string; destination: string }[] = [];
-  const redirects: { source: string; destination: string; permanent: true }[] = [];
+  const redirects: { source: string; destination: string; statusCode: 301 }[] = [];
   for (const pg of pages) {
     const internal = internalPath(pg);
     if (seen.has(internal)) throw new Error(`Legacy route collision: ${internal} (${seen.get(internal)} vs ${pg.path})`);
@@ -78,7 +78,7 @@ export function legacyRouting() {
     if (internal === pg.path) continue;
     if (publicPaths.has(internal)) throw new Error(`Internal path ${internal} shadows public URL`);
     rewrites.push({ source: pg.path, destination: internal });
-    redirects.push({ source: internal, destination: pg.path, permanent: true });
+    redirects.push({ source: internal, destination: pg.path, statusCode: 301 });
   }
   return { rewrites, redirects };
 }
