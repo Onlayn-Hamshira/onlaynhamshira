@@ -1,23 +1,15 @@
 import {
-  ArrowDown, ArrowRight, BadgeCheck, CalendarClock, Check, ChevronDown, CreditCard, HeartHandshake, History, House, MessageCircle,
-  Phone, PhoneCall, Plus, RefreshCw, Search, ShieldCheck, SlidersHorizontal, Sparkles, Star, Stethoscope, Tag,
-  UserCheck, X, Zap, type LucideIcon,
+  ArrowDown, ArrowRight, BadgeCheck, Check, HeartHandshake, Phone, Plus, ShieldCheck, Tag, Zap, type LucideIcon,
 } from "lucide-react";
 import { CERTIFICATES, COMPANY_TIN, LINKS, STATS } from "@/lib/data";
-import { fill } from "@/lib/i18n/format";
 import { WHY_BENEFIT_ICONS, WHY_FORWHO_ICONS, type WhyDict } from "@/lib/why";
 import { IconTile } from "./Icon";
 
 // Faoliyat boshlangan yil — birinchi davlat guvohnomasidan (sertifikatlar sahifasidagi bilan bir xil)
 const SINCE_YEAR = CERTIFICATES[0].date.slice(-4);
 
-// Taqqoslash qatorlari uch tilda bir xil tartibda (lib/why.ts) — har biriga ikonka
-const ROW_ICONS: LucideIcon[] = [
-  Search, BadgeCheck, Star, ShieldCheck, CalendarClock, Zap, SlidersHorizontal, MessageCircle, Stethoscope,
-  Tag, CreditCard, HeartHandshake, RefreshCw, House, UserCheck, History, Sparkles,
-];
-// Hero'dagi qisqa taqqoslash: Tekshiruv, Narxlar, Tezlik, Kafolat
-const KEY_ROWS = [1, 9, 5, 11];
+// Hero'dagi qisqa ustunliklar (lib/why.ts → highlights) uch tilda bir xil tartibda: tekshiruv, narx, tezlik, kafolat
+const HIGHLIGHT_ICONS: LucideIcon[] = [BadgeCheck, Tag, Zap, HeartHandshake];
 
 /** 13500 → "13 500" (bosh sahifadagi hisoblagich bilan bir xil ko'rinish) */
 const num = (n: number) => String(n).replace(/\B(?=(\d{3})+(?!\d))/g, " ");
@@ -25,11 +17,6 @@ const num = (n: number) => String(n).replace(/\B(?=(\d{3})+(?!\d))/g, " ");
 const Yes = ({ className = "" }: { className?: string }) => (
   <span aria-hidden className={`grid size-5 shrink-0 place-items-center rounded-full bg-brand-deep text-white ${className}`}>
     <Check className="size-3.5" strokeWidth={3} />
-  </span>
-);
-const No = ({ className = "" }: { className?: string }) => (
-  <span aria-hidden className={`grid size-5 shrink-0 place-items-center rounded-full bg-[#ffe7e7] text-alert ${className}`}>
-    <X className="size-3.5" strokeWidth={3} />
   </span>
 );
 const Pin = ({ className = "" }: { className?: string }) => (
@@ -42,31 +29,6 @@ function Eyebrow({ children, tone = "mint" }: { children: React.ReactNode; tone?
     <p className={`inline-flex items-center gap-2 rounded-full px-3.5 py-1.5 text-sm font-semibold text-brand-deep ${tone === "white" ? "bg-white ring-1 ring-line" : "bg-mint"}`}>
       <span className="size-1.5 rounded-full bg-brand-deep" /> {children}
     </p>
-  );
-}
-
-const MOBILE_VISIBLE = 6;
-
-function MobileRow({ r, i, cols }: { r: WhyDict["rows"][number]; i: number; cols: WhyDict["cols"] }) {
-  const Ico = ROW_ICONS[i % ROW_ICONS.length];
-  return (
-    <li className="overflow-hidden rounded-[22px] bg-white ring-1 ring-line">
-      <p className="flex items-center gap-3 px-4 pt-4 font-semibold">
-        <span aria-hidden className="grid size-9 shrink-0 place-items-center rounded-xl bg-mist text-brand-deep"><Ico className="size-4.5" /></span>
-        {r.feature}
-      </p>
-      <p className="mx-3 mt-3 flex items-start gap-2.5 rounded-2xl bg-[#effbf2] p-3 text-[15px]">
-        <Yes className="mt-0.5" />
-        <span>
-          <span className="sr-only">{cols.us}: </span>
-          {r.href ? <a href={r.href} className="font-medium underline decoration-brand-deep/30 decoration-2 underline-offset-3">{r.us}</a> : <span className="font-medium">{r.us}</span>}
-        </span>
-      </p>
-      <p className="flex items-start gap-2.5 px-6 pt-2.5 pb-4 text-[15px] text-ink-soft">
-        <No className="mt-0.5" />
-        <span><span className="sr-only">{cols.old}: </span>{r.old}</span>
-      </p>
-    </li>
   );
 }
 
@@ -94,8 +56,8 @@ export function WhyPage({ t, callLabel, stats, org }: { t: WhyDict; callLabel: s
                 <a href={LINKS.webApp} className="group inline-flex items-center gap-2 rounded-full bg-brand-grad px-7 py-4 font-semibold text-white shadow-[0_12px_28px_-12px_rgb(56_197_177/0.9)] transition hover:-translate-y-0.5 hover:brightness-105">
                   {t.cta} <ArrowRight className="size-5 transition-transform group-hover:translate-x-1" aria-hidden />
                 </a>
-                <a href="#compare" className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-4 font-semibold ring-1 ring-line transition hover:ring-ink/25">
-                  {t.toCompare} <ArrowDown className="size-4" aria-hidden />
+                <a href="#advantages" className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-4 font-semibold ring-1 ring-line transition hover:ring-ink/25">
+                  {t.toAdvantages} <ArrowDown className="size-4" aria-hidden />
                 </a>
               </div>
               <ul className="mt-8 flex flex-wrap gap-x-6 gap-y-2.5 text-[15px] font-medium">
@@ -109,32 +71,28 @@ export function WhyPage({ t, callLabel, stats, org }: { t: WhyDict; callLabel: s
               </ul>
             </div>
 
-            {/* Dalil paneli: asosiy farqlar + kompaniya rekvizitlari */}
+            {/* Dalil paneli: asosiy ustunliklar + kompaniya rekvizitlari (offline usul bilan qatorma-qator solishtirish yo'q) */}
             <div className="rounded-[28px] bg-ink p-5 text-white shadow-[0_40px_80px_-40px_rgb(16_41_58/0.8)] sm:p-7">
-              <p className="text-[13px] font-semibold tracking-wide text-white/60 uppercase">{t.keyDiff}</p>
-              <div className="mt-4 grid grid-cols-2 gap-2 text-[13px] font-semibold">
-                <span className="flex items-center gap-2 rounded-xl bg-white/10 px-3 py-2.5 ring-1 ring-white/15">
+              <div className="flex flex-wrap items-center justify-between gap-3">
+                <p className="text-[13px] font-semibold tracking-wide text-white/60 uppercase">{t.highlightsTitle}</p>
+                <span className="flex items-center gap-2 rounded-full bg-white/10 py-1 pr-3 pl-1 text-[13px] font-semibold ring-1 ring-white/15">
                   <span aria-hidden className="grid size-6 shrink-0 place-items-center rounded-full bg-white"><Pin className="h-4" /></span>
-                  <span className="truncate">{t.cols.us}</span>
-                </span>
-                <span className="flex items-center gap-2 rounded-xl px-3 py-2.5 text-white/55 ring-1 ring-white/10">
-                  <PhoneCall className="size-4 shrink-0" aria-hidden />
-                  <span className="truncate">{t.cols.old}</span>
+                  {t.brand}
                 </span>
               </div>
-              <ul className="mt-2 divide-y divide-white/10">
-                {KEY_ROWS.map((i) => {
-                  const r = t.rows[i];
-                  const Ico = ROW_ICONS[i];
+              <ul className="mt-3 divide-y divide-white/10">
+                {t.highlights.map((h, i) => {
+                  const Ico = HIGHLIGHT_ICONS[i % HIGHLIGHT_ICONS.length];
                   return (
-                    <li key={r.feature} className="py-3.5">
-                      <p className="flex items-center gap-2 text-[12px] font-semibold tracking-wide text-white/50 uppercase">
-                        <Ico className="size-3.5" aria-hidden /> {r.feature}
-                      </p>
-                      <div className="mt-1.5 grid grid-cols-2 gap-2 text-[14px] leading-snug">
-                        <p className="flex items-start gap-2 font-semibold"><Yes className="mt-px size-4.5! bg-brand-grad!" /> {r.us}</p>
-                        <p className="flex items-start gap-2 text-white/55"><No className="mt-px size-4.5! bg-white/10! text-[#ff8a8a]!" /> {r.old}</p>
+                    <li key={h.label} className="flex items-center gap-4 py-3.5">
+                      <span aria-hidden className="grid size-11 shrink-0 place-items-center rounded-2xl bg-white/10 text-brand ring-1 ring-white/10">
+                        <Ico className="size-5" />
+                      </span>
+                      <div className="min-w-0 flex-1">
+                        <p className="text-[12px] font-semibold tracking-wide text-white/50 uppercase">{h.label}</p>
+                        <p className="mt-0.5 text-[15px] leading-snug font-semibold">{h.text}</p>
                       </div>
+                      <Yes className="size-6! bg-brand-grad!" />
                     </li>
                   );
                 })}
@@ -165,111 +123,47 @@ export function WhyPage({ t, callLabel, stats, org }: { t: WhyDict; callLabel: s
         </div>
       </section>
 
-      {/* ───── Taqqoslash ───── */}
-      <section id="compare" aria-labelledby="cmp-h" className="scroll-mt-24 py-16 sm:py-24">
-        <div className="mx-auto max-w-[1160px] px-4 sm:px-6">
-          <div className="mx-auto max-w-[760px] text-center">
-            <Eyebrow>{t.compareCaption}</Eyebrow>
-            <h2 id="cmp-h" className="mt-3 text-[clamp(26px,6vw,44px)] leading-[1.1] font-semibold tracking-[-0.025em] text-balance">{t.compareTitle}</h2>
-          </div>
-
-          {/* Desktop: jadval — OnlaynHamshira ustuni yaxlit ajratilgan, sarlavha skrollda yopishib turadi */}
-          <table className="mt-12 hidden w-full border-separate border-spacing-0 text-left text-[15px] md:table">
-            <caption className="sr-only">{t.compareCaption}</caption>
-            <thead>
-              <tr>
-                <th scope="col" className="sticky top-[72px] z-10 w-[27%] bg-white/95 px-4 pt-4 pb-4 align-bottom text-[13px] font-semibold tracking-wide text-ink-soft uppercase backdrop-blur">
-                  {t.cols.feature}
-                </th>
-                <th scope="col" className="sticky top-[72px] z-10 w-[38%] rounded-t-[24px] bg-brand-grad px-6 py-5 text-white shadow-[0_-10px_30px_-18px_rgb(56_197_177/0.9)]">
-                  <span className="flex items-center gap-3">
-                    <span aria-hidden className="grid size-10 place-items-center rounded-full bg-white"><Pin className="h-6" /></span>
-                    <span className="text-lg font-bold">{t.cols.us}</span>
-                  </span>
-                </th>
-                <th scope="col" className="sticky top-[72px] z-10 bg-white/95 px-6 py-5 backdrop-blur">
-                  <span className="flex items-center gap-3 text-ink-soft">
-                    <span aria-hidden className="grid size-10 place-items-center rounded-full bg-mist"><PhoneCall className="size-4.5" /></span>
-                    <span className="font-semibold">{t.cols.old}</span>
-                  </span>
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              {t.rows.map((r, i) => {
-                const Ico = ROW_ICONS[i % ROW_ICONS.length];
-                const last = i === t.rows.length - 1;
-                return (
-                  <tr key={r.feature} className="group">
-                    <th scope="row" className="border-b border-line px-4 py-3.5 font-semibold group-hover:bg-mist/60">
-                      <span className="flex items-center gap-3">
-                        <span aria-hidden className="grid size-9 shrink-0 place-items-center rounded-xl bg-mist text-brand-deep transition group-hover:bg-white">
-                          <Ico className="size-4.5" />
-                        </span>
-                        {r.feature}
-                      </span>
-                    </th>
-                    <td className={`bg-[#effbf2] px-6 py-3.5 ${last ? "rounded-b-[24px]" : "border-b border-[#d9f3df]"} group-hover:bg-[#e4f8e9]`}>
-                      <span className="flex items-start gap-2.5">
-                        <Yes className="mt-0.5" />
-                        {r.href ? (
-                          <a href={r.href} className="font-medium underline decoration-brand-deep/30 decoration-2 underline-offset-3 hover:decoration-current">{r.us}</a>
-                        ) : (
-                          <span className="font-medium">{r.us}</span>
-                        )}
-                      </span>
-                    </td>
-                    <td className="border-b border-line px-6 py-3.5 text-ink-soft group-hover:bg-mist/60">
-                      <span className="flex items-start gap-2.5"><No className="mt-0.5" /> {r.old}</span>
-                    </td>
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
-
-          {/* Mobil: har bir xususiyat — alohida karta; dastlab MOBILE_VISIBLE ta, qolgani ochiladi (matn HTML'da qoladi) */}
-          <ul className="mt-10 grid gap-3 md:hidden">
-            {t.rows.slice(0, MOBILE_VISIBLE).map((r, i) => <MobileRow key={r.feature} r={r} i={i} cols={t.cols} />)}
-          </ul>
-          {t.rows.length > MOBILE_VISIBLE && (
-            <details className="group mt-3 md:hidden">
-              <summary className="flex cursor-pointer list-none items-center justify-center gap-2 rounded-full bg-mint px-5 py-3.5 font-semibold text-brand-deep group-open:hidden [&::-webkit-details-marker]:hidden">
-                {fill(t.showMore, { n: t.rows.length - MOBILE_VISIBLE })} <ChevronDown className="size-4" aria-hidden />
-              </summary>
-              <ul className="grid gap-3">
-                {t.rows.slice(MOBILE_VISIBLE).map((r, i) => <MobileRow key={r.feature} r={r} i={i + MOBILE_VISIBLE} cols={t.cols} />)}
-              </ul>
-            </details>
-          )}
-        </div>
-      </section>
-
-      {/* ───── Afzalliklar ───── */}
-      <section aria-labelledby="ben-h" className="bg-mist py-16 sm:py-24">
-        <div className="mx-auto grid max-w-[1320px] gap-10 px-4 sm:px-6 lg:grid-cols-[0.85fr_2fr] lg:gap-14">
+      {/* ───── Asosiy ustunliklar ─────
+          Tilda'dagi "biz ✓ / offline ✗" jadvali o'rnida (sababi — lib/why.ts boshidagi izoh): an'anaviy usulni
+          mezonma-mezon yomonlamaymiz, faqat o'z ustunliklarimizni ko'rsatamiz. */}
+      <section id="advantages" aria-labelledby="adv-h" className="mt-12 scroll-mt-24 bg-mist py-16 sm:mt-16 sm:py-24">
+        <div className="mx-auto grid max-w-[1320px] gap-10 px-4 sm:px-6 lg:grid-cols-[0.9fr_2fr] lg:gap-14">
           <div className="lg:sticky lg:top-28 lg:self-start">
             <Eyebrow tone="white">{t.benefitsLabel}</Eyebrow>
-            <h2 id="ben-h" className="mt-3 text-[clamp(26px,6vw,44px)] leading-[1.1] font-semibold tracking-[-0.025em] text-balance">{t.benefitsTitle}</h2>
-            <p className="mt-4 max-w-[40ch] leading-relaxed text-ink-soft max-sm:hidden">{t.lead}</p>
+            <h2 id="adv-h" className="mt-3 text-[clamp(26px,5vw,38px)] leading-[1.12] font-semibold tracking-[-0.025em] text-balance">{t.advantagesTitle}</h2>
+            <p className="mt-4 max-w-[44ch] leading-relaxed text-ink-soft">{t.advantagesText}</p>
             <a href={LINKS.webApp} className="group mt-7 inline-flex items-center gap-2 rounded-full bg-ink px-6 py-3.5 font-semibold text-white transition hover:bg-brand-grad">
               {t.cta} <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" aria-hidden />
             </a>
           </div>
-          <ul className="grid gap-3 sm:grid-cols-2 sm:gap-4">
-            {t.benefits.map((b, i) => (
-              <li key={b.title} className="lift relative flex items-center gap-4 overflow-hidden rounded-[24px] bg-white p-5 ring-1 ring-white sm:block sm:rounded-[28px] sm:p-7">
-                <span aria-hidden className="pointer-events-none absolute top-4 right-5 bg-brand-grad bg-clip-text text-[44px] leading-none font-bold tracking-tight text-transparent opacity-25 tabular-nums max-sm:hidden">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                <IconTile name={WHY_BENEFIT_ICONS[i % WHY_BENEFIT_ICONS.length]} size={56} className="max-sm:size-12! max-sm:rounded-2xl" />
-                <div>
-                  <h3 className="text-lg leading-snug font-semibold tracking-tight sm:mt-6 sm:text-xl">{b.title}</h3>
-                  {b.text && <p className="mt-1.5 text-[15px] leading-relaxed text-ink-soft sm:mt-2">{b.text}</p>}
-                </div>
-              </li>
-            ))}
-          </ul>
+          <div>
+            {t.benefitsTitle && <p className="mb-4 text-xl font-semibold tracking-tight sm:mb-5 sm:text-2xl">{t.benefitsTitle}</p>}
+            <ul className="grid gap-3 sm:grid-cols-2 sm:gap-4">
+              {t.benefits.map((b, i) => (
+                <li key={b.title} className="lift relative flex gap-4 overflow-hidden rounded-[24px] bg-white p-5 ring-1 ring-white sm:block sm:rounded-[28px] sm:p-7">
+                  <span aria-hidden className="pointer-events-none absolute top-4 right-5 bg-brand-grad bg-clip-text text-[44px] leading-none font-bold tracking-tight text-transparent opacity-25 tabular-nums max-sm:hidden">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <IconTile name={WHY_BENEFIT_ICONS[i % WHY_BENEFIT_ICONS.length]} size={56} className="shrink-0 max-sm:size-12! max-sm:rounded-2xl" />
+                  <div className="min-w-0">
+                    <h3 className="text-lg leading-snug font-semibold tracking-tight sm:mt-6 sm:text-xl">{b.title}</h3>
+                    {b.text && <p className="mt-1.5 text-[15px] leading-relaxed text-ink-soft sm:mt-2">{b.text}</p>}
+                    {b.links && (
+                      <ul className="mt-3 space-y-1.5">
+                        {b.links.map((l) => (
+                          <li key={l.href}>
+                            <a href={l.href} className="inline-flex items-start gap-1.5 text-[14px] leading-snug font-semibold text-brand-deep underline decoration-brand-deep/30 decoration-2 underline-offset-3 hover:decoration-current">
+                              {l.label} <ArrowRight className="mt-0.5 size-3.5 shrink-0" aria-hidden />
+                            </a>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </section>
 
