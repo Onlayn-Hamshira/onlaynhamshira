@@ -81,12 +81,13 @@ export function CertificatesPage({
                 {facts.map((f, i) => {
                   const Ico = FACT_ICONS[i];
                   return (
-                    <div key={f.l} className={`flex items-center gap-3 rounded-2xl bg-white p-3 shadow-[0_10px_30px_-20px_rgb(16_41_58/0.4)] ring-1 ring-white sm:p-4 ${i === 2 ? "max-sm:col-span-2" : ""}`}>
-                      <span aria-hidden className="grid size-10 shrink-0 place-items-center rounded-xl bg-mint text-brand-deep"><Ico className="size-5" /></span>
-                      <div className="flex min-w-0 flex-col-reverse">
-                        <dt className="text-[12px] leading-snug text-ink-soft sm:text-[13px]">{f.l}</dt>
-                        <dd className="text-lg leading-tight font-bold tracking-tight whitespace-nowrap tabular-nums sm:text-xl">{f.v}</dd>
-                      </div>
+                    // <dl> ichida dt/dd o'rovchi div'ning bevosita bolalari bo'lishi kerak (a11y) — ikonka dt ichida
+                    <div key={f.l} className={`relative flex min-h-16 min-w-0 flex-col-reverse justify-center rounded-2xl bg-white p-3 pl-16 shadow-[0_10px_30px_-20px_rgb(16_41_58/0.4)] ring-1 ring-white sm:min-h-[72px] sm:p-4 sm:pl-[68px] ${i === 2 ? "max-sm:col-span-2" : ""}`}>
+                      <dt className="text-[12px] leading-snug text-ink-soft sm:text-[13px]">
+                        <span aria-hidden className="absolute top-1/2 left-3 grid size-10 -translate-y-1/2 place-items-center rounded-xl bg-mint text-brand-deep sm:left-4"><Ico className="size-5" /></span>
+                        {f.l}
+                      </dt>
+                      <dd className="text-lg leading-tight font-bold tracking-tight whitespace-nowrap tabular-nums sm:text-xl">{f.v}</dd>
                     </div>
                   );
                 })}
