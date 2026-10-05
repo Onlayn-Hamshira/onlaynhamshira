@@ -23,7 +23,7 @@ export function MobileCTA({ t, cta }: { t: Dict["mobileCta"]; cta: string }) {
         show ? "translate-y-0" : "translate-y-[130%]"
       }`}
     >
-      <div className="flex gap-2 rounded-[22px] bg-white/90 p-2 shadow-[0_12px_40px_-12px_rgb(16_41_58/0.4)] ring-1 ring-line backdrop-blur-xl">
+      <div className="flex gap-2 rounded-[22px] bg-white/90 p-2 shadow-[0_12px_40px_-12px_rgb(13_47_68/0.4)] ring-1 ring-line backdrop-blur-xl">
         <a href={`tel:${LINKS.phone}`} aria-label={t.call} className="grid size-14 shrink-0 place-items-center rounded-2xl bg-mist">
           <Phone className="size-5" />
         </a>

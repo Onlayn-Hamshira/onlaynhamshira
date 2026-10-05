@@ -138,7 +138,7 @@ export function StoreButtons({ className = "" }: { className?: string }) {
           key={key}
           onClick={() => open(key as Store)}
           aria-label={label}
-          className="rounded-[12px] transition hover:-translate-y-0.5 hover:shadow-[0_10px_24px_-12px_rgb(16_41_58/0.5)] active:translate-y-0 active:scale-[0.98]"
+          className="rounded-[12px] transition hover:-translate-y-0.5 hover:shadow-[0_10px_24px_-12px_rgb(13_47_68/0.5)] active:translate-y-0 active:scale-[0.98]"
         >
           {/* Ekranda ~150–180px — 600px lik asl nusxa yuklanmasin */}
           <Image src={src} alt="" width={w} height={h} sizes="(min-width: 640px) 180px, 150px" className="h-11 w-auto sm:h-[52px]" draggable={false} />

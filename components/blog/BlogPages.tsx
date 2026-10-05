@@ -1,5 +1,5 @@
 import { preload } from "react-dom";
-import { ArrowLeft, ArrowRight, BadgeCheck, CalendarCheck, ChevronRight, Clock3, Phone, ShieldCheck, Siren, Stethoscope } from "lucide-react";
+import { ArrowLeft, ArrowRight, BadgeCheck, BookOpenText, CalendarCheck, ChevronRight, Clock3, HeartHandshake, Newspaper, Phone, ShieldCheck, Siren, Stethoscope } from "lucide-react";
 import { LINKS, STATS } from "@/lib/data";
 import { blogEntries, formatDate, parseArticle, relatedEntries, type BlogImage } from "@/lib/blog";
 import { fill } from "@/lib/i18n/format";
@@ -9,9 +9,10 @@ import { pageHref } from "@/lib/nav";
 import { SITE_URL } from "@/lib/seo/site";
 import type { LegacyPage } from "@/lib/seo/legacy";
 import { IconTile } from "../Icon";
+import { CountUp } from "../Stats";
 import { LegacyCta } from "../LegacyPage";
 import { BlogCard } from "./BlogCard";
-import { BlogIndex } from "./BlogIndex";
+import { LazyBlogIndex as BlogIndex } from "../AppLandingLazy";
 import { BlogShare } from "./BlogShare";
 import { BlogToc } from "./BlogToc";
 import { Cover } from "./Cover";
@@ -24,8 +25,6 @@ const preloadImage = (img: BlogImage | null, sizes: string) => {
 };
 
 const PRINCIPLE_ICONS = [Stethoscope, ShieldCheck, BadgeCheck];
-/** 13500 → "13 500" (bosh sahifadagi hisoblagich bilan bir xil ko'rinish) */
-const num = (n: number) => String(n).replace(/\B(?=(\d{3})+(?!\d))/g, "\u00a0");
 
 const FEATURED_SIZES = "(min-width: 1024px) 720px, calc(100vw - 32px)";
 const COVER_SIZES = "(min-width: 1248px) 1200px, calc(100vw - 32px)";
@@ -42,72 +41,110 @@ export function BlogIndexPage({ pg, t, lang }: { pg: LegacyPage; t: Dict; lang: 
   return (
     <>
       <section className="px-3 sm:px-4">
-        <div className="relative mx-auto max-w-[1400px] overflow-hidden rounded-[36px] bg-[linear-gradient(150deg,#ecfbef_0%,#e4f6f4_45%,#dcf1fb_100%)] px-6 py-12 sm:px-12 sm:py-16 lg:py-20">
-          <div aria-hidden className="pointer-events-none absolute -top-32 -left-24 size-[420px] rounded-full bg-brand/25 blur-[100px]" />
-          <div aria-hidden className="pointer-events-none absolute -right-24 -bottom-32 size-[440px] rounded-full bg-brand-blue/25 blur-[110px]" />
-          <div className="dots pointer-events-none absolute inset-0 opacity-70" />
+        <div className="relative mx-auto max-w-[1400px] overflow-hidden rounded-[36px] bg-[linear-gradient(135deg,#fff_0%,var(--color-mist)_40%,#cdebfa_100%)] px-6 py-12 ring-1 ring-line sm:px-12 sm:py-16 lg:py-20">
+          {/* Sekin suzib yuradigan brend rangidagi nur dog'lari */}
+          <div aria-hidden className="glow-blob pointer-events-none absolute -top-28 left-[6%] size-[400px] bg-grad-blue/40" />
+          <div aria-hidden className="glow-blob glow-blob-alt pointer-events-none absolute right-[8%] -bottom-36 size-[440px] bg-grad-green/40" />
+          {/* Brend patternining kontur varianti (qo'llanma, 23-bet) — matn tomonda yo'qolib boradi */}
+          <div aria-hidden className="hero-lines-wrap pointer-events-none absolute inset-0 overflow-hidden">
+            <div className="hero-lines" />
+            {/* Chiziqlar bo'ylab o'tadigan yaltirash */}
+            <div className="hero-lines hero-lines-shine" />
+          </div>
 
-          <div className="relative grid items-center gap-10 lg:grid-cols-[1.25fr_1fr] lg:gap-14">
+          {/* Ikonkalar uchun brend gradienti (qo'llanma: Ikonografika) — stroke="url(#bh-grad)" */}
+          <svg aria-hidden width="0" height="0" className="absolute">
+            <defs>
+              <linearGradient id="bh-grad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stopColor="#1BB3F7" />
+                <stop offset="1" stopColor="#3CDC6D" />
+              </linearGradient>
+            </defs>
+          </svg>
+
+          <div className="relative grid items-center gap-10 lg:grid-cols-[1.2fr_1fr] lg:gap-16">
             <div>
-              <p className="inline-flex items-center gap-2 rounded-full bg-white/80 px-3.5 py-1.5 text-sm font-semibold text-brand-deep ring-1 ring-white backdrop-blur">
-                <span className="size-1.5 rounded-full bg-brand-deep" /> {b.label}
+              <p className="inline-flex items-center gap-2.5 rounded-full bg-white/80 py-1.5 pr-4 pl-1.5 text-sm font-semibold ring-1 ring-white backdrop-blur">
+                <span aria-hidden className="grid size-7 place-items-center rounded-full bg-brand-grad text-white">
+                  <Newspaper className="size-3.5" />
+                </span>
+                {b.label}
               </p>
-              <h1 className="mt-5 text-[clamp(38px,9vw,72px)] leading-[1] font-bold tracking-[-0.035em]">{h1}</h1>
-              <p className="mt-5 max-w-[52ch] text-lg leading-relaxed text-ink-soft sm:text-xl">{b.lead}</p>
+              <h1 className="mt-6 text-[clamp(40px,9vw,76px)] leading-[1.02] font-bold tracking-[-0.04em]">
+                {h1}
+              </h1>
+              <span aria-hidden className="mt-5 block h-1.5 w-20 rounded-full bg-brand-grad" />
+              <p className="mt-5 max-w-[50ch] text-lg leading-relaxed text-ink-soft sm:text-xl">{b.lead}</p>
 
               {/* Raqamlar: bosh sahifadagi bilan bir xil manba (lib/data.ts → STATS) */}
-              <dl className="mt-8 grid max-w-[560px] grid-cols-3 divide-x divide-ink/10 rounded-2xl bg-white/70 py-4 ring-1 ring-white backdrop-blur">
+              <dl className="mt-9 grid max-w-[620px] grid-cols-3 gap-2.5 sm:gap-3">
                 {[
-                  { v: `${num(STATS[0].value)}${STATS[0].suffix}`, l: t.stats.items[0] },
-                  { v: `${num(STATS[2].value)}${STATS[2].suffix}`, l: t.stats.items[2] },
-                  { v: String(entries.length), l: b.articles },
+                  { n: STATS[0].value, suffix: STATS[0].suffix, l: t.stats.items[0], Ico: Stethoscope },
+                  { n: STATS[2].value, suffix: STATS[2].suffix, l: t.stats.items[2], Ico: HeartHandshake },
+                  { n: entries.length, suffix: "", l: b.articles, Ico: BookOpenText },
                 ].map((s) => (
-                  <div key={s.l} className="flex flex-col-reverse justify-end gap-1.5 px-3 sm:px-5">
-                    <dt className="text-[12px] leading-snug text-ink-soft hyphens-auto [overflow-wrap:anywhere] sm:text-[13px]">{s.l}</dt>
-                    <dd className="text-[clamp(20px,5vw,28px)] leading-none font-bold tracking-tight tabular-nums">{s.v}</dd>
+                  <div key={s.l} className="flex flex-col rounded-[22px] bg-white/75 p-3.5 ring-1 ring-white backdrop-blur transition duration-300 hover:-translate-y-1 hover:bg-white hover:shadow-[0_20px_40px_-24px_rgb(13_47_68/0.45)] sm:p-4">
+                    <span aria-hidden className="glass-badge grid size-10 place-items-center rounded-full sm:size-11">
+                      <s.Ico className="size-5" stroke="url(#bh-grad)" />
+                    </span>
+                    <dt className="order-2 mt-1.5 text-[12px] leading-snug text-ink-soft hyphens-auto [overflow-wrap:anywhere] sm:text-[13px]">{s.l}</dt>
+                    <dd className="order-1 mt-3 text-[clamp(20px,5.2vw,30px)] leading-none font-bold tracking-tight tabular-nums"><CountUp to={s.n} sep={t.common.money.sep} />{s.suffix}</dd>
                   </div>
                 ))}
               </dl>
             </div>
 
             {/* Tahririyat tamoyillari — maqolalar kim tomonidan va qanday tayyorlanadi */}
-            <aside aria-labelledby="principles-h" className="rounded-[28px] bg-white p-6 shadow-[0_30px_60px_-34px_rgb(16_41_58/0.45)] ring-1 ring-white sm:p-7">
-              <div className="flex items-center gap-3">
-                <span aria-hidden className="grid size-11 place-items-center rounded-2xl bg-mint">
-                  {/* eslint-disable-next-line @next/next/no-img-element -- kichik SVG logo */}
-                  <img src="/img/map-pin.svg" alt="" width={34} height={42} className="h-6 w-auto" />
-                </span>
-                <div>
-                  <h2 id="principles-h" className="text-lg leading-tight font-semibold tracking-tight">{b.principlesTitle}</h2>
-                  <p className="text-[13px] text-ink-soft">{b.byline}</p>
-                </div>
-              </div>
-              <ul className="mt-5 space-y-3 sm:space-y-4">
-                {b.principles.map((it, i) => {
-                  const Ico = PRINCIPLE_ICONS[i];
-                  return (
-                    <li key={it.title} className="flex items-center gap-3 sm:items-start">
-                      <span aria-hidden className="mt-0.5 grid size-8 shrink-0 place-items-center rounded-xl bg-mist text-brand-deep">
-                        <Ico className="size-4.5" />
+            <aside aria-labelledby="principles-h" className="relative">
+              {/* Karta ortidagi "nafas oluvchi" nur */}
+              <span aria-hidden className="glow-halo pointer-events-none absolute -inset-2 rounded-[40px] bg-brand-grad blur-2xl" />
+              {/* Gradient hoshiyali karta — qo'llanmadagi sharh kartalari uslubi */}
+              <div className="relative h-full rounded-[32px] bg-brand-grad p-[2px]">
+                <div className="h-full overflow-hidden rounded-[30px] bg-white">
+                  <div className="flex items-center gap-3.5 bg-[linear-gradient(90deg,var(--color-mist),#e9fbee)] px-6 py-5 sm:px-7">
+                    <span aria-hidden className="glass-badge grid size-12 shrink-0 place-items-center rounded-full">
+                      {/* eslint-disable-next-line @next/next/no-img-element -- kichik SVG logo */}
+                      <img src="/img/map-pin.svg" alt="" width={34} height={42} className="h-7 w-auto" />
+                    </span>
+                    <div className="min-w-0">
+                      <h2 id="principles-h" className="text-lg leading-tight font-semibold tracking-tight sm:text-xl">{b.principlesTitle}</h2>
+                      <p className="mt-0.5 text-[13px] text-ink-soft">{b.byline}</p>
+                    </div>
+                    <BadgeCheck aria-hidden className="ml-auto size-6 shrink-0" stroke="url(#bh-grad)" />
+                  </div>
+
+                  <ol className="px-4 py-3 sm:px-5 sm:py-4">
+                    {b.principles.map((it, i) => {
+                      const Ico = PRINCIPLE_ICONS[i];
+                      return (
+                        <li key={it.title} className="group/pr flex items-center gap-3.5 rounded-2xl p-2.5 transition-colors hover:bg-mist sm:items-start sm:p-3">
+                          <span aria-hidden className="glass-badge grid size-10 shrink-0 place-items-center rounded-full transition-transform duration-300 group-hover/pr:scale-110">
+                            <Ico className="size-5" stroke="url(#bh-grad)" />
+                          </span>
+                          <div className="min-w-0 flex-1">
+                            <p className="flex items-center justify-between gap-3 font-semibold">
+                              {it.title}
+                              <span aria-hidden className="text-[13px] font-bold text-ink-soft tabular-nums">0{i + 1}</span>
+                            </p>
+                            <p className="mt-0.5 text-[14px] leading-relaxed text-ink-soft max-sm:hidden">{it.text}</p>
+                          </div>
+                        </li>
+                      );
+                    })}
+                  </ol>
+
+                  <div className="flex flex-wrap items-center justify-between gap-3 border-t border-line px-6 py-4 text-[13px] sm:px-7">
+                    {lastUpdate && (
+                      <span className="inline-flex items-center gap-1.5 text-ink-soft">
+                        <CalendarCheck className="size-4" aria-hidden />
+                        <time dateTime={lastUpdate}>{fill(b.lastUpdate, { d: formatDate(lastUpdate, lang) })}</time>
                       </span>
-                      <div>
-                        <p className="font-semibold">{it.title}</p>
-                        <p className="mt-0.5 text-[14px] leading-relaxed text-ink-soft max-sm:hidden">{it.text}</p>
-                      </div>
-                    </li>
-                  );
-                })}
-              </ul>
-              <div className="mt-6 flex flex-wrap items-center justify-between gap-3 border-t border-line pt-4 text-[13px]">
-                {lastUpdate && (
-                  <span className="inline-flex items-center gap-1.5 text-ink-soft">
-                    <CalendarCheck className="size-4" aria-hidden />
-                    <time dateTime={lastUpdate}>{fill(b.lastUpdate, { d: formatDate(lastUpdate, lang) })}</time>
-                  </span>
-                )}
-                <a href={pageHref("certificates", lang)} className="inline-flex items-center gap-1 font-semibold text-brand-deep hover:underline">
-                  {b.docsLink} <ArrowRight className="size-3.5" aria-hidden />
-                </a>
+                    )}
+                    <a href={pageHref("certificates", lang)} className="group/doc inline-flex items-center gap-1.5 rounded-full bg-brand-grad py-2 pr-3 pl-4 font-semibold text-white transition hover:brightness-105">
+                      {b.docsLink} <ArrowRight className="size-3.5 transition-transform group-hover/doc:translate-x-0.5" aria-hidden />
+                    </a>
+                  </div>
+                </div>
               </div>
             </aside>
           </div>
@@ -256,15 +293,15 @@ export function BlogPostPage({ pg, t, lang }: { pg: LegacyPage; t: Dict; lang: L
           <aside className="hidden lg:block">
             <div className="sticky top-28 space-y-6">
               {toc.length > 1 && <BlogToc items={toc} title={b.toc} />}
-              <div className="relative overflow-hidden rounded-[28px] bg-ink p-6 text-white">
+              <div className="relative overflow-hidden rounded-[28px] bg-[linear-gradient(135deg,#fff_0%,var(--color-mist)_50%,#d3f0fb_100%)] p-6 ring-1 ring-line">
                 <div aria-hidden className="pointer-events-none absolute -top-16 -right-16 size-48 rounded-full bg-brand/25 blur-3xl" />
                 <IconTile name="nurse" size={52} className="relative" />
                 <p className="relative mt-5 text-xl font-semibold tracking-tight">{b.sideTitle}</p>
-                <p className="relative mt-2 text-[15px] leading-relaxed text-white/75">{b.sideText}</p>
-                <a href={LINKS.webApp} className="relative mt-5 flex items-center justify-center gap-2 rounded-2xl bg-brand-grad py-3.5 font-semibold transition hover:brightness-105">
+                <p className="relative mt-2 text-[15px] leading-relaxed text-ink-soft">{b.sideText}</p>
+                <a href={LINKS.webApp} className="relative mt-5 flex items-center justify-center gap-2 rounded-2xl bg-brand-grad py-3.5 font-semibold text-white transition hover:brightness-105">
                   {t.common.callNurse} <ArrowRight className="size-4" aria-hidden />
                 </a>
-                <a href={`tel:${LINKS.phone}`} className="relative mt-2 flex items-center justify-center gap-2 rounded-2xl py-2.5 text-[15px] font-medium text-white/85 transition hover:text-white">
+                <a href={`tel:${LINKS.phone}`} className="relative mt-2 flex items-center justify-center gap-2 rounded-2xl py-2.5 text-[15px] font-medium text-ink transition hover:text-brand-deep">
                   <Phone className="size-4" aria-hidden /> {LINKS.phoneLabel}
                 </a>
               </div>

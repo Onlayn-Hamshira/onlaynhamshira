@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { preload } from "react-dom";
 import Header from "@/components/Header";
-import { Footer } from "@/components/Sections";
+import { Footer } from "@/components/Footer";
 import { MobileCTA } from "@/components/MobileCTA";
 import { LegacyCta, QrRedirect } from "@/components/LegacyPage";
 import { LOCALES, OG_LOCALE, hasLocale, localePath, type Locale } from "@/lib/i18n/config";

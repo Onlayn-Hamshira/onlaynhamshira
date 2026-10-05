@@ -4,7 +4,8 @@ import { CERTIFICATES, COMPANY_TIN } from "@/lib/data";
 import type { Dict } from "@/lib/i18n/dictionaries/uz";
 import { fill } from "@/lib/i18n/format";
 import { IconTile, type IconName } from "../Icon";
-import { CertificateViewer, type CertImage } from "./CertificateViewer";
+import { LazyCertificateViewer as CertificateViewer } from "../AppLandingLazy";
+import type { CertImage } from "./CertificateViewer";
 
 const ICONS: IconName[] = ["id", "shield", "check"];
 const FACT_ICONS = [CalendarDays, FileCheck2, Hash];
@@ -52,11 +53,13 @@ export function CertificatesPage({
 
   return (
     <>
-      {/* ── Hero: "Nega biz?" bilan bir xil konteyner va uslub (oq fon, nozik to'r, tepada brend chizig'i) ── */}
+      {/* ── Hero: boshqa sahifalar bilan bir xil konteyner, brend foni ── */}
       <section className="px-3 pt-[calc(80px+env(safe-area-inset-top))] sm:px-4">
-        <div className="relative mx-auto max-w-[1400px] overflow-hidden rounded-[36px] bg-[linear-gradient(160deg,#f2f8fc_0%,#ecf7f2_55%,#e2f4e7_100%)]">
-          {/* Muhr naqshi: hujjatlar ortidagi konsentrik halqalar ("rasmiy hujjat" hissi) */}
-          <div aria-hidden className="pointer-events-none absolute inset-0 bg-[repeating-radial-gradient(circle_at_76%_48%,rgb(19_110_51/0.09)_0_1px,transparent_1px_26px)] [mask-image:radial-gradient(circle_at_76%_48%,#000_0,#000_30%,transparent_62%)]" />
+        <div className="relative mx-auto max-w-[1400px] overflow-hidden rounded-[36px] bg-[linear-gradient(135deg,#fff_0%,var(--color-mist)_40%,#cdebfa_100%)] ring-1 ring-line">
+          {/* Brend foni: to'lqin patterni (Pattern | Pack 1) + suzuvchi nur dog'lari */}
+          <div aria-hidden className="glow-blob pointer-events-none absolute -top-28 left-[6%] size-[400px] bg-grad-blue/25" />
+          <div aria-hidden className="glow-blob glow-blob-alt pointer-events-none absolute right-[8%] -bottom-36 size-[440px] bg-grad-green/25" />
+          <div aria-hidden className="hero-pattern-wide pointer-events-none absolute inset-0" />
 
           <div className="relative grid items-center gap-10 px-6 py-10 sm:px-12 sm:py-14 lg:grid-cols-[1.05fr_1fr] lg:gap-14 lg:py-16">
             <div>
@@ -81,19 +84,19 @@ export function CertificatesPage({
                 {facts.map((f, i) => {
                   const Ico = FACT_ICONS[i];
                   return (
-                    <div key={f.l} className={`flex items-center gap-3 rounded-2xl bg-white p-3 shadow-[0_10px_30px_-20px_rgb(16_41_58/0.4)] ring-1 ring-white sm:p-4 ${i === 2 ? "max-sm:col-span-2" : ""}`}>
-                      <span aria-hidden className="grid size-10 shrink-0 place-items-center rounded-xl bg-mint text-brand-deep"><Ico className="size-5" /></span>
-                      <div className="flex min-w-0 flex-col-reverse">
-                        <dt className="text-[12px] leading-snug text-ink-soft sm:text-[13px]">{f.l}</dt>
-                        <dd className="text-lg leading-tight font-bold tracking-tight whitespace-nowrap tabular-nums sm:text-xl">{f.v}</dd>
-                      </div>
+                    <div key={f.l} className={`relative flex min-w-0 flex-col-reverse justify-center rounded-2xl bg-white/85 py-3 pr-3 pl-16 shadow-[0_10px_30px_-20px_rgb(13_47_68/0.4)] ring-1 ring-white backdrop-blur sm:py-4 sm:pr-4 sm:pl-[68px] ${i === 2 ? "max-sm:col-span-2" : ""}`}>
+                      <dt className="text-[12px] leading-snug text-ink-soft sm:text-[13px]">{f.l}</dt>
+                      <dd className="text-lg leading-tight font-bold tracking-tight whitespace-nowrap tabular-nums sm:text-xl">
+                        <span aria-hidden className="absolute top-1/2 left-3 grid size-10 -translate-y-1/2 place-items-center rounded-xl bg-brand-grad text-white sm:left-4"><Ico className="size-5" /></span>
+                        {f.v}
+                      </dd>
                     </div>
                   );
                 })}
               </dl>
 
               <div className="hero-in mt-7 flex flex-wrap items-center gap-x-5 gap-y-3" style={d(4)}>
-                <a href="#docs" className="inline-flex items-center gap-2 rounded-full bg-ink px-6 py-3.5 font-semibold text-white transition hover:-translate-y-0.5 hover:bg-ink/90">
+                <a href="#docs" className="inline-flex items-center gap-2 rounded-full bg-brand-grad px-6 py-3.5 font-semibold text-white shadow-[0_12px_28px_-12px_rgb(46_201_176/0.9)] transition hover:-translate-y-0.5 hover:brightness-105">
                   {t.browse} <ArrowDown className="size-4" aria-hidden />
                 </a>
                 <span className="inline-flex items-center gap-2 text-[15px] font-semibold text-ink-soft">
@@ -110,7 +113,7 @@ export function CertificatesPage({
                   href={doc.image.src}
                   data-cert={i}
                   aria-label={fill(t.openDoc, { t: doc.title })}
-                  className={`group absolute block rounded-xl bg-white p-1.5 shadow-[0_24px_50px_-20px_rgb(16_41_58/0.45)] ring-1 ring-ink/5 transition duration-300 hover:z-40 hover:scale-[1.04] sm:p-2 ${stack[i]}`}
+                  className={`group absolute block rounded-xl bg-white p-1.5 shadow-[0_24px_50px_-20px_rgb(13_47_68/0.45)] ring-1 ring-ink/5 transition duration-300 hover:z-40 hover:scale-[1.04] sm:p-2 ${stack[i]}`}
                 >
                   <img
                     src={smallest(doc.image)}
@@ -166,7 +169,7 @@ export function CertificatesPage({
                     href={doc.image.src}
                     data-cert={i}
                     aria-label={fill(t.openDoc, { t: doc.title })}
-                    className={`group relative block rounded-xl bg-white p-2 shadow-[0_24px_50px_-24px_rgb(16_41_58/0.5)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_32px_60px_-24px_rgb(16_41_58/0.55)] ${landscape ? "w-full" : "w-[72%] max-w-[300px]"}`}
+                    className={`group relative block rounded-xl bg-white p-2 shadow-[0_24px_50px_-24px_rgb(13_47_68/0.5)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_32px_60px_-24px_rgb(13_47_68/0.55)] ${landscape ? "w-full" : "w-[72%] max-w-[300px]"}`}
                   >
                     <img
                       src={doc.image.src}
@@ -179,7 +182,7 @@ export function CertificatesPage({
                       decoding="async"
                       className="h-auto w-full rounded-lg"
                     />
-                    <span className="absolute right-4 bottom-4 inline-flex items-center gap-1.5 rounded-full bg-ink/80 px-3 py-1.5 text-xs font-semibold text-white opacity-90 backdrop-blur transition group-hover:bg-ink group-hover:opacity-100">
+                    <span className="absolute right-4 bottom-4 inline-flex items-center gap-1.5 rounded-full bg-white/90 px-3 py-1.5 text-xs font-semibold text-ink opacity-95 ring-1 ring-line backdrop-blur transition group-hover:bg-brand-grad group-hover:text-white group-hover:opacity-100 group-hover:ring-transparent">
                       <Maximize2 className="size-3.5" /> {t.open}
                     </span>
                   </a>
@@ -205,7 +208,7 @@ export function CertificatesPage({
                       href={doc.verify}
                       target="_blank"
                       rel="noopener nofollow"
-                      className="inline-flex items-center gap-2 rounded-full bg-ink px-5 py-3 font-semibold text-white transition hover:-translate-y-0.5 hover:bg-ink/90"
+                      className="inline-flex items-center gap-2 rounded-full bg-brand-grad px-5 py-3 font-semibold text-white transition hover:-translate-y-0.5 hover:brightness-105"
                     >
                       <ExternalLink className="size-4" /> {t.verify}
                     </a>
@@ -229,20 +232,20 @@ export function CertificatesPage({
 
       {/* ── Qanday tekshirish ── */}
       <section aria-labelledby="how-h" className="px-3 sm:px-4">
-        <div data-reveal className="relative mx-auto mb-12 max-w-[1400px] overflow-hidden rounded-[36px] bg-ink px-6 py-12 text-white sm:px-12 sm:py-16">
-          <div aria-hidden className="pointer-events-none absolute -top-24 -right-20 size-72 rounded-full bg-brand-teal opacity-25 blur-3xl" />
+        <div data-reveal className="relative mx-auto mb-12 max-w-[1400px] overflow-hidden rounded-[36px] bg-[linear-gradient(135deg,#fff_0%,var(--color-mist)_45%,#cdebfa_100%)] px-6 py-12 ring-1 ring-line sm:px-12 sm:py-16">
+          <div aria-hidden className="hero-pattern-wide pointer-events-none absolute inset-0" />
           <div className="relative grid gap-8 lg:grid-cols-[0.8fr_2fr] lg:gap-12">
             <div>
               <h2 id="how-h" className="max-w-[22ch] text-3xl leading-tight font-semibold tracking-tight text-balance sm:text-4xl">{t.howTitle}</h2>
-              <p className="mt-5 inline-flex items-center gap-2 text-sm text-white/65">
+              <p className="mt-5 inline-flex items-center gap-2 text-sm text-ink-soft">
                 <Building2 className="size-4 shrink-0" aria-hidden /> {t.company} · {t.facts.tin}: {COMPANY_TIN}
               </p>
             </div>
             <ol className="grid gap-4 md:grid-cols-3">
               {t.how.map((s, i) => (
-                <li key={s} className="rounded-2xl bg-white/[0.06] p-5 ring-1 ring-white/10 sm:p-6">
-                  <span className="grid size-10 place-items-center rounded-full bg-brand-grad font-semibold tabular-nums">{i + 1}</span>
-                  <p className="mt-4 leading-relaxed text-white/85">{s}</p>
+                <li key={s} className="rounded-2xl bg-white/85 p-5 shadow-[0_20px_40px_-28px_rgb(13_47_68/0.4)] ring-1 ring-white backdrop-blur sm:p-6">
+                  <span className="grid size-10 place-items-center rounded-full bg-brand-grad font-semibold text-white tabular-nums">{i + 1}</span>
+                  <p className="mt-4 leading-relaxed">{s}</p>
                 </li>
               ))}
             </ol>

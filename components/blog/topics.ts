@@ -3,10 +3,10 @@ import type { IconName } from "../Icon";
 
 /** Mavzu ko'rinishi: kartochka foni (rasmsiz maqolalar uchun) va ikonka — sayt palitrasidan */
 export const TOPIC_STYLE: Record<BlogTopic, { icon: IconName; tone: string; grad: string }> = {
-  nurse: { icon: "nurse", tone: "bg-sky", grad: "from-[#5ab8f0] to-[#2f7fd6]" },
-  care: { icon: "bed", tone: "bg-lilac", grad: "from-[#a98cf5] to-[#6a4fd8]" },
-  family: { icon: "massage", tone: "bg-peach", grad: "from-[#ffb36b] to-[#f0785a]" },
-  pressure: { icon: "heart", tone: "bg-[#ffe3ea]", grad: "from-[#ff6b8a] to-[#c2336a]" },
-  prevention: { icon: "shield", tone: "bg-mint", grad: "from-[#3fe0a0] to-[#1aa6d9]" },
-  news: { icon: "phone", tone: "bg-mist", grad: "from-[#38c5b1] to-[#0d619b]" },
+  nurse: { icon: "nurse", tone: "bg-sky", grad: "from-[#4ccaf8] to-[#008fd1]" },
+  care: { icon: "bed", tone: "bg-madang", grad: "from-[#2f8fb8] to-[#174f70]" },
+  family: { icon: "massage", tone: "bg-aqua", grad: "from-[#40d9c1] to-[#12a08e]" },
+  pressure: { icon: "heart", tone: "bg-sky", grad: "from-[#00b6f3] to-[#0a70a8]" },
+  prevention: { icon: "shield", tone: "bg-mint", grad: "from-[#54de62] to-[#1bb3f7]" },
+  news: { icon: "phone", tone: "bg-mist", grad: "from-[#2ec9b0] to-[#0d619b]" },
 };

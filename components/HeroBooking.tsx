@@ -18,7 +18,7 @@ export function HeroBooking({ t, common, items }: { t: Dict["booking"]; common: 
     <>
           {/* Pastda: kenglik bo'yicha to'liq buyurtma kartasi */}
           <div className="relative flex flex-1">
-            <div className="flex flex-1 flex-col rounded-[22px] bg-white p-5 shadow-[0_24px_60px_-20px_rgb(16_41_58/0.45)] sm:p-7">
+            <div className="flex flex-1 flex-col rounded-[22px] bg-white p-5 shadow-[0_24px_60px_-20px_rgb(13_47_68/0.45)] sm:p-7">
               <p className="text-[15px] font-semibold sm:text-xl sm:tracking-tight">{t.question}</p>
               <div role="radiogroup" aria-label={t.groupLabel} className="mt-4 grid flex-1 auto-rows-fr gap-2">
                 {items.map((s) => {
@@ -64,7 +64,7 @@ export function HeroBooking({ t, common, items }: { t: Dict["booking"]; common: 
 
               <a
                 href={LINKS.webApp}
-                className="group mt-5 flex items-center justify-center gap-2 rounded-2xl bg-brand-grad text-white py-4 text-[17px] font-bold shadow-[0_12px_28px_-12px_rgb(56_197_177/0.9)] transition hover:-translate-y-0.5 hover:brightness-105 active:translate-y-0 active:scale-[0.99]"
+                className="group mt-5 flex items-center justify-center gap-2 rounded-2xl bg-brand-grad text-white py-4 text-[17px] font-bold shadow-[0_12px_28px_-12px_rgb(46_201_176/0.9)] transition hover:-translate-y-0.5 hover:brightness-105 active:translate-y-0 active:scale-[0.99]"
               >
                 {common.callNurse}
                 <ArrowRight className="size-5 transition-transform group-hover:translate-x-1" />

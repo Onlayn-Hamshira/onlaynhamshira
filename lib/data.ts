@@ -17,7 +17,6 @@ export const LINKS = {
 };
 
 export const IMAGES = {
-  hero: "/img/misc/hero.webp",
   qrIphone: "/img/misc/qr-iphone.png",
   qrAndroid: "/img/misc/qr-android.png",
 };

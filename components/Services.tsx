@@ -75,30 +75,30 @@ export default function Services({ t, common }: { t: Dict["services"]; common: D
 
           {/* Tafsilot paneli (desktop) */}
           <aside aria-live="polite" className="hidden lg:block">
-            <div key={active.id} className="sticky top-28 animate-pop overflow-hidden rounded-[28px] bg-ink p-9 text-white">
-              <div aria-hidden className="pointer-events-none absolute -top-16 -right-16 size-56 rounded-full bg-brand/20 blur-3xl" />
-              <span className="relative grid size-20 place-items-center rounded-3xl bg-white/10 ring-1 ring-white/15">
-                <ServiceGlyph icon={active.icon} size={40} tone="current" className="animate-float text-brand" />
+            <div key={active.id} className="sticky top-28 animate-pop overflow-hidden rounded-[28px] bg-brand-grad-deep p-9 text-white">
+              <div aria-hidden className="pointer-events-none absolute -top-16 -right-16 size-56 rounded-full bg-white/20 blur-3xl" />
+              <span className="relative grid size-20 place-items-center rounded-3xl bg-white/20 ring-1 ring-white/30">
+                <ServiceGlyph icon={active.icon} size={40} tone="current" className="animate-float text-white" />
               </span>
               <h3 className="relative mt-7 text-[28px] leading-tight font-semibold tracking-tight text-balance">{at.title}</h3>
-              <p className="mt-4 leading-relaxed text-white/75">{at.description}</p>
-              <div className="mt-8 flex items-end justify-between border-t border-white/15 pt-6">
+              <p className="mt-4 leading-relaxed text-white/90">{at.description}</p>
+              <div className="mt-8 flex items-end justify-between border-t border-white/30 pt-6">
                 <div>
-                  <p className="text-sm text-white/60">{t.price}</p>
+                  <p className="text-sm text-white/85">{t.price}</p>
                   <p className="mt-1 text-3xl font-bold tabular-nums">
-                    {common.fromBefore && <span className="mr-1.5 text-lg font-medium text-white/60">{common.fromWord}</span>}
+                    {common.fromBefore && <span className="mr-1.5 text-lg font-medium text-white/85">{common.fromWord}</span>}
                     {price(active.priceFrom)}
-                    {!common.fromBefore && <span className="text-lg font-medium text-white/60">{common.fromWord}</span>}
+                    {!common.fromBefore && <span className="text-lg font-medium text-white/85">{common.fromWord}</span>}
                   </p>
                 </div>
-                <p className="flex items-center gap-1.5 text-sm text-white/70"><Clock3 className="size-4" /> {at.duration}</p>
+                <p className="flex items-center gap-1.5 text-sm text-white/90"><Clock3 className="size-4" /> {at.duration}</p>
               </div>
-              <ul className="mt-6 space-y-2 text-[15px] text-white/80">
+              <ul className="mt-6 space-y-2 text-[15px] text-white/95">
                 {t.perks.map((p) => (
-                  <li key={p} className="flex gap-2"><Check className="mt-0.5 size-4 shrink-0 text-brand" /> {p}</li>
+                  <li key={p} className="flex gap-2"><Check className="mt-0.5 size-4 shrink-0 text-white" /> {p}</li>
                 ))}
               </ul>
-              <a href={LINKS.webApp} className="group mt-8 flex items-center justify-center gap-2 rounded-2xl bg-brand-grad text-white py-4 text-[17px] font-bold transition hover:brightness-105">
+              <a href={LINKS.webApp} className="group mt-8 flex items-center justify-center gap-2 rounded-2xl bg-white py-4 text-[17px] font-bold text-ink shadow-[0_14px_30px_-16px_rgb(13_47_68/0.5)] transition hover:-translate-y-0.5">
                 {common.order} <ArrowRight className="size-5 transition-transform group-hover:translate-x-1" />
               </a>
             </div>

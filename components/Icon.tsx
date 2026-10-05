@@ -32,7 +32,7 @@ export function Icon({
     return (
       <span
         aria-hidden
-        className={`icon3d grid shrink-0 place-items-center rounded-[30%] bg-brand-grad text-white shadow-[0_14px_30px_-12px_rgb(37_182_233/0.7)] ring-4 ring-white/70 ${className}`}
+        className={`icon3d grid shrink-0 place-items-center rounded-[30%] bg-brand-grad text-white shadow-[0_14px_30px_-12px_rgb(0_182_243/0.7)] ring-4 ring-white/70 ${className}`}
         style={{ width: size, height: size }}
       >
         <Glyph size={Math.round(size * 0.5)} strokeWidth={2} />
@@ -59,7 +59,7 @@ export function IconTile({
   return (
     <span
       aria-hidden
-      className={`icon3d grid shrink-0 place-items-center rounded-[22px] bg-brand-grad text-white shadow-[0_14px_28px_-14px_rgb(37_182_233/0.75)] ${className}`}
+      className={`icon3d grid shrink-0 place-items-center rounded-[22px] bg-brand-grad text-white shadow-[0_14px_28px_-14px_rgb(0_182_243/0.75)] ${className}`}
       style={{ width: size, height: size }}
     >
       <Glyph size={icon ?? Math.round(size * 0.46)} strokeWidth={1.9} />

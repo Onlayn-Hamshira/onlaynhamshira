@@ -43,11 +43,11 @@ function Illustration() {
     <svg viewBox="0 0 120 70">
       <rect x="30" y="4" width="60" height="62" rx="4" fill="#E3F6EF" />
       <path d="M38 16h26M38 22h18M38 38h22M38 52h26" stroke="#9FDCC6" strokeWidth="2.5" strokeLinecap="round" />
-      <circle cx="76" cy="18" r="8" fill="#fff" stroke="#1FB6EE" strokeWidth="1.5" /><circle cx="76" cy="16" r="3" fill="#1E2328" /><path d="M71 23q5-5 10 0" fill="#1E2328" />
-      <circle cx="46" cy="36" r="8" fill="#fff" stroke="#1FB6EE" strokeWidth="1.5" /><circle cx="46" cy="34" r="3" fill="#B0523A" /><path d="M41 41q5-5 10 0" fill="#2BB59A" />
-      <circle cx="72" cy="50" r="8" fill="#fff" stroke="#1FB6EE" strokeWidth="1.5" /><circle cx="72" cy="48" r="3" fill="#1E2328" /><path d="M67 55q5-5 10 0" fill="#2BB59A" />
+      <circle cx="76" cy="18" r="8" fill="#fff" stroke="#1BB3F7" strokeWidth="1.5" /><circle cx="76" cy="16" r="3" fill="#1E2328" /><path d="M71 23q5-5 10 0" fill="#1E2328" />
+      <circle cx="46" cy="36" r="8" fill="#fff" stroke="#1BB3F7" strokeWidth="1.5" /><circle cx="46" cy="34" r="3" fill="#B0523A" /><path d="M41 41q5-5 10 0" fill="#2BB59A" />
+      <circle cx="72" cy="50" r="8" fill="#fff" stroke="#1BB3F7" strokeWidth="1.5" /><circle cx="72" cy="48" r="3" fill="#1E2328" /><path d="M67 55q5-5 10 0" fill="#2BB59A" />
       <g className={s.mag}>
-        <circle cx="70" cy="48" r="11" fill="rgba(31,182,238,.12)" stroke="#2BB59A" strokeWidth="2.5" />
+        <circle cx="70" cy="48" r="11" fill="rgba(0,182,243,.12)" stroke="#2BB59A" strokeWidth="2.5" />
         <path d="M62 56 50 64" stroke="#2BB59A" strokeWidth="3" strokeLinecap="round" />
       </g>
     </svg>
