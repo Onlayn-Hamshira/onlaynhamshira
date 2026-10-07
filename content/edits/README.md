@@ -1,6 +1,7 @@
 # Admin panel o'zgarishlari
 
-Bu fayllarni admin panel (`/admin`) yozadi — har saqlash GitHub'ga commit, Vercel esa saytni qayta yasaydi.
+Bu fayllarni admin panel (alohida loyiha: `onlaynhamshira-admin`) GitHub orqali yozadi. "Nashr qilish" —
+production branch'ga bitta commit, CI saytni qayta yasaydi.
 
 - `text.json` — matnlar: `manba → til → "yo'l" → qiymat` (masalan `dict.uz["faq.items.3.q"]`).
   Manbalar: `dict` (lib/i18n/dictionaries), `why` (lib/why.ts), `expert` (lib/expert.ts).

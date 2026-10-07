@@ -9,4 +9,3 @@ next-env.d.ts
 public/gemini_generated_video_*.gif
 
 # Admin panel qoralamalari (lokal rejim, lib/edit/store.ts)
-.admin-drafts/

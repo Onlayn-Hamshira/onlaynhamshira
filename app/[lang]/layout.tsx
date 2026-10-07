@@ -8,9 +8,6 @@ import { LOCALES, OG_LOCALE, hasLocale, localePath } from "@/lib/i18n/config";
 import { getDictionary } from "@/lib/i18n/get-dictionary";
 import { Analytics } from "@/components/Analytics";
 import { SITE_URL, DEFAULT_OG_IMAGE, GOOGLE_SITE_VERIFICATION } from "@/lib/seo/site";
-import { freshImageEdits, pageText } from "@/lib/edit/admin";
-import { storeMode } from "@/lib/edit/store";
-import { AdminLoader } from "@/components/admin/AdminLoader";
 
 const onest = Onest({
   // Faqat lotin oldindan yuklanadi; kirill (ru) unicode-range orqali faqat kerak bo'lganda yuklanadi
@@ -97,21 +94,14 @@ const jsonLd = {
 const CV_SCRIPT = `(function(h){h.classList.add('js');if(location.hash)h.classList.add('cv-off');
 document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href*="#"]');if(a&&a.hash)h.classList.add('cv-off')},true)})(document.documentElement)`;
 
-// Admin tahrirlash manzillari (/admin/..., proxy.ts) Draft Mode'ga tayanadi, u esa har yangi deploy'dan keyin
-// eskiradi. Shunda /admin/... sahifasi statik chiqadi — skript adminni bir marta /api/admin/enter orqali qayta ulaydi.
-// Oddiy manzillarda hech narsa qilmaydi.
-const ADMIN_RECONNECT = `;(function(){try{var p=location.pathname;if(!/^\\/admin(\\/|$)/.test(p))return;var k='ohAdminTry',n=+sessionStorage.getItem(k)||0;
-if(Date.now()-n<15000)return;sessionStorage.setItem(k,Date.now());location.replace('/api/admin/enter?next='+encodeURIComponent(p+location.search+location.hash))}catch(e){}})()`;
-
 export default async function RootLayout({ children, params }: LayoutProps<"/[lang]">) {
   const { lang } = await params;
   if (!hasLocale(lang)) notFound();
-  // Admin rejimida matnlar repodagi eng so'nggi holatdan + tahrirlash belgilari bilan (lib/edit/admin.ts)
-  const { t, admin } = await pageText(lang);
+  const t = await getDictionary(lang);
   return (
     <html lang={lang} className={onest.variable} suppressHydrationWarning>
       <body>
-        <script dangerouslySetInnerHTML={{ __html: CV_SCRIPT + (admin ? ";window.__ohAdmin=1" : ADMIN_RECONNECT) }} />
+        <script dangerouslySetInnerHTML={{ __html: CV_SCRIPT }} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -120,7 +110,6 @@ export default async function RootLayout({ children, params }: LayoutProps<"/[la
         <SmoothScroll />
         <BackToTop label={t.common.backToTop} />
         <Analytics />
-        {admin && <AdminLoader user={admin} lang={lang} mode={storeMode()} images={await freshImageEdits().catch(() => ({}))} />}
       </body>
     </html>
   );

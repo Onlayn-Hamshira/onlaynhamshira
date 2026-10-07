@@ -8,7 +8,7 @@ const dictionaries = {
   en: () => import("./dictionaries/en").then((m) => m.default),
 };
 
-/** Asl lug'at (admin o'zgarishlarisiz) — admin panel uchun */
+/** Asl lug'at (admin o'zgarishlarisiz) — admin panel manbasi (app/edit-sources.json) */
 export const getRawDictionary = (l: Locale) => dictionaries[l]();
 
 /** Lug'at + admin paneldan saqlangan o'zgarishlar (content/edits/text.json, build vaqtida) */

@@ -18,7 +18,8 @@ import { ContactsPage } from "@/components/ContactsPage";
 import { AppLanding } from "@/components/AppLanding";
 import { LegalPage } from "@/components/legal/LegalPage";
 import { BlogIndexPage, BlogPostPage } from "@/components/blog/BlogPages";
-import { adminLegacyPage, pageText } from "@/lib/edit/admin";
+import { getDictionary } from "@/lib/i18n/get-dictionary";
+import { expertText, whyText } from "@/lib/edit/text";
 
 // Eski Tilda sahifalari: har biri build vaqtida statik HTML. Ro'yxatda yo'q yo'l — 404
 export const dynamicParams = false;
@@ -93,11 +94,9 @@ export async function generateMetadata({ params }: PageProps<"/[lang]/[...slug]"
 
 export default async function LegacyRoute({ params }: PageProps<"/[lang]/[...slug]">) {
   const { lang, slug } = await params;
-  const found = findLegacyPage(lang, slug);
-  if (!found || !hasLocale(lang)) notFound();
-  // Admin tahrirlash rejimida: repodagi eng so'nggi matn + tahrirlash belgilari (lib/edit/admin.ts)
-  const { t, admin, why, expert } = await pageText(lang);
-  const pg = admin ? await adminLegacyPage(found) : found;
+  const pg = findLegacyPage(lang, slug);
+  if (!pg || !hasLocale(lang)) notFound();
+  const t = await getDictionary(lang);
   const home = localePath(lang);
   // Blog va maqolalar — yangi dizayn (faqat sahifa tanasi; <head>, JSON-LD va URL o'zgarmaydi)
   const blog = pg.group === "blogIndex" ? "index" : isArticle(pg) ? "post" : null;
@@ -139,13 +138,13 @@ export default async function LegacyRoute({ params }: PageProps<"/[lang]/[...slu
       {pg.group === "expert" ? (
         // Hamkor sahifasi — Tilda HTML o'rniga alohida dizayn (matnlar lib/expert.ts da, metadata JSON'da)
         <main id="main">
-          <ExpertPage t={expert(pg.contentLang)} />
+          <ExpertPage t={expertText(pg.contentLang)} />
         </main>
       ) : pg.group === "compare" ? (
         // "Nega biz?" — taqqoslash sahifasi (matnlar lib/why.ts da, metadata/JSON-LD JSON'da)
         <main id="main">
           <WhyPage
-            t={why(pg.contentLang)}
+            t={whyText(pg.contentLang)}
             callLabel={t.mobileCta.call}
             stats={t.stats.items}
             org={{

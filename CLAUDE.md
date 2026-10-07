@@ -80,14 +80,14 @@ Menyuda ko'rinishi kerak bo'lsa: `lib/nav.ts` → `PAGES` ga uch tildagi manzili
 - Doimiy redirectlar aynan `301` (`statusCode: 301`, `permanent: true` emas — u 308 beradi).
 - `seo:check` canonical o'z URL'i ekanini va hreflang ikki tomonlama ekanini ham tekshiradi.
 
-## Admin panel (`/admin`, `lib/edit/`, `components/admin/`)
+## Admin panel o'zgarishlari (`content/edits/`, `lib/edit/`)
 
-Tahrirlash `/admin/...` manzillarida: `proxy.ts` (matcher faqat `/admin/:path*`) so'rovni asl sahifaga rewrite qiladi
-va `x-oh-edit` belgisini qo'yadi; Draft Mode sahifani so'rov paytida chizadi. Oddiy manzillar hammaga statik qoladi.
-Har bir matn oxiriga faqat admin rejimida ko'rinmas manzil belgisi qo'shiladi (`stegaDeep`). Saqlash — `admin-drafts`
-branch'ga commit (qoralama), "Nashr qilish" — uni `main` ga merge. Fayllar: `content/edits/text.json` (manba fayllar
-ustiga build vaqtida qo'yiladi), `content/edits/images.json`, `public/uploads/`, `content/legacy/*.json`.
-- Sahifada lug'atni `getDictionary` emas, `pageText(lang)` (`lib/edit/admin.ts`) orqali oling — aks holda admin tahrirlay olmaydi.
+Admin panel — alohida loyiha (`onlaynhamshira-admin`); u shu repoga GitHub orqali commit qiladi. Saytda admin kodi
+yo'q: o'zgarishlar build vaqtida qo'llanadi, sahifalar to'liq statik qoladi.
+Fayllar: `content/edits/text.json` (manba fayllar ustiga qo'yiladi), `content/edits/images.json`, `public/uploads/`,
+`content/legacy/*.json`. Admin panel asl matn va qoidalarni `app/edit-sources.json` (statik) dan o'qiydi.
+- Sahifada lug'atni `getDictionary`, "Nega biz?"/hamkor matnini `whyText`/`expertText` (`lib/edit/text.ts`) orqali oling —
+  `WHY[l]`/`EXPERT[l]` to'g'ridan-to'g'ri ishlatilsa admin o'zgarishlari chiqmaydi.
 - Yangi almashtiriladigan rasm: `editableImage()` dan o'tkazing va prefiksini `EDITABLE_IMAGE_PREFIXES` ga qo'shing.
 - Lug'atda tartib bo'yicha boshqa ma'lumotga bog'lanmagan yangi ro'yxat bo'lsa — `LISTS` ga qo'shing.
 - `meta` va H1 qulfi (`LOCKED`) — SEO talabi, olib tashlamang.
