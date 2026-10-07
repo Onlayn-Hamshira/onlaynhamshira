@@ -3,11 +3,12 @@ import { loginConfigured, sessionUser } from "@/lib/edit/auth";
 import { storeMode } from "@/lib/edit/store";
 import { LoginForm } from "@/components/admin/LoginForm";
 
-export default async function AdminPage({ searchParams }: PageProps<"/admin">) {
-  const q = await searchParams;
-  const raw = typeof q.next === "string" ? q.next : "/";
-  const next = raw.startsWith("/") && !raw.startsWith("//") ? raw : "/";
-  // Kirgan bo'lsa — darhol saytga, tahrirlash rejimida
+/** Faqat /admin/... ichidagi yo'l (open redirect bo'lmasin) */
+const adminPath = (raw: unknown) => (typeof raw === "string" && /^\/admin(\/|$)/.test(raw) && !raw.startsWith("/admin/login") ? raw : "/admin");
+
+export default async function AdminLoginPage({ searchParams }: PageProps<"/admin/login">) {
+  const next = adminPath((await searchParams).next);
+  // Kirgan bo'lsa — darhol tahrirlash rejimiga
   if (await sessionUser()) redirect(`/api/admin/enter?next=${encodeURIComponent(next)}`);
   return (
     <LoginForm

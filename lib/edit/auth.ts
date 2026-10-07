@@ -3,11 +3,13 @@
 // boshqa tashrifchilar avvalgidek statik HTML oladi (tezlik va SEO o'zgarmaydi).
 
 import crypto from "node:crypto";
-import { cookies, draftMode } from "next/headers";
+import { cookies, draftMode, headers } from "next/headers";
 
 export const SESSION_COOKIE = "oh_admin_session";
 /** JS o'qiy oladigan belgi: yangi deploy'dan keyin draft cookie eskiradi — sahifa adminni qayta ulaydi */
 export const FLAG_COOKIE = "oh_admin";
+/** proxy.ts /admin/... so'rovlariga qo'yadigan belgi: tahrirlash faqat shu manzillarda */
+export const EDIT_HEADER = "x-oh-edit";
 const TTL = 12 * 60 * 60; // 12 soat
 
 function credentials(): { user: string; pass: string } | null {
@@ -57,10 +59,12 @@ export async function sessionUser() {
 }
 
 /**
- * Sahifalar uchun: admin tahrirlash rejimida bo'lsa — foydalanuvchi nomi.
- * cookies() faqat draft rejimida chaqiriladi — oddiy build/statik sahifa dinamik bo'lib qolmasin.
+ * Sahifalar uchun: /admin/... manzilida, tahrirlash rejimida bo'lsa — foydalanuvchi nomi.
+ * Oddiy manzillarda admin ham saytni oddiy (nashr qilingan) ko'rinishda ko'radi.
+ * cookies()/headers() faqat draft rejimida chaqiriladi — oddiy build/statik sahifa dinamik bo'lib qolmasin.
  */
 export async function adminUser(): Promise<string | null> {
   if (!(await draftMode()).isEnabled) return null;
+  if ((await headers()).get(EDIT_HEADER) !== "1") return null;
   return sessionUser();
 }

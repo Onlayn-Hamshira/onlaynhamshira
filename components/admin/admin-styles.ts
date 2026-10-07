@@ -27,6 +27,11 @@ export const ADMIN_CSS = `
 .oh-bar-btn{height:34px;min-width:34px;padding:0 10px;border-radius:999px;border:0;background:rgba(255,255,255,.1);color:#fff;cursor:pointer;
   display:inline-flex;align-items:center;gap:6px;font:inherit;font-size:13px;font-weight:600;white-space:nowrap}
 .oh-bar-btn:hover{background:rgba(255,255,255,.2)}
+.oh-bar-pub{background:linear-gradient(100deg,#1bb3f7,#2ec9b0 55%,#54de62)!important;box-shadow:0 6px 16px -8px rgba(46,201,176,.9)}
+.oh-bar-pub:hover{filter:brightness(1.06)}
+a.oh-bar-btn{text-decoration:none}
+.oh-changes{margin:0;padding:4px 0 4px 22px;display:grid;gap:8px;font-size:14.5px;line-height:1.45;max-height:46vh;overflow:auto}
+.oh-changes li::marker{color:#2ec9b0;font-weight:700}
 .oh-chip{display:inline-flex;align-items:center;gap:6px;height:28px;padding:0 10px;border-radius:999px;font-size:12.5px;font-weight:600;white-space:nowrap;
   background:rgba(255,255,255,.1);color:#d9f7ef;text-decoration:none}
 .oh-chip[data-s=pending]{background:rgba(255,213,74,.16);color:#ffe28a}

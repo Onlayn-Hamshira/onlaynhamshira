@@ -10,8 +10,8 @@
 import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import {
-  AlertTriangle, ArrowRight, Bold, Check, CircleCheck, Eye, EyeOff, ImageUp, Italic, Link2, Loader2, Lock, LogOut,
-  MoreHorizontal, Pencil, Plus, Trash2, Unlink, X,
+  AlertTriangle, ArrowRight, Bold, Check, CircleCheck, ExternalLink, Eye, EyeOff, ImageUp, Italic, Link2, Loader2, Lock, LogOut,
+  MoreHorizontal, Pencil, Plus, Send, Trash2, Undo2, Unlink, X,
 } from "lucide-react";
 import { ADMIN_CSS } from "./admin-styles";
 import {
@@ -40,7 +40,7 @@ type ImageTarget = { kind: "image"; el: HTMLImageElement; key: string };
 type Target = TextTarget | BlockTarget | ImageTarget;
 type ActionType = "edit" | "add" | "delete" | "image";
 type Action = { type: ActionType; target: Target; id?: string };
-type SaveResult = { ok: true; mode: string; sha?: string; url?: string };
+type SaveResult = { ok: true; mode: string };
 
 const parseId = (id: string) => {
   const [source, lang, path] = id.split(":");
@@ -101,11 +101,11 @@ function scan(images: Record<string, string>, mode: AdminOverlayProps["mode"]): 
     const key = img.dataset.ohKey ?? (shown ? (reverse.get(shown) ?? shown) : null);
     if (!key || !EDITABLE_IMAGE_PREFIXES.some((p) => key.startsWith(p))) return;
     img.dataset.ohKey = key;
-    // Saqlangan, lekin hali deploy bo'lmagan rasm — admin uni darhol ko'rsin
+    // Qoralamadagi (hali nashr qilinmagan) rasm — admin uni darhol ko'rsin
     const fresh = images[key];
     if (fresh && shown !== fresh) {
       img.removeAttribute("srcset");
-      img.src = mode === "github" ? `/api/admin/asset?p=${encodeURIComponent(fresh)}` : fresh;
+      img.src = `/api/admin/asset?p=${encodeURIComponent(fresh)}`;
     }
     out.push({ kind: "image", el: img, key });
   });
@@ -118,7 +118,14 @@ const visible = (el: Element) =>
 // ─── Asosiy komponent ──────────────────────────────────────────────────────────────────────────────
 
 type Deploy = { sha?: string; url?: string; mode: string; state: "pending" | "success" | "failure" | "local" };
+type Pending = { count: number; changes: string[] };
+type PublishResult = { ok: true; mode: string; sha?: string; url?: string };
 const LAST_KEY = "ohAdminLast";
+const FLASH_KEY = "ohAdminFlash";
+
+/** Sahifaning asl manzili: /admin/blog → /blog, /admin → / */
+const pagePath = () => location.pathname.replace(/^\/admin(?=\/|$)/, "") || "/";
+const adminHref = (p: string) => (p === "/" ? "/admin" : `/admin${p}`);
 
 export default function AdminOverlay({ user, lang, mode, images }: AdminOverlayProps) {
   const [targets, setTargets] = useState<Target[]>([]);
@@ -128,6 +135,8 @@ export default function AdminOverlay({ user, lang, mode, images }: AdminOverlayP
   const [action, setAction] = useState<Action | null>(null);
   const [toast, setToast] = useState<{ title: string; text?: string; err?: boolean; link?: string } | null>(null);
   const [deploy, setDeploy] = useState<Deploy | null>(null);
+  const [pending, setPending] = useState<Pending | null>(null);
+  const [dialog, setDialog] = useState<"publish" | "discard" | null>(null);
   const marks = useRef<(HTMLButtonElement | null)[]>([]);
   const outline = useRef<HTMLDivElement>(null);
   const hover = useRef<Element | null>(null);
@@ -244,21 +253,23 @@ export default function AdminOverlay({ user, lang, mode, images }: AdminOverlayP
     };
   }, [menu]);
 
-  // Oldingi saqlash natijasi (sahifa qayta yuklangandan keyin) va Vercel deploy holati
+  // Qayta yuklangandan keyingi xabar (saqlandi / nashr qilindi / bekor qilindi), nashr deploy holati, qoralamalar soni
   useEffect(() => {
     try {
-      const last = JSON.parse(sessionStorage.getItem(LAST_KEY) ?? "null") as (Deploy & { t: number; shown?: boolean }) | null;
-      if (!last || Date.now() - last.t > 15 * 60 * 1000) return;
-      setDeploy(last);
-      if (!last.shown) {
+      const flash = JSON.parse(sessionStorage.getItem(FLASH_KEY) ?? "null") as { kind: string; mode: string } | null;
+      sessionStorage.removeItem(FLASH_KEY);
+      if (flash?.kind === "saved") setToast({ title: "Qoralama saqlandi", text: "Hozircha faqat sizga ko‘rinadi. Saytga chiqarish uchun pastdagi “Nashr qilish”ni bosing." });
+      if (flash?.kind === "published")
         setToast(
-          last.mode === "github"
-            ? { title: "O‘zgarish saqlandi", text: "Vercel saytni yangilamoqda — odatda 1–3 daqiqa. Pastdagi holatni kuzating.", link: last.url }
-            : { title: "O‘zgarish saqlandi", text: "Lokal rejim: fayl diskka yozildi. Saytga chiqarish uchun commit qiling." },
+          flash.mode === "github"
+            ? { title: "Nashr qilindi", text: "Vercel saytni yangilamoqda — odatda 1–3 daqiqa. Holat pastdagi panelda." }
+            : { title: "Nashr qilindi", text: "Lokal rejim: fayllar joyiga yozildi. Saytga chiqarish uchun commit qiling." },
         );
-        sessionStorage.setItem(LAST_KEY, JSON.stringify({ ...last, shown: true }));
-      }
+      if (flash?.kind === "discarded") setToast({ title: "Qoralama bekor qilindi", text: "Sayt nashr qilingan holatiga qaytdi." });
+      const last = JSON.parse(sessionStorage.getItem(LAST_KEY) ?? "null") as (Deploy & { t: number }) | null;
+      if (last && Date.now() - last.t < 15 * 60 * 1000) setDeploy(last);
     } catch {}
+    api<Pending>("/api/admin/pending").then(setPending).catch(() => setPending({ count: 0, changes: [] }));
   }, []);
 
   useEffect(() => {
@@ -271,7 +282,7 @@ export default function AdminOverlay({ user, lang, mode, images }: AdminOverlayP
         if (stop || (state !== "success" && state !== "failure")) return;
         const next = { ...deploy, state } as Deploy;
         setDeploy(next);
-        sessionStorage.setItem(LAST_KEY, JSON.stringify({ ...next, t: Date.now(), shown: true }));
+        sessionStorage.setItem(LAST_KEY, JSON.stringify({ ...next, t: Date.now() }));
       } catch {}
     };
     const id = window.setInterval(poll, 8000);
@@ -288,6 +299,22 @@ export default function AdminOverlay({ user, lang, mode, images }: AdminOverlayP
     return () => clearTimeout(id);
   }, [toast]);
 
+  // Sayt ichidagi havolalar tahrirlash rejimida qolsin: /blog → /admin/blog
+  useEffect(() => {
+    const click = (e: MouseEvent) => {
+      if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+      const a = (e.target as Element).closest?.("a[href]") as HTMLAnchorElement | null;
+      if (!a || a.closest("[data-oh-ui]") || a.target === "_blank" || a.hasAttribute("download")) return;
+      const u = new URL(a.href, location.href);
+      if (u.origin !== location.origin || /^\/(admin|api)(\/|$)/.test(u.pathname)) return;
+      e.preventDefault();
+      e.stopPropagation();
+      location.href = adminHref(u.pathname) + u.search + u.hash;
+    };
+    document.addEventListener("click", click, true);
+    return () => document.removeEventListener("click", click, true);
+  }, []);
+
   const openMenu = (target: Target, e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     e.stopPropagation();
@@ -302,21 +329,30 @@ export default function AdminOverlay({ user, lang, mode, images }: AdminOverlayP
     setAction({ type, target, id });
   };
 
-  const onSaved = useCallback((res: SaveResult) => {
-    const d: Deploy = { sha: res.sha, url: res.url, mode: res.mode, state: res.mode === "github" ? "pending" : "local" };
+  // To'liq qayta yuklash: sahifa qoralamadagi yangi holat bilan chiziladi
+  const reloadWith = (flash: object) => {
     try {
+      sessionStorage.setItem(FLASH_KEY, JSON.stringify(flash));
+    } catch {}
+    location.reload();
+  };
+
+  const onSaved = useCallback((res: SaveResult) => reloadWith({ kind: "saved", mode: res.mode }), []);
+
+  const onPublished = (res: PublishResult) => {
+    try {
+      const d: Deploy = { sha: res.sha, url: res.url, mode: res.mode, state: res.mode === "github" && res.sha ? "pending" : "local" };
       sessionStorage.setItem(LAST_KEY, JSON.stringify({ ...d, t: Date.now() }));
     } catch {}
-    // To'liq qayta yuklash: sahifa repodagi yangi holat bilan chiziladi (yangi deploy bo'lsa — admin qayta ulanadi)
-    location.reload();
-  }, []);
+    reloadWith({ kind: "published", mode: res.mode });
+  };
 
   const logout = async () => {
     await fetch("/api/admin/logout", { method: "POST" }).catch(() => {});
     try {
       sessionStorage.removeItem(LAST_KEY);
     } catch {}
-    location.href = location.pathname;
+    location.href = pagePath();
   };
 
   const counts = useMemo(() => targets.length, [targets]);
@@ -354,7 +390,24 @@ export default function AdminOverlay({ user, lang, mode, images }: AdminOverlayP
           Tahrirlash <span className="oh-bar-label">rejimi</span>
         </span>
         <span className="oh-bar-user">· {user} · {counts} ta element</span>
+        {pending && pending.count > 0 && (
+          <>
+            <span className="oh-chip" data-s="pending" title="Saqlangan, lekin saytga hali chiqmagan o‘zgarishlar">
+              {pending.count} ta qoralama
+            </span>
+            <button type="button" className="oh-bar-btn oh-bar-pub" onClick={() => setDialog("publish")}>
+              <Send size={15} /> Nashr qilish
+            </button>
+            <button type="button" className="oh-bar-btn" onClick={() => setDialog("discard")} title="Qoralamani bekor qilish">
+              <Undo2 size={16} />
+            </button>
+          </>
+        )}
+        {pending && pending.count === 0 && <span className="oh-chip oh-bar-label">Barchasi nashr qilingan</span>}
         <DeployChip deploy={deploy} mode={mode} />
+        <a className="oh-bar-btn" href={pagePath()} target="_blank" rel="noopener" title="Sayt (nashr qilingan holat) yangi oynada">
+          <ExternalLink size={15} />
+        </a>
         <button type="button" className="oh-bar-btn" onClick={toggleHidden} title={hidden ? "Belgilarni ko‘rsatish" : "Belgilarni yashirish (saytni toza ko‘rish)"}>
           {hidden ? <Eye size={16} /> : <EyeOff size={16} />}
           <span className="oh-bar-label">{hidden ? "Belgilar" : "Ko‘rish"}</span>
@@ -363,6 +416,10 @@ export default function AdminOverlay({ user, lang, mode, images }: AdminOverlayP
           <LogOut size={16} />
         </button>
       </div>
+
+      {dialog && pending && (
+        <PublishDialog kind={dialog} pending={pending} mode={mode} onClose={() => setDialog(null)} onPublished={onPublished} onDiscarded={() => reloadWith({ kind: "discarded" })} />
+      )}
 
       {action && (
         <ActionModal
@@ -400,13 +457,90 @@ export default function AdminOverlay({ user, lang, mode, images }: AdminOverlayP
 function DeployChip({ deploy, mode }: { deploy: Deploy | null; mode: AdminOverlayProps["mode"] }) {
   if (mode === "readonly") return <span className="oh-chip" data-s="failure" title="Vercel'da GITHUB_TOKEN qo‘shilmagan">Saqlash o‘chiq</span>;
   if (!deploy) return null;
-  if (deploy.state === "local") return <span className="oh-chip">Lokal: faylga yozildi</span>;
+  if (deploy.state === "local") return null;
   const label = deploy.state === "pending" ? "Saytga chiqmoqda…" : deploy.state === "success" ? "Saytda yangilandi" : "Deploy xatosi";
   return (
     <a className="oh-chip" data-s={deploy.state} href={deploy.url} target="_blank" rel="noopener" title="GitHub'dagi commit">
       {deploy.state === "pending" ? <Loader2 size={13} className="oh-spin" /> : deploy.state === "success" ? <Check size={13} /> : <AlertTriangle size={13} />}
       {label}
     </a>
+  );
+}
+
+// "Edit dict text: faq.items.3.q" → "Tahrirlandi · Savol-javoblar › …" (commit sarlavhalari inglizcha — git qoidasi)
+function humanize(msg: string): string {
+  const text = msg.match(/^(Edit|Add item to|Remove item from) (dict|why|expert) text: ([\w.]+)(?: \(#(\d+)\))?/);
+  if (text) {
+    const verb = { Edit: "Tahrirlandi", "Add item to": "Qo‘shildi", "Remove item from": "O‘chirildi" }[text[1]];
+    return `${verb} · ${pathLabel(text[2] as Source, text[3])}${text[4] ? ` (${text[4]}-element)` : ""}`;
+  }
+  const block = msg.match(/^(Edit|Add|Remove|Replace image) block #\d+ on (\S+)/);
+  if (block) {
+    const verb = { Edit: "Matn tahrirlandi", Add: "Matn qo‘shildi", Remove: "Matn o‘chirildi", "Replace image": "Rasm almashtirildi" }[block[1]];
+    return `${verb} · ${block[2]}`;
+  }
+  const img = msg.match(/^Replace image (\S+)/);
+  return img ? `Rasm almashtirildi · ${img[1].split("/").slice(-2).join("/")}` : msg;
+}
+
+function PublishDialog({
+  kind, pending, mode, onClose, onPublished, onDiscarded,
+}: {
+  kind: "publish" | "discard"; pending: Pending; mode: AdminOverlayProps["mode"]; onClose: () => void; onPublished: (r: PublishResult) => void; onDiscarded: () => void;
+}) {
+  const [busy, setBusy] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const go = async () => {
+    setBusy(true);
+    setError(null);
+    try {
+      if (kind === "publish") onPublished(await api<PublishResult>("/api/admin/publish", {}));
+      else {
+        await api("/api/admin/discard", {});
+        onDiscarded();
+      }
+    } catch (e) {
+      setError((e as Error).message);
+      setBusy(false);
+    }
+  };
+  const publish = kind === "publish";
+  return (
+    <Shell
+      icon={publish ? <Send size={20} /> : <Undo2 size={20} />}
+      variant={publish ? undefined : "del"}
+      title={publish ? "Saytga nashr qilish" : "Qoralamani bekor qilish"}
+      crumb={`${pending.count} ta o‘zgarish`}
+      onClose={onClose}
+      footer={
+        <>
+          <span className="oh-mf-note">
+            {publish
+              ? mode === "github" ? "Sayt 1–3 daqiqada yangilanadi." : "Lokal rejim: fayllar joyiga yoziladi."
+              : "Bu amalni qaytarib bo‘lmaydi."}
+          </span>
+          <button type="button" className="oh-btn oh-btn-ghost" onClick={onClose}>Yopish</button>
+          <button type="button" className={`oh-btn ${publish ? "oh-btn-main" : "oh-btn-danger"}`} disabled={busy} onClick={go}>
+            {busy ? <Loader2 size={18} className="oh-spin" /> : publish ? <Send size={18} /> : <Undo2 size={18} />}
+            {publish ? "Saytga chiqarish" : "Ha, bekor qilish"}
+          </button>
+        </>
+      }
+    >
+      {error && <div className="oh-err">{error}</div>}
+      <div className={`oh-info${publish ? "" : " oh-warn"}`}>
+        {publish ? (
+          <>Quyidagi o‘zgarishlar <b>barcha tashrifchilarga</b> ko‘rinadi.</>
+        ) : (
+          <>Quyidagi nashr qilinmagan o‘zgarishlar <b>o‘chiriladi</b>, sayt hozirgi (nashr qilingan) holatida qoladi.</>
+        )}
+      </div>
+      <ol className="oh-changes">
+        {pending.changes.map((c, i) => (
+          <li key={i}>{humanize(c)}</li>
+        ))}
+      </ol>
+    </Shell>
   );
 }
 
@@ -572,7 +706,7 @@ function useSubmit(onSaved: (r: SaveResult) => void) {
 
 const SaveNote = ({ mode }: { mode: AdminOverlayProps["mode"] }) => (
   <span className="oh-mf-note">
-    {mode === "github" ? "Saqlangach sayt avtomatik yangilanadi (1–3 daqiqa)." : mode === "local" ? "Lokal rejim: o‘zgarish fayllarga yoziladi." : "Saqlash sozlanmagan (GITHUB_TOKEN)."}
+    {mode === "readonly" ? "Saqlash sozlanmagan (GITHUB_TOKEN)." : "Qoralama sifatida saqlanadi — saytga “Nashr qilish”dan keyin chiqadi."}
   </span>
 );
 
@@ -770,7 +904,7 @@ function BlockModal({ action, mode, onClose, onSaved }: ModalProps) {
   const { busy, error, run, setError } = useSubmit(onSaved);
 
   useEffect(() => {
-    api<BlockField>(`/api/admin/field?page=${encodeURIComponent(location.pathname)}&n=${t.n}`)
+    api<BlockField>(`/api/admin/field?page=${encodeURIComponent(pagePath())}&n=${t.n}`)
       .then((b) => {
         setBlock(b);
         setHtml(type === "edit" ? b.html : "");
@@ -785,7 +919,7 @@ function BlockModal({ action, mode, onClose, onSaved }: ModalProps) {
   const submit = () => {
     if (busy || !block) return;
     if (type !== "delete" && empty) return setError("Matn bo‘sh bo‘lmasligi kerak.");
-    run({ kind: "block", page: location.pathname, n: t.n, op: type, html });
+    run({ kind: "block", page: pagePath(), n: t.n, op: type, html });
   };
   const plain = (s: string) => {
     const d = document.createElement("div");
@@ -892,7 +1026,7 @@ function ImageModal({ action, mode, onClose, onSaved }: ModalProps) {
 
   useEffect(() => {
     if (t.kind !== "block") return;
-    api<BlockField>(`/api/admin/field?page=${encodeURIComponent(location.pathname)}&n=${t.n}`)
+    api<BlockField>(`/api/admin/field?page=${encodeURIComponent(pagePath())}&n=${t.n}`)
       .then((b) => setAlt(b.alt ?? ""))
       .catch(() => {});
   }, [t]);
@@ -912,7 +1046,7 @@ function ImageModal({ action, mode, onClose, onSaved }: ModalProps) {
   const submit = () => {
     if (!file || busy) return;
     const upload = { name: file.name, type: file.type, data: file.data, width: file.width, height: file.height };
-    if (t.kind === "block") run({ kind: "block", page: location.pathname, n: t.n, op: "image", alt, upload });
+    if (t.kind === "block") run({ kind: "block", page: pagePath(), n: t.n, op: "image", alt, upload });
     else if (t.kind === "image") run({ kind: "image", key: t.key, upload });
   };
 

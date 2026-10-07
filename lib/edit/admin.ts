@@ -10,13 +10,13 @@ import { legacyFile, type LegacyPage } from "@/lib/seo/legacy";
 import { adminUser } from "./auth";
 import { stegaDeep, type TextEdits } from "./shared";
 import { TEXT_EDITS, withEdits } from "./text";
-import { readJson, storeMode } from "./store";
+import { readJson } from "./store";
 import { annotate } from "./html";
 
 export const TEXT_FILE = "content/edits/text.json";
 export const IMAGES_FILE = "content/edits/images.json";
 
-/** Repodagi eng so'nggi holat (deploy kutilmaydi) — bitta so'rov ichida bir marta o'qiladi */
+/** Qoralamadagi eng so'nggi holat (nashr va deploy kutilmaydi) — bitta so'rov ichida bir marta o'qiladi */
 // (token yo'q Vercel'da fayl o'qilmaydi — build'dagi holat ishlatiladi)
 export const freshTextEdits = cache(() => readJson<TextEdits>(TEXT_FILE).catch(() => TEXT_EDITS));
 export const freshImageEdits = cache(() => readJson<Record<string, string>>(IMAGES_FILE));
@@ -52,7 +52,7 @@ export async function adminLegacyPage(pg: LegacyPage): Promise<LegacyPage> {
   const fresh = file ? await readJson<LegacyPage>(file).catch(() => pg) : pg;
   if (!blockEditable(fresh)) return fresh;
   let html = annotate(fresh.html);
-  // Yangi yuklangan rasm deploy tugaguncha saytda yo'q — admin uni repodan ko'radi
-  if (storeMode() === "github") html = html.replace(/(\ssrc=")(\/uploads\/[^"]+)"/g, (_, a: string, p: string) => `${a}/api/admin/asset?p=${encodeURIComponent(p)}"`);
+  // Yangi yuklangan rasm nashr va deploy tugaguncha saytda yo'q — admin uni qoralamadan ko'radi
+  html = html.replace(/(\ssrc=")(\/uploads\/[^"]+)"/g, (_, a: string, p: string) => `${a}/api/admin/asset?p=${encodeURIComponent(p)}"`);
   return { ...fresh, html };
 }

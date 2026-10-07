@@ -17,10 +17,12 @@ npm run build && npm start
 
 ## Admin panel (matn va rasmlarni tahrirlash)
 
-`/admin` → login/parol → sayt o'zi tahrirlash rejimida ochiladi: har bir matn va rasm yonida **⋯** tugmasi
-(Tahrirlash / Qo'shish / O'chirish). Matn modalda uch tilda birga chiqadi. "O'zgarishni tasdiqlash" →
-GitHub'ga commit → Vercel saytni avtomatik qayta yasaydi (1–3 daqiqa, holati pastki panelda ko'rinadi).
-Oddiy tashrifchilar avvalgidek statik sahifa oladi — tezlik va SEO o'zgarmaydi.
+`/admin` → login/parol → sayt `/admin/...` manzillarida tahrirlash rejimida ochiladi (`/admin/blog` = `/blog`):
+har bir matn va rasm yonida **⋯** tugmasi (Tahrirlash / Qo'shish / O'chirish). Matn modalda uch tilda birga chiqadi.
+- "O'zgarishni tasdiqlash" → **qoralama** (GitHub'dagi `admin-drafts` branch). Uni faqat admin `/admin/...` da ko'radi.
+- Pastki paneldagi **"Nashr qilish"** → qoralama `main` ga merge → Vercel saytni qayta yasaydi (1–3 daqiqa).
+  **"Bekor qilish"** (↶) — nashr qilinmagan o'zgarishlarni o'chiradi.
+- Oddiy manzillar (`/`, `/blog`) hammaga, adminga ham, nashr qilingan holatni ko'rsatadi; statik — tezlik va SEO o'zgarmaydi.
 
 Vercel → Settings → Environment Variables:
 
@@ -29,9 +31,10 @@ Vercel → Settings → Environment Variables:
 | `ADMIN_USERNAME`, `ADMIN_PASSWORD` | Admin login va paroli |
 | `ADMIN_SECRET` | Sessiya imzosi uchun uzun tasodifiy satr (`openssl rand -hex 32`) |
 | `GITHUB_TOKEN` | Fine-grained token, faqat shu repo: **Contents: Read and write**, **Deployments: Read**, **Commit statuses: Read** |
-| `GITHUB_REPO`, `GITHUB_BRANCH` | Ixtiyoriy (standart: `AsilbekXoliyorov441/onlaynhamshira-demo`, `main`) |
+| `GITHUB_REPO`, `GITHUB_BRANCH`, `GITHUB_DRAFT_BRANCH` | Ixtiyoriy (standart: `AsilbekXoliyorov441/onlaynhamshira-demo`, `main`, `admin-drafts`) |
 
-Lokal sinov: `npm run dev` → `/admin` (login `admin`, parol `admin12345`); token bo'lmasa o'zgarishlar diskka yoziladi.
+Lokal sinov: `npm run dev` → `/admin` (login `admin`, parol `admin12345`); token bo'lmasa qoralama `.admin-drafts/`
+papkasiga, nashr esa to'g'ridan-to'g'ri fayllarga yoziladi. `admin-drafts` branch Vercel'da deploy qilinmaydi (`vercel.json`).
 
 Qayerga yoziladi: lug'atlar / "Nega biz?" / hamkorlik sahifasi matnlari — `content/edits/text.json`,
 almashtirilgan rasmlar — `content/edits/images.json` + `public/uploads/`, blog va eski sahifalar — `content/legacy/*.json`.

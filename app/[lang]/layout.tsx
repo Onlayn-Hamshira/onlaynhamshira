@@ -97,10 +97,11 @@ const jsonLd = {
 const CV_SCRIPT = `(function(h){h.classList.add('js');if(location.hash)h.classList.add('cv-off');
 document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href*="#"]');if(a&&a.hash)h.classList.add('cv-off')},true)})(document.documentElement)`;
 
-// Admin tahrirlash rejimi (Draft Mode) har yangi deploy'dan keyin eskiradi. Admin brauzerida oh_admin belgisi bo'lsa,
-// statik sahifa uni bir marta /api/admin/enter orqali qayta ulaydi. Oddiy tashrifchida hech narsa qilmaydi.
-const ADMIN_RECONNECT = `;(function(){try{if(!/(?:^|; )oh_admin=1/.test(document.cookie))return;var k='ohAdminTry',n=+sessionStorage.getItem(k)||0;
-if(Date.now()-n<15000)return;sessionStorage.setItem(k,Date.now());location.replace('/api/admin/enter?next='+encodeURIComponent(location.pathname+location.search+location.hash))}catch(e){}})()`;
+// Admin tahrirlash manzillari (/admin/..., proxy.ts) Draft Mode'ga tayanadi, u esa har yangi deploy'dan keyin
+// eskiradi. Shunda /admin/... sahifasi statik chiqadi — skript adminni bir marta /api/admin/enter orqali qayta ulaydi.
+// Oddiy manzillarda hech narsa qilmaydi.
+const ADMIN_RECONNECT = `;(function(){try{var p=location.pathname;if(!/^\\/admin(\\/|$)/.test(p))return;var k='ohAdminTry',n=+sessionStorage.getItem(k)||0;
+if(Date.now()-n<15000)return;sessionStorage.setItem(k,Date.now());location.replace('/api/admin/enter?next='+encodeURIComponent(p+location.search+location.hash))}catch(e){}})()`;
 
 export default async function RootLayout({ children, params }: LayoutProps<"/[lang]">) {
   const { lang } = await params;

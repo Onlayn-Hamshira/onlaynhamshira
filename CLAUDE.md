@@ -82,10 +82,11 @@ Menyuda ko'rinishi kerak bo'lsa: `lib/nav.ts` → `PAGES` ga uch tildagi manzili
 
 ## Admin panel (`/admin`, `lib/edit/`, `components/admin/`)
 
-Draft Mode orqali: admin uchun sahifa so'rov paytida chiziladi, boshqalar uchun statik qoladi. Har bir matn
-oxiriga faqat admin rejimida ko'rinmas manzil belgisi qo'shiladi (`stegaDeep`). O'zgarishlar
-`content/edits/text.json` (manba fayllar ustiga build vaqtida qo'yiladi), `content/edits/images.json`
-va `content/legacy/*.json` ga GitHub commit sifatida yoziladi.
+Tahrirlash `/admin/...` manzillarida: `proxy.ts` (matcher faqat `/admin/:path*`) so'rovni asl sahifaga rewrite qiladi
+va `x-oh-edit` belgisini qo'yadi; Draft Mode sahifani so'rov paytida chizadi. Oddiy manzillar hammaga statik qoladi.
+Har bir matn oxiriga faqat admin rejimida ko'rinmas manzil belgisi qo'shiladi (`stegaDeep`). Saqlash — `admin-drafts`
+branch'ga commit (qoralama), "Nashr qilish" — uni `main` ga merge. Fayllar: `content/edits/text.json` (manba fayllar
+ustiga build vaqtida qo'yiladi), `content/edits/images.json`, `public/uploads/`, `content/legacy/*.json`.
 - Sahifada lug'atni `getDictionary` emas, `pageText(lang)` (`lib/edit/admin.ts`) orqali oling — aks holda admin tahrirlay olmaydi.
 - Yangi almashtiriladigan rasm: `editableImage()` dan o'tkazing va prefiksini `EDITABLE_IMAGE_PREFIXES` ga qo'shing.
 - Lug'atda tartib bo'yicha boshqa ma'lumotga bog'lanmagan yangi ro'yxat bo'lsa — `LISTS` ga qo'shing.
