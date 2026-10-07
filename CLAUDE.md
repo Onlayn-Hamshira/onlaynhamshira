@@ -94,7 +94,10 @@ Fayllar: `content/edits/text.json` (manba fayllar ustiga qo'yiladi), `content/ed
 - Admin vizual tahrirlovchisi saytni iframe'da ochadi: `components/Analytics.tsx` iframe ichida analitikani yuklamaydi —
   shu shartni olib tashlamang (admin ko'rishlari statistikaga tushadi).
 - Lug'atda tartib bo'yicha boshqa ma'lumotga bog'lanmagan yangi ro'yxat bo'lsa — `LISTS` ga qo'shing.
-- `meta` va H1 qulfi (`LOCKED`) — SEO talabi, olib tashlamang.
+- `meta` va H1 qulfi (`LOCKED`) — SEO talabi, olib tashlamang. Metadata faqat `content/edits/seo.json` orqali o'zgaradi
+  (`lib/edit/seo.ts`): admin uni ogohlantirish va yozma tasdiqdan keyin saqlaydi, `seo:check` shu qiymatlarni kutilgan deb oladi.
+- Narxlar: `content/edits/prices.json` (`lib/data.ts` → `SERVICES`). Narx chiqadigan elementda `data-oh-price={id}` bo'lsin —
+  admin vizual tahrirlovchisi narxni shu belgi bilan topadi.
 
 ## Git
 

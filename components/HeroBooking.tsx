@@ -43,7 +43,7 @@ export function HeroBooking({ t, common, items }: { t: Dict["booking"]; common: 
                       {/* "50 000 so‘m / dan" — ru/en'da "от / from" narxdan oldin */}
                       <span className="shrink-0 text-right text-[13px] leading-tight text-ink-soft">
                         {common.fromBefore && from}
-                        <span className="block text-[15px] font-semibold whitespace-nowrap text-ink tabular-nums">{formatPrice(s.priceFrom, common.money)}</span>
+                        <span data-oh-price={s.id} className="block text-[15px] font-semibold whitespace-nowrap text-ink tabular-nums">{formatPrice(s.priceFrom, common.money)}</span>
                         {!common.fromBefore && from}
                       </span>
                     </button>

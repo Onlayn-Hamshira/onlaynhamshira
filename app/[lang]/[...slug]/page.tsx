@@ -20,6 +20,7 @@ import { LegalPage } from "@/components/legal/LegalPage";
 import { BlogIndexPage, BlogPostPage } from "@/components/blog/BlogPages";
 import { getDictionary } from "@/lib/i18n/get-dictionary";
 import { expertText, whyText } from "@/lib/edit/text";
+import { seoEdit } from "@/lib/edit/seo";
 
 // Eski Tilda sahifalari: har biri build vaqtida statik HTML. Ro'yxatda yo'q yo'l — 404
 export const dynamicParams = false;
@@ -64,13 +65,15 @@ export async function generateMetadata({ params }: PageProps<"/[lang]/[...slug]"
   const pg = findLegacyPage(lang, slug);
   if (!pg || !hasLocale(lang)) return {};
   const { meta } = pg;
-  const title = meta.title ?? meta.og.title ?? "Onlayn Hamshira";
+  // Admin paneldan tasdiq bilan o'zgartirilgan qiymatlar ustun (lib/edit/seo.ts)
+  const seo = seoEdit(pg.path);
+  const title = seo.title ?? meta.title ?? meta.og.title ?? "Onlayn Hamshira";
   // ⚠️ Barcha qiymatlar Tilda <head>'idan aynan olingan (docs/seo-baseline) — o'zgartirmang.
   // Layout'dagi bosh sahifa qiymatlari meros bo'lib qolmasligi uchun yo'q maydonlar null qilinadi.
   return {
     title: { absolute: title },
-    description: meta.description,
-    keywords: meta.keywords,
+    description: seo.description ?? meta.description,
+    keywords: seo.keywords ?? meta.keywords,
     robots: parseRobots(meta.robots),
     // Canonical — har doim sahifaning o'z URL'i; hreflang — sahifaning haqiqiy tarjimalari (lib/nav.ts).
     // Tilda'dagi qiymatlar (boshqa maqolaga canonical, har sahifada bosh sahifa hreflang'i) xato edi.
@@ -80,8 +83,8 @@ export async function generateMetadata({ params }: PageProps<"/[lang]/[...slug]"
     },
     openGraph: {
       url: meta.og.url ?? pg.path,
-      title: meta.og.title ?? title,
-      description: meta.og.description ?? meta.description ?? undefined,
+      title: seo.ogTitle ?? meta.og.title ?? title,
+      description: seo.ogDescription ?? meta.og.description ?? seo.description ?? meta.description ?? undefined,
       type: "website",
       locale: OG_LOCALE[pg.contentLang],
       siteName: "Onlayn Hamshira",

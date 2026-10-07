@@ -12,6 +12,9 @@ import fs from "node:fs";
 const BASE = (process.argv[2] || "http://localhost:3000").replace(/\/$/, "");
 const SITE = "https://onlaynhamshira.uz";
 const expected = JSON.parse(fs.readFileSync(new URL("../docs/seo-baseline/expected-head.json", import.meta.url)));
+// Admin paneldan ogohlantirish va yozma tasdiq bilan o'zgartirilgan metadata (content/edits/seo.json) — kutilgan qiymat shu
+const approved = JSON.parse(fs.readFileSync(new URL("../content/edits/seo.json", import.meta.url)));
+for (const [p, fields] of Object.entries(approved)) if (expected[p]) Object.assign(expected[p], fields);
 const originalSitemap = fs.readFileSync(new URL("../docs/seo-baseline/sitemap-original.xml", import.meta.url), "utf8");
 
 const decode = (s) =>
@@ -102,4 +105,4 @@ if (errors.length) {
   console.error(`✗ SEO buzilgan — ${errors.length} ta muammo:\n  ` + errors.join("\n  "));
   process.exit(1);
 }
-console.log(`✓ SEO OK: ${Object.keys(expected).length} URL, sitemap ${mine.size} URL, tracking va JSON-LD joyida`);
+console.log(`✓ SEO OK: ${Object.keys(expected).length} URL, sitemap ${mine.size} URL, tracking va JSON-LD joyida${Object.keys(approved).length ? ` (admin tasdiqlagan metadata: ${Object.keys(approved).length} sahifa)` : ""}`);
