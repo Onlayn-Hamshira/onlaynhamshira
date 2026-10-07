@@ -1,6 +1,6 @@
 /*
  * Yangiliklar bo'limi — saytning umumiy palitrasida (app/globals.css @theme):
- * ink, ink-soft, mist, line, pastel kartalar (peach/sky/lilac/mint), brend gradienti.
+ * ink, ink-soft, mist, line, pastel kartalar (sky/aqua/madang/mint), brend gradienti.
  */
 
 .section {
@@ -27,9 +27,9 @@
 /* ---------- Brend gradientli tugmalar ---------- */
 .allLink,
 .arrow.arrowNext {
-  background: linear-gradient(135deg, var(--color-brand) 0%, var(--color-brand-teal) 55%, var(--color-brand-blue) 100%);
+  background: linear-gradient(90deg, var(--color-grad-blue) 0%, var(--color-grad-green) 100%);
   color: #fff;
-  box-shadow: 0 12px 28px -12px rgb(56 197 177 / 0.9);
+  box-shadow: 0 12px 28px -12px rgb(46 201 176 / 0.9);
 }
 .allLink {
   display: inline-flex;
@@ -153,14 +153,14 @@
   overflow: hidden;
   color: var(--color-ink);
   text-decoration: none;
-  box-shadow: 0 20px 40px -30px rgb(16 41 58 / 0.45);
+  box-shadow: 0 20px 40px -30px rgb(13 47 68 / 0.45);
   transition: transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.45s cubic-bezier(0.2, 0.8, 0.2, 1);
   -webkit-user-drag: none;
 }
 /* Saytdagi boshqa kartalar kabi pastel ranglar navbatma-navbat */
 .card:nth-child(4n + 1) { background: var(--color-sky); }
-.card:nth-child(4n + 2) { background: var(--color-peach); }
-.card:nth-child(4n + 3) { background: var(--color-lilac); }
+.card:nth-child(4n + 2) { background: var(--color-aqua); }
+.card:nth-child(4n + 3) { background: var(--color-madang); }
 .card:nth-child(4n + 4) { background: var(--color-mint); }
 
 .media {
@@ -293,7 +293,7 @@
   .card:focus-visible,
   .card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 34px 60px -28px rgb(16 41 58 / 0.5);
+    box-shadow: 0 34px 60px -28px rgb(13 47 68 / 0.5);
   }
   .card:focus-visible .badgeArrow,
   .card:hover .badgeArrow {
@@ -343,11 +343,11 @@
   transition: width 0.45s cubic-bezier(0.2, 0.8, 0.2, 1), background-color 0.3s;
 }
 .dot:hover span {
-  background: rgb(16 41 58 / 0.3);
+  background: rgb(13 47 68 / 0.3);
 }
 .dot[aria-current="true"] span {
   width: 34px;
-  background: linear-gradient(90deg, var(--color-brand), var(--color-brand-blue));
+  background: linear-gradient(90deg, var(--color-grad-blue), var(--color-grad-green));
 }
 
 /* ---------- Mobil ---------- */

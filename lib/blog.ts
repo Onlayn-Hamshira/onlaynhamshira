@@ -44,11 +44,12 @@ const topicOf = (pg: LegacyPage): BlogTopic => TOPIC_RULES.find(([, re]) => re.t
 const minutesOf = (html: string) => Math.max(1, Math.round(plain(html).split(" ").length / 200));
 
 type Parsed = { title: string; cover: BlogImage | null; body: string; toc: TocItem[]; entry: BlogEntry };
-const parsedCache = new Map<string, Parsed>();
+// Sahifa obyekti bo'yicha (admin rejimida JSON qayta o'qilib, yangi obyekt keladi)
+const parsedCache = new WeakMap<LegacyPage, Parsed>();
 
 /** Maqolani ajratish: H1 va muqova sahifa sarlavhasiga ko'chadi, qolgani — matn */
 export function parseArticle(pg: LegacyPage): Parsed {
-  const hit = parsedCache.get(pg.path);
+  const hit = parsedCache.get(pg);
   if (hit) return hit;
   let html = pg.html;
 
@@ -123,7 +124,7 @@ export function parseArticle(pg: LegacyPage): Parsed {
     updated: LEGACY_ROUTES.find((r) => r.path === pg.path)?.lastmod,
   };
   const res = { title, cover, body: html, toc, entry };
-  parsedCache.set(pg.path, res);
+  parsedCache.set(pg, res);
   return res;
 }
 

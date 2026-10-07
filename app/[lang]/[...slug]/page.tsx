@@ -2,15 +2,13 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { preload } from "react-dom";
 import Header from "@/components/Header";
-import { Footer } from "@/components/Sections";
+import { Footer } from "@/components/Footer";
 import { MobileCTA } from "@/components/MobileCTA";
 import { LegacyCta, QrRedirect } from "@/components/LegacyPage";
 import { LOCALES, OG_LOCALE, hasLocale, localePath, type Locale } from "@/lib/i18n/config";
-import { getDictionary } from "@/lib/i18n/get-dictionary";
 import { NAV_KEY_BY_GROUP, hreflangAlternates, pageAlternates, pageHref, translationPaths } from "@/lib/nav";
 import { LEGACY_ROUTES } from "@/lib/seo/routes";
 import { findLegacyPage, legacyPages, slugOf } from "@/lib/seo/legacy";
-import { EXPERT } from "@/lib/expert";
 import { DEFAULT_OG_IMAGE } from "@/lib/seo/site";
 import { isArticle } from "@/lib/blog";
 import { CertificatesPage } from "@/components/certificates/CertificatesPage";
@@ -20,7 +18,8 @@ import { ContactsPage } from "@/components/ContactsPage";
 import { AppLanding } from "@/components/AppLanding";
 import { LegalPage } from "@/components/legal/LegalPage";
 import { BlogIndexPage, BlogPostPage } from "@/components/blog/BlogPages";
-import { WHY } from "@/lib/why";
+import { getDictionary } from "@/lib/i18n/get-dictionary";
+import { expertText, whyText } from "@/lib/edit/text";
 
 // Eski Tilda sahifalari: har biri build vaqtida statik HTML. Ro'yxatda yo'q yo'l — 404
 export const dynamicParams = false;
@@ -139,13 +138,13 @@ export default async function LegacyRoute({ params }: PageProps<"/[lang]/[...slu
       {pg.group === "expert" ? (
         // Hamkor sahifasi — Tilda HTML o'rniga alohida dizayn (matnlar lib/expert.ts da, metadata JSON'da)
         <main id="main">
-          <ExpertPage t={EXPERT[pg.contentLang]} />
+          <ExpertPage t={expertText(pg.contentLang)} />
         </main>
       ) : pg.group === "compare" ? (
         // "Nega biz?" — taqqoslash sahifasi (matnlar lib/why.ts da, metadata/JSON-LD JSON'da)
         <main id="main">
           <WhyPage
-            t={WHY[pg.contentLang]}
+            t={whyText(pg.contentLang)}
             callLabel={t.mobileCta.call}
             stats={t.stats.items}
             org={{

@@ -19,7 +19,7 @@ export function Specialists({ t, children }: { t: Dict["specialists"]; children?
   // Mobilda dastlab 6 ta karta, qolgani "Yana ..." tugmasi bilan
   const MOBILE_LIMIT = 6;
   const [more, setMore] = useState(false);
-  const tones = ["bg-sky", "bg-peach", "bg-lilac", "bg-mint"];
+  const tones = ["bg-sky", "bg-aqua", "bg-madang", "bg-mint"];
   const all = useMemo(() => SPECIALISTS.map((s, i) => ({ ...s, ...t.items[i] })), [t]);
   const list = useMemo(() => (group === "all" ? all : all.filter((s) => s.group === group)), [all, group]);
 
@@ -91,7 +91,7 @@ const N = REVIEW_IMAGES.length;
 const COPIES = 3; // [nusxa][asl][nusxa] — o'rtadagi to'plamda turamiz, chetga yetganda sezdirmay qaytamiz
 const AUTOPLAY_MS = 4500;
 
-const REVIEW_TONES = ["bg-sky", "bg-peach", "bg-lilac", "bg-mint"];
+const REVIEW_TONES = ["bg-sky", "bg-aqua", "bg-madang", "bg-mint"];
 
 type Review = Dict["reviews"]["items"][number] & { img: string };
 
@@ -293,7 +293,7 @@ function ReviewsCarousel({ t, stars, reviews }: ReviewsProps & { reviews: Review
 
       {/* Kartalar ostida: bitta pill ichida ← nuqtalar → */}
       <div className="mt-6 flex justify-center px-4 sm:mt-8">
-        <div {...hoverProps} className="flex items-center gap-1 rounded-full bg-white p-1.5 shadow-[0_14px_34px_-18px_rgb(16_41_58/0.45)] ring-1 ring-line sm:gap-2">
+        <div {...hoverProps} className="flex items-center gap-1 rounded-full bg-white p-1.5 shadow-[0_14px_34px_-18px_rgb(13_47_68/0.45)] ring-1 ring-line sm:gap-2">
           <button onClick={() => scroll(-1)} aria-label={t.prev} className={`${arrowCls} bg-mist text-ink hover:bg-line`}>
             <ChevronLeft className="size-5" />
           </button>
@@ -308,7 +308,7 @@ function ReviewsCarousel({ t, stars, reviews }: ReviewsProps & { reviews: Review
                       // key: karta almashganda progress noldan boshlanadi; tugaganda — keyingi karta
                       <span
                         key={index}
-                        className="absolute inset-0 origin-left rounded-full bg-gradient-to-r from-brand to-brand-blue"
+                        className="absolute inset-0 origin-left rounded-full bg-gradient-to-r from-grad-blue to-grad-green"
                         style={reduced ? undefined : {
                           animation: `dot-progress ${AUTOPLAY_MS}ms linear forwards`,
                           animationPlayState: paused ? "paused" : "running",
@@ -322,7 +322,7 @@ function ReviewsCarousel({ t, stars, reviews }: ReviewsProps & { reviews: Review
             })}
           </div>
 
-          <button onClick={() => scroll(1)} aria-label={t.next} className={`${arrowCls} bg-brand-grad text-white shadow-[0_10px_22px_-12px_rgb(56_197_177/0.9)] hover:brightness-105`}>
+          <button onClick={() => scroll(1)} aria-label={t.next} className={`${arrowCls} bg-brand-grad text-white shadow-[0_10px_22px_-12px_rgb(46_201_176/0.9)] hover:brightness-105`}>
             <ChevronRight className="size-5" />
           </button>
         </div>
@@ -366,7 +366,7 @@ export function Faq({ t }: { t: Dict["faq"] }) {
               // data-reveal o'zgarmas className'li <li>da: holat klasslari ichki div'da,
               // aks holda React className'ni qayta yozib, "is-in"ni o'chirib yuboradi
               <li key={f.q} data-reveal style={{ "--d": Math.min(i, 4) } as React.CSSProperties}>
-                <div className={`rounded-[22px] transition-[background-color,box-shadow] ${on ? "bg-white shadow-[0_16px_40px_-24px_rgb(16_41_58/0.35)]" : "bg-white/60 hover:bg-white"}`}>
+                <div className={`rounded-[22px] transition-[background-color,box-shadow] ${on ? "bg-white shadow-[0_16px_40px_-24px_rgb(13_47_68/0.35)]" : "bg-white/60 hover:bg-white"}`}>
                   <h3>
                     <button
                       onClick={() => setOpen(on ? null : i)}

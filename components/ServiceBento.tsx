@@ -4,9 +4,10 @@ import { LINKS } from "@/lib/data";
 import { Icon, type IconName } from "./Icon";
 import { BentoPointer } from "./BentoPointer";
 import type { Dict } from "@/lib/i18n/dictionaries/uz";
+import { editableImage } from "@/lib/edit/edits";
 
 // Ilovadagi mutaxassislik rasmlari, /public/services ichida lokal nusxa
-const img = (name: string) => `/services/${name}.webp`;
+const img = (name: string) => editableImage(`/services/${name}.webp`);
 
 // Nomlar lug'atda (bento.cards) shu tartibda
 type Card = {
@@ -20,7 +21,7 @@ type Card = {
 // Barcha kartalar haqiqiy xizmat / mutaxassisliklarga mos keladi
 const CARDS: Card[] = [
   {
-    grad: "from-[#3fe0a0] via-[#2cc4b8] to-[#1aa6d9]",
+    grad: "from-[#54de62] via-[#2ec9b0] to-[#1bb3f7]",
     tall: true,
     icons: [
       ["syringe", 110, "right-[4%] bottom-[46%] rotate-6"],
@@ -28,13 +29,13 @@ const CARDS: Card[] = [
       ["thermometer", 92, "right-[14%] bottom-[4%] rotate-[30deg]"],
     ],
   },
-  { grad: "from-[#5ab8f0] to-[#2f7fd6]", image: img("nurse") },
-  { grad: "from-[#ff8fb8] via-[#d77be8] to-[#9a6cf0]", tall: true, image: img("kids") },
-  { grad: "from-[#2fae7a] to-[#15594a]", tall: true, image: img("lor") },
-  { grad: "from-[#ffb36b] to-[#f0785a]", image: img("massage") },
-  { grad: "from-[#ff6b8a] to-[#c2336a]", image: img("cardio") },
+  { grad: "from-[#4ccaf8] to-[#008fd1]", image: img("nurse") },
+  { grad: "from-[#62e58c] via-[#3cdc6d] to-[#1fae5c]", tall: true, image: img("kids") },
+  { grad: "from-[#1e7fa6] to-[#0f4666]", tall: true, image: img("lor") },
+  { grad: "from-[#40d9c1] to-[#12a08e]", image: img("massage") },
+  { grad: "from-[#00b6f3] to-[#0a70a8]", image: img("cardio") },
   {
-    grad: "from-[#8a6cf0] via-[#6a4fd8] to-[#3d2d91]",
+    grad: "from-[#2f8fb8] via-[#1e6a90] to-[#174f70]",
     tall: true,
     icons: [
       ["dna", 72, "top-[26%] left-[8%] -rotate-12"],
@@ -42,26 +43,26 @@ const CARDS: Card[] = [
       ["microscope", 136, "bottom-[5%] left-[6%]"],
     ],
   },
-  { grad: "from-[#4fd1e6] to-[#1f8fb3]", image: img("therapist") },
-  { grad: "from-[#7aa2ff] to-[#3c5bd6]", image: img("trauma") },
-  { grad: "from-[#f7c65a] to-[#e08a2e]", image: img("psych") },
+  { grad: "from-[#5ad4f0] to-[#1a9cc9]", image: img("therapist") },
+  { grad: "from-[#3cdc6d] to-[#12a37a]", image: img("trauma") },
+  { grad: "from-[#62dfa0] to-[#1fae8f]", image: img("psych") },
   { grad: "from-[#38d6c2] to-[#138a8a]", image: img("ekg") },
-  { grad: "from-[#c08cf5] to-[#7a4fd1]", image: img("neuro") },
+  { grad: "from-[#3fbdf0] to-[#14648f]", image: img("neuro") },
 ];
 
 export default function ServiceBento({ t, common }: { t: Dict["bento"]; common: Dict["common"] }) {
   return (
     <section id="services" aria-labelledby="bento-h" className="px-3 pt-3 sm:px-4">
-      <div className="relative mx-auto max-w-[1400px] overflow-hidden rounded-[36px] bg-[#0f2230] px-4 py-14 sm:px-10 sm:py-20">
-        <div aria-hidden className="pointer-events-none absolute -top-40 left-1/4 size-[520px] rounded-full bg-sky-deep/20 blur-[120px]" />
-        <div aria-hidden className="pointer-events-none absolute -right-20 bottom-0 size-[420px] rounded-full bg-[#8a6cf0]/20 blur-[120px]" />
+      <div className="relative mx-auto max-w-[1400px] overflow-hidden rounded-[36px] bg-[linear-gradient(135deg,#fff_0%,var(--color-mist)_40%,#cdebfa_100%)] px-4 py-14 ring-1 ring-line sm:px-10 sm:py-20">
+        {/* Brend to'lqin patterni (Pattern | Pack 1) */}
+        <div aria-hidden className="hero-pattern pointer-events-none absolute inset-0" />
 
         <div data-reveal className="relative flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
           <div>
-            <p className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3.5 py-1.5 text-sm font-semibold text-brand">
+            <p className="inline-flex items-center gap-2 rounded-full bg-mint px-3.5 py-1.5 text-sm font-semibold text-brand-deep">
               <span className="size-1.5 rounded-full bg-brand-grad" /> {t.label}
             </p>
-            <h2 id="bento-h" className="mt-3 max-w-[18ch] text-[32px] leading-[1.08] font-semibold tracking-[-0.025em] text-balance text-white sm:text-5xl">
+            <h2 id="bento-h" className="mt-3 max-w-[18ch] text-[32px] leading-[1.08] font-semibold tracking-[-0.025em] text-balance sm:text-5xl">
               {t.title}
             </h2>
           </div>

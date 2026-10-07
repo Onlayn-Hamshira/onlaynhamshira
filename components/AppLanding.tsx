@@ -31,7 +31,7 @@ export function AppLanding({ html, t }: { html: string; t: Dict }) {
   return (
     <>
       <section className="px-3 pt-[calc(80px+env(safe-area-inset-top))] sm:px-4">
-        <div className="relative mx-auto max-w-[1400px] overflow-hidden rounded-[36px] bg-[linear-gradient(135deg,#12803e_0%,#0b7571_50%,#0d619b_100%)] text-white">
+        <div className="relative mx-auto max-w-[1400px] overflow-hidden rounded-[36px] bg-brand-grad-deep text-white">
           <div aria-hidden className="pointer-events-none absolute inset-0">
             <div className="absolute -top-40 -left-32 size-[520px] rounded-full bg-white/[0.07] blur-[120px]" />
             <div className="absolute inset-0 bg-[radial-gradient(circle,rgb(255_255_255/0.14)_1.2px,transparent_1.6px)] bg-[length:16px_16px] [mask-image:radial-gradient(ellipse_70%_60%_at_80%_50%,#000_10%,transparent_70%)]" />
@@ -108,7 +108,7 @@ export function AppLanding({ html, t }: { html: string; t: Dict }) {
               <p className="mt-2 max-w-[52ch] text-lg text-ink-soft">{a.webText}</p>
             </div>
           </div>
-          <a href={LINKS.webApp} className="inline-flex shrink-0 items-center gap-2 rounded-full bg-brand-grad px-7 py-4 font-semibold text-white shadow-[0_12px_28px_-12px_rgb(56_197_177/0.9)] transition hover:-translate-y-0.5 hover:brightness-105">
+          <a href={LINKS.webApp} className="inline-flex shrink-0 items-center gap-2 rounded-full bg-brand-grad px-7 py-4 font-semibold text-white shadow-[0_12px_28px_-12px_rgb(46_201_176/0.9)] transition hover:-translate-y-0.5 hover:brightness-105">
             <Globe className="size-5" aria-hidden /> {t.common.onlineApp}
           </a>
         </div>

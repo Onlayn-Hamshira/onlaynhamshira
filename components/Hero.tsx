@@ -1,32 +1,34 @@
 import Image from "next/image";
-import { ArrowRight, BadgeCheck, Clock, Star, Wallet } from "lucide-react";
+import { ArrowRight, BadgeCheck, Clock, ScanLine, Wallet } from "lucide-react";
 import { IMAGES, LINKS, REVIEW_IMAGES, SERVICES, type ServiceId } from "@/lib/data";
-import { formatNum } from "@/lib/i18n/format";
+import { fill } from "@/lib/i18n/format";
 import type { Dict } from "@/lib/i18n/dictionaries/uz";
 import { StoreButtons } from "./DownloadModal";
 import { HeroBooking } from "./HeroBooking";
+import { AppleIcon, PlayIcon } from "./StoreIcons";
 
 const PERK_ICONS = [BadgeCheck, Clock, Wallet];
 // Buyurtma kartasidagi tezkor tanlov — client komponentga faqat shu 5 tasining qisqa matni boradi
 const QUICK: ServiceId[] = ["ukol", "kapelnitsa", "yara", "bosim", "massaj"];
+const QR = [
+  { src: IMAGES.qrIphone, label: "iPhone", Icon: AppleIcon, href: LINKS.appStore },
+  { src: IMAGES.qrAndroid, label: "Android", Icon: PlayIcon, href: LINKS.playStore },
+];
 
 export default function Hero({ t }: { t: Dict }) {
   const h = t.hero;
-  const clients = `${formatNum(13500, t.common.money.sep)}+`;
   return (
     <section id="top" className="relative px-3 pt-[88px] sm:px-4">
       <div className="relative mx-auto grid max-w-[1400px] gap-3 lg:grid-cols-[1.05fr_1fr]">
         {/* Chap: sarlavha */}
-        <div className="hero-in relative flex flex-col overflow-hidden rounded-[32px] bg-[linear-gradient(150deg,#ecfbef_0%,#e4f6f4_45%,#dcf1fb_100%)] px-6 pt-10 pb-8 sm:px-12 sm:pt-14 sm:pb-10">
-          {/* Logo ranglaridagi yumshoq nur dog'lari */}
-          <div aria-hidden className="pointer-events-none absolute -top-32 -left-24 size-[420px] rounded-full bg-brand/25 blur-[100px]" />
-          <div aria-hidden className="pointer-events-none absolute -right-24 -bottom-32 size-[440px] rounded-full bg-brand-blue/25 blur-[110px]" />
-          <div className="dots pointer-events-none absolute inset-0 opacity-70" />
+        <div className="hero-in relative flex flex-col overflow-hidden rounded-[32px] bg-[linear-gradient(135deg,#fff_0%,var(--color-mist)_45%,#cdebfa_100%)] px-6 pt-9 pb-7 sm:px-12 sm:pt-10 sm:pb-8">
+          {/* Brend qo'llanmadagi grafik element (Graphic element | Pack 2): qiya moviy-yashil tasma */}
+          <div aria-hidden className="hero-angle pointer-events-none absolute inset-0" />
 
           <div className="relative flex flex-1 flex-col">
             <a
               href={LINKS.webApp}
-              className="group inline-flex w-fit items-center gap-2.5 rounded-full bg-white/80 py-1.5 pr-2 pl-3 text-sm font-medium shadow-[0_6px_20px_-12px_rgb(16_41_58/0.5)] ring-1 ring-white backdrop-blur transition hover:bg-white"
+              className="group inline-flex w-fit items-center gap-2.5 rounded-full bg-white/80 py-1.5 pr-2 pl-3 text-sm font-medium shadow-[0_6px_20px_-12px_rgb(13_47_68/0.5)] ring-1 ring-white backdrop-blur transition hover:bg-white"
             >
               <span className="relative grid size-2.5 place-items-center">
                 <span className="absolute size-2.5 animate-pulse-ring rounded-full bg-brand" />
@@ -38,14 +40,14 @@ export default function Hero({ t }: { t: Dict }) {
               </span>
             </a>
 
-            <h1 className="mt-7 max-w-[13ch] text-[clamp(32px,11vw,40px)] leading-[1.02] font-bold tracking-[-0.035em] text-balance sm:text-[60px] xl:text-[70px]">
+            <h1 className="mt-6 max-w-[13ch] text-[clamp(32px,11vw,40px)] leading-[1.02] font-bold tracking-[-0.035em] text-balance sm:text-[54px] xl:text-[62px]">
               {h.titleBefore}<span className="text-brand-grad">{h.titleAccent}</span>{h.titleAfter}
             </h1>
-            <p className="mt-5 max-w-[44ch] text-lg leading-relaxed text-ink-soft sm:text-[19px]">
+            <p className="mt-4 max-w-[44ch] text-lg leading-relaxed text-ink-soft sm:text-[18px]">
               {h.lead}
             </p>
 
-            <ul className="mt-6 flex flex-wrap gap-2">
+            <ul className="mt-5 flex flex-wrap gap-2">
               {h.perks.map((text, i) => {
                 const Glyph = PERK_ICONS[i];
                 return (
@@ -56,51 +58,39 @@ export default function Hero({ t }: { t: Dict }) {
               })}
             </ul>
 
-            <StoreButtons className="mt-7 sm:mt-8 sm:mb-8" />
+            <StoreButtons className="mt-6 sm:mb-6" />
 
-            {/* Ijtimoiy isbot */}
-            <div className="mt-auto hidden flex-wrap items-center gap-x-6 gap-y-4 border-t border-ink/10 pt-6 sm:flex">
-              <div className="flex items-center gap-3">
-                <div className="flex -space-x-3">
-                  {REVIEW_IMAGES.slice(0, 4).map((src) => (
-                    <Image key={src} src={src} alt="" width={44} height={44} className="size-10 rounded-full border-2 border-white object-cover transition hover:z-10 hover:-translate-y-1" />
-                  ))}
-                </div>
-                <p className="text-sm leading-snug">
-                  <span className="flex items-center gap-0.5 text-[#f5b301]" role="img" aria-label={t.common.fiveStars}>
-                    {Array.from({ length: 5 }).map((_, k) => <Star key={k} className="size-3.5 fill-current" aria-hidden />)}
-                  </span>
-                  <strong className="font-bold">{clients}</strong> <span className="text-ink-soft">{h.happyClients}</span>
-                </p>
+            {/* Ilova QR kodlari — faqat kompyuter/planshetda (telefonda do'kon tugmalari yetarli) */}
+            <div className="mt-auto hidden items-center gap-5 border-t border-ink/10 pt-5 sm:flex">
+              <div className="flex shrink-0 gap-3">
+                {QR.map(({ src, label, Icon, href }) => (
+                  <a
+                    key={label}
+                    href={href}
+                    target="_blank"
+                    rel="noopener"
+                    className="rounded-[18px] bg-white p-2 shadow-[0_6px_20px_-12px_rgb(13_47_68/0.5)] ring-1 ring-white transition hover:-translate-y-0.5 hover:shadow-lg"
+                  >
+                    {/* 1-bitli PNG (~5KB) — qayta kodlash faqat buzadi */}
+                    <Image src={src} alt={fill(t.download.qrFor, { p: label })} width={104} height={104} unoptimized className="size-[88px]" />
+                    <span className="mt-1.5 flex items-center justify-center gap-1.5 text-[13px] font-medium">
+                      <Icon className="size-3.5" /> {label}
+                    </span>
+                  </a>
+                ))}
               </div>
-              <span aria-hidden className="hidden h-9 w-px bg-ink/10 sm:block" />
-              <p className="text-sm leading-snug">
-                <strong className="block text-xl font-bold tracking-tight">270+</strong>
-                <span className="text-ink-soft">{h.qualifiedNurses}</span>
-              </p>
-              <span aria-hidden className="hidden h-9 w-px bg-ink/10 sm:block" />
-              <p className="text-sm leading-snug">
-                <strong className="block text-xl font-bold tracking-tight">24/7</strong>
-                <span className="text-ink-soft">{h.noDaysOff}</span>
-              </p>
+              <div className="min-w-0">
+                <p className="flex items-center gap-2 text-[17px] leading-snug font-semibold tracking-tight">
+                  <ScanLine className="size-5 shrink-0 text-brand-deep" aria-hidden /> {h.qrTitle}
+                </p>
+                <p className="mt-1.5 max-w-[34ch] text-sm leading-relaxed text-ink-soft">{h.qrText}</p>
+              </div>
             </div>
           </div>
         </div>
 
-        {/* O'ng: foto + buyurtma kartasi */}
+        {/* O'ng: buyurtma kartasi */}
         <div style={{ "--d": 1 } as React.CSSProperties} className="hero-in relative flex flex-col gap-3 overflow-hidden rounded-[32px] bg-mist p-3">
-          <Image
-            src={IMAGES.hero}
-            alt={h.imageAlt}
-            fill
-            loading="eager"
-            fetchPriority="high"
-            quality={60}
-            sizes="(min-width: 1024px) 50vw, 100vw"
-            className="object-cover object-[60%_center]"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-ink/30 via-transparent to-transparent" />
-
           {/* Tepada: ishonch ko'rsatkichlari */}
           <div className="relative flex flex-wrap items-stretch gap-3">
             <div className="flex min-w-[260px] flex-1 items-center gap-3.5 rounded-[20px] bg-white/90 py-3.5 pr-5 pl-3.5 shadow-lg backdrop-blur">

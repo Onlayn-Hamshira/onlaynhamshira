@@ -3,7 +3,7 @@ export function SpriteDefs() {
   return (
     <svg width="0" height="0" style={{ position: "absolute" }} aria-hidden="true">
       <defs>
-        <linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stopColor="#55DB6B" /><stop offset="1" stopColor="#1FB6EE" /></linearGradient>
+        <linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stopColor="#54DE62" /><stop offset="1" stopColor="#1BB3F7" /></linearGradient>
         <symbol id="logo" viewBox="0 0 100 100">
           <path d="M50 16C31 16 20 31 20 47c0 19 19 32 30 45 11-13 30-26 30-45 0-16-11-31-30-31z" fill="url(#lg)" />
           <ellipse cx="50" cy="52" rx="18" ry="19" fill="#fff" />

@@ -1,20 +1,24 @@
 @import "tailwindcss";
 
 @theme {
-  --color-ink: #10293a;
-  --color-ink-soft: #4a6272;
-  --color-brand: #55dd62;
-  --color-brand-hover: #45cf54;
-  --color-brand-teal: #38c5b1;
-  --color-brand-blue: #25b6e9;
+  /* Brend qo'llanma (2026) palitrasi: Mosaic, Emerald, Vivid Cerulean, Madang, Alice Blue */
+  --color-ink: #0d2f44;
+  --color-ink-soft: #4a6577;
+  --color-brand: #3cdc6d;
+  --color-brand-hover: #2ecf5f;
+  --color-brand-teal: #2ec9b0;
+  --color-brand-blue: #00b6f3;
   --color-brand-deep: #136e33;
-  --color-sky: #d4f0fb;
-  --color-sky-deep: #1aa6d9;
-  --color-peach: #fdebdb;
-  --color-lilac: #ece2fc;
-  --color-mint: #d5f8d8;
-  --color-mist: #f3f8fa;
-  --color-line: #e3ecf0;
+  /* Logo gradienti nuqtalari (brend materiallaridagi SVG'lardan) */
+  --color-grad-blue: #1bb3f7;
+  --color-grad-green: #54de62;
+  --color-sky: #baecf9;
+  --color-sky-deep: #0098d4;
+  --color-aqua: #cdf5ea;
+  --color-madang: #b6f9bf;
+  --color-mint: #d8fbdd;
+  --color-mist: #eefbff;
+  --color-line: #d8edf5;
   --color-alert: #d93a3a;
   --font-sans: var(--font-onest), ui-sans-serif, system-ui, sans-serif;
   --animate-pulse-ring: pulse-ring 2.4s cubic-bezier(0.2, 0.6, 0.4, 1) infinite;
@@ -35,12 +39,16 @@
   }
 }
 
-/* Logo gradienti: yashil → moviy */
+/* Brend gradienti: moviy → yashil (qo'llanmadagi kabi chapdan o'ngga) */
 @utility bg-brand-grad {
-  background-image: linear-gradient(135deg, var(--color-brand) 0%, var(--color-brand-teal) 55%, var(--color-brand-blue) 100%);
+  background-image: linear-gradient(90deg, var(--color-grad-blue) 0%, var(--color-grad-green) 100%);
+}
+/* Katta bannerlar (ilova, hamkorlik, QR): oq matn o'qilishi uchun brend gradientining biroz to'qroq varianti */
+@utility bg-brand-grad-deep {
+  background-image: linear-gradient(135deg, #0794d6 0%, #11aab5 55%, #2cc46a 100%);
 }
 @utility text-brand-grad {
-  background-image: linear-gradient(135deg, var(--color-brand) 0%, var(--color-brand-blue) 100%);
+  background-image: linear-gradient(90deg, var(--color-grad-blue) 0%, var(--color-grad-green) 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -122,21 +130,9 @@ body {
   #reviews { --cv-h: 868px; }
   [aria-labelledby="news-h"] { --cv-h: 1047px; }
   #faq { --cv-h: 1540px; }
-  #contact { --cv-h: 768px; }
+  #contact { --cv-h: 436px; }
   main ~ footer { --cv-h: 968px; }
 }
-
-/* ── Aloqa xaritasidagi marker (Yandex Maps) ── */
-.oh-pin { position: relative; width: 46px; height: 57px; cursor: default; }
-.oh-pin img { position: relative; display: block; width: 46px; height: 57px; filter: drop-shadow(0 10px 14px rgb(16 41 58 / 0.35)); animation: oh-pin-drop 0.7s cubic-bezier(0.2, 0.9, 0.3, 1.3) both; }
-.oh-pin-pulse { position: absolute; left: 50%; bottom: -6px; width: 26px; height: 12px; margin-left: -13px; border-radius: 50%; background: rgb(37 182 233 / 0.45); animation: oh-pin-pulse 2s ease-out infinite; }
-@keyframes oh-pin-drop { from { opacity: 0; transform: translateY(-24px); } }
-@keyframes oh-pin-pulse { 0% { transform: scale(0.5); opacity: 0.9; } 100% { transform: scale(2.6); opacity: 0; } }
-/* Yandex xaritasi: brendga mos yumshoq ranglar; reklama/promo havolalari yashirin (logotip va "Shartlar" — litsenziya talabi) */
-.oh-pin-still img { animation: none; }
-.oh-ymap-static, .oh-ymap-raster [class*="ground-pane"] { filter: saturate(0.35) brightness(1.05) contrast(0.94); }
-.oh-ymap [class*="copyrights-promo"], .oh-ymap [class*="gototech"], .oh-ymap [class*="map-copyrights-promo"] { display: none !important; }
-.oh-ymap [class*="copyright__wrap"] { opacity: 0.7; }
 
 /* ── Kartalar: hover'da ko'tariladi, 3D ikonka "jonlanadi" ── */
 .lift {
@@ -147,7 +143,7 @@ body {
 }
 .lift:hover {
   transform: translateY(-6px);
-  box-shadow: 0 24px 48px -24px rgb(16 41 58 / 0.35);
+  box-shadow: 0 24px 48px -24px rgb(13 47 68 / 0.35);
 }
 .icon3d { transition: transform 0.45s cubic-bezier(0.2, 0.9, 0.3, 1.4); }
 .lift:hover .icon3d,
@@ -159,7 +155,7 @@ body {
 }
 .bento:hover {
   transform: translateY(-6px);
-  box-shadow: 0 30px 60px -28px rgb(0 0 0 / 0.6);
+  box-shadow: 0 30px 60px -28px rgb(13 47 68 / 0.45);
 }
 .bento-glow {
   background: radial-gradient(260px circle at var(--mx, 50%) var(--my, 50%), rgb(255 255 255 / 0.3), transparent 70%);
@@ -171,9 +167,113 @@ body {
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
+/* ── Brend fonlari (qo'llanma: Pattern | Pack 1, Graphic element | Pack 2) ──
+   Katta pattern SVG'lari background-image emas, MASK sifatida ulanadi: rang CSS gradientdan keladi.
+   Sabab — fon rasmi katta maydonni egallasa Lighthouse uni LCP elementi deb oladi va SVG kech yuklangani
+   uchun LCP 3–4 s ga chiqadi; niqob LCP nomzodi emas, LCP matnda (H1) qoladi.
+   Kichik shakllar (≈1 KB) CSS ichiga data-URI bo'lib joylangan — tarmoq so'rovi yo'q. */
+
+/* To'lqin patterni: chap-tepada oq, o'ng-pastga qarab moviy */
+.hero-pattern, .hero-pattern-wide {
+  background: linear-gradient(135deg, #fff 18%, #00b6f3 88%);
+  mask: url("/img/brand/pattern.svg") 44% 46% / 2535px auto no-repeat;
+  opacity: 0.5;
+}
+/* Keng bloklar (to'liq kenglikdagi hero/banner) uchun */
+.hero-pattern-wide { mask-position: 46% 46%; mask-size: 3400px auto; opacity: 0.45; }
+@media (max-width: 1023.98px) {
+  .hero-pattern-wide { mask-size: 2300px auto; opacity: 0.35; }
+}
+@media (max-width: 639.98px) {
+  .hero-pattern { mask-size: 1900px auto; opacity: 0.4; }
+}
+
+/* Qiya burchakli tasma (bosh sahifa hero'si): moviy-yashil gradient ustidan oqish ko'pburchaklar */
+.hero-angle {
+  background:
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 571 889' preserveAspectRatio='none' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_5597_21227' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='571' height='889'%3E%3Crect width='570.613' height='888.699' rx='32.8324' fill='url(%23paint0_linear_5597_21227)'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_5597_21227)'%3E%3Cpath d='M1279.43 647.37L1233.88 1898.43H-436.903L194.061 678.11C203.826 659.227 223.31 647.36 244.566 647.36H1279.42L1279.43 647.37ZM243.523 587.438C228.036 617.4 190.87 628.666 161.349 612.353L-842.779 57.5884L-797.227 -631.066H873.549L243.523 587.438Z' fill='url(%23paint1_linear_5597_21227)'/%3E%3C/g%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_5597_21227' x1='201.539' y1='230.691' x2='836.103' y2='988.797' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='white'/%3E%3Cstop offset='1' stop-color='%23ABDCF3'/%3E%3C/linearGradient%3E%3ClinearGradient id='paint1_linear_5597_21227' x1='-93.2184' y1='25.5462' x2='1573.53' y2='2627.46' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='white'/%3E%3Cstop offset='1' stop-color='%23ABDCF3'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E") center / 100% 100% no-repeat,
+    linear-gradient(200deg, #baecf9 0%, #90ff9b 48%, #baecf9 100%);
+}
+
+/* Egri shakl (keng hero): sekin "nafas oladi" — qisqarib-kengayadi va biroz chayqaladi (faqat transform) */
+.hero-wave {
+  background: url("data:image/svg+xml,%3Csvg width='1675' height='574' viewBox='0 0 1675 574' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1386.91 286.174H894.706C865.097 286.174 838.797 265.634 833.572 236.564C809.363 102.18 691.799 0 550.374 0H0C0 158.928 128.885 287.741 287.901 287.741H780.103C809.711 287.741 836.011 308.281 841.236 337.351C865.445 471.735 983.009 573.915 1124.43 573.915H1674.81C1674.81 414.987 1545.92 286.174 1386.91 286.174Z' fill='url(%23paint0_linear_5597_21832)'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_5597_21832' x1='448.969' y1='37.1018' x2='1183.71' y2='679.292' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23BAECF9'/%3E%3Cstop offset='0.48434' stop-color='%2390FF9B'/%3E%3Cstop offset='1' stop-color='%23BAECF9'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E") 50% 62% / 118% auto no-repeat;
+  opacity: 0.8;
+  transform-origin: 50% 60%;
+  animation: wave-breathe 9s ease-in-out infinite;
+  will-change: transform;
+}
+@keyframes wave-breathe {
+  0%, 100% { transform: scale(0.94) rotate(-1deg); }
+  50% { transform: scale(1.1) rotate(1.5deg); }
+}
+@media (max-width: 1023.98px) {
+  .hero-wave { background-size: 1500px auto; background-position: 30% 100%; }
+}
+
+/* Patternning kontur varianti (qo'llanma, 23-bet).
+   .hero-lines-wrap: matn tomonda yo'qolib boradigan niqob; ichida ikki qatlam:
+   .hero-lines — to'lqin yo'nalishi bo'ylab sekin suzadi,
+   .hero-lines-shine — xuddi shu chiziqlar shaklidagi niqob, ichidan yashil yorug'lik tasmasi o'tadi (jimirlash).
+   Hammasi transform animatsiyasi — kompozitorda, main-thread'ni band qilmaydi */
+.hero-lines-wrap {
+  mask-image: linear-gradient(100deg, transparent 22%, #000 72%);
+  opacity: 0.8;
+  /* opacity 0 dan paydo bo'ladi: Chrome bunday elementni LCP nomzodi deb olmaydi, LCP sarlavhada qoladi */
+  animation: bg-fade-in 0.9s ease-out 0.15s both;
+}
+@keyframes bg-fade-in { from { opacity: 0; } }
+.hero-lines {
+  position: absolute; inset: -70px;
+  background: linear-gradient(135deg, #7fd9f9 0%, #00b6f3 100%);
+  mask: url("/img/brand/pattern-outline.svg") 58% 46% / 2400px auto no-repeat;
+  animation: lines-drift 12s ease-in-out infinite alternate;
+  will-change: transform;
+}
+.hero-lines-shine { background: none; overflow: hidden; }
+.hero-lines-shine::before {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(105deg, transparent 40%, #54de62 50%, transparent 60%);
+  animation: lines-shine 4.5s linear infinite;
+  will-change: transform;
+}
+@keyframes lines-drift {
+  from { transform: translate3d(-45px, 26px, 0); }
+  to { transform: translate3d(45px, -26px, 0); }
+}
+@keyframes lines-shine {
+  from { transform: translate3d(70%, 0, 0); }
+  to { transform: translate3d(-70%, 0, 0); }
+}
+@media (max-width: 639.98px) {
+  .hero-lines-wrap { mask-image: linear-gradient(160deg, transparent 35%, #000 90%); opacity: 0.6; }
+  .hero-lines { mask-size: 1700px auto; }
+}
+
+/* Brend rangidagi nur: dog'lar silliq aylanma yo'l bo'ylab suzadi, karta ortidagi halo "nafas oladi" */
+.glow-blob { border-radius: 9999px; filter: blur(80px); animation: glow-drift 11s ease-in-out infinite; will-change: transform; }
+.glow-blob-alt { animation-duration: 14s; animation-direction: reverse; }
+.glow-halo { animation: glow-pulse 3.6s ease-in-out infinite; will-change: opacity, transform; }
+@keyframes glow-drift {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+  25% { transform: translate3d(110px, -30px, 0) scale(1.2); }
+  50% { transform: translate3d(160px, 50px, 0) scale(1.05); }
+  75% { transform: translate3d(50px, 80px, 0) scale(1.25); }
+}
+@keyframes glow-pulse {
+  0%, 100% { opacity: 0.25; transform: scale(0.97); }
+  50% { opacity: 0.7; transform: scale(1.03); }
+}
+
+/* Brend ikonografikasidagi "shisha" doira (qo'llanma, 24-bet): oq → och moviy, atrofida yumshoq halqa */
+.glass-badge {
+  background: linear-gradient(180deg, #fff 0%, #d6effb 100%);
+  box-shadow: 0 0 0 3px rgb(186 236 249 / 0.55), 0 8px 16px -10px rgb(13 47 68 / 0.35), inset 0 1px 0 #fff;
+}
+
 /* Brand dot-wave texture from the original site, rebuilt in CSS */
 .dots {
-  background-image: radial-gradient(circle, rgb(26 166 217 / 0.22) 1.2px, transparent 1.6px);
+  background-image: radial-gradient(circle, rgb(0 182 243 / 0.22) 1.2px, transparent 1.6px);
   background-size: 14px 14px;
   mask-image: radial-gradient(ellipse 80% 70% at 30% 100%, #000 20%, transparent 70%);
 }
@@ -203,7 +303,7 @@ body {
 .legacy-prose ol { list-style: decimal; padding-left: 1.4rem; }
 .legacy-prose li { margin-block: 0.35rem; }
 .legacy-prose li::marker { color: var(--color-brand-deep); }
-/* #0a6a94 — oq fonda 5.9:1 kontrast (WCAG AA); sky-deep (#1aa6d9) atigi 2.9:1 edi */
+/* #0a6a94 — oq fonda 5.9:1 kontrast (WCAG AA); brand-blue (#00b6f3) atigi 2.3:1 */
 .legacy-prose a { color: #0a6a94; text-decoration: underline; text-underline-offset: 3px; }
 .legacy-prose a:hover { color: var(--color-brand-deep); }
 .legacy-prose img { display: block; width: 100%; max-width: 100%; height: auto; border-radius: 20px; margin-inline: auto; }
@@ -226,7 +326,7 @@ body {
 
 /* Maqolalardagi maxsus bloklar (HTML-kod bloklaridagi klasslar) */
 .legacy-prose :is(.highlight, .highlight-box, .info, .info-box, .notice, .quote, .oh-intro, .preamble-card, .toc-card, .seo-alert-card) {
-  background: #eef8fd; border-left: 4px solid var(--color-sky-deep); border-radius: 14px; padding: 1rem 1.25rem;
+  background: var(--color-mist); border-left: 4px solid var(--color-sky-deep); border-radius: 14px; padding: 1rem 1.25rem;
 }
 .legacy-prose :is(.warning, .warning-box, .warn, .emergency-alert, .oh-warning) {
   background: #fff4f4; border-left: 4px solid var(--color-alert); border-radius: 14px; padding: 1rem 1.25rem;
@@ -265,7 +365,7 @@ body {
 .blog-prose ul > li { position: relative; padding-left: 1.9rem; }
 .blog-prose ul > li::before {
   content: ""; position: absolute; left: 0.35rem; top: 0.72em; width: 0.6rem; height: 0.6rem;
-  border-radius: 999px; background: linear-gradient(135deg, var(--color-brand), var(--color-brand-blue));
+  border-radius: 999px; background: linear-gradient(90deg, var(--color-grad-blue), var(--color-grad-green));
 }
 /* .check-list — yashil belgi */
 .blog-prose ul.check-list > li::before {
@@ -283,7 +383,7 @@ body {
 
 /* Maxsus bloklar — kartochka ko'rinishida */
 .blog-prose :is(.highlight, .highlight-box, .info, .info-box, .notice, .quote, .oh-intro, .preamble-card, .toc-card, .seo-alert-card) {
-  border: 0; border-radius: 22px; padding: 1.25rem 1.5rem; background: #eef8fd;
+  border: 0; border-radius: 22px; padding: 1.25rem 1.5rem; background: var(--color-mist);
   box-shadow: inset 4px 0 0 var(--color-sky-deep);
 }
 .blog-prose :is(.warning, .warning-box, .warn, .emergency-alert, .oh-warning) {
@@ -292,7 +392,7 @@ body {
 }
 .blog-prose :is(.warning, .warning-box, .warn, .emergency-alert, .oh-warning) strong { color: #a52a2a; }
 .blog-prose :is(.cta, .cta-box, .oh-cta, .seo-cta-banner, .tilda-cta-banner, .tilda-promo-card) {
-  border-radius: 24px; padding: 1.5rem 1.75rem; background: linear-gradient(135deg, #e3f9e6 0%, #dff4f8 100%);
+  border-radius: 24px; padding: 1.5rem 1.75rem; background: linear-gradient(90deg, #dff5fd 0%, #dffbe4 100%);
 }
 .blog-prose blockquote {
   margin-block: 2rem; padding: 1.25rem 1.5rem; border-radius: 22px; background: var(--color-mist);
@@ -381,7 +481,7 @@ body {
 }
 .legal-prose .section-num {
   flex: none; display: grid; place-items: center; width: 2.25rem; height: 2.25rem; margin: 0;
-  border-radius: 12px; background: linear-gradient(135deg, var(--color-brand), var(--color-brand-blue));
+  border-radius: 12px; background: linear-gradient(90deg, var(--color-grad-blue), var(--color-grad-green));
   color: #fff; font-weight: 700; font-size: 0.95rem;
 }
 .legal-prose .section-title { margin: 0; font-size: 1.1rem; font-weight: 700; line-height: 1.3; }
@@ -391,9 +491,9 @@ body {
 .legal-prose .clause-num { font-weight: 700; color: var(--color-brand-deep); font-variant-numeric: tabular-nums; }
 .legal-prose :is(.clause-list) { margin-top: 0.5rem; }
 .legal-prose :is(.preamble-card, .notice) {
-  border: 0; border-radius: 24px; padding: 1.25rem 1.5rem; background: #eef8fd; box-shadow: inset 4px 0 0 var(--color-sky-deep);
+  border: 0; border-radius: 24px; padding: 1.25rem 1.5rem; background: var(--color-mist); box-shadow: inset 4px 0 0 var(--color-sky-deep);
 }
-.legal-prose .highlight-box { border: 0; border-radius: 20px; padding: 1rem 1.25rem; background: #eef8fd; box-shadow: inset 4px 0 0 var(--color-sky-deep); }
+.legal-prose .highlight-box { border: 0; border-radius: 20px; padding: 1rem 1.25rem; background: var(--color-mist); box-shadow: inset 4px 0 0 var(--color-sky-deep); }
 .legal-prose .highlight-box.gold { background: #fff8e6; box-shadow: inset 4px 0 0 #e0a100; }
 .legal-prose .highlight-box.warn { background: #fff2f2; box-shadow: inset 4px 0 0 var(--color-alert); }
 @media (max-width: 639.98px) {

@@ -80,6 +80,18 @@ Menyuda ko'rinishi kerak bo'lsa: `lib/nav.ts` → `PAGES` ga uch tildagi manzili
 - Doimiy redirectlar aynan `301` (`statusCode: 301`, `permanent: true` emas — u 308 beradi).
 - `seo:check` canonical o'z URL'i ekanini va hreflang ikki tomonlama ekanini ham tekshiradi.
 
+## Admin panel o'zgarishlari (`content/edits/`, `lib/edit/`)
+
+Admin panel — alohida loyiha (`onlaynhamshira-admin`); u shu repoga GitHub orqali commit qiladi. Saytda admin kodi
+yo'q: o'zgarishlar build vaqtida qo'llanadi, sahifalar to'liq statik qoladi.
+Fayllar: `content/edits/text.json` (manba fayllar ustiga qo'yiladi), `content/edits/images.json`, `public/uploads/`,
+`content/legacy/*.json`. Admin panel asl matn va qoidalarni `app/edit-sources.json` (statik) dan o'qiydi.
+- Sahifada lug'atni `getDictionary`, "Nega biz?"/hamkor matnini `whyText`/`expertText` (`lib/edit/text.ts`) orqali oling —
+  `WHY[l]`/`EXPERT[l]` to'g'ridan-to'g'ri ishlatilsa admin o'zgarishlari chiqmaydi.
+- Yangi almashtiriladigan rasm: `editableImage()` dan o'tkazing va prefiksini `EDITABLE_IMAGE_PREFIXES` ga qo'shing.
+- Lug'atda tartib bo'yicha boshqa ma'lumotga bog'lanmagan yangi ro'yxat bo'lsa — `LISTS` ga qo'shing.
+- `meta` va H1 qulfi (`LOCKED`) — SEO talabi, olib tashlamang.
+
 ## Git
 
 - Commit xabarlari **ingliz tilida** yoziladi (sarlavha + qisqa ro'yxat).

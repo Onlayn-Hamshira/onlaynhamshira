@@ -42,9 +42,15 @@ function Counter({ to, run, sep }: { to: number; run: boolean; sep: string }) {
   return <>{formatNum(n, sep)}</>;
 }
 
+/** Mustaqil hisoblagich (blog hero va h.k.): ko'ringanda 0 dan sanaydi; SSR'da va JS'siz yakuniy qiymat turadi */
+export function CountUp({ to, sep }: { to: number; sep: string }) {
+  const [ref, seen] = useInView<HTMLSpanElement>();
+  return <span ref={ref}><Counter to={to} run={seen} sep={sep} /></span>;
+}
+
 export default function Stats({ t, sep }: { t: Dict["stats"]; sep: string }) {
   const [ref, seen] = useInView<HTMLDivElement>();
-  const tones = ["bg-peach", "bg-sky", "bg-lilac", "bg-mint"];
+  const tones = ["bg-aqua", "bg-sky", "bg-madang", "bg-mint"];
   return (
     <section aria-label={t.label} className="px-3 pt-3 sm:px-4">
       <div ref={ref} className="mx-auto grid max-w-[1400px] grid-cols-2 gap-3 lg:grid-cols-4">

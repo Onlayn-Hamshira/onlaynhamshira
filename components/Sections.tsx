@@ -1,9 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import ns from "./news/News.module.css";
-import { NewsCarousel } from "./news/NewsCarousel";
-import { NewsCard, type NewsPost } from "./news/NewsCard";
-import { ArrowRight as NewsArrowRight } from "./news/icons";
 import { ArrowRight, Globe, Mail } from "lucide-react";
 import { BENEFIT_ICONS, IMAGES, LINKS } from "@/lib/data";
 import type { BlogEntry } from "@/lib/blog-shared";
@@ -12,8 +8,7 @@ import type { Dict } from "@/lib/i18n/dictionaries/uz";
 import { localePath, type Locale } from "@/lib/i18n/config";
 import { pageHref, sectionHref } from "@/lib/nav";
 import { StoreButtons } from "./DownloadModal";
-import { AppPhone } from "./AppPhone";
-import { ContactMap } from "./map/ContactMap";
+import { LazyAppPhone as AppPhone } from "./AppLandingLazy";
 import { InstagramIcon, Logo, TelegramIcon, YoutubeIcon } from "./StoreIcons";
 import { Icon, IconTile, type IconName } from "./Icon";
 
@@ -82,7 +77,7 @@ export function AppBand({ t }: { t: Dict["app"] }) {
     <section aria-labelledby="app-h" className="px-3 sm:px-4 lg:pt-[130px]">
       <div
         data-reveal="scale"
-        className="relative mx-auto max-w-[1400px] rounded-[36px] bg-[linear-gradient(135deg,#12803e_0%,#0b7571_50%,#0d619b_100%)] text-white"
+        className="relative mx-auto max-w-[1400px] rounded-[36px] bg-brand-grad-deep text-white"
       >
         {/* Yorug'lik va to'r naqshi — faqat kartochka ichida */}
         <div aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden rounded-[36px]">
@@ -138,7 +133,7 @@ export function AppBand({ t }: { t: Dict["app"] }) {
 /* ───────── Xavfsizlik ───────── */
 const SAFETY_ICONS: IconName[] = ["shield", "handshake", "chat", "headphone"];
 export function Safety({ t, lang }: { t: Dict["safety"]; lang: Locale }) {
-  const tones = ["bg-peach", "bg-sky", "bg-lilac", "bg-mint"];
+  const tones = ["bg-aqua", "bg-sky", "bg-madang", "bg-mint"];
   return (
     <section aria-labelledby="safe-h" className="py-16 sm:py-24 lg:py-32">
       <Wrap>
@@ -169,58 +164,11 @@ export function Safety({ t, lang }: { t: Dict["safety"]; lang: Locale }) {
   );
 }
 
-/* ───────── Yangiliklar ───────── */
-// Shundan ko'p yangilik bo'lsa karusel, aks holda oddiy to'r (JS'siz)
-const NEWS_CAROUSEL_FROM = 4;
-
-export function News({ t, topics, entries, lang }: { t: Dict["news"]; topics: Dict["blog"]["topics"]; entries: BlogEntry[]; lang: Locale }) {
-  const blog = pageHref("blog", lang);
-  // Yagona manba — blog: kartalar blog sahifasidagi maqolalar (o'sha tartibda, lib/blog → homeNewsEntries),
-  // har biri o'z maqolasiga olib boradi. Ma'lumot server sahifasida olinadi (Sections client bundle'ga ham tushadi).
-  const posts: NewsPost[] = entries.map((e) => ({
-    title: e.title,
-    excerpt: e.excerpt,
-    image: e.cover!.src,
-    href: e.href,
-    category: topics[e.topic],
-  }));
-  const labels = { more: t.more, readMore: t.readMore };
-  if (!posts.length) return null;
-
-  return (
-    <section aria-labelledby="news-h" className={ns.section}>
-      <div className={ns.container}>
-        <SectionHead
-          id="news-h"
-          label={t.label}
-          title={t.title}
-          text={t.text}
-        />
-
-        {posts.length >= NEWS_CAROUSEL_FROM ? (
-          <NewsCarousel posts={posts} t={{ ...labels, carousel: t.carousel, prev: t.prev, next: t.next, page: t.page }} />
-        ) : (
-          <div className={ns.grid} style={{ "--n": posts.length } as React.CSSProperties}>
-            {posts.map((p) => <NewsCard key={p.title} post={p} t={labels} />)}
-          </div>
-        )}
-
-        <Link href={blog} className={ns.allLink}>
-          {t.all}
-          <span className={ns.allLinkIcon}><NewsArrowRight /></span>
-        </Link>
-      </div>
-    </section>
-  );
-}
-
 /* ───────── Aloqa ───────── */
-export function Contact({ t, map }: { t: Dict["contact"]; map: Dict["map"] }) {
+export function Contact({ t }: { t: Dict["contact"] }) {
   return (
     <section id="contact" aria-labelledby="contact-h" className="px-3 pb-3 sm:px-4">
-      <div className="mx-auto grid max-w-[1400px] gap-3 lg:grid-cols-2">
-        {/* MapLibre + OpenFreeMap: reklamasiz, brend markerli xarita */}
-        <ContactMap t={map} address={t.addressText} className="order-2 min-h-[320px] rounded-[28px] sm:min-h-[420px] sm:rounded-[32px] lg:order-none" />
+      <div className="mx-auto max-w-[1400px]">
         <div data-reveal="scale" style={d(1)} className="relative overflow-hidden rounded-[28px] bg-mint p-6 sm:rounded-[32px] sm:p-12">
           <div aria-hidden className="pointer-events-none absolute top-8 right-8 hidden animate-float sm:block"><Icon name="telephone" size={76} tone="tile" className="rotate-6" /></div>
           <h2 id="contact-h" className="sr-only">{t.heading}</h2>
@@ -249,73 +197,5 @@ export function Contact({ t, map }: { t: Dict["contact"]; map: Dict["map"] }) {
         </div>
       </div>
     </section>
-  );
-}
-
-/* ───────── Footer ───────── */
-export function Footer({ t, common, lang, home }: { t: Dict["footer"]; common: Dict["common"]; lang: Locale; home?: string }) {
-  // Har til o'z sahifalariga: /ru dagi "Блог" → /ru/blog. Ichki sahifalarda bo'limlar bosh sahifaga ("/ru#faq")
-  const onHome = !home;
-  const hrefs = [
-    onHome ? "#top" : localePath(lang),
-    sectionHref("about", lang, onHome),
-    sectionHref("services", lang, onHome),
-    sectionHref("reviews", lang, onHome),
-    sectionHref("faq", lang, onHome),
-    pageHref("blog", lang),
-    pageHref("partner", lang),
-    pageHref("certificates", lang),
-  ];
-  const links = hrefs.map((h, i) => ({ h, l: t.links[i] }));
-  const socials = [
-    { href: LINKS.telegram, Icon: TelegramIcon, l: "Telegram" },
-    { href: LINKS.instagram, Icon: InstagramIcon, l: "Instagram" },
-    { href: LINKS.youtube, Icon: YoutubeIcon, l: "YouTube" },
-  ];
-  return (
-    <footer className="px-3 pb-24 sm:px-4 lg:pb-4">
-      <div className="mx-auto max-w-[1400px] rounded-[32px] bg-ink px-6 py-12 text-white sm:px-12 sm:py-16">
-        <div className="grid gap-12 lg:grid-cols-[1.2fr_1.6fr_1fr]">
-          <div>
-            <div className="inline-block rounded-2xl bg-white px-4 py-3"><Logo className="h-9" /></div>
-            <p className="mt-6 max-w-[32ch] text-white/70">{t.tagline}</p>
-            <div className="mt-6 flex gap-2">
-              {socials.map(({ href, Icon, l }) => (
-                <a key={l} href={href} aria-label={l} className="grid size-11 place-items-center rounded-full bg-white/10 transition hover:-translate-y-1 hover:bg-brand-grad hover:text-white">
-                  <Icon />
-                </a>
-              ))}
-              <a href={`mailto:${LINKS.email}`} aria-label="Email" className="grid size-11 place-items-center rounded-full bg-white/10 transition hover:-translate-y-1 hover:bg-brand-grad hover:text-white">
-                <Mail className="size-5" />
-              </a>
-            </div>
-          </div>
-          <nav aria-label={t.nav}>
-            <ul className="grid grid-cols-2 gap-x-6 gap-y-1">
-              {links.map((x) => (
-                <li key={x.l}><a href={x.h} className="inline-block py-1 text-white/80 transition hover:text-brand">{x.l}</a></li>
-              ))}
-            </ul>
-          </nav>
-          <div>
-            <div className="flex gap-3">
-              {[IMAGES.qrAndroid, IMAGES.qrIphone].map((q, i) => (
-                <figure key={q} className="text-center text-xs text-white/60">
-                  <Image src={q} alt={fill(t.qr, { p: i ? "iPhone" : "Android" })} width={100} height={100} unoptimized className="size-[100px] rounded-xl bg-white p-1.5" />
-                  <figcaption className="mt-1.5">{i ? "iPhone" : "Android"}</figcaption>
-                </figure>
-              ))}
-            </div>
-            <a href={LINKS.webApp} className="mt-5 flex items-center justify-center gap-2 rounded-full border border-white/30 py-3 font-semibold transition hover:border-brand hover:text-brand">
-              <Globe className="size-4" /> {common.onlineApp}
-            </a>
-          </div>
-        </div>
-        <div className="mt-12 flex flex-col gap-3 border-t border-white/15 pt-6 text-sm text-white/60 md:flex-row md:items-center md:justify-between">
-          <p>{fill(t.rights, { year: new Date().getFullYear() })}</p>
-          <a href={pageHref("privacy", lang)} className="hover:text-white">{t.privacy}</a>
-        </div>
-      </div>
-    </footer>
   );
 }

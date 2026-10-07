@@ -37,15 +37,27 @@ export type LegacyPage = {
 const DIR = path.join(process.cwd(), "content/legacy");
 
 let cache: LegacyPage[] | null = null;
+const files = new Map<string, string>();
 export function legacyPages(): LegacyPage[] {
   if (!cache) {
     cache = fs
       .readdirSync(DIR)
       .filter((f) => f.endsWith(".json"))
-      .map((f) => JSON.parse(fs.readFileSync(path.join(DIR, f), "utf8")) as LegacyPage)
+      .map((f) => {
+        const pg = JSON.parse(fs.readFileSync(path.join(DIR, f), "utf8")) as LegacyPage;
+        files.set(pg.path, f);
+        return pg;
+      })
       .sort((a, b) => a.path.localeCompare(b.path));
   }
   return cache;
+}
+
+/** Sahifa JSON fayli (repo ildizidan): admin panel shu faylga yozadi */
+export function legacyFile(publicPath: string): string | undefined {
+  legacyPages();
+  const f = files.get(publicPath);
+  return f && `content/legacy/${f}`;
 }
 
 /** Tashqi yo'ldan URL til prefiksini olib tashlaydi: "/ru/blog/x" → "/blog/x" */
