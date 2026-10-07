@@ -69,6 +69,8 @@ export function Analytics() {
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={`https://mc.yandex.ru/watch/${TRACKING.yandexMetrika}`}
+          width={1}
+          height={1}
           style={{ position: "absolute", left: "-9999px" }}
           alt=""
         />
