@@ -1,6 +1,8 @@
 {
   "dict": {
-    "uz": {},
+    "uz": {
+      "common.callNurseOnline": "Hamshirani "
+    },
     "ru": {
       "common.callNurseOnline": "Вызвать медсестру"
     },
