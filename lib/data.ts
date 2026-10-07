@@ -19,8 +19,8 @@ export const LINKS = {
 };
 
 export const IMAGES = {
-  qrIphone: "/img/misc/qr-iphone.png",
-  qrAndroid: "/img/misc/qr-android.png",
+  qrIphone: editableImage("/img/misc/qr-iphone.png"),
+  qrAndroid: editableImage("/img/misc/qr-android.png"),
 };
 
 // Sahifa/bo'lim havolalari (har til uchun) — lib/nav.ts da

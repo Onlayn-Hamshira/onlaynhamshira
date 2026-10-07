@@ -4,6 +4,7 @@ import {
 import { CERTIFICATES, COMPANY_TIN, LINKS, STATS } from "@/lib/data";
 import { WHY_BENEFIT_ICONS, WHY_FORWHO_ICONS, type WhyDict } from "@/lib/why";
 import { IconTile } from "./Icon";
+import { editableImage } from "@/lib/edit/edits";
 
 // Faoliyat boshlangan yil — birinchi davlat guvohnomasidan (sertifikatlar sahifasidagi bilan bir xil)
 const SINCE_YEAR = CERTIFICATES[0].date.slice(-4);
@@ -21,7 +22,7 @@ const Yes = ({ className = "" }: { className?: string }) => (
 );
 const Pin = ({ className = "" }: { className?: string }) => (
   // eslint-disable-next-line @next/next/no-img-element -- kichik SVG logo
-  <img src="/img/map-pin.svg" alt="" width={34} height={42} className={`w-auto ${className}`} />
+  <img src={editableImage("/img/map-pin.svg")} alt="" width={34} height={42} className={`w-auto ${className}`} />
 );
 
 function Eyebrow({ children, tone = "mint" }: { children: React.ReactNode; tone?: "mint" | "white" }) {

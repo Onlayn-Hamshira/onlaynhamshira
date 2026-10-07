@@ -8,6 +8,7 @@ import { AppleIcon, PlayIcon } from "./StoreIcons";
 import { setScrollLock } from "./Motion";
 import { fill } from "@/lib/i18n/format";
 import type { Dict } from "@/lib/i18n/dictionaries/uz";
+import { editableImage } from "@/lib/edit/edits";
 
 type T = Dict["download"] & { close: string; onlineApp: string };
 
@@ -126,8 +127,8 @@ export function DownloadProvider({ t, children }: { t: T; children: React.ReactN
 export function StoreButtons({ className = "" }: { className?: string }) {
   const { open, platform, t } = useDownload();
   const buttons = [
-    { key: "android", src: "/badges/google-play-black.png", w: 600, h: 178, label: t.googlePlay },
-    { key: "ios", src: "/badges/app-store.png", w: 600, h: 209, label: t.appStore },
+    { key: "android", src: editableImage("/badges/google-play-black.png"), w: 600, h: 178, label: t.googlePlay },
+    { key: "ios", src: editableImage("/badges/app-store.png"), w: 600, h: 209, label: t.appStore },
   ];
   // Foydalanuvchi qurilmasiga mos tugma birinchi turadi
   if (platform === "ios") buttons.reverse();

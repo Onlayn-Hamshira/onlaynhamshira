@@ -4,6 +4,7 @@
 
 import type { IconName } from "@/components/Icon";
 import type { Locale } from "@/lib/i18n/config";
+import { editableImage } from "@/lib/edit/edits";
 
 export const EXPERT_LINKS = {
   // Asosiy yo'l: HR onboarding web-ilovasi (ariza → platforma → shartlar → saralash → o'quv → video)
@@ -13,9 +14,9 @@ export const EXPERT_LINKS = {
   // Mutaxassislar ilovasi (mijozlar ilovasi emas) — /qr2 bilan bir xil
   android: "https://play.google.com/store/apps/details?id=uz.teamwork.onlinehamshiramutaxassis",
   ios: "https://apps.apple.com/uz/app/onlayn-hamshira-mutaxassis/id6590618718",
-  qrAndroid: "/legacy/61336433-qr-code-android-2-w480.webp",
-  qrIos: "/legacy/66613831-qr-code-iphone-2-w480.webp",
-  phoneShot: "/legacy/61323838-group-1-1.webp",
+  qrAndroid: editableImage("/legacy/61336433-qr-code-android-2-w480.webp"),
+  qrIos: editableImage("/legacy/66613831-qr-code-iphone-2-w480.webp"),
+  phoneShot: editableImage("/legacy/61323838-group-1-1.webp"),
 };
 
 export const STEP_ICONS: IconName[] = ["chat", "people", "phone", "wallet"];

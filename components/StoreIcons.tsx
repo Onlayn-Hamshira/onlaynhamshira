@@ -1,3 +1,5 @@
+import { editableImage } from "@/lib/edit/edits";
+
 export function AppleIcon({ className = "size-5" }: { className?: string }) {
   return (
     <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden className={className}>
@@ -44,7 +46,7 @@ export function Logo({ className = "h-10" }: { className?: string }) {
     // eslint-disable-next-line @next/next/no-img-element
     // SVG — next/image optimallashtirmaydi; o'z serverimizdan (tashqi CDN ulanishisiz)
     <img
-      src="/logo-v2.svg"
+      src={editableImage("/logo-v2.svg")}
       alt="Onlayn Hamshira"
       className={`w-auto ${className}`}
       width={139}

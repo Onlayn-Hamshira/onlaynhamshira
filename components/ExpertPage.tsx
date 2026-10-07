@@ -8,6 +8,7 @@ import { SectionHead } from "./Sections";
 import { Icon, IconTile } from "./Icon";
 import { TelegramIcon } from "./StoreIcons";
 import { LazyExpertPhoneDemo as ExpertPhoneDemo } from "./AppLandingLazy";
+import { editableImage } from "@/lib/edit/edits";
 
 // "Hamkor bo'lish" sahifasi — mutaxassislar uchun. Anchor'lar (#instructions, #advantages, #income, #faq)
 // Tilda'dagi havolalar bilan bir xil — o'zgartirmang.
@@ -50,8 +51,8 @@ function ApplyMeta({ t, className = "" }: { t: ExpertDict; className?: string })
 /** Mutaxassislar ilovasi (mijozlar ilovasi emas) — shuning uchun umumiy StoreButtons ishlatilmaydi */
 function StoreLinks({ className = "" }: { className?: string }) {
   const items = [
-    { href: EXPERT_LINKS.android, src: "/badges/google-play-black.png", w: 600, h: 178, label: "Google Play" },
-    { href: EXPERT_LINKS.ios, src: "/badges/app-store.png", w: 600, h: 209, label: "App Store" },
+    { href: EXPERT_LINKS.android, src: editableImage("/badges/google-play-black.png"), w: 600, h: 178, label: "Google Play" },
+    { href: EXPERT_LINKS.ios, src: editableImage("/badges/app-store.png"), w: 600, h: 209, label: "App Store" },
   ];
   return (
     <div className={`flex flex-wrap gap-2.5 sm:gap-3 ${className}`}>

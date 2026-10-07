@@ -18,6 +18,7 @@ import { BlogToc } from "./BlogToc";
 import { Cover } from "./Cover";
 import { YouTubeFacade } from "./YouTubeFacade";
 import { TOPIC_STYLE } from "./topics";
+import { editableImage } from "@/lib/edit/edits";
 
 /** LCP rasmi <head>'da oldindan yuklanadi — HTML'ni oxirigacha o'qishni kutmaydi */
 const preloadImage = (img: BlogImage | null, sizes: string) => {
@@ -104,7 +105,7 @@ export function BlogIndexPage({ pg, t, lang }: { pg: LegacyPage; t: Dict; lang: 
                   <div className="flex items-center gap-3.5 bg-[linear-gradient(90deg,var(--color-mist),#e9fbee)] px-6 py-5 sm:px-7">
                     <span aria-hidden className="glass-badge grid size-12 shrink-0 place-items-center rounded-full">
                       {/* eslint-disable-next-line @next/next/no-img-element -- kichik SVG logo */}
-                      <img src="/img/map-pin.svg" alt="" width={34} height={42} className="h-7 w-auto" />
+                      <img src={editableImage("/img/map-pin.svg")} alt="" width={34} height={42} className="h-7 w-auto" />
                     </span>
                     <div className="min-w-0">
                       <h2 id="principles-h" className="text-lg leading-tight font-semibold tracking-tight sm:text-xl">{b.principlesTitle}</h2>
@@ -199,7 +200,7 @@ export function BlogPostPage({ pg, t, lang }: { pg: LegacyPage; t: Dict; lang: L
               <span className="flex items-center gap-3">
                 <span aria-hidden className="grid size-11 place-items-center rounded-full bg-mint ring-4 ring-mint/40">
                   {/* eslint-disable-next-line @next/next/no-img-element -- kichik SVG logo */}
-                  <img src="/img/map-pin.svg" alt="" width={34} height={42} className="h-6 w-auto" />
+                  <img src={editableImage("/img/map-pin.svg")} alt="" width={34} height={42} className="h-6 w-auto" />
                 </span>
                 <span>
                   <span className="flex items-center gap-1 font-semibold">
@@ -255,7 +256,7 @@ export function BlogPostPage({ pg, t, lang }: { pg: LegacyPage; t: Dict; lang: L
               <div className="flex gap-4 bg-mist/60 p-5 sm:p-6">
                 <span aria-hidden className="grid size-12 shrink-0 place-items-center rounded-2xl bg-white ring-1 ring-line">
                   {/* eslint-disable-next-line @next/next/no-img-element -- kichik SVG logo */}
-                  <img src="/img/map-pin.svg" alt="" width={34} height={42} className="h-7 w-auto" />
+                  <img src={editableImage("/img/map-pin.svg")} alt="" width={34} height={42} className="h-7 w-auto" />
                 </span>
                 <div className="min-w-0">
                   <h2 id="about-h" className="font-semibold">{b.aboutTitle}</h2>

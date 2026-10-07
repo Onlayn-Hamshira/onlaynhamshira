@@ -161,7 +161,7 @@ export function ExpertPhoneDemo({ t }: { t: ExpertDemoDict }) {
       <div className={s.homeTop} />
       <StatusBar />
       <div className={s.homeHead}>
-        <img className={s.avatar} src="/img/app/specialist-avatar.webp" alt="" width={40} height={40} />
+        <img className={s.avatar} src={editableImage("/img/app/specialist-avatar.webp")} alt="" width={40} height={40} />
         <b>{t.home.name}</b>
         <span className={s.roundBtn}><FilePlus2 size={17} /></span>
         <span className={`${s.roundBtn} ${s.bell}`}><Bell size={17} /></span>
@@ -221,7 +221,7 @@ export function ExpertPhoneDemo({ t }: { t: ExpertDemoDict }) {
               </div>
               <div className={s.psList}>
                 <div ref={r.result} className={s.psRow}>
-                  <span className={s.psIcon}><img src="/img/app-icon-mark.svg" alt="" width={26} height={33} /></span>
+                  <span className={s.psIcon}><img src={editableImage("/img/app-icon-mark.svg")} alt="" width={26} height={33} /></span>
                   <div>
                     <p>Onlayn Hamshira Mutaxassis</p>
                     <small>ONLAYN HAMSHIRA LLC • Productivity</small>
@@ -229,7 +229,7 @@ export function ExpertPhoneDemo({ t }: { t: ExpertDemoDict }) {
                   </div>
                 </div>
                 <div className={s.psRow}>
-                  <span className={`${s.psIcon} ${s.psClient}`}><img src="/img/app-icon-mark.svg" alt="" width={26} height={33} /></span>
+                  <span className={`${s.psIcon} ${s.psClient}`}><img src={editableImage("/img/app-icon-mark.svg")} alt="" width={26} height={33} /></span>
                   <div>
                     <p>Onlayn Hamshira</p>
                     <small>ONLAYN HAMSHIRA LLC • Medical</small>
@@ -259,7 +259,7 @@ export function ExpertPhoneDemo({ t }: { t: ExpertDemoDict }) {
               <div className={s.storeApp}>
                 <div className={s.storeIcon}>
                   <svg className={s.ring} viewBox="0 0 76 76"><circle cx="38" cy="38" r="35" style={{ strokeDashoffset: 220 - (220 * v.pct) / 100 }} /></svg>
-                  <div className={s.ic}><img src="/img/app-icon-mark.svg" alt="" width={40} height={51} /></div>
+                  <div className={s.ic}><img src={editableImage("/img/app-icon-mark.svg")} alt="" width={40} height={51} /></div>
                 </div>
                 <div>
                   <div className={s.storeName}>Onlayn Hamshira Mutaxassis</div>
@@ -285,7 +285,7 @@ export function ExpertPhoneDemo({ t }: { t: ExpertDemoDict }) {
             <div key={`s1-${run}`} className={`${s.scene} ${s.reg}`}>
               <StatusBar dark />
               <div className={s.regHead}>
-                <img src="/img/map-pin.svg" alt="" width={54} height={67} />
+                <img src={editableImage("/img/map-pin.svg")} alt="" width={54} height={67} />
                 <p>{v.codeView ? t.reg.sms : t.reg.title}</p>
               </div>
               <div className={s.regCard}>
@@ -332,7 +332,7 @@ export function ExpertPhoneDemo({ t }: { t: ExpertDemoDict }) {
                 <StatusBar dark />
                 <span className={s.route} />
                 <span className={s.me} />
-                <img className={s.mapPin} src="/img/map-pin.svg" alt="" width={28} height={35} />
+                <img className={s.mapPin} src={editableImage("/img/map-pin.svg")} alt="" width={28} height={35} />
               </div>
               <div className={s.flowCard}>
                 <h6>{t.flow.title}</h6>

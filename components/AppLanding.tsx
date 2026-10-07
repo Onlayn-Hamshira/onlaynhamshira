@@ -7,6 +7,7 @@ import { Benefits } from "./Sections";
 import { preload } from "react-dom";
 import { LazyAppPhone, LazyHowItWorks, LazyStats } from "./AppLandingLazy";
 import { AppleIcon, PlayIcon } from "./StoreIcons";
+import { editableImage } from "@/lib/edit/edits";
 
 const plain = (s: string) => s.replace(/<[^>]+>/g, "").trim();
 
@@ -21,7 +22,7 @@ export function AppLanding({ html, t }: { html: string; t: Dict }) {
   const [eyebrow, lead, androidLabel, iosLabel] = [ps[0] ?? t.app.label, ps[1] ?? t.app.text, ps[2] ?? a.android, ps[3] ?? a.ios];
 
   // Telefon posteri — sahifaning LCP rasmi
-  preload("/img/app/phone-poster-v3.webp", { as: "image", fetchPriority: "high" });
+  preload(editableImage("/img/app/phone-poster-v3.webp"), { as: "image", fetchPriority: "high" });
 
   const stores = [
     { href: LINKS.playStore, label: androidLabel, sub: "Google Play", Glyph: PlayIcon },
