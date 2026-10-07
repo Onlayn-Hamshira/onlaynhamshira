@@ -2,7 +2,8 @@
   "dict": {
     "uz": {
       "news.label": "Yangilik",
-      "blog.lead": "Uyda parvarish, profilaktika va sog‘lom turmush bo‘yicha hamshiralarimiz tajribasiga asoslangan foydali maqolalar"
+      "blog.lead": "Uyda parvarish, profilaktika va sog‘lom turmush bo‘yicha hamshiralarimiz tajribasiga asoslangan foydali maqolalar",
+      "hero.allDaySub": "dam olish kunlarisiz ishlaymiz"
     },
     "ru": {},
     "en": {}
