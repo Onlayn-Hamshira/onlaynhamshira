@@ -21,10 +21,15 @@ const NO_BLOCK_EDIT = new Set(["blogIndex", "compare", "contacts", "app", "certi
 
 const IMAGE_EXT = /\.(webp|jpe?g|png|avif|svg)$/i;
 
+/** Papkadagi rasmlar (ichki papkalar bilan); fayl prefiksi ("/logo-v2.svg") — o'zi */
 function publicImages(prefix: string): string[] {
   const dir = path.join(process.cwd(), "public", prefix);
   if (!fs.existsSync(dir)) return [];
-  return fs.readdirSync(dir).filter((f) => IMAGE_EXT.test(f)).sort().map((f) => `${prefix}${f}`);
+  if (!prefix.endsWith("/")) return IMAGE_EXT.test(prefix) ? [prefix] : [];
+  return (fs.readdirSync(dir, { recursive: true }) as string[])
+    .filter((f) => IMAGE_EXT.test(f))
+    .sort()
+    .map((f) => `${prefix}${f.split(path.sep).join("/")}`);
 }
 
 export async function GET() {
@@ -43,7 +48,8 @@ export async function GET() {
     locked: Object.fromEntries(SOURCES.map((s) => [s, LOCKED[s].map((re) => re.source)])),
     lists: LISTS,
     imagePrefixes: EDITABLE_IMAGE_PREFIXES,
-    images: EDITABLE_IMAGE_PREFIXES.flatMap(publicImages),
+    // Eski sahifa rasmlari (/legacy/, ~1000 ta) ro'yxatga kirmaydi — ular sahifaning o'zida almashtiriladi
+    images: EDITABLE_IMAGE_PREFIXES.filter((p) => p !== "/legacy/").flatMap(publicImages),
     pages: legacyPages().map((pg) => ({
       path: pg.path,
       file: legacyFile(pg.path),

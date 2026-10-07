@@ -36,6 +36,22 @@ export type LegacyPage = {
 
 const DIR = path.join(process.cwd(), "content/legacy");
 
+/**
+ * Admin paneldan almashtirilgan rasmlar (content/edits/images.json) sahifa HTML'iga ham qo'llanadi.
+ * lib/edit/edits.ts import qilinmaydi: bu fayl next.config.ts dan ham yuklanadi (u yerda "@/" alias yo'q).
+ * Almashtirilgan rasmning srcset/sizes'i olib tashlanadi — ular eski rasmning o'lchamlariga tegishli.
+ */
+function withImageEdits(html: string): string {
+  const file = path.join(process.cwd(), "content/edits/images.json");
+  const map = fs.existsSync(file) ? (JSON.parse(fs.readFileSync(file, "utf8")) as Record<string, string>) : {};
+  if (!Object.keys(map).length) return html;
+  return html.replace(/<img\b[^>]*>/g, (tag) => {
+    const src = tag.match(/\ssrc="([^"]+)"/)?.[1];
+    if (!src || !map[src]) return tag;
+    return tag.replace(/\s(srcset|sizes)="[^"]*"/g, "").replace(/\ssrc="[^"]+"/, ` src="${map[src]}"`);
+  });
+}
+
 let cache: LegacyPage[] | null = null;
 const files = new Map<string, string>();
 export function legacyPages(): LegacyPage[] {
@@ -46,7 +62,7 @@ export function legacyPages(): LegacyPage[] {
       .map((f) => {
         const pg = JSON.parse(fs.readFileSync(path.join(DIR, f), "utf8")) as LegacyPage;
         files.set(pg.path, f);
-        return pg;
+        return { ...pg, html: withImageEdits(pg.html) };
       })
       .sort((a, b) => a.path.localeCompare(b.path));
   }

@@ -88,7 +88,11 @@ Fayllar: `content/edits/text.json` (manba fayllar ustiga qo'yiladi), `content/ed
 `content/legacy/*.json`. Admin panel asl matn va qoidalarni `app/edit-sources.json` (statik) dan o'qiydi.
 - Sahifada lug'atni `getDictionary`, "Nega biz?"/hamkor matnini `whyText`/`expertText` (`lib/edit/text.ts`) orqali oling —
   `WHY[l]`/`EXPERT[l]` to'g'ridan-to'g'ri ishlatilsa admin o'zgarishlari chiqmaydi.
-- Yangi almashtiriladigan rasm: `editableImage()` dan o'tkazing va prefiksini `EDITABLE_IMAGE_PREFIXES` ga qo'shing.
+- Rasmlar: `public/` dagi har bir rasm yo'li (`/img/`, `/services/`, `/badges/`, `/legacy/`, logo) komponentda `editableImage()`
+  dan o'tishi shart — admin vizual tahrirlovchisi saytdagi istalgan rasmni almashtiradi. Yangi papka bo'lsa prefiksini
+  `EDITABLE_IMAGE_PREFIXES` ga qo'shing. Eski sahifalar HTML'idagi rasmlarga xarita `lib/seo/legacy.ts` da qo'llanadi.
+- Admin vizual tahrirlovchisi saytni iframe'da ochadi: `components/Analytics.tsx` iframe ichida analitikani yuklamaydi —
+  shu shartni olib tashlamang (admin ko'rishlari statistikaga tushadi).
 - Lug'atda tartib bo'yicha boshqa ma'lumotga bog'lanmagan yangi ro'yxat bo'lsa — `LISTS` ga qo'shing.
 - `meta` va H1 qulfi (`LOCKED`) — SEO talabi, olib tashlamang.
 

@@ -2,11 +2,12 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import { AppPhoneDemo } from "./app-demo/AppPhoneDemo";
+import { editableImage } from "@/lib/edit/edits";
 
 // Quti o'lchami (poster bilan bir xil — telefon qiyshiq, fon shaffof)
 const W = 386;
 const H = 612;
-const POSTER = "/img/app/phone-poster-v3.webp"; // 20KB
+const POSTER = editableImage("/img/app/phone-poster-v3.webp"); // 20KB
 
 /**
  * Ilova animatsiyasi (20 soniya) — HTML/CSS bilan chizilgan telefon (video/GIF emas):

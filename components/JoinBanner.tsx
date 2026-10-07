@@ -4,6 +4,7 @@ import { EXPERT_LINKS } from "@/lib/expert";
 import { pageHref } from "@/lib/nav";
 import type { Locale } from "@/lib/i18n/config";
 import type { Dict } from "@/lib/i18n/dictionaries/uz";
+import { editableImage } from "@/lib/edit/edits";
 
 // Mutaxassislarni jalb qilish: asosiy yo'l — HR onboarding web-ilovasi (hr.onlaynhamshira.uz/hamkor),
 // batafsil shartlar — mavjud /expert sahifasi (URL o'zgarmaydi).
@@ -79,7 +80,7 @@ export function JoinBanner({ t, lang }: { t: Dict["join"]; lang: Locale }) {
               {/* Sarlavha + bosqich */}
               <div className="flex items-center justify-between gap-3">
                 <span className="flex items-center gap-2 text-[13px] font-semibold">
-                  <img src="/img/map-pin.svg" alt="" width={34} height={42} className="h-6 w-auto" />
+                  <img src={editableImage("/img/map-pin.svg")} alt="" width={34} height={42} className="h-6 w-auto" />
                   {t.mock.brand}
                 </span>
                 <span className="rounded-md bg-brand/10 px-2 py-0.5 text-[11px] font-semibold text-brand-deep tabular-nums">{t.mock.step}</span>

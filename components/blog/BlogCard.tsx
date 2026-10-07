@@ -3,6 +3,7 @@ import { formatDate, type BlogEntry } from "@/lib/blog-shared";
 import { fill } from "@/lib/i18n/format";
 import type { Dict } from "@/lib/i18n/dictionaries/uz";
 import { Cover } from "./Cover";
+import { editableImage } from "@/lib/edit/edits";
 
 export type CardT = Pick<Dict["blog"], "minutes" | "read" | "topics" | "byline">;
 
@@ -38,7 +39,7 @@ export function BlogCard({ e, t, priority }: { e: BlogEntry; t: CardT; priority?
             <span className="flex min-w-0 items-center gap-2 font-medium">
               <span aria-hidden className="grid size-7 shrink-0 place-items-center rounded-full bg-mint">
                 {/* eslint-disable-next-line @next/next/no-img-element -- kichik SVG logo */}
-                <img src="/img/map-pin.svg" alt="" width={34} height={42} className="h-4 w-auto" />
+                <img src={editableImage("/img/map-pin.svg")} alt="" width={34} height={42} className="h-4 w-auto" />
               </span>
               <span className="truncate">{t.byline}</span>
             </span>

@@ -13,7 +13,7 @@ import { TRACKING } from "@/lib/seo/site";
 // Vaqt bo'yicha zaxira (avval 6 s) YO'Q: sekin tarmoqda (PageSpeed Insights) u test tugashidan oldin ishlab,
 // Metrika/GA third-party cookie'lari sabab Best Practices 100 → 77 ga tushardi. Telefonda birinchi teginish,
 // kompyuterda sichqoncha harakati deyarli darhol bo'ladi — tashriflar hisobga tushadi.
-// window.__ohLoadAnalytics() — darhol yuklash (QR sahifalari shuni chaqiradi).
+// window.__ohLoadAnalytics() — darhol yuklash (QR sahifalari shuni chaqiradi). iframe ichida yuklanmaydi.
 
 const init = `
 window.dataLayer = window.dataLayer || [];
@@ -38,7 +38,8 @@ ym(${TRACKING.yandexMetrika}, "init", {clickmap:true,trackLinks:true,accurateTra
   function add(src){ for (var j=0;j<document.scripts.length;j++){ if (document.scripts[j].src===src) return; }
     var s=document.createElement('script'); s.async=true; s.src=src; document.head.appendChild(s); }
   function load(){
-    if (done) return; done = true;
+    // iframe ichida (admin paneldagi vizual tahrirlovchi) analitika yuklanmaydi — admin ko'rishlari statistikaga tushmasin
+    if (done || window.self !== window.top) return; done = true;
     evs.forEach(function(e){ removeEventListener(e, onEvent, true); });
     add('https://www.googletagmanager.com/gtag/js?id=${TRACKING.ga4}');
     add('https://mc.yandex.ru/metrika/tag.js');

@@ -55,7 +55,7 @@ const parseRobots = (v: string | null): Metadata["robots"] => {
 };
 
 const firstImage = (html: string) => {
-  const m = html.match(/<img[^>]*\ssrc="(\/legacy\/[^"]+)"/);
+  const m = html.match(/<img[^>]*\ssrc="(\/(?:legacy|uploads)\/[^"]+)"/);
   return m ? m[1] : null;
 };
 
