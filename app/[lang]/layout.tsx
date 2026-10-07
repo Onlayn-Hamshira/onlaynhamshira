@@ -8,6 +8,7 @@ import { LOCALES, OG_LOCALE, hasLocale, localePath } from "@/lib/i18n/config";
 import { getDictionary } from "@/lib/i18n/get-dictionary";
 import { Analytics } from "@/components/Analytics";
 import { SITE_URL, DEFAULT_OG_IMAGE, GOOGLE_SITE_VERIFICATION } from "@/lib/seo/site";
+import { seoEdit } from "@/lib/edit/seo";
 
 const onest = Onest({
   // Faqat lotin oldindan yuklanadi; kirill (ru) unicode-range orqali faqat kerak bo'lganda yuklanadi
@@ -24,19 +25,21 @@ export async function generateMetadata({ params }: LayoutProps<"/[lang]">): Prom
   const { lang } = await params;
   if (!hasLocale(lang)) return {};
   const { meta } = await getDictionary(lang);
+  // Admin paneldan tasdiq bilan o'zgartirilgan qiymatlar (bo'lmasa — lug'atdagi Tilda qiymatlari)
+  const seo = seoEdit(localePath(lang));
   return {
     metadataBase: new URL(SITE_URL),
-    title: meta.title,
-    description: meta.description,
-    keywords: meta.keywords,
+    title: seo.title ?? meta.title,
+    description: seo.description ?? meta.description,
+    keywords: seo.keywords ?? meta.keywords,
     verification: { google: GOOGLE_SITE_VERIFICATION },
     alternates: {
       canonical: localePath(lang),
       languages: { ...Object.fromEntries(LOCALES.map((l) => [l, localePath(l)])), "x-default": "/" },
     },
     openGraph: {
-      title: meta.ogTitle,
-      description: meta.ogDescription,
+      title: seo.ogTitle ?? meta.ogTitle,
+      description: seo.ogDescription ?? meta.ogDescription,
       url: localePath(lang),
       locale: OG_LOCALE[lang],
       alternateLocale: LOCALES.filter((l) => l !== lang).map((l) => OG_LOCALE[l]),

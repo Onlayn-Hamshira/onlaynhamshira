@@ -5,13 +5,15 @@
 
 import fs from "node:fs";
 import path from "node:path";
-import { LOCALES, type Locale } from "@/lib/i18n/config";
+import { LOCALES, localePath, type Locale } from "@/lib/i18n/config";
 import { getRawDictionary } from "@/lib/i18n/get-dictionary";
 import { WHY } from "@/lib/why";
 import { EXPERT } from "@/lib/expert";
 import { legacyFile, legacyPages } from "@/lib/seo/legacy";
 import { EDITABLE_IMAGE_PREFIXES } from "@/lib/edit/edits";
 import { LISTS, LOCKED, SOURCES } from "@/lib/edit/shared";
+import { BASE_PRICES } from "@/lib/data";
+
 
 export const dynamic = "force-static";
 
@@ -50,6 +52,29 @@ export async function GET() {
     imagePrefixes: EDITABLE_IMAGE_PREFIXES,
     // Eski sahifa rasmlari (/legacy/, ~1000 ta) ro'yxatga kirmaydi — ular sahifaning o'zida almashtiriladi
     images: EDITABLE_IMAGE_PREFIXES.filter((p) => p !== "/legacy/").flatMap(publicImages),
+    // Narxlar (so'm): asl qiymatlar; sahifada [data-oh-price] belgisi bilan topiladi
+    prices: BASE_PRICES,
+    // Metadata — asl (Tilda) qiymatlar; admin tasdiq bilan o'zgartiradi (content/edits/seo.json)
+    seo: [
+      ...(await Promise.all(
+        LOCALES.map(async (l) => {
+          const { meta } = await getRawDictionary(l);
+          return { path: localePath(l), lang: l, title: meta.title, description: meta.description, keywords: meta.keywords, ogTitle: meta.ogTitle, ogDescription: meta.ogDescription };
+        }),
+      )),
+      ...legacyPages().map((pg) => {
+        const title = pg.meta.title ?? pg.meta.og.title ?? "Onlayn Hamshira";
+        return {
+          path: pg.path,
+          lang: pg.contentLang,
+          title,
+          description: pg.meta.description,
+          keywords: pg.meta.keywords,
+          ogTitle: pg.meta.og.title ?? title,
+          ogDescription: pg.meta.og.description ?? pg.meta.description,
+        };
+      }),
+    ],
     pages: legacyPages().map((pg) => ({
       path: pg.path,
       file: legacyFile(pg.path),

@@ -49,13 +49,13 @@ export default function Services({ t, common }: { t: Dict["services"]; common: D
                       {/* Mobilda narx sarlavha ostida (o'ng ustun faqat sm+) */}
                       <span className={`mt-0.5 text-[13px] text-ink-soft tabular-nums sm:hidden ${on ? "hidden" : "block"}`}>
                         {common.fromBefore && `${common.fromWord} `}
-                        <span className="font-semibold text-ink">{price(s.priceFrom)}</span>
+                        <span data-oh-price={s.id} className="font-semibold text-ink">{price(s.priceFrom)}</span>
                         {!common.fromBefore && common.fromWord}
                       </span>
                     </span>
                     <span className="hidden shrink-0 text-right sm:block">
                       {common.fromBefore && fromWord}
-                      <span className="block font-semibold whitespace-nowrap tabular-nums">{price(s.priceFrom)}</span>
+                      <span data-oh-price={s.id} className="block font-semibold whitespace-nowrap tabular-nums">{price(s.priceFrom)}</span>
                       {!common.fromBefore && fromWord}
                     </span>
                     <Plus className={`size-5 shrink-0 text-ink-soft transition lg:hidden ${on ? "rotate-45" : ""}`} aria-hidden />
@@ -63,7 +63,7 @@ export default function Services({ t, common }: { t: Dict["services"]; common: D
                   {/* Mobil: tafsilot ro'yxat ichida */}
                   <div id={`svc-${s.id}`} hidden={!on} className="animate-pop bg-mint px-5 pb-6 sm:px-7 lg:hidden">
                     <p className="leading-relaxed text-ink-soft">{it.description}</p>
-                    <p className="mt-3 font-semibold tabular-nums">{priceFrom(s.priceFrom)}</p>
+                    <p data-oh-price={s.id} className="mt-3 font-semibold tabular-nums">{priceFrom(s.priceFrom)}</p>
                     <a href={LINKS.webApp} className="mt-4 flex items-center justify-center gap-2 rounded-2xl bg-brand-grad text-white py-3.5 font-semibold">
                       {common.order} <ArrowRight className="size-5" />
                     </a>
@@ -87,7 +87,7 @@ export default function Services({ t, common }: { t: Dict["services"]; common: D
                   <p className="text-sm text-white/85">{t.price}</p>
                   <p className="mt-1 text-3xl font-bold tabular-nums">
                     {common.fromBefore && <span className="mr-1.5 text-lg font-medium text-white/85">{common.fromWord}</span>}
-                    {price(active.priceFrom)}
+                    <span data-oh-price={active.id}>{price(active.priceFrom)}</span>
                     {!common.fromBefore && <span className="text-lg font-medium text-white/85">{common.fromWord}</span>}
                   </p>
                 </div>

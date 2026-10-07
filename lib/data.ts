@@ -1,4 +1,5 @@
 import { editableImage } from "./edit/edits";
+import priceEdits from "@/content/edits/prices.json";
 
 // Tilga bog'liq bo'lmagan tuzilma: havolalar, rasmlar, narxlar, ikonkalar.
 // Matnlar lib/i18n/dictionaries/* da (ro'yxatlar tartibi shu fayldagi bilan bir xil).
@@ -32,8 +33,8 @@ export type ServiceId = "ukol" | "kapelnitsa" | "yara" | "bosim" | "parvarish" |
 
 export type Service = { id: ServiceId; priceFrom: number; icon: ServiceIcon };
 
-// Narxlar so'mda, TAXMINIY
-export const SERVICES: Service[] = [
+// Narxlar so'mda, TAXMINIY. Admin paneldan o'zgartirilgani — content/edits/prices.json (ustun)
+const SERVICE_LIST: Service[] = [
   { id: "ukol", priceFrom: 50000, icon: "syringe" },
   { id: "kapelnitsa", priceFrom: 150000, icon: "droplet" },
   { id: "yara", priceFrom: 80000, icon: "bandage" },
@@ -43,6 +44,12 @@ export const SERVICES: Service[] = [
   { id: "tahlil", priceFrom: 70000, icon: "flask" },
   { id: "massaj", priceFrom: 120000, icon: "hand" },
 ];
+
+/** Dasturchi yozgan asl narxlar (admin panel "asliga qaytarish" uchun — app/edit-sources.json) */
+export const BASE_PRICES = Object.fromEntries(SERVICE_LIST.map((s) => [s.id, s.priceFrom])) as Record<ServiceId, number>;
+
+const PRICE_EDITS = priceEdits as Partial<Record<ServiceId, number>>;
+export const SERVICES: Service[] = SERVICE_LIST.map((s) => ({ ...s, priceFrom: PRICE_EDITS[s.id] ?? s.priceFrom }));
 
 // app.onlaynhamshira.uz dagi mutaxassisliklar (rasmlar ilovadan)
 // editableImage — admin paneldan almashtirilgan rasm (lib/edit/edits.ts)
