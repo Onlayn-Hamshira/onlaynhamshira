@@ -6,11 +6,9 @@ import { Footer } from "@/components/Footer";
 import { MobileCTA } from "@/components/MobileCTA";
 import { LegacyCta, QrRedirect } from "@/components/LegacyPage";
 import { LOCALES, OG_LOCALE, hasLocale, localePath, type Locale } from "@/lib/i18n/config";
-import { getDictionary } from "@/lib/i18n/get-dictionary";
 import { NAV_KEY_BY_GROUP, hreflangAlternates, pageAlternates, pageHref, translationPaths } from "@/lib/nav";
 import { LEGACY_ROUTES } from "@/lib/seo/routes";
 import { findLegacyPage, legacyPages, slugOf } from "@/lib/seo/legacy";
-import { EXPERT } from "@/lib/expert";
 import { DEFAULT_OG_IMAGE } from "@/lib/seo/site";
 import { isArticle } from "@/lib/blog";
 import { CertificatesPage } from "@/components/certificates/CertificatesPage";
@@ -20,7 +18,7 @@ import { ContactsPage } from "@/components/ContactsPage";
 import { AppLanding } from "@/components/AppLanding";
 import { LegalPage } from "@/components/legal/LegalPage";
 import { BlogIndexPage, BlogPostPage } from "@/components/blog/BlogPages";
-import { WHY } from "@/lib/why";
+import { adminLegacyPage, pageText } from "@/lib/edit/admin";
 
 // Eski Tilda sahifalari: har biri build vaqtida statik HTML. Ro'yxatda yo'q yo'l — 404
 export const dynamicParams = false;
@@ -95,9 +93,11 @@ export async function generateMetadata({ params }: PageProps<"/[lang]/[...slug]"
 
 export default async function LegacyRoute({ params }: PageProps<"/[lang]/[...slug]">) {
   const { lang, slug } = await params;
-  const pg = findLegacyPage(lang, slug);
-  if (!pg || !hasLocale(lang)) notFound();
-  const t = await getDictionary(lang);
+  const found = findLegacyPage(lang, slug);
+  if (!found || !hasLocale(lang)) notFound();
+  // Admin tahrirlash rejimida: repodagi eng so'nggi matn + tahrirlash belgilari (lib/edit/admin.ts)
+  const { t, admin, why, expert } = await pageText(lang);
+  const pg = admin ? await adminLegacyPage(found) : found;
   const home = localePath(lang);
   // Blog va maqolalar — yangi dizayn (faqat sahifa tanasi; <head>, JSON-LD va URL o'zgarmaydi)
   const blog = pg.group === "blogIndex" ? "index" : isArticle(pg) ? "post" : null;
@@ -139,13 +139,13 @@ export default async function LegacyRoute({ params }: PageProps<"/[lang]/[...slu
       {pg.group === "expert" ? (
         // Hamkor sahifasi — Tilda HTML o'rniga alohida dizayn (matnlar lib/expert.ts da, metadata JSON'da)
         <main id="main">
-          <ExpertPage t={EXPERT[pg.contentLang]} />
+          <ExpertPage t={expert(pg.contentLang)} />
         </main>
       ) : pg.group === "compare" ? (
         // "Nega biz?" — taqqoslash sahifasi (matnlar lib/why.ts da, metadata/JSON-LD JSON'da)
         <main id="main">
           <WhyPage
-            t={WHY[pg.contentLang]}
+            t={why(pg.contentLang)}
             callLabel={t.mobileCta.call}
             stats={t.stats.items}
             org={{

@@ -8,6 +8,7 @@ import { formatNum } from "@/lib/i18n/format";
 import type { ExpertDemoDict } from "@/lib/expert";
 import { useTapDot } from "../how-it-works/useTapDot";
 import s from "./ExpertDemo.module.css";
+import { editableImage } from "@/lib/edit/edits";
 
 /*
  * Mutaxassis ilovasining ish oqimi (avtomatik, cheksiz):
@@ -23,7 +24,7 @@ const STORY_IMG = [
   "/img/specialists/78b8f24c-c269-44cb-96a9-62da661bea34.webp",
   "/img/specialists/349ede49-2f31-4af9-8a42-369bdbaf6029.webp",
   "/img/specialists/b113e253-1138-4194-981a-a96581bb245b.webp",
-];
+].map(editableImage);
 
 /** iOS status bar: soat, signal, Wi-Fi, batareya */
 function StatusBar({ dark }: { dark?: boolean }) {

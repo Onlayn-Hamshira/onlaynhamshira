@@ -13,12 +13,12 @@ import { Faq, Reviews, Specialists } from "@/components/Interactive";
 import { MobileCTA } from "@/components/MobileCTA";
 import { JoinBanner } from "@/components/JoinBanner";
 import { hasLocale } from "@/lib/i18n/config";
-import { getDictionary } from "@/lib/i18n/get-dictionary";
+import { pageText } from "@/lib/edit/admin";
 
 export default async function Home({ params }: PageProps<"/[lang]">) {
   const { lang } = await params;
   if (!hasLocale(lang)) notFound();
-  const t = await getDictionary(lang);
+  const { t } = await pageText(lang);
   const { common } = t;
   return (
     <>

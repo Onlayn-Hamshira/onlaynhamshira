@@ -1,0 +1,23 @@
+{
+  "dict": {
+    "uz": {
+      "common.callNurseOnline": "Hamshirani chaqirish"
+    },
+    "ru": {
+      "common.callNurseOnline": "Вызвать медсестру"
+    },
+    "en": {
+      "common.callNurseOnline": "Call a nurse"
+    }
+  },
+  "why": {
+    "uz": {},
+    "ru": {},
+    "en": {}
+  },
+  "expert": {
+    "uz": {},
+    "ru": {},
+    "en": {}
+  }
+}

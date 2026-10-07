@@ -14,10 +14,11 @@ const plain = (s: string) =>
 
 export type LegalDoc = { title: string; body: string; toc: TocItem[]; minutes: number };
 
-const cache = new Map<string, LegalDoc>();
+// Sahifa obyekti bo'yicha (admin rejimida JSON qayta o'qilib, yangi obyekt keladi)
+const cache = new WeakMap<LegacyPage, LegalDoc>();
 
 export function parseLegal(pg: LegacyPage): LegalDoc {
-  const hit = cache.get(pg.path);
+  const hit = cache.get(pg);
   if (hit) return hit;
   let html = pg.html;
 
@@ -50,6 +51,6 @@ export function parseLegal(pg: LegacyPage): LegalDoc {
   }
 
   const doc = { title, body: html, toc, minutes: Math.max(1, Math.round(plain(pg.html).split(" ").length / 200)) };
-  cache.set(pg.path, doc);
+  cache.set(pg, doc);
   return doc;
 }

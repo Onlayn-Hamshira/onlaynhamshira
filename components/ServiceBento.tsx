@@ -4,9 +4,10 @@ import { LINKS } from "@/lib/data";
 import { Icon, type IconName } from "./Icon";
 import { BentoPointer } from "./BentoPointer";
 import type { Dict } from "@/lib/i18n/dictionaries/uz";
+import { editableImage } from "@/lib/edit/edits";
 
 // Ilovadagi mutaxassislik rasmlari, /public/services ichida lokal nusxa
-const img = (name: string) => `/services/${name}.webp`;
+const img = (name: string) => editableImage(`/services/${name}.webp`);
 
 // Nomlar lug'atda (bento.cards) shu tartibda
 type Card = {

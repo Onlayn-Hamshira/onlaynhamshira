@@ -80,6 +80,17 @@ Menyuda ko'rinishi kerak bo'lsa: `lib/nav.ts` → `PAGES` ga uch tildagi manzili
 - Doimiy redirectlar aynan `301` (`statusCode: 301`, `permanent: true` emas — u 308 beradi).
 - `seo:check` canonical o'z URL'i ekanini va hreflang ikki tomonlama ekanini ham tekshiradi.
 
+## Admin panel (`/admin`, `lib/edit/`, `components/admin/`)
+
+Draft Mode orqali: admin uchun sahifa so'rov paytida chiziladi, boshqalar uchun statik qoladi. Har bir matn
+oxiriga faqat admin rejimida ko'rinmas manzil belgisi qo'shiladi (`stegaDeep`). O'zgarishlar
+`content/edits/text.json` (manba fayllar ustiga build vaqtida qo'yiladi), `content/edits/images.json`
+va `content/legacy/*.json` ga GitHub commit sifatida yoziladi.
+- Sahifada lug'atni `getDictionary` emas, `pageText(lang)` (`lib/edit/admin.ts`) orqali oling — aks holda admin tahrirlay olmaydi.
+- Yangi almashtiriladigan rasm: `editableImage()` dan o'tkazing va prefiksini `EDITABLE_IMAGE_PREFIXES` ga qo'shing.
+- Lug'atda tartib bo'yicha boshqa ma'lumotga bog'lanmagan yangi ro'yxat bo'lsa — `LISTS` ga qo'shing.
+- `meta` va H1 qulfi (`LOCKED`) — SEO talabi, olib tashlamang.
+
 ## Git
 
 - Commit xabarlari **ingliz tilida** yoziladi (sarlavha + qisqa ro'yxat).
