@@ -1,3 +1,5 @@
+import { editableImage } from "./edit/edits";
+
 // Tilga bog'liq bo'lmagan tuzilma: havolalar, rasmlar, narxlar, ikonkalar.
 // Matnlar lib/i18n/dictionaries/* da (ro'yxatlar tartibi shu fayldagi bilan bir xil).
 // ⚠️ NARXLAR TAXMINIY: ishga tushirishdan oldin app.onlaynhamshira.uz dagi haqiqiy narxlar bilan almashtiring.
@@ -17,7 +19,6 @@ export const LINKS = {
 };
 
 export const IMAGES = {
-  hero: "/img/misc/hero.webp",
   qrIphone: "/img/misc/qr-iphone.png",
   qrAndroid: "/img/misc/qr-android.png",
 };
@@ -44,7 +45,8 @@ export const SERVICES: Service[] = [
 ];
 
 // app.onlaynhamshira.uz dagi mutaxassisliklar (rasmlar ilovadan)
-const spec = (id: string) => `/img/specialists/${id}.webp`;
+// editableImage — admin paneldan almashtirilgan rasm (lib/edit/edits.ts)
+const spec = (id: string) => editableImage(`/img/specialists/${id}.webp`);
 
 export type SpecialistGroup = "nurses" | "kids" | "doctors";
 
@@ -77,7 +79,7 @@ export const STATS = [
 // Rasmlar o'z serverimizda (public/img) — tashqi CDN'ga bog'liqlik va sovuq so'rov kechikishi yo'q
 const img = (path: string) => `/img/${path}`;
 
-export const REVIEW_IMAGES = ["01", "03", "04", "02", "06", "10", "08"].map((n) => img(`avatars/${n}.webp`));
+export const REVIEW_IMAGES = ["01", "03", "04", "02", "06", "10", "08"].map((n) => editableImage(img(`avatars/${n}.webp`)));
 
 /**
  * Sertifikatlar sahifasi (/certificates). Tartib content/legacy/*certificates.json dagi rasmlar va

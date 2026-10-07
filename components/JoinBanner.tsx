@@ -13,7 +13,7 @@ export function JoinBanner({ t, lang }: { t: Dict["join"]; lang: Locale }) {
   return (
     <div
       data-reveal="scale"
-      className="relative mt-10 overflow-hidden rounded-[32px] bg-[linear-gradient(135deg,#12803e_0%,#0b7571_50%,#0d619b_100%)] text-white sm:mt-14"
+      className="relative mt-10 overflow-hidden rounded-[32px] bg-brand-grad-deep text-white sm:mt-14"
     >
       <div aria-hidden className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle,rgb(255_255_255/0.14)_1.2px,transparent_1.6px)] bg-[length:16px_16px] [mask-image:radial-gradient(ellipse_60%_70%_at_85%_40%,#000_10%,transparent_70%)]" />
       <div className="relative grid gap-10 px-5 py-10 sm:px-10 sm:py-12 lg:grid-cols-[1.25fr_1fr] lg:items-center lg:gap-12 lg:px-14 lg:py-14">

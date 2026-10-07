@@ -7,7 +7,7 @@ import {
 import { SectionHead } from "./Sections";
 import { Icon, IconTile } from "./Icon";
 import { TelegramIcon } from "./StoreIcons";
-import { ExpertPhoneDemo } from "./expert-demo/ExpertPhoneDemo";
+import { LazyExpertPhoneDemo as ExpertPhoneDemo } from "./AppLandingLazy";
 
 // "Hamkor bo'lish" sahifasi — mutaxassislar uchun. Anchor'lar (#instructions, #advantages, #income, #faq)
 // Tilda'dagi havolalar bilan bir xil — o'zgartirmang.
@@ -24,7 +24,7 @@ function ApplyButton({ t, className = "" }: { t: ExpertDict; className?: string 
     <a
       href={EXPERT_LINKS.hrApply}
       rel="noopener"
-      className={`group inline-flex items-center justify-center gap-2.5 rounded-full bg-brand-grad px-7 py-4 font-semibold text-white shadow-[0_16px_32px_-16px_rgb(37_182_233/0.8)] transition hover:-translate-y-0.5 hover:brightness-105 ${className}`}
+      className={`group inline-flex items-center justify-center gap-2.5 rounded-full bg-brand-grad px-7 py-4 font-semibold text-white shadow-[0_16px_32px_-16px_rgb(0_182_243/0.8)] transition hover:-translate-y-0.5 hover:brightness-105 ${className}`}
     >
       <ClipboardCheck className="size-5" aria-hidden /> {t.apply}
       <ArrowRight className="size-5 transition-transform group-hover:translate-x-1" aria-hidden />
@@ -56,7 +56,7 @@ function StoreLinks({ className = "" }: { className?: string }) {
   return (
     <div className={`flex flex-wrap gap-2.5 sm:gap-3 ${className}`}>
       {items.map((s) => (
-        <a key={s.href} href={s.href} rel="noopener" aria-label={s.label} className="rounded-[12px] transition hover:-translate-y-0.5 hover:shadow-[0_10px_24px_-12px_rgb(16_41_58/0.5)]">
+        <a key={s.href} href={s.href} rel="noopener" aria-label={s.label} className="rounded-[12px] transition hover:-translate-y-0.5 hover:shadow-[0_10px_24px_-12px_rgb(13_47_68/0.5)]">
           <Image src={s.src} alt="" width={s.w} height={s.h} sizes="(min-width: 640px) 180px, 150px" className="h-11 w-auto sm:h-[52px]" draggable={false} />
         </a>
       ))}
@@ -156,7 +156,7 @@ function Steps({ t }: { t: ExpertDict }) {
 /* ───────── Imtiyozlar ───────── */
 function Benefits({ t }: { t: ExpertDict }) {
   const b = t.benefits;
-  const tones = ["bg-mint", "bg-sky", "bg-peach", "bg-lilac"];
+  const tones = ["bg-mint", "bg-sky", "bg-aqua", "bg-madang"];
   return (
     <section id="advantages" aria-labelledby="adv-h" className="bg-mist py-16 sm:py-24 lg:py-28">
       <Wrap className="grid gap-10 lg:grid-cols-[0.9fr_1.3fr] lg:gap-14">
@@ -213,7 +213,7 @@ function Income({ t }: { t: ExpertDict }) {
   const m = t.income;
   return (
     <section id="income" aria-labelledby="inc-h" className="px-3 sm:px-4">
-      <div className="relative mx-auto max-w-[1400px] overflow-hidden rounded-[36px] bg-[linear-gradient(135deg,#12803e_0%,#0b7571_50%,#0d619b_100%)] text-white">
+      <div className="relative mx-auto max-w-[1400px] overflow-hidden rounded-[36px] bg-brand-grad-deep text-white">
         <div aria-hidden className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle,rgb(255_255_255/0.14)_1.2px,transparent_1.6px)] bg-[length:16px_16px] [mask-image:radial-gradient(ellipse_70%_60%_at_85%_30%,#000_10%,transparent_70%)]" />
         <div className="relative grid gap-10 px-5 py-14 sm:px-12 sm:py-20 lg:grid-cols-[1fr_1.1fr] lg:gap-16 lg:px-16">
           <div data-reveal>
@@ -277,7 +277,7 @@ function Faq({ t }: { t: ExpertDict }) {
         <ul className="space-y-2">
           {f.items.map((it, i) => (
             <li key={it.q} data-reveal style={d(Math.min(i, 4))}>
-              <details name="expert-faq" open={i === 0} className="group rounded-[22px] bg-mist transition-[background-color,box-shadow] open:bg-white open:shadow-[0_16px_40px_-24px_rgb(16_41_58/0.35)] open:ring-1 open:ring-line">
+              <details name="expert-faq" open={i === 0} className="group rounded-[22px] bg-mist transition-[background-color,box-shadow] open:bg-white open:shadow-[0_16px_40px_-24px_rgb(13_47_68/0.35)] open:ring-1 open:ring-line">
                 <summary className="flex list-none items-center gap-3 px-5 py-4 text-base leading-snug font-medium sm:gap-4 sm:px-7 sm:py-5 sm:text-lg [&::-webkit-details-marker]:hidden">
                   <h3 className="flex-1">{it.q}</h3>
                   <span className="grid size-9 shrink-0 place-items-center rounded-full bg-white transition duration-300 group-open:rotate-45 group-open:bg-brand-grad group-open:text-white sm:size-10">
@@ -314,7 +314,7 @@ function FinalCta({ t }: { t: ExpertDict }) {
             </div>
           </div>
           <div className="hidden items-center gap-4 justify-self-end lg:flex">
-            <div className="flex gap-3 rounded-[24px] bg-white p-3 shadow-[0_20px_40px_-24px_rgb(16_41_58/0.4)]">
+            <div className="flex gap-3 rounded-[24px] bg-white p-3 shadow-[0_20px_40px_-24px_rgb(13_47_68/0.4)]">
               {[{ src: EXPERT_LINKS.qrAndroid, label: "Android" }, { src: EXPERT_LINKS.qrIos, label: "iPhone" }].map((q) => (
                 <figure key={q.src} className="text-center text-xs font-semibold text-ink">
                   <Image src={q.src} alt={`QR — ${q.label}`} width={480} height={480} unoptimized className="size-[120px] rounded-lg" />

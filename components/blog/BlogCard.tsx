@@ -11,7 +11,7 @@ export function BlogCard({ e, t, priority }: { e: BlogEntry; t: CardT; priority?
   return (
     <a
       href={e.href}
-      className="group flex h-full flex-col overflow-hidden rounded-[28px] bg-white ring-1 ring-line transition duration-300 hover:-translate-y-1 hover:shadow-[0_24px_50px_-24px_rgb(16_41_58/0.35)] hover:ring-transparent focus-visible:ring-3 focus-visible:ring-brand-teal"
+      className="group flex h-full flex-col overflow-hidden rounded-[28px] bg-white ring-1 ring-line transition duration-300 hover:-translate-y-1 hover:shadow-[0_24px_50px_-24px_rgb(13_47_68/0.35)] hover:ring-transparent focus-visible:ring-3 focus-visible:ring-brand-teal"
     >
       <div className="relative aspect-[16/10] overflow-hidden bg-mist">
         <Cover

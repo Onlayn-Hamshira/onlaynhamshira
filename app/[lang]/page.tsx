@@ -4,19 +4,21 @@ import Hero from "@/components/Hero";
 import Stats from "@/components/Stats";
 import Services from "@/components/Services";
 import ServiceBento from "@/components/ServiceBento";
-import { AppBand, Benefits, Contact, Footer, News, Safety } from "@/components/Sections";
+import { AppBand, Benefits, Contact, Safety } from "@/components/Sections";
+import { News } from "@/components/news/NewsSection";
+import { Footer } from "@/components/Footer";
 import { homeNewsEntries } from "@/lib/blog";
 import HowItWorks from "@/components/how-it-works/HowItWorks";
 import { Faq, Reviews, Specialists } from "@/components/Interactive";
 import { MobileCTA } from "@/components/MobileCTA";
 import { JoinBanner } from "@/components/JoinBanner";
 import { hasLocale } from "@/lib/i18n/config";
-import { getDictionary } from "@/lib/i18n/get-dictionary";
+import { pageText } from "@/lib/edit/admin";
 
 export default async function Home({ params }: PageProps<"/[lang]">) {
   const { lang } = await params;
   if (!hasLocale(lang)) notFound();
-  const t = await getDictionary(lang);
+  const { t } = await pageText(lang);
   const { common } = t;
   return (
     <>
@@ -40,7 +42,7 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
         <News t={t.news} topics={t.blog.topics} entries={homeNewsEntries(lang)} lang={lang} />
         <Faq t={t.faq} />
         <div className="h-3" />
-        <Contact t={t.contact} map={t.map} />
+        <Contact t={t.contact} />
       </main>
       <Footer t={t.footer} common={common} lang={lang} />
       <MobileCTA t={t.mobileCta} cta={common.callNurse} />

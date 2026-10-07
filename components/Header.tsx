@@ -109,7 +109,7 @@ export default function Header({
             </a>
             <a
               href={LINKS.webApp}
-              className="hidden rounded-full bg-brand-grad text-white px-5 py-2.5 text-[15px] font-semibold whitespace-nowrap shadow-[0_8px_20px_-10px_rgb(56_197_177/0.9)] transition hover:-translate-y-0.5 hover:brightness-105 active:translate-y-0 sm:inline-flex"
+              className="hidden rounded-full bg-brand-grad text-white px-5 py-2.5 text-[15px] font-semibold whitespace-nowrap shadow-[0_8px_20px_-10px_rgb(46_201_176/0.9)] transition hover:-translate-y-0.5 hover:brightness-105 active:translate-y-0 sm:inline-flex"
             >
               {common.callNurse}
             </a>
@@ -127,7 +127,7 @@ export default function Header({
         <div
           aria-hidden
           data-scroll-p
-          className={`absolute inset-x-0 bottom-0 h-[3px] origin-left bg-gradient-to-r from-brand via-brand-teal to-brand-blue transition-opacity ${scrolled ? "opacity-100" : "opacity-0"}`}
+          className={`absolute inset-x-0 bottom-0 h-[3px] origin-left bg-gradient-to-r from-grad-blue to-grad-green transition-opacity ${scrolled ? "opacity-100" : "opacity-0"}`}
           style={{ transform: "scaleX(var(--scroll-p, 0))" }}
         />
       </header>
@@ -271,7 +271,7 @@ function MoreMenu({ label, items, isOn }: { label: string; items: Item[]; isOn: 
       </button>
       {/* pt-2 — tugma va ro'yxat orasidagi "ko'prik": sichqoncha o'tayotganda yopilib qolmasin */}
       <div id={id} hidden={!open} className="absolute top-full left-0 z-10 pt-2">
-        <ul className="min-w-[240px] rounded-2xl bg-white p-1.5 shadow-[0_18px_40px_-16px_rgb(16_41_58/0.35)] ring-1 ring-line">
+        <ul className="min-w-[240px] rounded-2xl bg-white p-1.5 shadow-[0_18px_40px_-16px_rgb(13_47_68/0.35)] ring-1 ring-line">
           {items.map((n) => {
             const on = isOn(n.key);
             return (

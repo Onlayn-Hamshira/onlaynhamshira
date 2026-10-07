@@ -50,8 +50,7 @@ ym(${TRACKING.yandexMetrika}, "init", {clickmap:true,trackLinks:true,accurateTra
 
 // Faqat haqiqiy foydalanuvchi harakati. PageSpeed (headless Chrome) foydalanuvchisiz ham "scroll"
 // (siljishsiz) va soxta "mousemove" (layout o'zgarganda, movementX/Y = 0) yuboradi — avval shular sabab
-// test paytida Metrika/gtag/Yandex xarita yuklanib, Performance ~73, Best Practices tushardi.
-// Xuddi shu tekshiruv ContactMap.tsx da (isRealInteraction) ham bor.
+// test paytida Metrika/gtag yuklanib, Performance ~73, Best Practices tushardi.
 const realInteraction = `
 window.__ohRealInteraction = function(e){
   if (!e.isTrusted) return false;
@@ -70,8 +69,6 @@ export function Analytics() {
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={`https://mc.yandex.ru/watch/${TRACKING.yandexMetrika}`}
-          width={1}
-          height={1}
           style={{ position: "absolute", left: "-9999px" }}
           alt=""
         />

@@ -22,7 +22,7 @@ export function LangSwitch({
                 lang={l}
                 aria-current={on ? "true" : undefined}
                 className={`grid h-8 min-w-8 place-items-center rounded-full px-1.5 text-[13px] font-semibold uppercase transition sm:min-w-9 ${
-                  on ? "bg-white text-ink shadow-[0_2px_8px_-3px_rgb(16_41_58/0.35)]" : "text-ink-soft hover:text-ink"
+                  on ? "bg-white text-ink shadow-[0_2px_8px_-3px_rgb(13_47_68/0.35)]" : "text-ink-soft hover:text-ink"
                 }`}
               >
                 <span aria-hidden>{l}</span>

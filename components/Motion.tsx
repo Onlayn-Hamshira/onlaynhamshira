@@ -153,7 +153,7 @@ export function BackToTop({ label }: { label: string }) {
       onClick={scrollToTop}
       aria-label={label}
       tabIndex={show ? 0 : -1}
-      className={`fixed right-5 bottom-6 z-40 hidden size-14 place-items-center rounded-full bg-white shadow-[0_12px_32px_-12px_rgb(16_41_58/0.45)] ring-1 ring-line transition duration-300 hover:-translate-y-1 lg:grid ${
+      className={`fixed right-5 bottom-6 z-40 hidden size-14 place-items-center rounded-full bg-white shadow-[0_12px_32px_-12px_rgb(13_47_68/0.45)] ring-1 ring-line transition duration-300 hover:-translate-y-1 lg:grid ${
         show ? "opacity-100" : "pointer-events-none translate-y-4 opacity-0"
       }`}
     >
