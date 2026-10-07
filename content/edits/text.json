@@ -1,6 +1,9 @@
 {
   "dict": {
-    "uz": {},
+    "uz": {
+      "news.label": "Yangilik",
+      "blog.lead": "Uyda parvarish, profilaktika va sog‘lom turmush bo‘yicha hamshiralarimiz tajribasiga asoslangan foydali maqolalar"
+    },
     "ru": {},
     "en": {}
   },
