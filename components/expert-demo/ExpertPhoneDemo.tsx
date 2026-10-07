@@ -209,7 +209,7 @@ export function ExpertPhoneDemo({ t }: { t: ExpertDemoDict }) {
 
           {scene === 0 && v.st === "search" && (
             <div key={`s0s-${run}`} className={`${s.scene} ${s.store}`}>
-              <StatusBar />
+              <StatusBar dark />
               <div className={s.psSearch}>
                 <ArrowLeft size={20} />
                 <span>onlaynhamshira</span>
@@ -254,7 +254,7 @@ export function ExpertPhoneDemo({ t }: { t: ExpertDemoDict }) {
 
           {scene === 0 && v.st !== "search" && (
             <div key={`s0-${run}`} className={`${s.scene} ${s.store} ${v.st === "loading" ? s.loading : ""}`}>
-              <StatusBar />
+              <StatusBar dark />
               <div className={s.storeTop}><ArrowLeft size={20} /><MoreVertical size={20} /></div>
               <div className={s.storeApp}>
                 <div className={s.storeIcon}>
@@ -358,7 +358,7 @@ export function ExpertPhoneDemo({ t }: { t: ExpertDemoDict }) {
               <div><b>{t.flow.paid}</b><span>+{money(ORDER_PRICE)}</span></div>
             </div>
           )}
-          <span className={`${s.homeBar} ${scene === 1 ? s.dark : ""}`} />
+          <span className={s.homeBar} />
         </div>
         <span className={s.glare} />
         </div>

@@ -1,10 +1,12 @@
 /* Mutaxassislar ilovasining jonli demosi — "Onlayn Hamshira Mutaxassis" ilovasi skrinshotlari uslubida */
 
 .wrap {
-  --navy: #10202e;
-  --navy-2: #172b3c;
-  --modal: #1b3346;
-  --muted: #8ea2b3;
+  /* Yorug' mavzu: ekran foni oq, kartalar och kulrang */
+  --navy: #ffffff;
+  --navy-2: #f1f5f8;
+  --modal: #ffffff;
+  --ink: #10202e;
+  --muted: #6b7c8a;
   --ok: #17d98a;
   --skip: #ff7a6b;
   position: relative;
@@ -82,7 +84,7 @@
   overflow: hidden;
   border-radius: 41px;
   background: var(--navy);
-  color: #fff;
+  color: var(--ink);
   font-size: 12px;
   line-height: 1.3;
   isolation: isolate;
@@ -106,9 +108,8 @@
   height: 4px;
   margin-left: -54px;
   border-radius: 999px;
-  background: rgb(255 255 255 / 0.85);
+  background: rgb(0 0 0 / 0.75);
 }
-.homeBar.dark { background: rgb(0 0 0 / 0.75); }
 @media (max-width: 400px) {
   .device { transform: scale(0.86); margin: -44px 0; }
 }
@@ -146,8 +147,8 @@
   height: 30px;
   margin: -15px 0 0 -15px;
   border-radius: 50%;
-  background: rgb(255 255 255 / 0.35);
-  border: 2px solid #fff;
+  background: rgb(0 182 243 / 0.22);
+  border: 2px solid #00b6f3;
   box-shadow: 0 0 0 4px rgb(0 182 243 / 0.35);
   opacity: 0;
   pointer-events: none;
@@ -157,8 +158,8 @@
 .pressed { transform: scale(0.95) !important; transition: transform 0.12s; }
 
 /* ---------- 1. Play Market ---------- */
-.store { background: #131314; color: #e3e3e3; }
-.storeTop { display: flex; justify-content: space-between; padding: 4px 18px 0; color: #e3e3e3; }
+.store { background: #fff; color: #1f1f1f; }
+.storeTop { display: flex; justify-content: space-between; padding: 4px 18px 0; color: #444746; }
 .storeApp { display: flex; gap: 14px; align-items: center; padding: 22px 18px 0; }
 .storeIcon { position: relative; width: 64px; height: 64px; flex: none; }
 .storeIcon .ic {
@@ -170,18 +171,18 @@
 .loading .storeIcon .ic { transform: scale(0.76); border-radius: 50%; }
 .ring { position: absolute; inset: -6px; width: 76px; height: 76px; transform: rotate(-90deg); opacity: 0; transition: opacity 0.3s; }
 .loading .ring { opacity: 1; }
-.ring circle { fill: none; stroke: #a8c7fa; stroke-width: 3; stroke-linecap: round; stroke-dasharray: 220; transition: stroke-dashoffset 0.12s linear; }
+.ring circle { fill: none; stroke: #0b57d0; stroke-width: 3; stroke-linecap: round; stroke-dasharray: 220; transition: stroke-dashoffset 0.12s linear; }
 .storeName { font-size: 18px; font-weight: 500; line-height: 1.15; }
-.storeDev { margin-top: 4px; font-size: 11px; font-weight: 500; color: #a8c7fa; }
-.storeStats { display: grid; grid-template-columns: repeat(3, 1fr); margin: 22px 12px 0; text-align: center; font-size: 10px; color: #c4c7c5; }
-.storeStats div + div { border-left: 1px solid #444; }
-.storeStats b { display: block; margin-bottom: 3px; font-size: 13px; color: #e3e3e3; }
+.storeDev { margin-top: 4px; font-size: 11px; font-weight: 500; color: #0b57d0; }
+.storeStats { display: grid; grid-template-columns: repeat(3, 1fr); margin: 22px 12px 0; text-align: center; font-size: 10px; color: #444746; }
+.storeStats div + div { border-left: 1px solid #dadce0; }
+.storeStats b { display: block; margin-bottom: 3px; font-size: 13px; color: #1f1f1f; }
 .storeBtn {
   margin: 22px 16px 0; height: 38px; border-radius: 999px; border: 0;
-  background: #a8c7fa; color: #062e6f; font: inherit; font-size: 13px; font-weight: 600;
+  background: #0b57d0; color: #fff; font: inherit; font-size: 13px; font-weight: 600;
   display: grid; place-items: center; transition: transform 0.15s;
 }
-.storeBtn.ghost { background: #2a2a2b; color: #8e918f; }
+.storeBtn.ghost { background: #e9eef6; color: #747775; }
 .storeShots { display: flex; gap: 8px; padding: 22px 16px 0; }
 .storeShots span {
   flex: 1; height: 176px; overflow: hidden; display: flex; flex-direction: column; align-items: center; gap: 6px;
@@ -197,33 +198,33 @@
     linear-gradient(90deg, #4fd96a, #2aa9ea) 5px 56px / calc(100% - 10px) 8px no-repeat,
     linear-gradient(135deg, #6cc8f2, #3aa9e6) 5px 32px / calc(100% - 10px) 18px no-repeat,
     linear-gradient(135deg, #5be06a, #2aa9ea) 0 0 / 100% 26px no-repeat,
-    #10202e;
+    #f4f7fa;
 }
 .storeMeta { display: flex; gap: 6px; padding: 16px 16px 0; }
-.storeMeta b { padding: 5px 10px; border-radius: 8px; border: 1px solid #444; font-size: 10px; font-weight: 500; color: #c4c7c5; }
+.storeMeta b { padding: 5px 10px; border-radius: 8px; border: 1px solid #c4c7c5; font-size: 10px; font-weight: 500; color: #444746; }
 
 /* Play Market qidiruv natijalari */
-.psSearch { display: flex; align-items: center; gap: 12px; padding: 8px 18px 0; color: #e3e3e3; }
+.psSearch { display: flex; align-items: center; gap: 12px; padding: 8px 18px 0; color: #1f1f1f; }
 .psSearch span { flex: 1; font-size: 15px; }
-.psChips { display: flex; gap: 6px; padding: 14px 14px 12px; border-bottom: 1px solid #333; overflow: hidden; }
-.psChips b { flex: none; display: inline-flex; align-items: center; gap: 3px; padding: 6px 11px; border: 1px solid #5f6368; border-radius: 9px; font-size: 11px; font-weight: 500; color: #e3e3e3; }
+.psChips { display: flex; gap: 6px; padding: 14px 14px 12px; border-bottom: 1px solid #e3e3e3; overflow: hidden; }
+.psChips b { flex: none; display: inline-flex; align-items: center; gap: 3px; padding: 6px 11px; border: 1px solid #c4c7c5; border-radius: 9px; font-size: 11px; font-weight: 500; color: #444746; }
 .psList { display: flex; flex-direction: column; gap: 4px; padding: 10px 8px 0; }
 .psRow { display: flex; align-items: center; gap: 12px; padding: 7px 8px; border-radius: 14px; transition: background 0.2s, transform 0.15s; }
-.psRow.pressed { background: rgb(255 255 255 / 0.08); }
+.psRow.pressed { background: rgb(0 0 0 / 0.06); }
 .psIcon { width: 48px; height: 48px; flex: none; display: grid; place-items: center; border-radius: 12px; background: linear-gradient(135deg, var(--color-grad-green), var(--color-grad-blue)); }
 .psClient { background: linear-gradient(135deg, var(--color-grad-blue), var(--color-grad-green)); }
-.psRow p { margin: 0; font-size: 13px; font-weight: 500; color: #e3e3e3; }
-.psRow small { display: block; margin-top: 2px; font-size: 10.5px; color: #c4c7c5; }
-.psRow em { display: inline-flex; align-items: center; gap: 2px; margin-top: 5px; padding: 2px 7px; border-radius: 6px; background: #2a2a2b; font-style: normal; font-size: 10px; color: #c4c7c5; }
-.psSkel .psIcon { background: #2a2a2b; }
+.psRow p { margin: 0; font-size: 13px; font-weight: 500; color: #1f1f1f; }
+.psRow small { display: block; margin-top: 2px; font-size: 10.5px; color: #444746; }
+.psRow em { display: inline-flex; align-items: center; gap: 2px; margin-top: 5px; padding: 2px 7px; border-radius: 6px; background: #f0f4f9; font-style: normal; font-size: 10px; color: #444746; }
+.psSkel .psIcon { background: #eceff3; }
 .psSkel div { display: flex; flex: 1; flex-direction: column; gap: 6px; }
-.psSkel i { height: 8px; border-radius: 4px; background: #2a2a2b; }
+.psSkel i { height: 8px; border-radius: 4px; background: #eceff3; }
 .psSkel i:nth-child(1) { width: 70%; } .psSkel i:nth-child(2) { width: 50%; } .psSkel i:nth-child(3) { width: 30%; }
-.psNav { margin-top: auto; display: flex; justify-content: space-around; padding: 8px 4px 22px; background: #1e1f20; font-size: 9.5px; color: #c4c7c5; }
+.psNav { margin-top: auto; display: flex; justify-content: space-around; padding: 8px 4px 22px; background: #f3f6fc; font-size: 9.5px; color: #444746; }
 .psNav span { display: flex; flex-direction: column; align-items: center; gap: 3px; }
 .psNav i { display: grid; place-items: center; width: 44px; height: 26px; border-radius: 999px; }
-.psNav .on { color: #a8c7fa; }
-.psNav .on i { background: #004a77; color: #c2e7ff; }
+.psNav .on { color: #001d35; }
+.psNav .on i { background: #c2e7ff; color: #001d35; }
 
 /* ---------- 2. Ro'yxatdan o'tish ---------- */
 .reg { background: #f6f8fa; color: #1e2328; }
@@ -255,7 +256,7 @@
   position: absolute; inset: 0 0 auto; height: 250px;
   background: linear-gradient(135deg, var(--color-grad-green) 0%, var(--color-grad-blue) 100%);
 }
-.homeHead { position: relative; display: flex; align-items: center; gap: 10px; padding: 6px 16px 0; }
+.homeHead { position: relative; display: flex; align-items: center; gap: 10px; padding: 6px 16px 0; color: #fff; }
 .avatar { width: 40px; height: 40px; flex: none; border-radius: 50%; object-fit: cover; box-shadow: 0 0 0 2px rgb(255 255 255 / 0.7); }
 .homeHead b { flex: 1; font-size: 15px; }
 .roundBtn { width: 34px; height: 34px; display: grid; place-items: center; border-radius: 50%; background: rgb(255 255 255 / 0.25); position: relative; color: #fff; }
@@ -264,7 +265,7 @@
 .stories span {
   position: relative; overflow: hidden;
   width: 84px; height: 96px; flex: none; padding: 7px; border-radius: 12px;
-  border: 2px solid rgb(255 255 255 / 0.85); font-size: 9.5px; font-weight: 700; line-height: 1.15;
+  border: 2px solid rgb(255 255 255 / 0.85); color: #fff; font-size: 9.5px; font-weight: 700; line-height: 1.15;
   background: linear-gradient(160deg, #2bb5e8, #1d8fd0);
 }
 .stories img { position: absolute; right: -6px; bottom: -4px; width: 64px; height: 64px; object-fit: contain; }
@@ -277,7 +278,7 @@
 }
 .panel h6 { margin: 0; font-size: 13px; font-weight: 700; }
 .balance {
-  display: flex; flex-direction: column; gap: 10px; padding: 14px; border-radius: 16px;
+  display: flex; flex-direction: column; gap: 10px; padding: 14px; border-radius: 16px; color: #fff;
   background: linear-gradient(135deg, #6cc8f2, #3aa9e6);
 }
 .balance .row { display: flex; justify-content: space-between; align-items: baseline; }
@@ -303,26 +304,26 @@
   transition: left 0.8s cubic-bezier(0.5, 0, 0.2, 1), color 0.5s;
 }
 .online .knob { color: #1fbf8f; }
-.cardWarn { display: flex; align-items: center; gap: 10px; color: #fff; padding: 11px 12px; border-radius: 14px; border: 1.5px solid #f2a915; background: #2a2a20; font-size: 11px; }
+.cardWarn { display: flex; align-items: center; gap: 10px; color: #6b4e00; padding: 11px 12px; border-radius: 14px; border: 1.5px solid #f2a915; background: #fff8e6; font-size: 11px; }
 .earn { display: flex; align-items: center; justify-content: space-between; padding: 12px 14px; border-radius: 14px; background: var(--navy-2); }
 .earn span { color: var(--muted); font-size: 11px; }
-.earn strong { font-size: 15px; color: #4fe39a; font-variant-numeric: tabular-nums; }
+.earn strong { font-size: 15px; color: #15a35a; font-variant-numeric: tabular-nums; }
 .tabbar {
   margin-top: auto; display: flex; justify-content: space-around; padding: 10px 6px 16px;
-  background: #0c1922; font-size: 10px; color: var(--muted);
+  background: #fff; border-top: 1px solid #e6edf2; font-size: 10px; color: var(--muted);
 }
 .tabbar span { display: flex; flex-direction: column; align-items: center; gap: 4px; }
-.tabbar svg { color: #50606e; }
-.tabbar .on { color: #fff; }
-.tabbar .on svg { color: #3fd6a6; }
+.tabbar svg { color: #9aa8b4; }
+.tabbar .on { color: var(--ink); }
+.tabbar .on svg { color: #1fbf8f; }
 
 /* ---------- 4. Yangi buyurtma oynasi ---------- */
-.dim { position: absolute; inset: 0; z-index: 5; background: rgb(5 12 18 / 0.55); animation: fade 0.3s both; }
+.dim { position: absolute; inset: 0; z-index: 5; background: rgb(13 47 68 / 0.35); animation: fade 0.3s both; }
 @keyframes fade { from { opacity: 0; } }
 .modal {
   position: absolute; left: 12px; right: 12px; top: 120px; z-index: 6;
   padding: 18px 16px 16px; border-radius: 26px; background: var(--modal);
-  box-shadow: 0 30px 60px -20px rgb(0 0 0 / 0.6);
+  box-shadow: 0 30px 60px -20px rgb(13 47 68 / 0.45);
   animation: pop 0.4s cubic-bezier(0.2, 0.9, 0.3, 1.2) both;
 }
 @keyframes pop { from { opacity: 0; transform: translateY(30px) scale(0.96); } }
@@ -332,15 +333,15 @@
 .mrow .em { width: 30px; height: 30px; flex: none; display: grid; place-items: center; border-radius: 10px; }
 .em.red { background: rgb(255 92 92 / 0.16); color: #ff6b6b; }
 .em.blue { background: rgb(0 182 243 / 0.16); color: #4cc4f0; }
-.em.amber { background: rgb(255 184 77 / 0.16); color: #ffbe55; }
-.em.green { background: rgb(23 217 138 / 0.16); color: #3fe39a; }
+.em.amber { background: rgb(255 184 77 / 0.18); color: #e0961a; }
+.em.green { background: rgb(23 217 138 / 0.16); color: #15a35a; }
 .mrow .grow { flex: 1; min-width: 0; }
 .mrow small { display: block; color: var(--muted); font-size: 10.5px; }
 .mrow .right { text-align: right; font-weight: 600; }
-.price { color: #3fe39a; font-size: 15px; font-weight: 700; }
+.price { color: #15a35a; font-size: 15px; font-weight: 700; }
 .mbtns { display: grid; grid-template-columns: 1fr 1.4fr; gap: 8px; margin-top: 12px; }
 .mbtns span { display: grid; place-items: center; height: 42px; border-radius: 999px; font-size: 12.5px; font-weight: 600; text-align: center; transition: transform 0.15s; }
-.mbtns .no { background: var(--skip); }
+.mbtns .no { background: var(--skip); color: #fff; }
 .mbtns .yes { background: linear-gradient(90deg, #12e08a, #19c97c); color: #062b1b; }
 
 /* ---------- 5. Buyurtma jarayoni ---------- */
@@ -364,11 +365,11 @@
 .flowCard h6 { margin: 0 0 10px; font-size: 13px; }
 .stages { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 12px; }
 .stages span { display: flex; flex-direction: column; gap: 6px; font-size: 10px; color: var(--muted); }
-.stages span::before { content: ""; height: 4px; border-radius: 4px; background: #2d4253; transition: background 0.4s; }
-.stages .on { color: #fff; }
+.stages span::before { content: ""; height: 4px; border-radius: 4px; background: #dbe4eb; transition: background 0.4s; }
+.stages .on { color: var(--ink); }
 .stages .on::before { background: linear-gradient(90deg, var(--color-grad-blue), var(--color-grad-green)); }
-.flowBtn { margin: auto 14px 22px; height: 46px; border-radius: 999px; display: grid; place-items: center; background: linear-gradient(90deg, var(--color-grad-blue), var(--color-grad-green)); font-size: 14px; font-weight: 600; transition: transform 0.15s; }
-.doneWrap { position: absolute; inset: 0; z-index: 7; display: grid; place-items: center; background: rgb(16 32 46 / 0.92); animation: fade 0.3s both; }
+.flowBtn { margin: auto 14px 22px; height: 46px; border-radius: 999px; display: grid; place-items: center; background: linear-gradient(90deg, var(--color-grad-blue), var(--color-grad-green)); color: #fff; font-size: 14px; font-weight: 600; transition: transform 0.15s; }
+.doneWrap { position: absolute; inset: 0; z-index: 7; display: grid; place-items: center; background: rgb(255 255 255 / 0.94); animation: fade 0.3s both; }
 .doneWrap div { display: flex; flex-direction: column; align-items: center; gap: 12px; font-size: 15px; font-weight: 600; }
 .check { width: 72px; height: 72px; display: grid; place-items: center; border-radius: 50%; background: linear-gradient(135deg, var(--color-grad-green), var(--color-grad-blue)); animation: pop 0.45s cubic-bezier(0.2, 0.9, 0.3, 1.4) both; }
 
@@ -376,7 +377,7 @@
 .toast {
   position: absolute; left: 12px; right: 12px; top: 46px; z-index: 8;
   display: flex; align-items: center; gap: 10px; padding: 10px 12px; border-radius: 16px;
-  background: #fff; color: #0b2a1c; box-shadow: 0 20px 40px -18px rgb(0 0 0 / 0.6);
+  background: #fff; color: #0b2a1c; box-shadow: 0 20px 40px -14px rgb(13 47 68 / 0.45), 0 0 0 1px #e6edf2;
   animation: drop 0.5s cubic-bezier(0.2, 0.9, 0.3, 1.2) both;
 }
 @keyframes drop { from { opacity: 0; transform: translateY(-30px); } }
