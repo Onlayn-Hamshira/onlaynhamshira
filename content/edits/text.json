@@ -21,7 +21,8 @@
       "stats.items.0": "Qualified specialists",
       "header.partnerShort": "For specialists",
       "header.certificates": "Documents",
-      "header.contacts": "Contact"
+      "header.contacts": "Contact",
+      "common.callNurse": "Book a nurse"
     }
   },
   "why": {
