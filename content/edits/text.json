@@ -19,7 +19,8 @@
       "services.items.kapelnitsa.duration": "30–70 daqiqa",
       "services.items.kapelnitsa.short": "Tomchilatma (kapelnitsa)",
       "bento.cards.4": "Bolalar va ayollar massaji",
-      "booking.arrival": "Yetib kelish: 30–90 daqiqa"
+      "booking.arrival": "Yetib kelish: 30–90 daqiqa",
+      "booking.payAfter": "To‘lov — xizmatdan keyin"
     },
     "ru": {
       "stats.items.0": "Квалифицированные специалисты",
@@ -34,7 +35,8 @@
       "hero.clientsSub": "пользуются приложением",
       "hero.allDaySub": "включая выходные и праздники",
       "services.items.kapelnitsa.duration": "30–70 минут",
-      "booking.arrival": "Приезд: 30–90 мин"
+      "booking.arrival": "Приезд: 30–90 мин",
+      "booking.payAfter": "Оплата после процедуры"
     },
     "en": {
       "stats.items.0": "Qualified specialists",
