@@ -4,7 +4,7 @@
       "news.label": "Yangilik",
       "blog.lead": "Uyda parvarish, profilaktika va sog‘lom turmush bo‘yicha hamshiralarimiz tajribasiga asoslangan foydali maqolalar",
       "hero.allDaySub": "dam olish va bayram kunlari ham",
-      "stats.items.0": "Malakali mutaxasisslar",
+      "stats.items.0": "Tekshirilgan mutaxassis",
       "hero.lead": "Ukol, tomchilatma, bog‘lam va bemor parvarishi — o‘zingiz yoki yaqiningiz uchun.",
       "header.nav.4": "Ko‘p beriladigan savollar",
       "header.partnerShort": "Mutaxassislarga",
@@ -23,10 +23,18 @@
       "booking.payAfter": "To‘lov — xizmatdan keyin",
       "booking.orCall": "Qo‘ng‘iroq qilishni afzal ko‘rasizmi?",
       "booking.emergency": "Hayot uchun xavfli holatda darhol 103 ga qo‘ng‘iroq qiling",
-      "services.items.bosim.short": "Vena kateteri"
+      "services.items.bosim.short": "Vena kateteri",
+      "stats.items.1": "Bajarilgan buyurtma",
+      "stats.items.2": "Foydalanuvchi",
+      "stats.items.3": "Shaharda ishlaymiz",
+      "bento.title": "Kerakli tibbiy yordam — bir joyda",
+      "bento.cards.0": "Ukol, tomchilatma, bog‘lam",
+      "bento.cards.1": "Bemor parvarishi",
+      "bento.cards.2": "Bolalar hamshirasi",
+      "bento.cards.3": "LOR shifokori"
     },
     "ru": {
-      "stats.items.0": "Квалифицированные специалисты",
+      "stats.items.0": "Проверенных специалистов",
       "header.nav.4": "Часто задаваемые вопросы",
       "header.partnerShort": "Специалистам",
       "header.certificates": "Документы",
@@ -42,10 +50,17 @@
       "booking.payAfter": "Оплата после процедуры",
       "booking.orCall": "Удобнее по телефону?",
       "booking.emergency": "При угрозе жизни сразу звоните 103",
-      "services.items.bosim.short": "Венозный катетер"
+      "services.items.bosim.short": "Венозный катетер",
+      "stats.items.2": "Пользователей",
+      "stats.items.3": "Городов присутствия",
+      "bento.title": "Нужная медицинская помощь — в одном месте",
+      "bento.cards.0": "Уколы, капельницы, перевязки",
+      "bento.cards.1": "Уход за больными",
+      "bento.cards.2": "Детская медсестра",
+      "bento.cards.3": "ЛОР-врач"
     },
     "en": {
-      "stats.items.0": "Qualified specialists",
+      "stats.items.0": "Verified specialists",
       "header.partnerShort": "For specialists",
       "header.certificates": "Documents",
       "header.contacts": "Contact",
@@ -61,7 +76,14 @@
       "services.items.yara.short": "Wound dressing",
       "booking.arrival": "Arrival: 30–90 min",
       "booking.orCall": "Prefer to call?",
-      "services.items.bosim.short": "IV cannula"
+      "services.items.bosim.short": "IV cannula",
+      "stats.items.2": "Users",
+      "stats.items.3": "Cities served",
+      "bento.title": "The care you need — in one place",
+      "bento.cards.0": "Injections, IV drips, dressings",
+      "bento.cards.1": "Patient care",
+      "bento.cards.2": "Pediatric nurse",
+      "bento.cards.3": "ENT doctor"
     }
   },
   "why": {
