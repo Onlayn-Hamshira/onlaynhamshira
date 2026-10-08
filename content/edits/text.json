@@ -8,7 +8,8 @@
       "hero.lead": "Malakali mutaxassislarni uyga chaqirish orqali kutish vaqtisiz uyingizda professional tibbiy yordam oling.",
       "header.nav.4": "Ko‘p beriladigan savollar",
       "header.partnerShort": "Mutaxassislarga",
-      "header.certificates": "Hujjatlar"
+      "header.certificates": "Hujjatlar",
+      "header.contacts": "Aloqa"
     },
     "ru": {
       "stats.items.0": "Квалифицированные специалисты",
@@ -19,7 +20,8 @@
     "en": {
       "stats.items.0": "Qualified specialists",
       "header.partnerShort": "For specialists",
-      "header.certificates": "Documents"
+      "header.certificates": "Documents",
+      "header.contacts": "Contact"
     }
   },
   "why": {
