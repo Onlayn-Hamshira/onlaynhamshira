@@ -5,24 +5,27 @@
       "blog.lead": "Uyda parvarish, profilaktika va sog‘lom turmush bo‘yicha hamshiralarimiz tajribasiga asoslangan foydali maqolalar",
       "hero.allDaySub": "dam olish kunlarisiz ishlaymiz",
       "stats.items.0": "Malakali mutaxasisslar",
-      "hero.lead": "Malakali mutaxassislarni uyga chaqirish orqali kutish vaqtisiz uyingizda professional tibbiy yordam oling.",
+      "hero.lead": "Ukol, tomchilatma, bog‘lam va bemor parvarishi — o‘zingiz yoki yaqiningiz uchun.",
       "header.nav.4": "Ko‘p beriladigan savollar",
       "header.partnerShort": "Mutaxassislarga",
       "header.certificates": "Hujjatlar",
-      "header.contacts": "Aloqa"
+      "header.contacts": "Aloqa",
+      "hero.perks.0": "Diplomi tekshirilgan mutaxassislar"
     },
     "ru": {
       "stats.items.0": "Квалифицированные специалисты",
       "header.nav.4": "Часто задаваемые вопросы",
       "header.partnerShort": "Специалистам",
-      "header.certificates": "Документы"
+      "header.certificates": "Документы",
+      "hero.perks.0": "Специалисты с проверенным дипломом"
     },
     "en": {
       "stats.items.0": "Qualified specialists",
       "header.partnerShort": "For specialists",
       "header.certificates": "Documents",
       "header.contacts": "Contact",
-      "common.callNurse": "Book a nurse"
+      "common.callNurse": "Book a nurse",
+      "hero.perks.0": "Specialists with verified diplomas"
     }
   },
   "why": {
