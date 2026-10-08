@@ -32,7 +32,8 @@
       "bento.cards.1": "Bemor parvarishi",
       "bento.cards.2": "Bolalar hamshirasi",
       "bento.cards.3": "LOR shifokori",
-      "services.items.massaj.short": "Bolalar va ayollar massaji"
+      "services.items.massaj.short": "Bolalar va ayollar massaji",
+      "bento.cards.6": "Uyda tahlil topshirish"
     },
     "ru": {
       "stats.items.0": "Проверенных специалистов",
@@ -60,7 +61,8 @@
       "bento.cards.2": "Детская медсестра",
       "bento.cards.3": "ЛОР-врач",
       "bento.cards.4": "Массаж для детей и женщин",
-      "services.items.massaj.short": "Массаж для детей и женщин"
+      "services.items.massaj.short": "Массаж для детей и женщин",
+      "bento.cards.6": "Анализы на дому"
     },
     "en": {
       "stats.items.0": "Verified specialists",
@@ -88,7 +90,9 @@
       "bento.cards.2": "Pediatric nurse",
       "bento.cards.3": "ENT doctor",
       "bento.cards.4": "Massage for children and women",
-      "services.items.massaj.short": "Massage for children and women"
+      "services.items.massaj.short": "Massage for children and women",
+      "bento.cards.6": "Lab tests at home",
+      "bento.cards.8": "Traumatologist"
     }
   },
   "why": {
