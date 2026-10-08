@@ -6,14 +6,17 @@
       "hero.allDaySub": "dam olish kunlarisiz ishlaymiz",
       "stats.items.0": "Malakali mutaxasisslar",
       "hero.lead": "Malakali mutaxassislarni uyga chaqirish orqali kutish vaqtisiz uyingizda professional tibbiy yordam oling.",
-      "header.nav.4": "Ko‘p beriladigan savollar"
+      "header.nav.4": "Ko‘p beriladigan savollar",
+      "header.partnerShort": "Mutaxassislarga"
     },
     "ru": {
       "stats.items.0": "Квалифицированные специалисты",
-      "header.nav.4": "Часто задаваемые вопросы"
+      "header.nav.4": "Часто задаваемые вопросы",
+      "header.partnerShort": "Специалистам"
     },
     "en": {
-      "stats.items.0": "Qualified specialists"
+      "stats.items.0": "Qualified specialists",
+      "header.partnerShort": "For specialists"
     }
   },
   "why": {
