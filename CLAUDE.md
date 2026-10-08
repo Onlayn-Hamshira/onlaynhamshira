@@ -100,6 +100,8 @@ Fayllar: `content/edits/text.json` (manba fayllar ustiga qo'yiladi), `content/ed
   admin vizual tahrirlovchisi narxni shu belgi bilan topadi.
 - Statistika (bosh sahifa): `content/edits/stats.json` (`lib/data.ts` → `STATS`, kalit — tartib raqami). Raqam
   chiqadigan elementda `data-oh-stat={i}` bo'lsin.
+- Shrift o'lchami: `content/edits/styles.json` (`lib/edit/styles.ts`) — element manzili (`#main>section:nth-of-type(2)>…`)
+  bo'yicha `zoom`. Sahifa tuzilmasini (bo'limlar tartibi, o'ramlar) o'zgartirsangiz, shu fayldagi manzillarni tekshiring.
 
 ## Git
 

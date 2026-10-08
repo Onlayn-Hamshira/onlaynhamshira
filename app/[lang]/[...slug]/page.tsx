@@ -21,6 +21,7 @@ import { BlogIndexPage, BlogPostPage } from "@/components/blog/BlogPages";
 import { getDictionary } from "@/lib/i18n/get-dictionary";
 import { expertText, whyText } from "@/lib/edit/text";
 import { seoEdit } from "@/lib/edit/seo";
+import { EditStyles } from "@/components/EditStyles";
 
 // Eski Tilda sahifalari: har biri build vaqtida statik HTML. Ro'yxatda yo'q yo'l — 404
 export const dynamicParams = false;
@@ -193,6 +194,7 @@ export default async function LegacyRoute({ params }: PageProps<"/[lang]/[...slu
       <div className="h-10" />
       <Footer t={t.footer} common={t.common} lang={lang} home={home} />
       {pg.group !== "expert" && <MobileCTA t={t.mobileCta} cta={t.common.callNurse} />}
+      <EditStyles path={pg.path} />
     </>
   );
 }

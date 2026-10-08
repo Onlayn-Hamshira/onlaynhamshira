@@ -12,7 +12,8 @@ import HowItWorks from "@/components/how-it-works/HowItWorks";
 import { Faq, Reviews, Specialists } from "@/components/Interactive";
 import { MobileCTA } from "@/components/MobileCTA";
 import { JoinBanner } from "@/components/JoinBanner";
-import { hasLocale } from "@/lib/i18n/config";
+import { EditStyles } from "@/components/EditStyles";
+import { hasLocale, localePath } from "@/lib/i18n/config";
 import { getDictionary } from "@/lib/i18n/get-dictionary";
 
 export default async function Home({ params }: PageProps<"/[lang]">) {
@@ -46,6 +47,7 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
       </main>
       <Footer t={t.footer} common={common} lang={lang} />
       <MobileCTA t={t.mobileCta} cta={common.callNurse} />
+      <EditStyles path={localePath(lang)} />
     </>
   );
 }
