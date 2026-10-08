@@ -18,7 +18,8 @@
       "hero.clientsSub": "ilovadan foydalanadi",
       "services.items.kapelnitsa.duration": "30–70 daqiqa",
       "services.items.kapelnitsa.short": "Tomchilatma (kapelnitsa)",
-      "bento.cards.4": "Bolalar va ayollar massaji"
+      "bento.cards.4": "Bolalar va ayollar massaji",
+      "booking.arrival": "Yetib kelish: 30–90 daqiqa"
     },
     "ru": {
       "stats.items.0": "Квалифицированные специалисты",
@@ -32,7 +33,8 @@
       "hero.clients": "15 500+ пользователей",
       "hero.clientsSub": "пользуются приложением",
       "hero.allDaySub": "включая выходные и праздники",
-      "services.items.kapelnitsa.duration": "30–70 минут"
+      "services.items.kapelnitsa.duration": "30–70 минут",
+      "booking.arrival": "Приезд: 30–90 мин"
     },
     "en": {
       "stats.items.0": "Qualified specialists",
@@ -48,7 +50,8 @@
       "hero.clientsSub": "use the app",
       "hero.allDaySub": "weekends and holidays included",
       "services.items.kapelnitsa.duration": "30–70 min",
-      "services.items.yara.short": "Wound dressing"
+      "services.items.yara.short": "Wound dressing",
+      "booking.arrival": "Arrival: 30–90 min"
     }
   },
   "why": {
