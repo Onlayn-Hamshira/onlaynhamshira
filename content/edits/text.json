@@ -7,16 +7,19 @@
       "stats.items.0": "Malakali mutaxasisslar",
       "hero.lead": "Malakali mutaxassislarni uyga chaqirish orqali kutish vaqtisiz uyingizda professional tibbiy yordam oling.",
       "header.nav.4": "Ko‘p beriladigan savollar",
-      "header.partnerShort": "Mutaxassislarga"
+      "header.partnerShort": "Mutaxassislarga",
+      "header.certificates": "Hujjatlar"
     },
     "ru": {
       "stats.items.0": "Квалифицированные специалисты",
       "header.nav.4": "Часто задаваемые вопросы",
-      "header.partnerShort": "Специалистам"
+      "header.partnerShort": "Специалистам",
+      "header.certificates": "Документы"
     },
     "en": {
       "stats.items.0": "Qualified specialists",
-      "header.partnerShort": "For specialists"
+      "header.partnerShort": "For specialists",
+      "header.certificates": "Documents"
     }
   },
   "why": {
