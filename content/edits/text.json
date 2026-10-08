@@ -16,7 +16,8 @@
       "hero.perks.2": "To‘lov — xizmatdan keyin",
       "hero.clients": "15 500+ foydalanuvchi",
       "hero.clientsSub": "ilovadan foydalanadi",
-      "services.items.kapelnitsa.duration": "30–70 daqiqa"
+      "services.items.kapelnitsa.duration": "30–70 daqiqa",
+      "services.items.kapelnitsa.short": "Tomchilatma (kapelnitsa)"
     },
     "ru": {
       "stats.items.0": "Квалифицированные специалисты",
