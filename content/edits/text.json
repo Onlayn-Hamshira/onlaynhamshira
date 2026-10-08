@@ -11,7 +11,9 @@
       "header.certificates": "Hujjatlar",
       "header.contacts": "Aloqa",
       "hero.perks.0": "Diplomi tekshirilgan mutaxassislar",
-      "hero.qrTitle": "Ilovani yuklab olish uchun skanerlang"
+      "hero.qrTitle": "Ilovani yuklab olish uchun skanerlang",
+      "hero.perks.1": "Narx oldindan ko‘rinadi",
+      "hero.perks.2": "To‘lov — xizmatdan keyin"
     },
     "ru": {
       "stats.items.0": "Квалифицированные специалисты",
@@ -19,7 +21,9 @@
       "header.partnerShort": "Специалистам",
       "header.certificates": "Документы",
       "hero.perks.0": "Специалисты с проверенным дипломом",
-      "hero.qrTitle": "Отсканируйте, чтобы скачать приложение"
+      "hero.qrTitle": "Отсканируйте, чтобы скачать приложение",
+      "hero.perks.1": "Цена видна заранее",
+      "hero.perks.2": "Оплата после процедуры"
     },
     "en": {
       "stats.items.0": "Qualified specialists",
@@ -28,7 +32,9 @@
       "header.contacts": "Contact",
       "common.callNurse": "Book a nurse",
       "hero.perks.0": "Specialists with verified diplomas",
-      "hero.qrTitle": "Scan to download the app"
+      "hero.qrTitle": "Scan to download the app",
+      "hero.qrText": "Point your camera at the QR code — the app store will open.",
+      "hero.perks.1": "See the price upfront"
     }
   },
   "why": {
