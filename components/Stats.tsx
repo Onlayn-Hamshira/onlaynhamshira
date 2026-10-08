@@ -62,7 +62,7 @@ export default function Stats({ t, sep }: { t: Dict["stats"]; sep: string }) {
             className={`${tones[i]} lift relative overflow-hidden rounded-[28px] px-4 py-6 min-[400px]:px-5 sm:px-8 sm:py-9`}
           >
             <Icon name={ICONS[i]} size={44} tone="tile" className="mb-3 size-10! sm:absolute sm:top-5 sm:right-5 sm:mb-0 sm:size-11!" />
-            <p className="text-[clamp(24px,7.8vw,36px)] leading-none font-bold tracking-[-0.03em] whitespace-nowrap tabular-nums sm:text-[56px]">
+            <p data-oh-stat={i} className="text-[clamp(24px,7.8vw,36px)] leading-none font-bold tracking-[-0.03em] whitespace-nowrap tabular-nums sm:text-[56px]">
               <Counter to={s.value} run={seen} sep={sep} />
               {s.suffix}
             </p>

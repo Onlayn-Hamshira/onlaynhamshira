@@ -1,5 +1,6 @@
 import { editableImage } from "./edit/edits";
 import priceEdits from "@/content/edits/prices.json";
+import statEdits from "@/content/edits/stats.json";
 
 // Tilga bog'liq bo'lmagan tuzilma: havolalar, rasmlar, narxlar, ikonkalar.
 // Matnlar lib/i18n/dictionaries/* da (ro'yxatlar tartibi shu fayldagi bilan bir xil).
@@ -76,12 +77,21 @@ export const SPECIALISTS: { img: string; group: SpecialistGroup }[] = [
 
 export const BENEFIT_ICONS = ["clock", "shield", "wallet", "label", "phone", "calendar"] as const;
 
-export const STATS = [
+export type Stat = { value: number; suffix: string };
+
+// Admin paneldan o'zgartirilgani — content/edits/stats.json (ustun; kalit — tartib raqami)
+const STAT_LIST: Stat[] = [
   { value: 270, suffix: "+" },
   { value: 11400, suffix: "+" },
   { value: 13500, suffix: "+" },
   { value: 6, suffix: "+" },
 ];
+
+/** Dasturchi yozgan asl statistika (admin panel "asliga qaytarish" uchun — app/edit-sources.json) */
+export const BASE_STATS = Object.fromEntries(STAT_LIST.map((s, i) => [String(i), s])) as Record<string, Stat>;
+
+const STAT_EDITS = statEdits as Record<string, Partial<Stat>>;
+export const STATS: Stat[] = STAT_LIST.map((s, i) => ({ ...s, ...STAT_EDITS[String(i)] }));
 
 // Rasmlar o'z serverimizda (public/img) — tashqi CDN'ga bog'liqlik va sovuq so'rov kechikishi yo'q
 const img = (path: string) => `/img/${path}`;
