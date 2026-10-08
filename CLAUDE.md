@@ -98,6 +98,10 @@ Fayllar: `content/edits/text.json` (manba fayllar ustiga qo'yiladi), `content/ed
   (`lib/edit/seo.ts`): admin uni ogohlantirish va yozma tasdiqdan keyin saqlaydi, `seo:check` shu qiymatlarni kutilgan deb oladi.
 - Narxlar: `content/edits/prices.json` (`lib/data.ts` → `SERVICES`). Narx chiqadigan elementda `data-oh-price={id}` bo'lsin —
   admin vizual tahrirlovchisi narxni shu belgi bilan topadi.
+- Statistika (bosh sahifa): `content/edits/stats.json` (`lib/data.ts` → `STATS`, kalit — tartib raqami). Raqam
+  chiqadigan elementda `data-oh-stat={i}` bo'lsin.
+- Shrift o'lchami: `content/edits/styles.json` (`lib/edit/styles.ts`) — element manzili (`#main>section:nth-of-type(2)>…`)
+  bo'yicha `zoom`. Sahifa tuzilmasini (bo'limlar tartibi, o'ramlar) o'zgartirsangiz, shu fayldagi manzillarni tekshiring.
 
 ## Git
 

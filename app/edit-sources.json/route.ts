@@ -12,7 +12,7 @@ import { EXPERT } from "@/lib/expert";
 import { legacyFile, legacyPages } from "@/lib/seo/legacy";
 import { EDITABLE_IMAGE_PREFIXES } from "@/lib/edit/edits";
 import { LISTS, LOCKED, SOURCES } from "@/lib/edit/shared";
-import { BASE_PRICES } from "@/lib/data";
+import { BASE_PRICES, BASE_STATS } from "@/lib/data";
 
 
 export const dynamic = "force-static";
@@ -54,6 +54,8 @@ export async function GET() {
     images: EDITABLE_IMAGE_PREFIXES.filter((p) => p !== "/legacy/").flatMap(publicImages),
     // Narxlar (so'm): asl qiymatlar; sahifada [data-oh-price] belgisi bilan topiladi
     prices: BASE_PRICES,
+    // Bosh sahifadagi statistika (raqam + belgi, masalan "+"): asl qiymatlar; sahifada [data-oh-stat] bilan topiladi
+    stats: BASE_STATS,
     // Metadata — asl (Tilda) qiymatlar; admin tasdiq bilan o'zgartiradi (content/edits/seo.json)
     seo: [
       ...(await Promise.all(
