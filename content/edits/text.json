@@ -3,10 +3,15 @@
     "uz": {
       "news.label": "Yangilik",
       "blog.lead": "Uyda parvarish, profilaktika va sog‘lom turmush bo‘yicha hamshiralarimiz tajribasiga asoslangan foydali maqolalar",
-      "hero.allDaySub": "dam olish kunlarisiz ishlaymiz"
+      "hero.allDaySub": "dam olish kunlarisiz ishlaymiz",
+      "stats.items.0": "Malakali mutaxasisslar"
     },
-    "ru": {},
-    "en": {}
+    "ru": {
+      "stats.items.0": "Квалифицированные специалисты"
+    },
+    "en": {
+      "stats.items.0": "Qualified specialists"
+    }
   },
   "why": {
     "uz": {},
