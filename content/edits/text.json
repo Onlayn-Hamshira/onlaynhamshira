@@ -31,7 +31,8 @@
       "bento.cards.0": "Ukol, tomchilatma, bog‘lam",
       "bento.cards.1": "Bemor parvarishi",
       "bento.cards.2": "Bolalar hamshirasi",
-      "bento.cards.3": "LOR shifokori"
+      "bento.cards.3": "LOR shifokori",
+      "services.items.massaj.short": "Bolalar va ayollar massaji"
     },
     "ru": {
       "stats.items.0": "Проверенных специалистов",
@@ -57,7 +58,9 @@
       "bento.cards.0": "Уколы, капельницы, перевязки",
       "bento.cards.1": "Уход за больными",
       "bento.cards.2": "Детская медсестра",
-      "bento.cards.3": "ЛОР-врач"
+      "bento.cards.3": "ЛОР-врач",
+      "bento.cards.4": "Массаж для детей и женщин",
+      "services.items.massaj.short": "Массаж для детей и женщин"
     },
     "en": {
       "stats.items.0": "Verified specialists",
@@ -83,7 +86,9 @@
       "bento.cards.0": "Injections, IV drips, dressings",
       "bento.cards.1": "Patient care",
       "bento.cards.2": "Pediatric nurse",
-      "bento.cards.3": "ENT doctor"
+      "bento.cards.3": "ENT doctor",
+      "bento.cards.4": "Massage for children and women",
+      "services.items.massaj.short": "Massage for children and women"
     }
   },
   "why": {
