@@ -3,7 +3,7 @@
     "uz": {
       "news.label": "Yangilik",
       "blog.lead": "Uyda parvarish, profilaktika va sog‘lom turmush bo‘yicha hamshiralarimiz tajribasiga asoslangan foydali maqolalar",
-      "hero.allDaySub": "dam olish kunlarisiz ishlaymiz",
+      "hero.allDaySub": "dam olish va bayram kunlari ham",
       "stats.items.0": "Malakali mutaxasisslar",
       "hero.lead": "Ukol, tomchilatma, bog‘lam va bemor parvarishi — o‘zingiz yoki yaqiningiz uchun.",
       "header.nav.4": "Ko‘p beriladigan savollar",
@@ -13,7 +13,10 @@
       "hero.perks.0": "Diplomi tekshirilgan mutaxassislar",
       "hero.qrTitle": "Ilovani yuklab olish uchun skanerlang",
       "hero.perks.1": "Narx oldindan ko‘rinadi",
-      "hero.perks.2": "To‘lov — xizmatdan keyin"
+      "hero.perks.2": "To‘lov — xizmatdan keyin",
+      "hero.clients": "15 500+ foydalanuvchi",
+      "hero.clientsSub": "ilovadan foydalanadi",
+      "services.items.kapelnitsa.duration": "30–70 daqiqa"
     },
     "ru": {
       "stats.items.0": "Квалифицированные специалисты",
@@ -23,7 +26,11 @@
       "hero.perks.0": "Специалисты с проверенным дипломом",
       "hero.qrTitle": "Отсканируйте, чтобы скачать приложение",
       "hero.perks.1": "Цена видна заранее",
-      "hero.perks.2": "Оплата после процедуры"
+      "hero.perks.2": "Оплата после процедуры",
+      "hero.clients": "15 500+ пользователей",
+      "hero.clientsSub": "пользуются приложением",
+      "hero.allDaySub": "включая выходные и праздники",
+      "services.items.kapelnitsa.duration": "30–70 минут"
     },
     "en": {
       "stats.items.0": "Qualified specialists",
@@ -34,7 +41,11 @@
       "hero.perks.0": "Specialists with verified diplomas",
       "hero.qrTitle": "Scan to download the app",
       "hero.qrText": "Point your camera at the QR code — the app store will open.",
-      "hero.perks.1": "See the price upfront"
+      "hero.perks.1": "See the price upfront",
+      "hero.clients": "15,500+ users",
+      "hero.clientsSub": "use the app",
+      "hero.allDaySub": "weekends and holidays included",
+      "services.items.kapelnitsa.duration": "30–70 min"
     }
   },
   "why": {
