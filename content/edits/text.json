@@ -22,7 +22,8 @@
       "booking.arrival": "Yetib kelish: 30–90 daqiqa",
       "booking.payAfter": "To‘lov — xizmatdan keyin",
       "booking.orCall": "Qo‘ng‘iroq qilishni afzal ko‘rasizmi?",
-      "booking.emergency": "Hayot uchun xavfli holatda darhol 103 ga qo‘ng‘iroq qiling"
+      "booking.emergency": "Hayot uchun xavfli holatda darhol 103 ga qo‘ng‘iroq qiling",
+      "services.items.bosim.short": "Vena kateteri"
     },
     "ru": {
       "stats.items.0": "Квалифицированные специалисты",
@@ -40,7 +41,8 @@
       "booking.arrival": "Приезд: 30–90 мин",
       "booking.payAfter": "Оплата после процедуры",
       "booking.orCall": "Удобнее по телефону?",
-      "booking.emergency": "При угрозе жизни сразу звоните 103"
+      "booking.emergency": "При угрозе жизни сразу звоните 103",
+      "services.items.bosim.short": "Венозный катетер"
     },
     "en": {
       "stats.items.0": "Qualified specialists",
@@ -58,7 +60,8 @@
       "services.items.kapelnitsa.duration": "30–70 min",
       "services.items.yara.short": "Wound dressing",
       "booking.arrival": "Arrival: 30–90 min",
-      "booking.orCall": "Prefer to call?"
+      "booking.orCall": "Prefer to call?",
+      "services.items.bosim.short": "IV cannula"
     }
   },
   "why": {
