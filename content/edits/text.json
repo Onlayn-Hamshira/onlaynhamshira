@@ -35,7 +35,13 @@
       "services.items.massaj.short": "Bolalar va ayollar massaji",
       "bento.cards.6": "Uyda tahlil topshirish",
       "how.pill": "Qanday ishlaydi",
-      "how.title": "Hamshirani 4 qadamda chaqiring"
+      "how.title": "Hamshirani 4 qadamda chaqiring",
+      "how.sub": "Buyurtma bir necha daqiqa oladi, hamshira esa 30–90 daqiqada keladi.\t\t",
+      "how.steps.0.tab": "Ilovani oching",
+      "how.steps.0.desc": "App Store yoki Google Play’dan bepul yuklab oling yoki veb-ilovani brauzerda oching.",
+      "how.steps.2.desc": "Kerakli muolajalarni qo‘shing — umumiy narx darhol ko‘rinadi.",
+      "how.steps.3.desc": "“Tayyor” tugmasini bosing — ilova eng yaqin mutaxassisni topadi, siz esa uning holatini kuzatib borasiz.",
+      "how.ctaNote": "Ilovasiz, to‘g‘ridan-to‘g‘ri brauzerda"
     },
     "ru": {
       "stats.items.0": "Проверенных специалистов",
@@ -66,7 +72,16 @@
       "services.items.massaj.short": "Массаж для детей и женщин",
       "bento.cards.6": "Анализы на дому",
       "how.pill": "Как это работает",
-      "how.title": "Вызовите медсестру за 4 шага"
+      "how.title": "Вызовите медсестру за 4 шага",
+      "how.sub": "Заказ занимает пару минут, медсестра приедет за 30–90 минут.",
+      "how.steps.0.tab": "Откройте приложение",
+      "how.steps.0.desc": "Скачайте бесплатно в App Store или Google Play — или откройте веб-версию в браузере.",
+      "how.steps.1.tab": "Зарегистрируйтесь",
+      "how.steps.2.tab": "Выберите услугу",
+      "how.steps.2.desc": "Добавьте нужные процедуры — итоговая цена видна сразу.",
+      "how.steps.3.tab": "Оформите заказ",
+      "how.steps.3.desc": "Нажмите «Готово» — приложение найдёт ближайшего специалиста, а вы сможете следить за статусом.",
+      "how.ctaNote": "Без приложения — прямо в браузере"
     },
     "en": {
       "stats.items.0": "Verified specialists",
@@ -97,7 +112,15 @@
       "services.items.massaj.short": "Massage for children and women",
       "bento.cards.6": "Lab tests at home",
       "bento.cards.8": "Traumatologist",
-      "how.title": "Book a nurse in 4 steps"
+      "how.title": "Book a nurse in 4 steps",
+      "how.sub": "Booking takes a couple of minutes, and the nurse arrives in 30–90 minutes.",
+      "how.steps.0.tab": "Open the app",
+      "how.steps.0.desc": "Download it free from the App Store or Google Play, or open the web app in your browser.",
+      "how.steps.2.tab": "Choose a service",
+      "how.steps.2.desc": "Add the procedures you need — the total is shown right away.",
+      "how.steps.3.tab": "Place your order",
+      "how.steps.3.desc": "Tap “Done” — the app finds the nearest specialist and you can track their status.",
+      "how.ctaNote": "No app needed — right in your browser"
     }
   },
   "why": {
