@@ -51,7 +51,11 @@
       "benefits.items.1.text": "Platformaga hamkor sifatida qo‘shilishdan oldin har bir mutaxassisning diplomi va sertifikati tekshiriladi, u bilan suhbat o‘tkaziladi.",
       "benefits.items.2.title": "To‘lov xizmatdan keyin",
       "benefits.items.2.text": "Oldindan to‘lov yo‘q. Naqd yoki karta orqali to‘laysiz.",
-      "benefits.items.3.title": "Ochiq narx"
+      "benefits.items.3.title": "Ochiq narx",
+      "benefits.items.3.text": "Taxminiy narx buyurtmada ko‘rinadi. Yashirin to‘lovlar yo‘q.",
+      "benefits.items.4.title": "Yaqinlaringiz uchun ham",
+      "benefits.items.4.text": "Ota-onangiz yoki farzandingiz uchun buyurtmani o‘z telefoningizdan berasiz.",
+      "benefits.items.5.text": "O‘zingizga qulay sana va vaqtda muolajani oldindan band qilib qo‘ying."
     },
     "ru": {
       "stats.items.0": "Проверенных специалистов",
@@ -101,7 +105,11 @@
       "benefits.items.1.text": "Прежде чем стать партнёром платформы, каждый специалист проходит проверку диплома и сертификатов и собеседование.",
       "benefits.items.2.title": "Оплата после процедуры",
       "benefits.items.2.text": "Никакой предоплаты. Оплата наличными или картой.",
-      "benefits.items.3.title": "Прозрачные цены"
+      "benefits.items.3.title": "Прозрачные цены",
+      "benefits.items.3.text": "Ориентировочная цена видна при заказе. Без скрытых платежей.",
+      "benefits.items.4.title": "Для близких тоже",
+      "benefits.items.4.text": "Закажите медсестру для родителей или ребёнка со своего телефона.",
+      "benefits.items.5.text": "Заранее забронируйте процедуру на удобные вам дату и время."
     },
     "en": {
       "stats.items.0": "Verified specialists",
@@ -149,7 +157,11 @@
       "benefits.items.1.title": "Verified specialists",
       "benefits.items.1.text": "Before joining the platform as a partner, every specialist has their diploma and certificates checked and goes through an interview.",
       "benefits.items.2.text": "No prepayment. Pay in cash or by card.",
-      "benefits.items.3.title": "Clear pricing"
+      "benefits.items.3.title": "Clear pricing",
+      "benefits.items.3.text": "You see an estimated price when you book. No hidden fees.",
+      "benefits.items.4.title": "For your loved ones too",
+      "benefits.items.4.text": "Book a nurse for your parents or child from your own phone.",
+      "benefits.items.5.text": "Book a procedure in advance for a date and time that suits you."
     }
   },
   "why": {
