@@ -33,7 +33,8 @@
       "bento.cards.2": "Bolalar hamshirasi",
       "bento.cards.3": "LOR shifokori",
       "services.items.massaj.short": "Bolalar va ayollar massaji",
-      "bento.cards.6": "Uyda tahlil topshirish"
+      "bento.cards.6": "Uyda tahlil topshirish",
+      "how.pill": "Qanday ishlaydi"
     },
     "ru": {
       "stats.items.0": "Проверенных специалистов",
@@ -62,7 +63,8 @@
       "bento.cards.3": "ЛОР-врач",
       "bento.cards.4": "Массаж для детей и женщин",
       "services.items.massaj.short": "Массаж для детей и женщин",
-      "bento.cards.6": "Анализы на дому"
+      "bento.cards.6": "Анализы на дому",
+      "how.pill": "Как это работает"
     },
     "en": {
       "stats.items.0": "Verified specialists",
