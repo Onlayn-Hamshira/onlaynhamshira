@@ -44,7 +44,9 @@
       "how.ctaNote": "Ilovasiz, to‘g‘ridan-to‘g‘ri brauzerda",
       "benefits.label": "Nega biz",
       "benefits.title": "Nega Onlayn Hamshira?",
-      "benefits.text": "Hamshira uyingizga keladi, siz esa nima, qachon va qanchaga ekanini oldindan bilasiz."
+      "benefits.text": "Hamshira uyingizga keladi, siz esa nima, qachon va qanchaga ekanini oldindan bilasiz.",
+      "benefits.items.0.title": "Kechayu kunduz",
+      "benefits.items.0.text": "Hamshirani istalgan vaqtda chaqirishingiz mumkin, dam olish va bayram kunlari ham."
     },
     "ru": {
       "stats.items.0": "Проверенных специалистов",
@@ -87,7 +89,9 @@
       "how.ctaNote": "Без приложения — прямо в браузере",
       "benefits.label": "Почему мы",
       "benefits.title": "Почему Onlayn Hamshira?",
-      "benefits.text": "Медсестра приезжает к вам домой, а вы заранее знаете, что, когда и за сколько."
+      "benefits.text": "Медсестра приезжает к вам домой, а вы заранее знаете, что, когда и за сколько.",
+      "benefits.items.0.title": "Днём и ночью",
+      "benefits.items.0.text": "Вызвать медсестру можно в любое время, включая выходные и праздники."
     },
     "en": {
       "stats.items.0": "Verified specialists",
@@ -129,7 +133,9 @@
       "how.ctaNote": "No app needed — right in your browser",
       "benefits.label": "Why us",
       "benefits.title": "Why Onlayn Hamshira?",
-      "benefits.text": "A nurse comes to your home, and you know what, when and how much in advance."
+      "benefits.text": "A nurse comes to your home, and you know what, when and how much in advance.",
+      "benefits.items.0.title": "Day and night",
+      "benefits.items.0.text": "Book a nurse at any time, including weekends and holidays."
     }
   },
   "why": {
