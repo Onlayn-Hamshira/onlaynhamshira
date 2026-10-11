@@ -41,7 +41,9 @@
       "how.steps.0.desc": "App Store yoki Google Play’dan bepul yuklab oling yoki veb-ilovani brauzerda oching.",
       "how.steps.2.desc": "Kerakli muolajalarni qo‘shing — umumiy narx darhol ko‘rinadi.",
       "how.steps.3.desc": "“Tayyor” tugmasini bosing — ilova eng yaqin mutaxassisni topadi, siz esa uning holatini kuzatib borasiz.",
-      "how.ctaNote": "Ilovasiz, to‘g‘ridan-to‘g‘ri brauzerda"
+      "how.ctaNote": "Ilovasiz, to‘g‘ridan-to‘g‘ri brauzerda",
+      "benefits.label": "Nega biz",
+      "benefits.title": "Nega Onlayn Hamshira?"
     },
     "ru": {
       "stats.items.0": "Проверенных специалистов",
@@ -81,7 +83,9 @@
       "how.steps.2.desc": "Добавьте нужные процедуры — итоговая цена видна сразу.",
       "how.steps.3.tab": "Оформите заказ",
       "how.steps.3.desc": "Нажмите «Готово» — приложение найдёт ближайшего специалиста, а вы сможете следить за статусом.",
-      "how.ctaNote": "Без приложения — прямо в браузере"
+      "how.ctaNote": "Без приложения — прямо в браузере",
+      "benefits.label": "Почему мы",
+      "benefits.title": "Почему Onlayn Hamshira?"
     },
     "en": {
       "stats.items.0": "Verified specialists",
@@ -120,7 +124,9 @@
       "how.steps.2.desc": "Add the procedures you need — the total is shown right away.",
       "how.steps.3.tab": "Place your order",
       "how.steps.3.desc": "Tap “Done” — the app finds the nearest specialist and you can track their status.",
-      "how.ctaNote": "No app needed — right in your browser"
+      "how.ctaNote": "No app needed — right in your browser",
+      "benefits.label": "Why us",
+      "benefits.title": "Why Onlayn Hamshira?"
     }
   },
   "why": {
