@@ -34,7 +34,8 @@
       "bento.cards.3": "LOR shifokori",
       "services.items.massaj.short": "Bolalar va ayollar massaji",
       "bento.cards.6": "Uyda tahlil topshirish",
-      "how.pill": "Qanday ishlaydi"
+      "how.pill": "Qanday ishlaydi",
+      "how.title": "Hamshirani 4 qadamda chaqiring"
     },
     "ru": {
       "stats.items.0": "Проверенных специалистов",
@@ -64,7 +65,8 @@
       "bento.cards.4": "Массаж для детей и женщин",
       "services.items.massaj.short": "Массаж для детей и женщин",
       "bento.cards.6": "Анализы на дому",
-      "how.pill": "Как это работает"
+      "how.pill": "Как это работает",
+      "how.title": "Вызовите медсестру за 4 шага"
     },
     "en": {
       "stats.items.0": "Verified specialists",
@@ -94,7 +96,8 @@
       "bento.cards.4": "Massage for children and women",
       "services.items.massaj.short": "Massage for children and women",
       "bento.cards.6": "Lab tests at home",
-      "bento.cards.8": "Traumatologist"
+      "bento.cards.8": "Traumatologist",
+      "how.title": "Book a nurse in 4 steps"
     }
   },
   "why": {
