@@ -1,4 +1,4 @@
-// Eski Tilda sahifalari (bosh sahifadan tashqari 83 ta) — kontent content/legacy/*.json da.
+// Eski Tilda sahifalari (bosh sahifadan tashqari 92 ta) — kontent content/legacy/*.json da.
 // JSON fayllar Tilda HTML'idan avtomatik ajratilgan: <head> metadata (Google aynan shuni o'qiydi),
 // sahifa JSON-LD'lari va tozalangan matn/rasmlar. Faqat build vaqtida (server) o'qiladi.
 //

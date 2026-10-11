@@ -13,15 +13,15 @@ npm run build && npm start        # boshqa terminalda (yoki: npx next start -p 3
 npm run seo:check                 # yoki: node scripts/seo-check.mjs http://localhost:3311
 ```
 
-`✓ SEO OK: 86 URL ...` chiqmaguncha ish tugagan hisoblanmaydi, commit/push qilinmaydi.
-Skript 86 URL'ning title, description, keywords, canonical, og:*, hreflang qiymatlarini, tracking
+`✓ SEO OK: 95 URL ...` chiqmaguncha ish tugagan hisoblanmaydi, commit/push qilinmaydi.
+Skript 95 URL'ning title, description, keywords, canonical, og:*, hreflang qiymatlarini, tracking
 kodlarini, JSON-LD, H1, sitemap va robots'ni Tilda asli (`docs/seo-baseline/expected-head.json`)
 bilan solishtiradi. Uni "o'tishi uchun" o'zgartirmang, expected-head.json'ni ham tahrirlamang.
 Qiymatni o'zgartirish kerak bo'lsa (marketing qarori bilan), alohida va aniq aytilgan holda o'zgartiring.
 
 ## O'ZGARTIRILMAYDIGAN narsalar
 
-1. **URL yo'llari** — `lib/seo/routes.ts` dagi 86 ta yo'l (bosh sahifa + 83 ichki sahifa + /ru, /en).
+1. **URL yo'llari** — `lib/seo/routes.ts` dagi 95 ta yo'l (bosh sahifa + /ru, /en + 92 ichki sahifa).
    Birortasini o'chirmang, nomini o'zgartirmang, slash qo'shmang/olib tashlamang.
    QR yo'llari `/qr` … `/qr8` bosma materiallarda — ayniqsa tegmang.
 2. **Metadata** — sahifalarniki `content/legacy/*.json` → `meta`, bosh sahifaniki
@@ -36,7 +36,7 @@ Qiymatni o'zgartirish kerak bo'lsa (marketing qarori bilan), alohida va aniq ayt
    yuklanib, Lighthouse Performance 40'larga, Best Practices 77 ga tushadi (third-party cookies).
    QR sahifalari darhol yuklaydi.
 4. **JSON-LD** — layout'dagi MedicalBusiness (har sahifada) va `content/legacy/*.json` → `jsonLd`.
-5. **sitemap.xml / robots.txt** — sitemap 86 URL'dan kam bo'lmasin; robots'da `Disallow: /` yoki
+5. **sitemap.xml / robots.txt** — sitemap va robots.txt Tilda'dagi bilan bayt-ma-bayt bir xil (`docs/seo-baseline/`), sitemap 95 URL'dan kam bo'lmasin; robots'da `Disallow: /` yoki
    `noindex` hech qachon bo'lmasin.
 6. **Redirectlar** (`next.config.ts`) — `/uz`→`/`, ichki yo'l→tashqi yo'l, buzuq Tilda havolalari
    (`/politic` va boshq.). `trailingSlash` sozlamasini o'zgartirmang.
@@ -44,7 +44,7 @@ Qiymatni o'zgartirish kerak bo'lsa (marketing qarori bilan), alohida va aniq ayt
 ## Arxitektura (nima qayerda)
 
 - Bosh sahifa: `app/[lang]/page.tsx` (uz `/` — rewrite orqali `/uz`).
-- Qolgan 83 sahifa: `app/[lang]/[...slug]/page.tsx` + `content/legacy/*.json`
+- Qolgan 92 sahifa: `app/[lang]/[...slug]/page.tsx` + `content/legacy/*.json`
   (Tilda HTML'dan avtomatik olingan: `<head>` metadata, JSON-LD, tozalangan matn/rasmlar).
   Matnni tahrirlash mumkin, lekin `meta`, `jsonLd`, `path` maydonlariga tegmang.
 - `lib/seo/legacy.ts` — tashqi URL ↔ ichki yo'l. Ba'zi uz-prefikssiz URL'larda ru/en kontent bor
@@ -79,6 +79,9 @@ Menyuda ko'rinishi kerak bo'lsa: `lib/nav.ts` → `PAGES` ga uch tildagi manzili
   Tilda har ichki sahifada bosh sahifalarni ko'rsatardi. Yangi tarjima juftligi `TRANSLATIONS` ga qo'shiladi.
 - Doimiy redirectlar aynan `301` (`statusCode: 301`, `permanent: true` emas — u 308 beradi).
 - `seo:check` canonical o'z URL'i ekanini va hreflang ikki tomonlama ekanini ham tekshiradi.
+- 2026-10-04 da Tilda'ga qo'shilgan 9 maqola (choklar / keksalar / enaga, uch tilda) ko'chirildi; baseline
+  (`sitemap-original.xml`, `expected-head.json`) 2026-10-07 dagi jonli Tilda holatiga yangilandi. Tilda'da yangi sahifa
+  paydo bo'lsa — xuddi shunday: `content/legacy/`, `routes.ts` oxiriga, `TRANSLATIONS`, `TILDA_PAGE_IDS`, baseline.
 
 ## Admin panel o'zgarishlari (`content/edits/`, `lib/edit/`)
 

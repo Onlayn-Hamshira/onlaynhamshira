@@ -2,7 +2,7 @@ import type { NextConfig } from "next";
 import { legacyRouting } from "./lib/seo/legacy";
 import { TILDA_PAGE_IDS } from "./lib/seo/tilda-page-ids";
 
-// Eski Tilda URL'lari (83 ta) — tashqi yo'l o'zgarmaydi, ichkarida app/[lang]/[...slug] ga yo'naltiriladi
+// Eski Tilda URL'lari (92 ta) — tashqi yo'l o'zgarmaydi, ichkarida app/[lang]/[...slug] ga yo'naltiriladi
 const legacy = legacyRouting();
 
 // Tilda saytining o'zidagi buzuq ichki havolalar (404 berardi) → to'g'ri sahifaga 301.
@@ -12,6 +12,10 @@ const BROKEN_TILDA_LINKS = [
   { source: "/ru/politic", destination: "/ru/politichamshira" },
   { source: "/en/politic", destination: "/nurse-politic" },
   { source: "/chaqaloq-parvarishi-yangi-onalar-uchun", destination: "/blog/chaqaloq-parvarishi-yangi-onalar-uchun" },
+  // 2026-10-04 maqolalaridagi havolalar va Article JSON-LD'dagi @id
+  { source: "/ru/blog/vyzov-medsestry-na-dom", destination: "/ru/blog/vyzov-medsestry-na-dom-meditsinskaya-pomoshch" },
+  { source: "/en/blog/nurse-at-home-tashkent", destination: "/en/blog/nurse-at-home-tashkent-services-prices" },
+  { source: "/blog/operatsiyadan-keyin-choklarni-parvarish-qilish", destination: "/operatsiyadan-keyin-choklarni-parvarish-qilish" },
 ];
 
 const nextConfig: NextConfig = {

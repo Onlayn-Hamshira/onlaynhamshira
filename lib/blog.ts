@@ -34,8 +34,8 @@ const imageOf = (tag: string): BlogImage | null => {
 const TOPIC_RULES: [BlogTopic, RegExp][] = [
   ["news", /app-update|prezident|uzbekistan/],
   ["pressure", /bosim|davlen|pressure/],
-  ["family", /chaqaloq|newborn|novorozh|massaj|massag|massazh|kupat|chomiltir|bathe/],
-  ["care", /operats|postoperat|posleoper|saraton|onkolog|palliativ|yotib|lezhach|bedridden/],
+  ["family", /chaqaloq|newborn|novorozh|massaj|massag|massazh|kupat|chomiltir|bathe|enaga|nyanya|babysit/],
+  ["care", /operats|postoperat|posleoper|surgery|saraton|onkolog|palliativ|yotib|lezhach|bedridden|keksa|pozhil|elderly/],
   ["prevention", /immun|infek|infekts|infection|habits|privych|odatlar|profilakt|detok|detox/],
 ];
 const topicOf = (pg: LegacyPage): BlogTopic => TOPIC_RULES.find(([, re]) => re.test(pg.path))?.[0] ?? "nurse";
