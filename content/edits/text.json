@@ -55,7 +55,17 @@
       "benefits.items.3.text": "Taxminiy narx buyurtmada ko‘rinadi. Yashirin to‘lovlar yo‘q.",
       "benefits.items.4.title": "Yaqinlaringiz uchun ham",
       "benefits.items.4.text": "Ota-onangiz yoki farzandingiz uchun buyurtmani o‘z telefoningizdan berasiz.",
-      "benefits.items.5.text": "O‘zingizga qulay sana va vaqtda muolajani oldindan band qilib qo‘ying."
+      "benefits.items.5.text": "O‘zingizga qulay sana va vaqtda muolajani oldindan band qilib qo‘ying.",
+      "services.title": "Xizmatlar va narxlar",
+      "services.items.ukol.title": "Vena ichiga va mushak orasiga ukol",
+      "services.items.kapelnitsa.title": "Tomchilatma (kapelnitsa) qo‘yish",
+      "services.items.yara.title": "Yarani tozalash va bog‘lash\t\t",
+      "services.text": "Boshlang‘ich narxlar. Aniq narx bemorning yoshiga va tanlangan mutaxassislikka bog‘liq.",
+      "services.note": "Narx buyurtma berayotganda ko‘rinadi. Joyida qo‘shimcha muolaja kerak bo‘lsa, u alohida hisoblanadi — faqat sizning roziligingiz bilan.",
+      "services.items.bosim.title": "Vena kateteri qo‘yish",
+      "services.items.bosim.description": "Bir necha kun tomchilatma yoki vena ichiga ukol kerak bo‘lsa, venaga kateter (angiokateter) qo‘yiladi. Shunda venani har safar qayta teshish kerak bo‘lmaydi.",
+      "services.items.korik.title": "Klizma qo‘yish",
+      "services.items.korik.description": "Shifokor tavsiyasi bilan tozalovchi yoki dorili klizma qo‘yiladi. Muolaja ehtiyotkorlik bilan, bemorning shaxsiy daxlsizligini hurmat qilgan holda bajariladi."
     },
     "ru": {
       "stats.items.0": "Проверенных специалистов",
@@ -109,7 +119,16 @@
       "benefits.items.3.text": "Ориентировочная цена видна при заказе. Без скрытых платежей.",
       "benefits.items.4.title": "Для близких тоже",
       "benefits.items.4.text": "Закажите медсестру для родителей или ребёнка со своего телефона.",
-      "benefits.items.5.text": "Заранее забронируйте процедуру на удобные вам дату и время."
+      "benefits.items.5.text": "Заранее забронируйте процедуру на удобные вам дату и время.",
+      "services.title": "Услуги и цены",
+      "services.items.kapelnitsa.title": "Постановка капельницы\t",
+      "services.items.yara.title": "Обработка и перевязка ран",
+      "services.text": "Указаны цены «от». Точная стоимость зависит от возраста пациента и выбранного специалиста.\t",
+      "services.note": "Стоимость видна при оформлении заказа. Если на месте понадобится дополнительная процедура, она оплачивается отдельно — только с вашего согласия.",
+      "services.items.bosim.title": "Установка венозного катетера",
+      "services.items.bosim.description": "Если несколько дней нужны капельницы или уколы в вену, ставится венозный катетер — не придётся каждый раз заново прокалывать вену.",
+      "services.items.korik.title": "Постановка клизмы",
+      "services.items.korik.description": "Очистительная или лекарственная клизма по назначению врача. Процедура проводится деликатно, с уважением к личному пространству пациента."
     },
     "en": {
       "stats.items.0": "Verified specialists",
@@ -161,7 +180,16 @@
       "benefits.items.3.text": "You see an estimated price when you book. No hidden fees.",
       "benefits.items.4.title": "For your loved ones too",
       "benefits.items.4.text": "Book a nurse for your parents or child from your own phone.",
-      "benefits.items.5.text": "Book a procedure in advance for a date and time that suits you."
+      "benefits.items.5.text": "Book a procedure in advance for a date and time that suits you.",
+      "services.title": "Services and prices",
+      "services.items.ukol.title": "IV and intramuscular injections",
+      "services.items.yara.title": "Wound cleaning and dressing",
+      "services.text": "Starting prices. The exact price depends on the patient’s age and the chosen specialist.",
+      "services.note": "You see the price when you book. If an extra procedure is needed on site, it’s charged separately — only with your approval.",
+      "services.items.bosim.title": " IV cannula placement",
+      "services.items.bosim.description": "If you need IV drips or injections for several days, a cannula is placed in a vein so it doesn’t have to be punctured every time.",
+      "services.items.korik.title": "Enema",
+      "services.items.korik.description": "A cleansing or medicated enema as prescribed by a doctor, performed discreetly and with respect for the patient’s privacy."
     }
   },
   "why": {
