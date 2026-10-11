@@ -44,6 +44,9 @@ const TRANSLATIONS: Record<Locale, string>[] = [
   { uz: "/chaqaloqni-uyda-chomiltirish", ru: "/ru/kak-kupat-novorozhdennogo-doma", en: "/en/how-to-bathe-a-newborn-at-home" },
   { uz: "/onlayn-hamshira-2-0-app-update", ru: "/ru/onlayn-hamshira-2-0-app-update", en: "/en/onlayn-hamshira-2-0-app-update" },
   { uz: "/uyga-hamshira-chilonzor", ru: "/ru/medsestra-na-dom-chilanzar", en: "/home-nurse-chilanzar" },
+  { uz: "/operatsiyadan-keyin-choklarni-parvarish-qilish", ru: "/uhod-za-posleoperacionnymi-shvami", en: "/post-surgery-wound-care-tashkent" },
+  { uz: "/keksalarga-uyda-parvarish-toshkent", ru: "/uhod-za-pozhilymi-na-domu-tashkent", en: "/elderly-home-care-tashkent" },
+  { uz: "/bolalarga-uyda-enagalik-xizmati-toshkent", ru: "/nyanya-na-domu-tashkent", en: "/babysitter-at-home-tashkent" },
   // Ommaviy oferta shartnomasi
   { uz: "/hamshirapolitic", ru: "/ru/politichamshira", en: "/nurse-politic" },
 ];

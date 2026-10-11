@@ -1304,5 +1304,149 @@
    "en": "https://onlaynhamshira.uz/en/home-care-for-bedridden-patients",
    "x-default": "https://onlaynhamshira.uz/yotib-qolgan-bemorlarni-uyda-parvarish-qilish"
   }
+ },
+ "/operatsiyadan-keyin-choklarni-parvarish-qilish": {
+  "title": "Operatsiyadan keyin choklarni parvarish qilish | Onlayn Hamshira",
+  "description": "Operatsiyadan keyin choklarni uyda parvarish qilish, bog‘lovni almashtirish, infeksiya belgilarini kuzatish va qachon shifokorga murojaat qilish haqida qo‘llanma.",
+  "keywords": null,
+  "canonical": "https://onlaynhamshira.uz/operatsiyadan-keyin-choklarni-parvarish-qilish",
+  "ogUrl": "https://onlaynhamshira.uz/operatsiyadan-keyin-choklarni-parvarish-qilish",
+  "ogTitle": "Operatsiyadan keyin choklarni parvarish qilish | Onlayn Hamshira",
+  "ogDescription": "Operatsiyadan keyin choklarni uyda parvarish qilish, bog‘lovni almashtirish, infeksiya belgilarini kuzatish va qachon shifokorga murojaat qilish haqida qo‘llanma.",
+  "ogImage": null,
+  "hreflang": {
+   "uz": "https://onlaynhamshira.uz/operatsiyadan-keyin-choklarni-parvarish-qilish",
+   "ru": "https://onlaynhamshira.uz/uhod-za-posleoperacionnymi-shvami",
+   "en": "https://onlaynhamshira.uz/post-surgery-wound-care-tashkent",
+   "x-default": "https://onlaynhamshira.uz/operatsiyadan-keyin-choklarni-parvarish-qilish"
+  }
+ },
+ "/uhod-za-posleoperacionnymi-shvami": {
+  "title": "Уход за послеоперационными швами на дому в Ташкенте",
+  "description": "Как правильно ухаживать за послеоперационными швами, менять повязку и распознать признаки осложнений. Перевязка на дому в Ташкенте через Onlayn Hamshira.",
+  "keywords": null,
+  "canonical": "https://onlaynhamshira.uz/uhod-za-posleoperacionnymi-shvami",
+  "ogUrl": "https://onlaynhamshira.uz/uhod-za-posleoperacionnymi-shvami",
+  "ogTitle": "Уход за послеоперационными швами на дому в Ташкенте",
+  "ogDescription": "Как правильно ухаживать за послеоперационными швами, менять повязку и распознать признаки осложнений. Перевязка на дому в Ташкенте через Onlayn Hamshira.",
+  "ogImage": null,
+  "hreflang": {
+   "uz": "https://onlaynhamshira.uz/operatsiyadan-keyin-choklarni-parvarish-qilish",
+   "ru": "https://onlaynhamshira.uz/uhod-za-posleoperacionnymi-shvami",
+   "en": "https://onlaynhamshira.uz/post-surgery-wound-care-tashkent",
+   "x-default": "https://onlaynhamshira.uz/operatsiyadan-keyin-choklarni-parvarish-qilish"
+  }
+ },
+ "/post-surgery-wound-care-tashkent": {
+  "title": "Post-Surgery Wound Care at Home in Tashkent",
+  "description": "Learn how to care for a surgical incision at home, change dressings safely, recognize signs of infection, and request a home nurse in Tashkent.",
+  "keywords": null,
+  "canonical": "https://onlaynhamshira.uz/post-surgery-wound-care-tashkent",
+  "ogUrl": "https://onlaynhamshira.uz/post-surgery-wound-care-tashkent",
+  "ogTitle": "Post-Surgery Wound Care at Home in Tashkent",
+  "ogDescription": "Learn how to care for a surgical incision at home, change dressings safely, recognize signs of infection, and request a home nurse in Tashkent.",
+  "ogImage": null,
+  "hreflang": {
+   "uz": "https://onlaynhamshira.uz/operatsiyadan-keyin-choklarni-parvarish-qilish",
+   "ru": "https://onlaynhamshira.uz/uhod-za-posleoperacionnymi-shvami",
+   "en": "https://onlaynhamshira.uz/post-surgery-wound-care-tashkent",
+   "x-default": "https://onlaynhamshira.uz/operatsiyadan-keyin-choklarni-parvarish-qilish"
+  }
+ },
+ "/keksalarga-uyda-parvarish-toshkent": {
+  "title": "Keksalarga uyda parvarish xizmati Toshkentda | 8 soatlik parvarish",
+  "description": "Toshkentda keksalar uchun 8 soatlik uyda parvarish xizmati, xizmat tarkibi, bir kunlik va bir necha kunlik parvarish hamda buyurtma berish tartibi.",
+  "keywords": null,
+  "canonical": "https://onlaynhamshira.uz/keksalarga-uyda-parvarish-toshkent",
+  "ogUrl": "https://onlaynhamshira.uz/keksalarga-uyda-parvarish-toshkent",
+  "ogTitle": "Keksalarga uyda parvarish xizmati Toshkentda | 8 soatlik parvarish",
+  "ogDescription": "Toshkentda keksalar uchun 8 soatlik uyda parvarish xizmati, xizmat tarkibi, bir kunlik va bir necha kunlik parvarish hamda buyurtma berish tartibi.",
+  "ogImage": null,
+  "hreflang": {
+   "uz": "https://onlaynhamshira.uz/keksalarga-uyda-parvarish-toshkent",
+   "ru": "https://onlaynhamshira.uz/uhod-za-pozhilymi-na-domu-tashkent",
+   "en": "https://onlaynhamshira.uz/elderly-home-care-tashkent",
+   "x-default": "https://onlaynhamshira.uz/keksalarga-uyda-parvarish-toshkent"
+  }
+ },
+ "/uhod-za-pozhilymi-na-domu-tashkent": {
+  "title": "Уход за пожилыми на дому в Ташкенте",
+  "description": "Уход за пожилыми людьми и лежачими пациентами на дому в Ташкенте. Помощь с гигиеной, питанием и повседневным уходом",
+  "keywords": null,
+  "canonical": "https://onlaynhamshira.uz/uhod-za-pozhilymi-na-domu-tashkent",
+  "ogUrl": "https://onlaynhamshira.uz/uhod-za-pozhilymi-na-domu-tashkent",
+  "ogTitle": "Уход за пожилыми на дому в Ташкенте",
+  "ogDescription": "Уход за пожилыми людьми и лежачими пациентами на дому в Ташкенте. Помощь с гигиеной, питанием и повседневным уходом",
+  "ogImage": null,
+  "hreflang": {
+   "uz": "https://onlaynhamshira.uz/keksalarga-uyda-parvarish-toshkent",
+   "ru": "https://onlaynhamshira.uz/uhod-za-pozhilymi-na-domu-tashkent",
+   "en": "https://onlaynhamshira.uz/elderly-home-care-tashkent",
+   "x-default": "https://onlaynhamshira.uz/keksalarga-uyda-parvarish-toshkent"
+  }
+ },
+ "/elderly-home-care-tashkent": {
+  "title": "Elderly Home Care in Tashkent |Daily Care",
+  "description": "Elderly home care in Tashkent for daily support with hygiene, meals, mobility, and care for bedridden patients. Book for one or several days.",
+  "keywords": null,
+  "canonical": "https://onlaynhamshira.uz/elderly-home-care-tashkent",
+  "ogUrl": "https://onlaynhamshira.uz/elderly-home-care-tashkent",
+  "ogTitle": "Elderly Home Care in Tashkent |Daily Care",
+  "ogDescription": "Elderly home care in Tashkent for daily support with hygiene, meals, mobility, and care for bedridden patients. Book for one or several days.",
+  "ogImage": null,
+  "hreflang": {
+   "uz": "https://onlaynhamshira.uz/keksalarga-uyda-parvarish-toshkent",
+   "ru": "https://onlaynhamshira.uz/uhod-za-pozhilymi-na-domu-tashkent",
+   "en": "https://onlaynhamshira.uz/elderly-home-care-tashkent",
+   "x-default": "https://onlaynhamshira.uz/keksalarga-uyda-parvarish-toshkent"
+  }
+ },
+ "/bolalarga-uyda-enagalik-xizmati-toshkent": {
+  "title": "Bolalarga uyda enagalik xizmati Toshkentda | Ishonchli enaga xizmati",
+  "description": "Toshkentda bolalar uchun uyda enagalik xizmati: kunlik va qisqa muddatli enaga chaqirish, xizmat shartlari, afzalliklari va Onlayn Hamshira orqali buyurtma berish.",
+  "keywords": null,
+  "canonical": "https://onlaynhamshira.uz/bolalarga-uyda-enagalik-xizmati-toshkent",
+  "ogUrl": "https://onlaynhamshira.uz/bolalarga-uyda-enagalik-xizmati-toshkent",
+  "ogTitle": "Bolalarga uyda enagalik xizmati Toshkentda | Ishonchli enaga xizmati",
+  "ogDescription": "Toshkentda bolalar uchun uyda enagalik xizmati: kunlik va qisqa muddatli enaga chaqirish, xizmat shartlari, afzalliklari va Onlayn Hamshira orqali buyurtma berish.",
+  "ogImage": null,
+  "hreflang": {
+   "uz": "https://onlaynhamshira.uz/bolalarga-uyda-enagalik-xizmati-toshkent",
+   "ru": "https://onlaynhamshira.uz/nyanya-na-domu-tashkent",
+   "en": "https://onlaynhamshira.uz/babysitter-at-home-tashkent",
+   "x-default": "https://onlaynhamshira.uz/bolalarga-uyda-enagalik-xizmati-toshkent"
+  }
+ },
+ "/nyanya-na-domu-tashkent": {
+  "title": "Няня на дому в Ташкенте | Уход за ребенком",
+  "description": "Няня на дому в Ташкенте для временного ухода за ребенком. Помощь с кормлением, играми, режимом дня и присмотром на один или несколько дней.",
+  "keywords": null,
+  "canonical": "https://onlaynhamshira.uz/nyanya-na-domu-tashkent",
+  "ogUrl": "https://onlaynhamshira.uz/nyanya-na-domu-tashkent",
+  "ogTitle": "Няня на дому в Ташкенте | Уход за ребенком",
+  "ogDescription": "Няня на дому в Ташкенте для временного ухода за ребенком. Помощь с кормлением, играми, режимом дня и присмотром на один или несколько дней.",
+  "ogImage": null,
+  "hreflang": {
+   "uz": "https://onlaynhamshira.uz/bolalarga-uyda-enagalik-xizmati-toshkent",
+   "ru": "https://onlaynhamshira.uz/nyanya-na-domu-tashkent",
+   "en": "https://onlaynhamshira.uz/babysitter-at-home-tashkent",
+   "x-default": "https://onlaynhamshira.uz/bolalarga-uyda-enagalik-xizmati-toshkent"
+  }
+ },
+ "/babysitter-at-home-tashkent": {
+  "title": "Babysitter at Home in Tashkent | Childcare Support",
+  "description": "Babysitter at home in Tashkent for temporary childcare, meals, playtime, naps and daily routines. Book support for one day or several days.",
+  "keywords": null,
+  "canonical": "https://onlaynhamshira.uz/babysitter-at-home-tashkent",
+  "ogUrl": "https://onlaynhamshira.uz/babysitter-at-home-tashkent",
+  "ogTitle": "Babysitter at Home in Tashkent | Childcare Support",
+  "ogDescription": "Babysitter at home in Tashkent for temporary childcare, meals, playtime, naps and daily routines. Book support for one day or several days.",
+  "ogImage": null,
+  "hreflang": {
+   "uz": "https://onlaynhamshira.uz/bolalarga-uyda-enagalik-xizmati-toshkent",
+   "ru": "https://onlaynhamshira.uz/nyanya-na-domu-tashkent",
+   "en": "https://onlaynhamshira.uz/babysitter-at-home-tashkent",
+   "x-default": "https://onlaynhamshira.uz/bolalarga-uyda-enagalik-xizmati-toshkent"
+  }
  }
 }

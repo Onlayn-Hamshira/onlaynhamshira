@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 // SEO regressiya tekshiruvi: ishlab turgan sayt (standart: http://localhost:3000) Tilda'dagi
-// 86 URL'ning <head> qiymatlari bilan solishtiriladi (docs/seo-baseline/expected-head.json).
+// 95 URL'ning <head> qiymatlari bilan solishtiriladi (docs/seo-baseline/expected-head.json).
 //
 //   npm run build && npm start      # boshqa terminalda
 //   npm run seo:check               # yoki: node scripts/seo-check.mjs http://localhost:3311
@@ -92,12 +92,18 @@ for (const [url, h] of heads) {
   }
 }
 
-// sitemap: asl 86 URL kamaymasligi kerak
+// sitemap: asl 95 URL kamaymasligi kerak
 const locs = (xml) => new Set([...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1].replace(/\/$/, "")));
 const sm = await (await fetch(BASE + "/sitemap.xml")).text();
 const mine = locs(sm);
 for (const u of locs(originalSitemap)) if (!mine.has(u)) fail("/sitemap.xml", `yo'q: ${u}`);
+// Format va tartib Tilda'niki bilan bayt-ma-bayt bir xil (yangi sahifalar faqat oxiriga qo'shiladi)
+const tail = "</urlset>\n";
+if (!sm.startsWith(originalSitemap.slice(0, -tail.length)) || !sm.endsWith(tail))
+  fail("/sitemap.xml", "Tilda sitemap'idan farq qiladi (format, tartib yoki lastmod) — docs/seo-baseline/sitemap-original.xml");
 const robots = await (await fetch(BASE + "/robots.txt")).text();
+if (robots !== fs.readFileSync(new URL("../docs/seo-baseline/robots-original.txt", import.meta.url), "utf8"))
+  fail("/robots.txt", "Tilda robots.txt'dan farq qiladi — docs/seo-baseline/robots-original.txt");
 if (!/Sitemap:\s*https:\/\/onlaynhamshira\.uz\/sitemap\.xml/.test(robots)) fail("/robots.txt", "Sitemap qatori yo'q");
 if (/Disallow:\s*\/\s*$/m.test(robots)) fail("/robots.txt", "butun sayt yopilgan (Disallow: /)!");
 

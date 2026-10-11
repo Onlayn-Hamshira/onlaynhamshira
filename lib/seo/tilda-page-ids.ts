@@ -88,4 +88,13 @@ export const TILDA_PAGE_IDS: Record<string, string> = {
   "150105453": "/uyga-hamshira-chilonzor",
   "104952266": "/uzbekistan",
   "254822203": "/yotib-qolgan-bemorlarni-uyda-parvarish-qilish",
+  "279385803": "/operatsiyadan-keyin-choklarni-parvarish-qilish",
+  "282384603": "/keksalarga-uyda-parvarish-toshkent",
+  "282396403": "/bolalarga-uyda-enagalik-xizmati-toshkent",
+  "282575403": "/uhod-za-posleoperacionnymi-shvami",
+  "282588203": "/uhod-za-pozhilymi-na-domu-tashkent",
+  "282599903": "/nyanya-na-domu-tashkent",
+  "282620203": "/post-surgery-wound-care-tashkent",
+  "282632203": "/elderly-home-care-tashkent",
+  "282643903": "/babysitter-at-home-tashkent",
 };
