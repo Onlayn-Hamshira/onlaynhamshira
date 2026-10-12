@@ -162,6 +162,7 @@ const en: Dict = {
     perks: ["The nurse brings all necessary supplies", "Pay after the service", "No hidden fees"],
     note: "An estimated price is shown when you book; the final price is confirmed once the nurse arrives.",
     items: {
+      chaqiruv: { title: "Specialist home call-out", short: "Call-out", duration: "30–90 min", description: "The cost of a nurse or specialist coming to your address. Procedures are priced separately and added to the call-out fee." },
       ukol: { title: "Intravenous and intramuscular injections", short: "Injection", duration: "15–20 min", description: "Administering medication prescribed by your doctor under sterile conditions with single-use supplies." },
       kapelnitsa: { title: "IV drip", short: "IV drip", duration: "40–90 min", description: "The nurse sets up the drip and monitors the patient until the procedure is finished." },
       yara: { title: "Wound dressing and care", short: "Dressing", duration: "20–30 min", description: "Cleaning the wound, antiseptic treatment, changing dressings and post-surgical stitch care." },

@@ -58,7 +58,7 @@ export function PlayStoreScreen(p: ScreenProps) {
         </div>
       </div>
       <div className={s["ps-stats"]}>
-        <div><b>4.3 ★</b>{t.reviews}</div>
+        <div><b>4.8 ★</b>{t.reviews}</div>
         <div><b>3+</b>{t.rated}</div>
         <div><b>10K+</b>{t.downloads}</div>
       </div>

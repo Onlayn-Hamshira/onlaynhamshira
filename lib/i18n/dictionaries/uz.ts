@@ -164,6 +164,7 @@ const uz = {
     perks: ["Hamshira kerakli anjomlarni o‘zi olib keladi", "Xizmat yakunlanganidan so‘ng to‘lov", "Yashirin to‘lovlarsiz"],
     note: "Buyurtma berish jarayonida taxminiy narx ko‘rinadi, hamshira manzilga kelgandan so‘ng yakuniy narx tasdiqlanadi.",
     items: {
+      chaqiruv: { title: "Mutaxassisni uyga chaqirish", short: "Chaqiruv", duration: "30–90 daqiqa", description: "Hamshira yoki mutaxassisning manzilingizga kelish narxi. Muolajalar narxi alohida hisoblanib, chaqiruv narxiga qo‘shiladi." },
       ukol: { title: "Tomir ichiga va yonboshga ukol qilish", short: "Ukol", duration: "15–20 daqiqa", description: "Shifokor tavsiyasi bo‘yicha dori vositalarini steril sharoitda, bir martalik anjomlar bilan yuborish." },
       kapelnitsa: { title: "Sistema (kapelnitsa) qo‘yish", short: "Kapelnitsa", duration: "40–90 daqiqa", description: "Hamshira sistema qo‘yadi va muolaja tugaguncha bemor holatini kuzatib turadi." },
       yara: { title: "Yaralarni bog‘lash va davolash", short: "Bog‘lam", duration: "20–30 daqiqa", description: "Yarani tozalash, antiseptik ishlov berish va bog‘lamni almashtirish, operatsiyadan keyingi choklar parvarishi." },

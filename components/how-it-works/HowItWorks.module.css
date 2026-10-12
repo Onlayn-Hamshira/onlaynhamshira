@@ -93,7 +93,7 @@
 .ps-app{display:flex;gap:14px;align-items:center;padding:22px 18px 0}
 .ps-icon{position:relative;width:62px;height:62px;flex:none}
 .ps-icon .ic{position:absolute;inset:0;border-radius:16px;background:#fff;box-shadow:0 0 0 1px #E3E3E3,0 1px 3px rgba(0,0,0,.08);display:grid;place-items:center;transition:transform .4s,border-radius .4s}
-.ps-icon svg.logo{width:50px;height:50px}
+.ps-icon .logo{width:auto;height:46px}
 .ps-icon .ring{position:absolute;inset:-6px;width:74px;height:74px;transform:rotate(-90deg);opacity:0;transition:opacity .3s}
 .ps-icon .ring circle{fill:none;stroke:#0B57D0;stroke-width:3;stroke-dasharray:220;stroke-dashoffset:220;stroke-linecap:round}
 .s0[data-st="loading"] .ps-icon .ring{opacity:1}

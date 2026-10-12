@@ -10,6 +10,9 @@ const MAP: Record<ServiceIcon, IconName> = {
   stethoscope: "stethoscope",
   flask: "testtube",
   hand: "massage",
+  catheter: "catheter",
+  enema: "enema",
+  homeVisit: "homeVisit",
 };
 
 export function ServiceGlyph({

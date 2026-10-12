@@ -28,20 +28,21 @@ export const IMAGES = {
 // Sahifa/bo'lim havolalari (har til uchun) — lib/nav.ts da
 
 export type ServiceIcon =
-  | "syringe" | "droplet" | "bandage" | "gauge" | "bed" | "stethoscope" | "flask" | "hand";
+  | "syringe" | "droplet" | "bandage" | "gauge" | "bed" | "stethoscope" | "flask" | "hand" | "catheter" | "enema" | "homeVisit";
 
-export type ServiceId = "ukol" | "kapelnitsa" | "yara" | "bosim" | "parvarish" | "korik" | "tahlil" | "massaj";
+export type ServiceId = "chaqiruv" | "ukol" | "kapelnitsa" | "yara" | "bosim" | "parvarish" | "korik" | "tahlil" | "massaj";
 
 export type Service = { id: ServiceId; priceFrom: number; icon: ServiceIcon };
 
 // Narxlar so'mda, TAXMINIY. Admin paneldan o'zgartirilgani — content/edits/prices.json (ustun)
 const SERVICE_LIST: Service[] = [
+  { id: "chaqiruv", priceFrom: 50000, icon: "homeVisit" },
   { id: "ukol", priceFrom: 50000, icon: "syringe" },
   { id: "kapelnitsa", priceFrom: 150000, icon: "droplet" },
   { id: "yara", priceFrom: 80000, icon: "bandage" },
-  { id: "bosim", priceFrom: 40000, icon: "gauge" },
+  { id: "bosim", priceFrom: 40000, icon: "catheter" },
   { id: "parvarish", priceFrom: 200000, icon: "bed" },
-  { id: "korik", priceFrom: 150000, icon: "stethoscope" },
+  { id: "korik", priceFrom: 150000, icon: "enema" },
   { id: "tahlil", priceFrom: 70000, icon: "flask" },
   { id: "massaj", priceFrom: 120000, icon: "hand" },
 ];

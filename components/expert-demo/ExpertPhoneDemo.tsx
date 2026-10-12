@@ -225,7 +225,7 @@ export function ExpertPhoneDemo({ t }: { t: ExpertDemoDict }) {
                   <div>
                     <p>Onlayn Hamshira Mutaxassis</p>
                     <small>ONLAYN HAMSHIRA LLC • Productivity</small>
-                    <em>4.6 <Star size={9} fill="currentColor" /> &nbsp; 2.2 MB</em>
+                    <em>4.8 <Star size={9} fill="currentColor" /> &nbsp; 2.2 MB</em>
                   </div>
                 </div>
                 <div className={s.psRow}>
@@ -267,7 +267,7 @@ export function ExpertPhoneDemo({ t }: { t: ExpertDemoDict }) {
                 </div>
               </div>
               <div className={s.storeStats}>
-                <div><b>4.6 ★</b>{t.store.reviews}</div>
+                <div><b>4.8 ★</b>{t.store.reviews}</div>
                 <div><b>3+</b>Rated 3+</div>
                 <div><b>2.2 MB</b>&nbsp;</div>
               </div>
