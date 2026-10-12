@@ -105,7 +105,13 @@
       "specialists.items.4.note": "Bolalar shifokori uyga keladi",
       "specialists.items.7.note": "Umumiy ko‘rik va maslahat",
       "specialists.items.13.title": "Uyda EKG",
-      "specialists.items.13.note": "Elektrokardiogramma"
+      "specialists.items.13.note": "Elektrokardiogramma",
+      "join.title": "Hamshira, feldsher, shifokor yoki massajchimisiz? Platformaga hamkor sifatida qo‘shiling",
+      "join.text": "Arizani onlayn to‘ldiring: shartlar bilan tanishasiz, saralash va o‘quv videosidan o‘tasiz. Istalgan bosqichda to‘xtab, keyin davom ettirishingiz mumkin.",
+      "join.steps.2": "Buyurtmalarni qabul qilish",
+      "join.details": "Hamkorlik shartlari",
+      "join.mock.specialty": "MUTAXASSISLIK",
+      "join.mock.experienceValue": "5 yildan ortiq"
     },
     "ru": {
       "stats.items.0": "Проверенных специалистов",
@@ -203,7 +209,14 @@
       "specialists.items.3.note": "Для малышей и детей",
       "specialists.items.7.note": "Общий осмотр и консультация",
       "specialists.items.13.title": "ЭКГ на дому",
-      "specialists.items.13.note": "Электрокардиограмма"
+      "specialists.items.13.note": "Электрокардиограмма",
+      "join.title": "Вы медсестра, фельдшер, врач или массажист? Станьте партнёром платформы",
+      "join.text": "Заполните заявку онлайн: вы познакомитесь с условиями, пройдёте отбор и обучающее видео. Можно остановиться на любом этапе и продолжить позже.",
+      "join.steps.2": "Приём заказов",
+      "join.details": "Условия сотрудничества",
+      "join.mock.brand": "Заявка на партнёрство",
+      "join.mock.specialty": "СПЕЦИАЛЬНОСТЬ",
+      "join.mock.experienceValue": "Более 5 лет"
     },
     "en": {
       "stats.items.0": "Verified specialists",
@@ -305,7 +318,15 @@
       "specialists.items.7.note": "General check-up and advice",
       "specialists.items.8.title": "ENT specialist",
       "specialists.items.13.title": "ECG at home",
-      "specialists.items.13.note": "Electrocardiogram"
+      "specialists.items.13.note": "Electrocardiogram",
+      "join.title": "Are you a nurse, paramedic, doctor or massage therapist? Join the platform as a partner",
+      "join.text": "Apply online: you’ll review the terms, go through screening and watch a training video. You can pause at any step and continue later.",
+      "join.steps.1": "Screening and interview",
+      "join.steps.2": "Start taking orders",
+      "join.details": "Partnership terms",
+      "join.mock.brand": "Partnership application",
+      "join.mock.specialty": "SPECIALTY",
+      "join.mock.experienceValue": "5+ years"
     }
   },
   "why": {
