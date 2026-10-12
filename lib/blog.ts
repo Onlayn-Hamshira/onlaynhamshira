@@ -8,7 +8,7 @@ import { LEGACY_ROUTES } from "@/lib/seo/routes";
 
 export { BLOG_TOPICS, formatDate } from "./blog-shared";
 export type { BlogEntry, BlogImage, BlogTopic, TocItem } from "./blog-shared";
-import type { BlogEntry, BlogImage, BlogTopic, TocItem } from "./blog-shared";
+import { BLOG_TOPICS, type BlogEntry, type BlogImage, type BlogTopic, type TocItem } from "./blog-shared";
 
 const ARTICLE_GROUPS = new Set(["blogPost", "article"]);
 export const isArticle = (pg: LegacyPage) => ARTICLE_GROUPS.has(pg.group);
@@ -38,7 +38,8 @@ const TOPIC_RULES: [BlogTopic, RegExp][] = [
   ["care", /operats|postoperat|posleoper|surgery|saraton|onkolog|palliativ|yotib|lezhach|bedridden|keksa|pozhil|elderly/],
   ["prevention", /immun|infek|infekts|infection|habits|privych|odatlar|profilakt|detok|detox/],
 ];
-const topicOf = (pg: LegacyPage): BlogTopic => TOPIC_RULES.find(([, re]) => re.test(pg.path))?.[0] ?? "nurse";
+const topicOf = (pg: LegacyPage): BlogTopic =>
+  (BLOG_TOPICS as string[]).includes(pg.post?.topic ?? "") ? (pg.post!.topic as BlogTopic) : (TOPIC_RULES.find(([, re]) => re.test(pg.path))?.[0] ?? "nurse");
 
 /** Daqiqada o'qish vaqti (~200 so'z/daqiqa) */
 const minutesOf = (html: string) => Math.max(1, Math.round(plain(html).split(" ").length / 200));
@@ -112,7 +113,7 @@ export function parseArticle(pg: LegacyPage): Parsed {
   });
 
   const firstP = html.match(/<p[^>]*>([\s\S]*?)<\/p>/);
-  const desc = pg.meta.description ?? (firstP ? plain(firstP[1]) : "");
+  const desc = pg.post?.excerpt ?? pg.meta.description ?? (firstP ? plain(firstP[1]) : "");
   const entry: BlogEntry = {
     href: pg.path,
     lang: pg.contentLang,
@@ -121,7 +122,7 @@ export function parseArticle(pg: LegacyPage): Parsed {
     cover,
     topic: topicOf(pg),
     minutes: minutesOf(pg.html),
-    updated: LEGACY_ROUTES.find((r) => r.path === pg.path)?.lastmod,
+    updated: LEGACY_ROUTES.find((r) => r.path === pg.path)?.lastmod ?? pg.post?.updated,
   };
   const res = { title, cover, body: html, toc, entry };
   parsedCache.set(pg, res);
@@ -131,7 +132,7 @@ export function parseArticle(pg: LegacyPage): Parsed {
 const byPath = () => new Map(legacyPages().map((p) => [p.path, p]));
 
 /**
- * Blog ro'yxati: avval Tilda'dagi blog sahifasida tanlangan tartib (havolalar o'z sahifasidan sarlavha/rasm oladi —
+ * Blog ro'yxati: avval admin qo'shgan "boshida" maqolalar, so'ng Tilda'dagi blog sahifasida tanlangan tartib (havolalar o'z sahifasidan sarlavha/rasm oladi —
  * Tilda'dagi noto'g'ri havola matnlari tuzaladi, takrorlar olib tashlanadi), so'ng shu tildagi qolgan blog maqolalari.
  * Kartochka rasmi — Tilda blog sahifasidagi miniatyura (bo'lmasa maqola muqovasi).
  */
@@ -146,6 +147,8 @@ export function blogEntries(index: LegacyPage): BlogEntry[] {
     out.push(thumb ? { ...entry, cover: thumb } : entry);
   };
 
+  // Admin qo'shgan, "boshida ko'rsatilsin" belgilangan maqolalar — eng yangisi birinchi (bosh sahifa "Yangiliklar"i ham shu tartibda)
+  for (const pg of [...legacyPages()].filter((p) => p.post?.featured).sort((a, b) => b.post!.created.localeCompare(a.post!.created))) add(pg);
   // Tilda blog sahifasi: <figure><a href><img></a></figure> + <p><a href>sarlavha</a></p>
   for (const m of index.html.matchAll(/<figure[^>]*>\s*<a href="([^"]+)"[^>]*>\s*(<img[^>]*>)/g)) {
     add(pages.get(m[1]), imageOf(m[2]));

@@ -80,7 +80,8 @@ export async function generateMetadata({ params }: PageProps<"/[lang]/[...slug]"
     // Tilda'dagi qiymatlar (boshqa maqolaga canonical, har sahifada bosh sahifa hreflang'i) xato edi.
     alternates: {
       canonical: pg.path,
-      languages: hreflangAlternates(pg.path),
+      // Admin qo'shgan maqola uchala tilda bor — nusxalari bir-biriga ko'rsatadi
+      languages: pg.post ? { ...pg.post.alternates, "x-default": pg.post.alternates.uz } : hreflangAlternates(pg.path),
     },
     openGraph: {
       url: meta.og.url ?? pg.path,
@@ -138,7 +139,7 @@ export default async function LegacyRoute({ params }: PageProps<"/[lang]/[...slu
       <a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[200] focus:rounded-full focus:bg-ink focus:px-5 focus:py-3 focus:text-white">
         {t.common.skipToContent}
       </a>
-      <Header lang={lang} t={t.header} common={t.common} home={home} current={NAV_KEY_BY_GROUP[pg.group]} alternates={{ ...(pageAlternates(pg.path, pg.group) ?? homes), [lang]: pg.path }} />
+      <Header lang={lang} t={t.header} common={t.common} home={home} current={NAV_KEY_BY_GROUP[pg.group]} alternates={{ ...(pg.post?.alternates ?? pageAlternates(pg.path, pg.group) ?? homes), [lang]: pg.path }} />
       {pg.group === "expert" ? (
         // Hamkor sahifasi — Tilda HTML o'rniga alohida dizayn (matnlar lib/expert.ts da, metadata JSON'da)
         <main id="main">

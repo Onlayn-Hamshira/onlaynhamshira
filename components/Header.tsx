@@ -87,9 +87,9 @@ export default function Header({
           </a>
 
           <nav aria-label={t.mainNav} className="ml-2 hidden lg:block xl:ml-4">
-            <ul className="flex items-center gap-0.5 xl:gap-1">
+            <ul data-oh-nav="primary" className="flex items-center gap-0.5 xl:gap-1">
               {primary.map((n) => (
-                <li key={n.key}>
+                <li key={n.key} data-oh-nav-key={n.key}>
                   <NavLink item={n} on={isOn(n.key)} section={isSection(n.key)} />
                 </li>
               ))}
@@ -155,10 +155,10 @@ export default function Header({
             </button>
           </div>
           <nav className="mt-8" aria-label={t.mobileNav}>
-            <ul className="space-y-1">
+            <ul data-oh-nav="primary" className="space-y-1">
               {/* Mobilda faqat sahifa havolalari — bosh sahifa bo'limlariga skroll (NAV_MORE) kerak emas */}
               {primary.map((n) => (
-                <li key={n.key}>
+                <li key={n.key} data-oh-nav-key={n.key}>
                   <a
                     href={n.href}
                     onClick={() => setMenu(false)}
@@ -271,11 +271,11 @@ function MoreMenu({ label, items, isOn }: { label: string; items: Item[]; isOn: 
       </button>
       {/* pt-2 — tugma va ro'yxat orasidagi "ko'prik": sichqoncha o'tayotganda yopilib qolmasin */}
       <div id={id} hidden={!open} className="absolute top-full left-0 z-10 pt-2">
-        <ul className="min-w-[240px] rounded-2xl bg-white p-1.5 shadow-[0_18px_40px_-16px_rgb(13_47_68/0.35)] ring-1 ring-line">
+        <ul data-oh-nav="more" className="min-w-[240px] rounded-2xl bg-white p-1.5 shadow-[0_18px_40px_-16px_rgb(13_47_68/0.35)] ring-1 ring-line">
           {items.map((n) => {
             const on = isOn(n.key);
             return (
-              <li key={n.key}>
+              <li key={n.key} data-oh-nav-key={n.key}>
                 <a
                   href={n.href}
                   onClick={() => setOpen(false)}

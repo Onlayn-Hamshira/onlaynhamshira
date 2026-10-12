@@ -12,6 +12,7 @@ import fs from "node:fs";
 import path from "node:path";
 import type { Locale } from "@/lib/i18n/config";
 import { LEGACY_ROUTES, type RouteGroup } from "./routes";
+import { postPages, type PostInfo } from "./posts";
 
 export type LegacyMeta = {
   htmlLang: string | null;
@@ -32,6 +33,8 @@ export type LegacyPage = {
   meta: LegacyMeta;
   jsonLd: unknown[];
   html: string;
+  /** Admin paneldan qo'shilgan maqola (content/edits/posts.json) — Tilda'dan kelganlarida yo'q */
+  post?: PostInfo;
 };
 
 const DIR = path.join(process.cwd(), "content/legacy");
@@ -63,8 +66,11 @@ export function legacyPages(): LegacyPage[] {
         const pg = JSON.parse(fs.readFileSync(path.join(DIR, f), "utf8")) as LegacyPage;
         files.set(pg.path, f);
         return { ...pg, html: withImageEdits(pg.html) };
-      })
-      .sort((a, b) => a.path.localeCompare(b.path));
+      });
+    // Admin qo'shgan maqolalar: mavjud sahifa manzilini egallay olmaydi
+    const taken = new Set(cache.map((p) => p.path));
+    for (const pg of postPages()) if (!taken.has(pg.path)) cache.push(pg);
+    cache.sort((a, b) => a.path.localeCompare(b.path));
   }
   return cache;
 }

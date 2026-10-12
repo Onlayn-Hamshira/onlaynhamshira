@@ -2,6 +2,7 @@
 // Har bir til o'z sahifasiga olib boradi: /ru dagi "Блог" → /ru/blog (o'zbekcha /blog emas).
 // ⚠️ Yo'llar Tilda'dagi URL'lar (lib/seo/routes.ts) — yangi yo'l o'ylab topmang.
 
+import navEdits from "@/content/edits/nav.json";
 import { localePath, type Locale } from "@/lib/i18n/config";
 
 /** Alohida sahifalar — har tilda mavjud manzili */
@@ -98,8 +99,21 @@ export const NAV_KEY_BY_GROUP: Partial<Record<string, NavKey>> = {
  * Header tuzilishi: boshqa sahifaga olib boradigan havolalar ochiq turadi,
  * bosh sahifa bo'limlariga skroll qiladiganlari — "Yana" ochiladigan ro'yxatida
  */
-export const NAV_PRIMARY: NavKey[] = ["blog", "partner", "why", "certificates", "contacts"];
-export const NAV_MORE: NavKey[] = ["services", "about", "specialists", "reviews", "faq"];
+export const BASE_NAV = {
+  primary: ["blog", "partner", "why", "certificates", "contacts"],
+  more: ["services", "about", "specialists", "reviews", "faq"],
+} satisfies Record<string, NavKey[]>;
+
+/**
+ * Admin paneldan o'zgartirilgan tartib (content/edits/nav.json: { primary?, more? }). Faqat o'sha punktlarning
+ * boshqa tartibi qabul qilinadi — punkt qo'shilsa/yo'qolsa (masalan, kod o'zgarganda) asl tartib qoladi.
+ */
+const NAV_EDITS = navEdits as Partial<Record<keyof typeof BASE_NAV, unknown>>;
+const ordered = (base: NavKey[], edit: unknown): NavKey[] =>
+  Array.isArray(edit) && edit.length === base.length && base.every((k) => edit.includes(k)) ? (edit as NavKey[]) : base;
+
+export const NAV_PRIMARY: NavKey[] = ordered(BASE_NAV.primary, NAV_EDITS.primary);
+export const NAV_MORE: NavKey[] = ordered(BASE_NAV.more, NAV_EDITS.more);
 
 const SECTION_KEYS: SectionKey[] = ["about", "services", "specialists", "reviews", "faq"];
 export const isSection = (k: NavKey): k is SectionKey => (SECTION_KEYS as string[]).includes(k);

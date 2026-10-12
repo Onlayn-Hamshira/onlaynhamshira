@@ -13,6 +13,7 @@ import { legacyFile, legacyPages } from "@/lib/seo/legacy";
 import { EDITABLE_IMAGE_PREFIXES } from "@/lib/edit/edits";
 import { LISTS, LOCKED, SOURCES } from "@/lib/edit/shared";
 import { BASE_PRICES, BASE_STATS } from "@/lib/data";
+import { BASE_NAV } from "@/lib/nav";
 
 
 export const dynamic = "force-static";
@@ -56,6 +57,8 @@ export async function GET() {
     prices: BASE_PRICES,
     // Bosh sahifadagi statistika (raqam + belgi, masalan "+"): asl qiymatlar; sahifada [data-oh-stat] bilan topiladi
     stats: BASE_STATS,
+    // Header menyusi tartibi (asl): ochiq punktlar va "Yana" ro'yxati; sahifada [data-oh-nav] / [data-oh-nav-key] bilan topiladi
+    nav: BASE_NAV,
     // Metadata — asl (Tilda) qiymatlar; admin tasdiq bilan o'zgartiradi (content/edits/seo.json)
     seo: [
       ...(await Promise.all(
@@ -83,7 +86,8 @@ export async function GET() {
       group: pg.group,
       lang: pg.contentLang,
       title: pg.meta.title,
-      blockEditable: !NO_BLOCK_EDIT.has(pg.group),
+      // Admin qo'shgan maqolalar o'z tahrirlovchisida (posts.json) — bloklab emas
+      blockEditable: !NO_BLOCK_EDIT.has(pg.group) && !pg.post,
     })),
   };
   return Response.json(body, { headers: { "X-Robots-Tag": "noindex, nofollow" } });
