@@ -82,7 +82,18 @@
       "app.text": "Hamshira, shifokor yoki massajchini uyga chaqiring. Buyurtmalar, bemorlar ro‘yxati va to‘lovlar — bitta ilovada.",
       "app.scanQr": "← Telefon kamerasi bilan QR kodni skanerlang",
       "app.aiChatSub": "Savollaringizga 24/7 javob beradi",
-      "app.onTheWaySub": "Odatda 30–90 daqiqada yetib keladi"
+      "app.onTheWaySub": "Odatda 30–90 daqiqada yetib keladi",
+      "safety.title": "Uyingizga kim kelishini bilasiz",
+      "safety.text": "Har bir mutaxassis platformaga qo‘shilishdan oldin tekshiruvdan o‘tadi. Buyurtmada uning ismi, rasmi va reytingini ko‘rasiz.",
+      "safety.items.0.title": "Tekshirilgan mutaxassislar",
+      "safety.items.0.text": "Diplom va sertifikatlarini tekshiramiz. Kamida 5 yillik ish tajribasi talab qilinadi.",
+      "safety.items.1.title": "Shartnoma asosida hamkorlik",
+      "safety.items.1.text": "Har bir mutaxassis platforma bilan hamkorlik shartnomasini tuzadi.",
+      "safety.items.2.title": "Har bir tashrifdan keyin baho",
+      "safety.items.2.text": "Buyurtmadan keyin mutaxassisni baholaysiz. Past baho va shikoyatlarni har safar ko‘rib chiqamiz.\t\t",
+      "safety.items.3.title": "24/7 qo‘llab-quvvatlash",
+      "safety.items.3.text": "Savol yoki muammo bo‘lsa, operatorimiz bemorlarga ham, mutaxassislarga ham yordam beradi.",
+      "safety.certificates": "Hujjatlarni ko‘rish\t\t"
     },
     "ru": {
       "stats.items.0": "Проверенных специалистов",
@@ -160,7 +171,18 @@
       "app.text": "Вызывайте медсестру, врача или массажиста на дом. Заказы, список пациентов и оплата — в одном приложении.\t",
       "app.scanQr": "← Отсканируйте QR-код камерой телефона",
       "app.aiChatSub": "Отвечает на вопросы 24/7",
-      "app.onTheWaySub": "Обычно приезжает за 30–90 минут"
+      "app.onTheWaySub": "Обычно приезжает за 30–90 минут",
+      "safety.title": "Вы знаете, кто придёт к вам домой",
+      "safety.text": "Каждый специалист проходит проверку перед подключением к платформе. В заказе вы видите его имя, фото и рейтинг.",
+      "safety.items.0.title": "Проверенные специалисты",
+      "safety.items.0.text": "Мы проверяем дипломы и сертификаты. Требуется опыт работы не менее 5 лет.",
+      "safety.items.1.title": "Сотрудничество по договору",
+      "safety.items.1.text": "Каждый специалист заключает с платформой договор о сотрудничестве.",
+      "safety.items.2.title": "Оценка после каждого визита",
+      "safety.items.2.text": "После заказа вы оцениваете специалиста. Каждую низкую оценку и жалобу мы рассматриваем.",
+      "safety.items.3.title": "Поддержка 24/7",
+      "safety.items.3.text": "Если возник вопрос или проблема, оператор поможет и пациентам, и специалистам.",
+      "safety.certificates": "Посмотреть документы"
     },
     "en": {
       "stats.items.0": "Verified specialists",
@@ -236,7 +258,18 @@
       "app.text": "Book a nurse, doctor or massage therapist at home. Orders, patient profiles and payments — all in one app.",
       "app.scanQr": "← Scan the QR code with your phone camera",
       "app.aiChatSub": "Answers your questions 24/7",
-      "app.onTheWaySub": "Usually arrives in 30–90 minutes"
+      "app.onTheWaySub": "Usually arrives in 30–90 minutes",
+      "safety.title": "You know who’s coming to your home",
+      "safety.text": "Every specialist is verified before joining the platform. You’ll see their name, photo and rating in your order.",
+      "safety.items.0.title": "Verified specialists",
+      "safety.items.0.text": "We check diplomas and certificates. At least 5 years of work experience is required.",
+      "safety.items.1.title": "Contract-based partnership",
+      "safety.items.1.text": "Every specialist signs a partnership agreement with the platform.",
+      "safety.items.2.title": "Rating after every visit",
+      "safety.items.2.text": "After each order, you rate the specialist. We review every low rating and complaint.",
+      "safety.items.3.title": "24/7 support",
+      "safety.items.3.text": "If you have a question or issue, our operator helps both patients and specialists.",
+      "safety.certificates": "View documents"
     }
   },
   "why": {
