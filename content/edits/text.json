@@ -93,7 +93,19 @@
       "safety.items.2.text": "Buyurtmadan keyin mutaxassisni baholaysiz. Past baho va shikoyatlarni har safar ko‘rib chiqamiz.\t\t",
       "safety.items.3.title": "24/7 qo‘llab-quvvatlash",
       "safety.items.3.text": "Savol yoki muammo bo‘lsa, operatorimiz bemorlarga ham, mutaxassislarga ham yordam beradi.",
-      "safety.certificates": "Hujjatlarni ko‘rish\t\t"
+      "safety.certificates": "Hujjatlarni ko‘rish\t\t",
+      "specialists.label": "Mutaxassislar",
+      "specialists.title": "Kerakli mutaxassisni tanlang",
+      "specialists.text": "Hamshiralar, shifokorlar, massajchilar va enagalar platformaga hamkor sifatida qo‘shilgan. Yo‘nalishni tanlang — mutaxassis uyingizga keladi.",
+      "specialists.groups.kids": "Bolalar uchun\t",
+      "specialists.items.0.note": "Ukol, tomchilatma, bog‘lash",
+      "specialists.items.1.note": "Oliy malaka toifasi, murakkab muolajalar",
+      "specialists.items.2.note": "Chaqaloq va bolalarga ukol, tomchilatma",
+      "specialists.items.3.note": "Chaqaloq va bolalar uchun",
+      "specialists.items.4.note": "Bolalar shifokori uyga keladi",
+      "specialists.items.7.note": "Umumiy ko‘rik va maslahat",
+      "specialists.items.13.title": "Uyda EKG",
+      "specialists.items.13.note": "Elektrokardiogramma"
     },
     "ru": {
       "stats.items.0": "Проверенных специалистов",
@@ -182,7 +194,16 @@
       "safety.items.2.text": "После заказа вы оцениваете специалиста. Каждую низкую оценку и жалобу мы рассматриваем.",
       "safety.items.3.title": "Поддержка 24/7",
       "safety.items.3.text": "Если возник вопрос или проблема, оператор поможет и пациентам, и специалистам.",
-      "safety.certificates": "Посмотреть документы"
+      "safety.certificates": "Посмотреть документы",
+      "specialists.label": "Специалисты",
+      "specialists.title": "Выберите нужного специалиста",
+      "specialists.text": "Медсёстры, врачи, массажисты и няни подключены к платформе как партнёры. Выберите направление — специалист приедет к вам домой.",
+      "specialists.items.1.note": "Высшая категория, сложные процедуры",
+      "specialists.items.2.note": "Уколы и капельницы малышам и детям",
+      "specialists.items.3.note": "Для малышей и детей",
+      "specialists.items.7.note": "Общий осмотр и консультация",
+      "specialists.items.13.title": "ЭКГ на дому",
+      "specialists.items.13.note": "Электрокардиограмма"
     },
     "en": {
       "stats.items.0": "Verified specialists",
@@ -269,7 +290,22 @@
       "safety.items.2.text": "After each order, you rate the specialist. We review every low rating and complaint.",
       "safety.items.3.title": "24/7 support",
       "safety.items.3.text": "If you have a question or issue, our operator helps both patients and specialists.",
-      "safety.certificates": "View documents"
+      "safety.certificates": "View documents",
+      "specialists.label": "Specialists",
+      "specialists.title": "Choose the specialist you need",
+      "specialists.text": "Nurses, doctors, massage therapists and nannies partner with our platform. Choose a category, and a specialist will come to your home.",
+      "specialists.groups.kids": "For children",
+      "specialists.items.1.title": "Senior-category nurse",
+      "specialists.items.1.note": "Highest qualification, complex procedures",
+      "specialists.items.2.note": "Injections and IV drips for babies and children",
+      "specialists.items.3.note": "For babies and children",
+      "specialists.items.4.note": "A children’s doctor at home",
+      "specialists.items.5.note": "Childcare at home",
+      "specialists.items.6.note": "Recovery massage",
+      "specialists.items.7.note": "General check-up and advice",
+      "specialists.items.8.title": "ENT specialist",
+      "specialists.items.13.title": "ECG at home",
+      "specialists.items.13.note": "Electrocardiogram"
     }
   },
   "why": {
