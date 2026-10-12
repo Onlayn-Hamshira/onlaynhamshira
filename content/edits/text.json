@@ -76,7 +76,11 @@
       "services.items.massaj.description": "Bolalar va ayollar uchun tiklovchi massaj: bir martalik seans yoki kurs.",
       "common.fromWord": " dan",
       "services.items.parvarish.description": "Terapevt, pediatr yoki boshqa mutaxassis shifokor uyingizga keladi. Bemorni ko‘rikdan o‘tkazadi va keyingi qadamlar bo‘yicha tavsiya beradi.",
-      "services.perks.0": "Terapevt · Pediatr · Boshqa mutaxassislar"
+      "services.perks.0": "Hamshira · Feldsher · Terapevt · Pediatr · Boshqa mutaxassislar",
+      "services.perks.1": "To‘lov — xizmatdan keyin\t\t",
+      "services.perks.2": "Yashirin to‘lovlar yo‘q",
+      "app.text": "Hamshira, shifokor yoki massajchini uyga chaqiring. Buyurtmalar, bemorlar ro‘yxati va to‘lovlar — bitta ilovada.",
+      "app.scanQr": "← Telefon kamerasi bilan QR kodni skanerlang"
     },
     "ru": {
       "stats.items.0": "Проверенных специалистов",
@@ -149,7 +153,10 @@
       "services.items.massaj.description": "Восстанавливающий массаж для детей и женщин: разовый сеанс или курс.",
       "common.fromWord": " от",
       "services.items.parvarish.description": "Терапевт, педиатр или другой врач-специалист приедет к вам домой. Осмотрит пациента и даст рекомендации по дальнейшим шагам.",
-      "services.perks.0": "Терапевт · Педиатр · Другие специалисты"
+      "services.perks.0": "Медсестра · Фельдшер ·Терапевт · Педиатр · Другие специалисты",
+      "services.perks.1": "Оплата после процедуры",
+      "app.text": "Вызывайте медсестру, врача или массажиста на дом. Заказы, список пациентов и оплата — в одном приложении.\t",
+      "app.scanQr": "← Отсканируйте QR-код камерой телефона"
     },
     "en": {
       "stats.items.0": "Verified specialists",
@@ -220,7 +227,10 @@
       "common.fromWord": " from",
       "services.items.parvarish.title": "Doctor home visit",
       "services.items.parvarish.description": "A general practitioner, pediatrician or another specialist comes to your home. The doctor examines the patient and advises on next steps.",
-      "services.perks.0": "GP · Pediatrician · Other specialists"
+      "services.perks.0": "Nurse · Paramedics · GP · Pediatrician · Other specialists",
+      "services.perks.1": "Pay after the visit",
+      "app.text": "Book a nurse, doctor or massage therapist at home. Orders, patient profiles and payments — all in one app.",
+      "app.scanQr": "← Scan the QR code with your phone camera"
     }
   },
   "why": {
