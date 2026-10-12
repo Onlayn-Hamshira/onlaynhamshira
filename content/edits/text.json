@@ -65,7 +65,8 @@
       "services.items.bosim.title": "Vena kateteri qo‘yish",
       "services.items.bosim.description": "Bir necha kun tomchilatma yoki vena ichiga ukol kerak bo‘lsa, venaga kateter (angiokateter) qo‘yiladi. Shunda venani har safar qayta teshish kerak bo‘lmaydi.",
       "services.items.korik.title": "Klizma qo‘yish",
-      "services.items.korik.description": "Shifokor tavsiyasi bilan tozalovchi yoki dorili klizma qo‘yiladi. Muolaja ehtiyotkorlik bilan, bemorning shaxsiy daxlsizligini hurmat qilgan holda bajariladi. Mutaxassis jinsini tanlashingiz mumkin."
+      "services.items.korik.description": "Shifokor tavsiyasi bilan tozalovchi yoki dorili klizma qo‘yiladi. Muolaja ehtiyotkorlik bilan, bemorning shaxsiy daxlsizligini hurmat qilgan holda bajariladi. Mutaxassis jinsini tanlashingiz mumkin.",
+      "services.items.parvarish.title": "Yotib qolgan bemor parvarishi"
     },
     "ru": {
       "stats.items.0": "Проверенных специалистов",
@@ -128,7 +129,8 @@
       "services.items.bosim.title": "Установка венозного катетера",
       "services.items.bosim.description": "Если несколько дней нужны капельницы или уколы в вену, ставится венозный катетер — не придётся каждый раз заново прокалывать вену.",
       "services.items.korik.title": "Постановка клизмы",
-      "services.items.korik.description": "Очистительная или лекарственная клизма по назначению врача. Процедура проводится деликатно, с уважением к личному пространству пациента. Вы можете выбрать пол специалиста."
+      "services.items.korik.description": "Очистительная или лекарственная клизма по назначению врача. Процедура проводится деликатно, с уважением к личному пространству пациента. Вы можете выбрать пол специалиста.",
+      "services.items.parvarish.title": "Уход за лежачими больными"
     },
     "en": {
       "stats.items.0": "Verified specialists",
