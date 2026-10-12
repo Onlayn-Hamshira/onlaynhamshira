@@ -80,7 +80,9 @@
       "services.perks.1": "To‘lov — xizmatdan keyin\t\t",
       "services.perks.2": "Yashirin to‘lovlar yo‘q",
       "app.text": "Hamshira, shifokor yoki massajchini uyga chaqiring. Buyurtmalar, bemorlar ro‘yxati va to‘lovlar — bitta ilovada.",
-      "app.scanQr": "← Telefon kamerasi bilan QR kodni skanerlang"
+      "app.scanQr": "← Telefon kamerasi bilan QR kodni skanerlang",
+      "app.aiChatSub": "Savollaringizga 24/7 javob beradi",
+      "app.onTheWaySub": "Odatda 30–90 daqiqada yetib keladi"
     },
     "ru": {
       "stats.items.0": "Проверенных специалистов",
@@ -156,7 +158,9 @@
       "services.perks.0": "Медсестра · Фельдшер ·Терапевт · Педиатр · Другие специалисты",
       "services.perks.1": "Оплата после процедуры",
       "app.text": "Вызывайте медсестру, врача или массажиста на дом. Заказы, список пациентов и оплата — в одном приложении.\t",
-      "app.scanQr": "← Отсканируйте QR-код камерой телефона"
+      "app.scanQr": "← Отсканируйте QR-код камерой телефона",
+      "app.aiChatSub": "Отвечает на вопросы 24/7",
+      "app.onTheWaySub": "Обычно приезжает за 30–90 минут"
     },
     "en": {
       "stats.items.0": "Verified specialists",
@@ -230,7 +234,9 @@
       "services.perks.0": "Nurse · Paramedics · GP · Pediatrician · Other specialists",
       "services.perks.1": "Pay after the visit",
       "app.text": "Book a nurse, doctor or massage therapist at home. Orders, patient profiles and payments — all in one app.",
-      "app.scanQr": "← Scan the QR code with your phone camera"
+      "app.scanQr": "← Scan the QR code with your phone camera",
+      "app.aiChatSub": "Answers your questions 24/7",
+      "app.onTheWaySub": "Usually arrives in 30–90 minutes"
     }
   },
   "why": {
