@@ -1,11 +1,11 @@
 {
   "dict": {
     "uz": {
-      "news.label": "Yangilik",
+      "news.label": "Blog",
       "blog.lead": "Uyda parvarish, profilaktika va sog‘lom turmush bo‘yicha hamshiralarimiz tajribasiga asoslangan foydali maqolalar",
       "hero.allDaySub": "dam olish va bayram kunlari ham",
       "stats.items.0": "Tekshirilgan mutaxassis",
-      "hero.lead": "Ukol, tomchilatma, bog‘lam va bemor parvarishi — o‘zingiz yoki yaqiningiz uchun.",
+      "hero.lead": "Onlayn Hamshira — uyga tibbiy mutaxassis chaqirish uchun raqamli platforma: biz sizni tekshirilgan hamshira, feldsher va shifokorlar bilan bog‘laymiz.",
       "header.nav.4": "Ko‘p beriladigan savollar",
       "header.partnerShort": "Mutaxassislarga",
       "header.certificates": "Hujjatlar",
@@ -111,7 +111,60 @@
       "join.steps.2": "Buyurtmalarni qabul qilish",
       "join.details": "Hamkorlik shartlari",
       "join.mock.specialty": "MUTAXASSISLIK",
-      "join.mock.experienceValue": "5 yildan ortiq"
+      "join.mock.experienceValue": "5 yildan ortiq",
+      "reviews.title": "15,000 dan ortiq foydalanuvchi bizga murojaat qilgan",
+      "reviews.text": "Bemorlar va ularning yaqinlari xizmat haqida nima deydi. Fikrlar ilovadagi baholardan olingan.",
+      "news.title": "Uyda parvarish haqida foydali maqolalar",
+      "news.text": "Muolajalar, bemor parvarishi va narxlar haqida sodda tilda yozilgan qo‘llanmalar.",
+      "faq.text": "Buyurtma berishdan oldin ko‘p so‘raladigan savollar.",
+      "faq.operators": "Operatorimiz yordam beradi — 24/7",
+      "faq.call": "Qo‘ng‘iroq qilish",
+      "faq.items": [
+        {
+          "q": "Onlayn Hamshira nima va u orqali qanday xizmatlarni buyurtma qilish mumkin?",
+          "a": "Onlayn Hamshira — klinika emas, raqamli platforma. U sizni tekshiruvdan o‘tgan mutaxassislar bilan bog‘laydi. Bu mutaxassislar platforma bilan hamkorlik shartnomasini tuzgan. Muolajani mutaxassisning o‘zi bajaradi, platforma esa buyurtma va aloqani tashkil qiladi.\n\nUyga quyidagilarni buyurtma qilish mumkin: ukol (vena ichiga, mushak orasiga), tomchilatma (kapelnitsa), vena kateteri qo‘yish, yarani tozalash va bog‘lash, klizma, tahlil uchun qon olish. Terapevt yoki pediatrni uyga chaqirish, bolalar va ayollar massaji hamda enaga xizmati ham bor. Hamshira shifokor buyurgan muolajalarni bajaradi.\t"
+        },
+        {
+          "q": "Xizmat narxi qanday hisoblanadi?",
+          "a": "Summa ikki qismdan iborat: chaqiruv narxi va tanlangan xizmatlar narxi. Chaqiruv bir tashrif uchun bir marta olinadi: umumiy hamshira — 30 000 so‘m, oliy toifali hamshira — 50 000 so‘m. Masalan: chaqiruv 30 000 + ukol 30 000 + tomchilatma 60 000 = 120 000 so‘m. Aniq summa buyurtma berayotganda ko‘rinadi. Qo‘shimcha muolaja faqat sizning roziligingiz bilan qo‘shiladi."
+        },
+        {
+          "q": "To‘lov qanday amalga oshiriladi?",
+          "a": "To‘lov — xizmatdan keyin. Naqd yoki karta orqali to‘lashingiz mumkin."
+        },
+        {
+          "q": "Hamshiralar malakasi qanday tekshiriladi?",
+          "a": "Bizning hamshiralar rasmiy tibbiyot ta’limiga ega, sertifikatlangan va amaliy tajribasi bor. Har bir hamshiraning hujjatlari tekshiriladi va xizmatga qabul qilishdan oldin suhbatdan o‘tkaziladi. Maqsad bemorga xavfsiz va to‘g‘ri yordam ko‘rsatish."
+        },
+        {
+          "q": "Qaysi holatlarda Onlayn Hamshira yordam bera olmaydi?",
+          "a": "Juda og‘ir, hayot uchun xavfli holatlarda biz yordam bera olmaymiz. Masalan, hushdan ketish, kuchli qon ketishi, infarkt alomatlari yoki og‘ir nafas yetishmovchiligi bo‘lsa, darhol 103 ga qo‘ng‘iroq qilish kerak. Bizning xizmat kundalik va o‘rta darajadagi muammo uchun mo‘ljallangan."
+        },
+        {
+          "q": "Xizmat qaysi hududlarda ishlaydi?",
+          "a": "Xizmat shaharning asosiy tumanlarida va qo‘shimcha ko‘rsatilgan (Namangan, Nukus, Farg‘ona, Toshkent, Samarqand) hududlarda mavjud. Buyurtma berayotganingizda manzilingizni kiritsangiz, tizim avtomatik ravishda xizmat mavjud yoki yo‘qligini ko‘rsatadi."
+        },
+        {
+          "q": "Hamshira kelishidan oldin nima qilishim kerak?",
+          "a": "Faqat bemor yotadigan yoki o‘tiradigan joyni tayyorlab qo‘ysangiz bo‘ladi. Agar dori, tibbiy yozuvlar yoki shifokor tavsiyalari bo‘lsa, qo‘l ostida turing. Hamshira o‘zi kerakli tibbiy anjomlarni olib keladi."
+        },
+        {
+          "q": "Shaxsiy ma’lumotlarim qanday saqlanadi?",
+          "a": "Barcha shaxsiy va tibbiy ma’lumotlaringiz maxfiy saqlanadi. Ular uchinchi shaxslarga berilmaydi va faqat xizmatni to‘g‘ri bajarish uchun ishlatiladi."
+        },
+        {
+          "q": "Xizmat sifati yaxshi bo‘lmasa, nima bo‘ladi?",
+          "a": "Agar xizmat siz kutgandek bo‘lmasa, qo‘llab-quvvatlashga murojaat qilsangiz, vaziyat tekshiriladi. Kerak bo‘lsa, pul qaytariladi yoki hamshira yana bepul yuboriladi. Maqsad bemorning rozi bo‘lishi."
+        },
+        {
+          "q": "Hamshira odatda qancha vaqtda yetib keladi?",
+          "a": "Odatda 30–90 daqiqa ichida etib keladi. Yaqin manzillar tezroq, uzoq tumanlar biroz sekinroq bo‘lishi mumkin. Buyurtma tasdiqlangandan keyin taxminiy kelish vaqti ko‘rsatiladi."
+        },
+        {
+          "q": "Savollarim bo‘lsa, qayerga yozsam bo‘ladi?",
+          "a": "Call-center, Telegram bot yoki rasmiy qo‘llab-quvvatlash orqali savollarni berishingiz mumkin. Operatorlar 24/7 yordam beradi."
+        }
+      ]
     },
     "ru": {
       "stats.items.0": "Проверенных специалистов",
@@ -216,7 +269,61 @@
       "join.details": "Условия сотрудничества",
       "join.mock.brand": "Заявка на партнёрство",
       "join.mock.specialty": "СПЕЦИАЛЬНОСТЬ",
-      "join.mock.experienceValue": "Более 5 лет"
+      "join.mock.experienceValue": "Более 5 лет",
+      "reviews.title": "Более 15,000 пользователей уже обратились к нам\t",
+      "reviews.text": "Что говорят пациенты и их близкие. Отзывы взяты из оценок в приложении.",
+      "news.label": "Блог",
+      "news.title": "Полезные статьи об уходе на дому",
+      "news.text": "Понятные руководства о процедурах, уходе за пациентом и ценах.",
+      "faq.text": "Что обычно спрашивают перед заказом.",
+      "faq.operators": "Наш оператор поможет — 24/7",
+      "hero.lead": "Onlayn Hamshira — цифровая платформа для вызова медицинских специалистов на дом: мы связываем вас с проверенными медсёстрами и врачами.",
+      "faq.items": [
+        {
+          "q": "Что такое Onlayn Hamshira и какие услуги можно заказать?",
+          "a": "Onlayn Hamshira — не клиника, а цифровая платформа. Она связывает вас с проверенными специалистами, которые заключили с платформой договор о сотрудничестве. Процедуру выполняет сам специалист, а платформа организует заказ и связь.\n\nНа дом можно заказать: уколы (внутривенные, внутримышечные), капельницы, установку венозного катетера, обработку и перевязку ран, клизму, забор крови на анализы. Также доступны вызов терапевта или педиатра на дом, детский и женский массаж, услуги няни. Медсестра выполняет процедуры, назначенные врачом."
+        },
+        {
+          "q": "Как рассчитывается стоимость услуги?",
+          "a": "Сумма состоит из двух частей: стоимости вызова и выбранных услуг. Вызов оплачивается один раз за визит: медсестра общего профиля — 30 000 сум, высшей категории — 60 000 сум. Например: вызов 30 000 + укол 30 000 + капельница 60 000 = 120 000 сум. Точная сумма видна при оформлении заказа. Дополнительная процедура добавляется только с вашего согласия."
+        },
+        {
+          "q": "Как происходит оплата?",
+          "a": "Оплата — после услуги. Можно оплатить наличными или картой."
+        },
+        {
+          "q": "Как проверяется квалификация медсестёр?",
+          "a": "Наши медсёстры имеют официальное медицинское образование, сертификаты и практический опыт. Документы каждой медсестры проверяются, а перед допуском к работе проводится собеседование. Наша цель — безопасная и правильная помощь пациенту."
+        },
+        {
+          "q": "В каких случаях Onlayn Hamshira не может помочь?",
+          "a": "В очень тяжёлых, угрожающих жизни состояниях мы помочь не можем. Например, при потере сознания, сильном кровотечении, признаках инфаркта или тяжёлой дыхательной недостаточности нужно немедленно звонить 103. Наш сервис предназначен для повседневных проблем и состояний средней тяжести."
+        },
+        {
+          "q": "В каких регионах работает сервис?",
+          "a": "Сервис доступен в основных районах города и в отдельно указанных регионах (Наманган, Нукус, Фергана, Ташкент, Самарканд). Когда вы вводите адрес при оформлении заказа, система автоматически покажет, доступен ли сервис."
+        },
+        {
+          "q": "Что нужно сделать до приезда медсестры?",
+          "a": "Достаточно подготовить место, где будет лежать или сидеть пациент. Если есть лекарства, медицинские записи или рекомендации врача, держите их под рукой. Все необходимые медицинские материалы медсестра привезёт сама."
+        },
+        {
+          "q": "Как хранятся мои персональные данные?",
+          "a": "Все ваши личные и медицинские данные хранятся конфиденциально. Они не передаются третьим лицам и используются только для правильного оказания услуги."
+        },
+        {
+          "q": "Что делать, если качество услуги не устроило?",
+          "a": "Если услуга не оправдала ожиданий, обратитесь в поддержку — ситуация будет проверена. При необходимости деньги вернут или медсестру направят повторно бесплатно. Наша цель — довольный пациент."
+        },
+        {
+          "q": "Как быстро обычно приезжает медсестра?",
+          "a": "Обычно в течение 30–90 минут. На близкие адреса — быстрее, в отдалённые районы — немного дольше. После подтверждения заказа отображается примерное время прибытия."
+        },
+        {
+          "q": "Куда можно написать, если есть вопросы?",
+          "a": "Задать вопросы можно через колл-центр, Telegram-бот или официальную поддержку. Операторы помогут 24/7."
+        }
+      ]
     },
     "en": {
       "stats.items.0": "Verified specialists",
@@ -326,7 +433,63 @@
       "join.details": "Partnership terms",
       "join.mock.brand": "Partnership application",
       "join.mock.specialty": "SPECIALTY",
-      "join.mock.experienceValue": "5+ years"
+      "join.mock.experienceValue": "5+ years",
+      "reviews.label": "Customer reviews",
+      "reviews.title": "Over 15,000 people have used our service",
+      "reviews.text": "What patients and their families say. Reviews are taken from in-app ratings.",
+      "news.label": "Blog",
+      "news.title": "Helpful reads on care at home",
+      "news.text": "Clear guides on procedures, patient care and prices.",
+      "faq.text": "What people usually ask before booking.",
+      "faq.operators": "Our operator will help, 24/7",
+      "faq.call": "Call us",
+      "hero.lead": "Onlayn Hamshira is a digital platform for booking medical specialists at home: we connect you with verified nurses and doctors.",
+      "faq.items": [
+        {
+          "q": "What is Onlayn Hamshira, and what can I book?",
+          "a": "Onlayn Hamshira is not a clinic but a digital platform. It connects you with verified specialists who have signed a partnership agreement with us. The specialist carries out the procedure, while the platform handles booking and communication.\n\nYou can book at home: injections (IV and intramuscular), IV drips, venous catheter placement, wound cleaning and dressing, enemas and blood draws for lab tests. GP or pediatrician home visits, massage for children and women, and nanny services are also available. Nurses carry out procedures prescribed by a doctor."
+        },
+        {
+          "q": "How is the price calculated?",
+          "a": "The total has two parts: the call-out fee and the selected services. The call-out fee is charged once per visit: 30,000 UZS for a general nurse, 60,000 UZS for a senior-category nurse. Example: call-out 30,000 + injection 30,000 + IV drip 60,000 = 120,000 UZS. You’ll see the exact total when booking. Extra procedures are added only with your consent."
+        },
+        {
+          "q": "How do I pay?",
+          "a": "You pay after the service. Cash or card are accepted."
+        },
+        {
+          "q": "How are nurses’ qualifications verified?",
+          "a": "Our nurses have formal medical education, certificates and hands-on experience. Every nurse’s documents are checked and they are interviewed before joining. Our goal is safe and proper care for the patient."
+        },
+        {
+          "q": "When can’t Onlayn Hamshira help?",
+          "a": "We can’t help in very serious, life-threatening situations. For example, in case of fainting, heavy bleeding, signs of a heart attack or severe breathing difficulty, call 103 immediately. Our service is designed for everyday and moderate health issues."
+        },
+        {
+          "q": "Which areas do you serve?",
+          "a": "The service is available in the main districts of the city and in the listed regions (Namangan, Nukus, Fergana, Tashkent, Samarkand). When you enter your address while booking, the system automatically shows whether the service is available."
+        },
+        {
+          "q": "What should I do before the nurse arrives?",
+          "a": "Just prepare a place where the patient can lie down or sit. If you have medications, medical records or doctor’s recommendations, keep them at hand. The nurse brings all the necessary medical supplies."
+        },
+        {
+          "q": "How is my personal data stored?",
+          "a": "All your personal and medical data is kept confidential. It is never shared with third parties and is used only to provide the service correctly."
+        },
+        {
+          "q": "What if I’m not satisfied with the service?",
+          "a": "If the service didn’t meet your expectations, contact support and the case will be reviewed. If needed, your money will be refunded or a nurse will be sent again free of charge. Our goal is a satisfied patient."
+        },
+        {
+          "q": "How quickly does a nurse usually arrive?",
+          "a": "Usually within 30–90 minutes. Nearby addresses are faster, remote districts may take a little longer. The estimated arrival time is shown once your order is confirmed."
+        },
+        {
+          "q": "Where can I ask questions?",
+          "a": "You can ask through our call center, Telegram bot or official support. Our operators are available 24/7."
+        }
+      ]
     }
   },
   "why": {
