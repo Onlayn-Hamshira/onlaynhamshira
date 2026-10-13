@@ -164,7 +164,12 @@
           "q": "Savollarim bo‘lsa, qayerga yozsam bo‘ladi?",
           "a": "Call-center, Telegram bot yoki rasmiy qo‘llab-quvvatlash orqali savollarni berishingiz mumkin. Operatorlar 24/7 yordam beradi."
         }
-      ]
+      ],
+      "faq.items.6.q": "Mutaxassis kelishidan oldin nimani tayyorlashim kerak?",
+      "faq.items.6.a": "Shifokor tavsiyasini, buyurilgan dorilarni, shuningdek shprits, tomchilatma tizimi va bintni oldindan tayyorlab qo‘ying. Spirt, paxta, jgut kabi zarur vositalarni hamshira o‘zi olib keladi. Bemorning allergiyasi va qabul qilayotgan dorilari haqida mutaxassisga ayting.",
+      "faq.items.1.a": "Summa ikki qismdan iborat: chaqiruv narxi va tanlangan xizmatlar narxi. Chaqiruv bir tashrif uchun bir marta olinadi: umumiy hamshira — 30 000 so‘m, oliy toifali hamshira — 50 000 so‘m. Masalan: chaqiruv 30 000 + ukol 30 000 + tomchilatma 60 000 = 120 000 so‘m. Aniq summa buyurtma berayotganda ko‘rinadi. Qo‘shimcha muolaja faqat sizning roziligingiz bilan qo‘shiladi.\n\nDorilar, shprits, tomchilatma tizimi va bint narxga kirmaydi — ularni oldindan tayyorlab qo‘ying.",
+      "faq.items.3.q": "Mutaxassislar malakasi qanday tekshiriladi?",
+      "faq.items.3.a": "Har bir mutaxassis platformaga qo‘shilishdan oldin tekshiruvdan o‘tadi. Biz uning diplomi va sertifikatlarini tekshiramiz, kamida 5 yillik ish tajribasini talab qilamiz. Undan keyin mutaxassis suhbat va o‘quv videodan o‘tadi. Shundan so‘nggina u platforma bilan hamkorlik shartnomasini tuzadi.\n\nIlovada har bir mutaxassisning ma’lumoti, tajribasi, sertifikatlari va bemorlar qo‘ygan reytingini ko‘rishingiz mumkin."
     },
     "ru": {
       "stats.items.0": "Проверенных специалистов",
@@ -323,7 +328,12 @@
           "q": "Куда можно написать, если есть вопросы?",
           "a": "Задать вопросы можно через колл-центр, Telegram-бот или официальную поддержку. Операторы помогут 24/7."
         }
-      ]
+      ],
+      "faq.items.6.q": "Что подготовить к приезду специалиста?",
+      "faq.items.6.a": "Подготовьте назначение врача и лекарства, а также шприцы, систему для капельницы и бинт. Спирт, вату, жгут и другие необходимые мелочи медсестра привезёт с собой. Сообщите специалисту об аллергиях пациента и принимаемых препаратах.",
+      "faq.items.1.a": "Сумма состоит из двух частей: стоимости вызова и выбранных услуг. Вызов оплачивается один раз за визит: медсестра общего профиля — 30 000 сум, высшей категории — 60 000 сум. Например: вызов 30 000 + укол 30 000 + капельница 60 000 = 120 000 сум. Точная сумма видна при оформлении заказа. Дополнительная процедура добавляется только с вашего согласия.\n\nЛекарства, шприцы, система для капельницы и бинт в стоимость не входят — подготовьте их заранее.",
+      "faq.items.3.q": "Как проверяется квалификация специалистов?",
+      "faq.items.3.a": "Каждый специалист проходит проверку перед подключением к платформе. Мы проверяем его диплом и сертификаты и требуем опыт работы не менее 5 лет. Затем специалист проходит собеседование и обучающее видео. Только после этого он заключает с платформой договор о сотрудничестве.\n\nВ приложении можно посмотреть образование, опыт, сертификаты и рейтинг каждого специалиста."
     },
     "en": {
       "stats.items.0": "Verified specialists",
@@ -489,7 +499,12 @@
           "q": "Where can I ask questions?",
           "a": "You can ask through our call center, Telegram bot or official support. Our operators are available 24/7."
         }
-      ]
+      ],
+      "faq.items.6.q": "How should I prepare for the visit?",
+      "faq.items.6.a": "Please have the doctor’s prescription and medicines ready, along with syringes, an IV drip set and bandages. The nurse brings alcohol wipes, cotton, a tourniquet, medical tape and other basic supplies. Tell the specialist about any allergies and medicines the patient takes.",
+      "faq.items.1.a": "The total has two parts: the call-out fee and the selected services. The call-out fee is charged once per visit: 30,000 UZS for a general nurse, 60,000 UZS for a senior-category nurse. Example: call-out 30,000 + injection 30,000 + IV drip 60,000 = 120,000 UZS. You’ll see the exact total when booking. Extra procedures are added only with your consent.\n\nMedicines, syringes, IV drip sets and bandages aren’t included in the price — please have them ready.",
+      "faq.items.3.q": "How are specialists vetted?",
+      "faq.items.3.a": "Every specialist is vetted before joining the platform. We check their diploma and certificates and require at least 5 years of work experience. They then complete an interview and a training video. Only after that do they sign a partnership agreement with the platform.\n\nIn the app, you can see each specialist’s education, experience, certificates and patient ratings."
     }
   },
   "why": {
