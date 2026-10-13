@@ -171,7 +171,12 @@
       "faq.items.3.q": "Mutaxassislar malakasi qanday tekshiriladi?",
       "faq.items.3.a": "Har bir mutaxassis platformaga qo‘shilishdan oldin tekshiruvdan o‘tadi. Biz uning diplomi va sertifikatlarini tekshiramiz, kamida 5 yillik ish tajribasini talab qilamiz. Undan keyin mutaxassis suhbat va o‘quv videodan o‘tadi. Shundan so‘nggina u platforma bilan hamkorlik shartnomasini tuzadi.\n\nIlovada har bir mutaxassisning ma’lumoti, tajribasi, sertifikatlari va bemorlar qo‘ygan reytingini ko‘rishingiz mumkin.",
       "faq.items.4.q": "Qaysi holatlarda Onlayn Hamshira yordam bera olmaydi?",
-      "faq.items.4.a": "Biz tez yordam xizmati emasmiz. Hayot uchun xavfli holatda darhol 103 ga qo‘ng‘iroq qiling. Bunday holatlarga hushdan ketish, ko‘krakdagi kuchli og‘riq, nafas qisilishi va kuchli qon ketishi kiradi. Hamshira tashxis qo‘ymaydi va dori buyurmaydi — u shifokor tavsiya qilgan muolajalarni bajaradi."
+      "faq.items.4.a": "Biz tez yordam xizmati emasmiz. Hayot uchun xavfli holatda darhol 103 ga qo‘ng‘iroq qiling. Bunday holatlarga hushdan ketish, ko‘krakdagi kuchli og‘riq, nafas qisilishi va kuchli qon ketishi kiradi. Hamshira tashxis qo‘ymaydi va dori buyurmaydi — u shifokor tavsiya qilgan muolajalarni bajaradi.",
+      "faq.items.5.q": "Xizmat qaysi shaharlarda ishlaydi?",
+      "faq.items.5.a": "Toshkent, Nukus, Farg‘ona va Marg‘ilonda ishlaymiz. Namangan va Samarqandda xizmat sinov rejimida ishlamoqda. Manzilingizga mutaxassis bora oladimi, operatordan aniqlashingiz mumkin.",
+      "faq.items.7.a": "Ma’lumotlaringiz “Shaxsga doir ma’lumotlar to‘g‘risida”gi qonunga muvofiq ishlanadi. Ular faqat buyurtmani bajarish uchun ishlatiladi. Mutaxassis faqat tashrif uchun zarur ma’lumotlarni ko‘radi. Batafsil — Maxfiylik siyosatida.",
+      "faq.items.8.q": "Xizmat sifati yoqmasa, nima qilishim kerak?",
+      "faq.items.8.a": "Ilovada buyurtmani baholang yoki qo‘llab-quvvatlash xizmatiga yozing. Har bir shikoyatni ko‘rib chiqib, natijasini sizga xabar qilamiz."
     },
     "ru": {
       "stats.items.0": "Проверенных специалистов",
@@ -337,7 +342,12 @@
       "faq.items.3.q": "Как проверяется квалификация специалистов?",
       "faq.items.3.a": "Каждый специалист проходит проверку перед подключением к платформе. Мы проверяем его диплом и сертификаты и требуем опыт работы не менее 5 лет. Затем специалист проходит собеседование и обучающее видео. Только после этого он заключает с платформой договор о сотрудничестве.\n\nВ приложении можно посмотреть образование, опыт, сертификаты и рейтинг каждого специалиста.",
       "faq.items.4.q": "В каких случаях Onlayn Hamshira не сможет помочь?",
-      "faq.items.4.a": "Мы не служба скорой помощи. При угрозе жизни — потере сознания, сильной боли в груди, удушье, сильном кровотечении — сразу звоните 103. Медсестра не ставит диагноз и не назначает лекарства — она выполняет процедуры, назначенные врачом."
+      "faq.items.4.a": "Мы не служба скорой помощи. При угрозе жизни — потере сознания, сильной боли в груди, удушье, сильном кровотечении — сразу звоните 103. Медсестра не ставит диагноз и не назначает лекарства — она выполняет процедуры, назначенные врачом.",
+      "faq.items.5.q": "В каких городах работает сервис?",
+      "faq.items.5.a": "Мы работаем в Ташкенте, Нукусе, Фергане и Маргилане. В Намангане и Самарканде сервис работает в тестовом режиме. Уточнить, приедет ли специалист по вашему адресу, можно у оператора.",
+      "faq.items.7.a": "Ваши данные обрабатываются в соответствии с Законом «О персональных данных». Они используются только для выполнения заказа. Специалист видит лишь то, что нужно для визита. Подробнее — в Политике конфиденциальности.",
+      "faq.items.8.q": "Что делать, если качество услуги не устроило?",
+      "faq.items.8.a": "Оцените заказ в приложении или напишите в поддержку. Мы рассмотрим каждую жалобу и сообщим вам результат."
     },
     "en": {
       "stats.items.0": "Verified specialists",
@@ -510,7 +520,12 @@
       "faq.items.3.q": "How are specialists vetted?",
       "faq.items.3.a": "Every specialist is vetted before joining the platform. We check their diploma and certificates and require at least 5 years of work experience. They then complete an interview and a training video. Only after that do they sign a partnership agreement with the platform.\n\nIn the app, you can see each specialist’s education, experience, certificates and patient ratings.",
       "faq.items.4.q": "When can’t Onlayn Hamshira help?",
-      "faq.items.4.a": "We are not an emergency service. If someone’s life is at risk — fainting, severe chest pain, difficulty breathing or heavy bleeding — call 103 right away. Nurses don’t diagnose or prescribe medicine; they carry out procedures prescribed by a doctor."
+      "faq.items.4.a": "We are not an emergency service. If someone’s life is at risk — fainting, severe chest pain, difficulty breathing or heavy bleeding — call 103 right away. Nurses don’t diagnose or prescribe medicine; they carry out procedures prescribed by a doctor.",
+      "faq.items.5.q": "Which cities do you serve?",
+      "faq.items.5.a": "We operate in Tashkent, Nukus, Fergana and Margilan. In Namangan and Samarkand the service is in a trial phase. Our operator can confirm whether a specialist can reach your address.",
+      "faq.items.7.a": "Your data is processed in line with Uzbekistan’s Law on Personal Data. It is used only to fulfil your order. The specialist sees only what is needed for the visit. Details are in our Privacy Policy.",
+      "faq.items.8.q": "What if I’m not happy with the service?",
+      "faq.items.8.a": "Rate the order in the app or contact support. We review every complaint and let you know the outcome."
     }
   },
   "why": {
