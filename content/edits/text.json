@@ -200,7 +200,8 @@
       "reviews.label": "Foydalanuvchilar fikri",
       "footer.links.7": "Hujjatlar",
       "common.onlineApp": "Web-ilova",
-      "footer.privacy": "Ommaviy oferta · Maxfiylik siyosati"
+      "footer.privacy": "Ommaviy oferta · Maxfiylik siyosati",
+      "footer.rights": "© {year} “ONLAYN HAMSHIRA” MChJ. Barcha huquqlar himoyalangan."
     },
     "ru": {
       "stats.items.0": "Проверенных специалистов",
@@ -394,7 +395,8 @@
       "reviews.label": "Отзывы пользователей",
       "footer.links.7": "Документы",
       "common.onlineApp": "Веб-приложение",
-      "footer.privacy": "Публичная оферта · Политика конфиденциальности"
+      "footer.privacy": "Публичная оферта · Политика конфиденциальности",
+      "footer.rights": "© {year} ООО “ONLAYN HAMSHIRA”. Все права защищены."
     },
     "en": {
       "stats.items.0": "Verified specialists",
@@ -592,7 +594,8 @@
       "header.partner": "For specialists",
       "footer.links.1": "About us",
       "footer.links.7": "Documents",
-      "footer.privacy": "Public offer · Privacy policy"
+      "footer.privacy": "Public offer · Privacy policy",
+      "footer.rights": "© {year} ONLAYN HAMSHIRA LLC. All rights reserved."
     }
   },
   "why": {
