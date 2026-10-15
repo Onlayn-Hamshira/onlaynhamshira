@@ -704,7 +704,9 @@
       "forWho.4": "Shifokor buyurgan muolajani uyda olmoqchi bo‘lganlar",
       "stepWord": "QADAM – ",
       "steps.1": "Manzil, sana va vaqtni belgilang — hozirga yoki oldindan\t\t",
-      "steps.2": "Mutaxassis keladi va muolajani bajaradi. To‘lov — xizmatdan keyin."
+      "steps.2": "Mutaxassis keladi va muolajani bajaradi. To‘lov — xizmatdan keyin.",
+      "conclusionTitle": "Mutaxassisni uyga chaqiring\t\t",
+      "conclusion": "Shifokor buyurgan muolajani uyda oling. Mutaxassislar tekshirilgan, narx buyurtmadan oldin ko‘rinadi. Toshkent, Nukus, Samarqand, Farg‘ona va Marg‘ilonda ishlaymiz.\t\t"
     },
     "ru": {
       "brand": "Onlayn Hamshira",
@@ -739,7 +741,9 @@
       "forWho.4": "Тем, кто хочет получить назначенную врачом процедуру дома",
       "stepWord": "ШАГ –",
       "steps.1": "Выберите адрес, дату и время — на сейчас или заранее",
-      "steps.2": "Специалист приезжает и выполняет процедуру. Оплата — после услуги."
+      "steps.2": "Специалист приезжает и выполняет процедуру. Оплата — после услуги.",
+      "conclusionTitle": "Вызовите специалиста на дом",
+      "conclusion": "Получите назначенную врачом процедуру дома. Специалисты проверены, цена видна до заказа. Работаем в Ташкенте, Самарканде, Нукусе, Фергане и Маргилане."
     },
     "en": {
       "brand": "Onlayn Hamshira",
@@ -775,7 +779,9 @@
       "stepWord": "STEP –",
       "steps.0": "Choose a service and specialist",
       "steps.1": "Pick an adress, date and time — now or in advance",
-      "steps.2": "The specialist arrives and carries out the procedure. You pay afterwards."
+      "steps.2": "The specialist arrives and carries out the procedure. You pay afterwards.",
+      "conclusionTitle": "Book a specialist at home",
+      "conclusion": "Get your prescribed procedure at home. Specialists are verified, and you see the price before booking. We operate in Tashkent, Samarkand, Nukus, Fergana and Margilan."
     }
   },
   "expert": {
