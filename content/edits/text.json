@@ -670,9 +670,38 @@
     }
   },
   "why": {
-    "uz": {},
-    "ru": {},
-    "en": {}
+    "uz": {
+      "brand": "Onlayn Hamshira",
+      "lead": "Tekshirilgan mutaxassislar va oldindan ko‘rinadigan narxlar. Buyurtma berish bir necha daqiqa oladi.\t",
+      "toAdvantages": "Afzalliklarni ko‘rish",
+      "highlightsTitle": "ASOSIY AFZALLIKLAR\t",
+      "highlights.0.text": "Shaxsi, diplomi va tajribasi tekshirilgan",
+      "highlights.1.text": "Buyurtmadan oldin ko‘rinadi",
+      "chipFast": "Odatda 30–90 daqiqada yetib keladi",
+      "highlights.3.label": "QO‘LLAB-QUVVATLASH",
+      "highlights.3.text": "Muammo bo‘lsa, yordam beramiz"
+    },
+    "ru": {
+      "brand": "Onlayn Hamshira",
+      "lead": "Проверенные специалисты и цены, известные заранее. Оформление заказа занимает несколько минут.",
+      "highlightsTitle": "ГЛАВНЫЕ ПРЕИМУЩЕСТВА",
+      "highlights.0.text": "Личность, диплом и опыт проверены",
+      "highlights.1.text": "Видны до заказа",
+      "chipFast": "Обычно приезжает за 30–90 минут",
+      "highlights.3.label": "ПОДДЕРЖКА",
+      "highlights.3.text": "Поможем если возникнет проблема"
+    },
+    "en": {
+      "brand": "Onlayn Hamshira",
+      "lead": "Verified specialists and prices you see upfront. Booking takes just a few minutes.",
+      "toAdvantages": "See the benefits",
+      "highlightsTitle": "KEY BENEFITS",
+      "highlights.0.text": "Diploma and experience checked",
+      "highlights.1.text": "Shown before you book",
+      "chipFast": "Usually arrives in 30–90 minutes",
+      "highlights.3.label": "SUPPORT",
+      "highlights.3.text": "Help if something goes wrong"
+    }
   },
   "expert": {
     "uz": {
