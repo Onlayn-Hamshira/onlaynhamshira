@@ -203,7 +203,9 @@
       "footer.privacy": "Ommaviy oferta · Maxfiylik siyosati",
       "footer.rights": "© {year} “ONLAYN HAMSHIRA” MChJ. Barcha huquqlar himoyalangan.",
       "services.items.chaqiruv.title": "Chaqiruv narxi",
-      "services.items.chaqiruv.description": "Mutaxassisning uyingizga kelish narxi. U har bir tashrifga bir marta qo‘shiladi va mutaxassis tarifiga bog‘liq. Muolajalar narxi alohida hisoblanadi."
+      "services.items.chaqiruv.description": "Mutaxassisning uyingizga kelish narxi. U har bir tashrifga bir marta qo‘shiladi va mutaxassis tarifiga bog‘liq. Muolajalar narxi alohida hisoblanadi.",
+      "services.items.korik.duration": "20–30 daqiqa",
+      "services.items.parvarish.duration": "20–50 daqiqa"
     },
     "ru": {
       "stats.items.0": "Проверенных специалистов",
@@ -400,7 +402,9 @@
       "footer.privacy": "Публичная оферта · Политика конфиденциальности",
       "footer.rights": "© {year} ООО “ONLAYN HAMSHIRA”. Все права защищены.",
       "services.items.chaqiruv.title": "Стоимость вызова",
-      "services.items.chaqiruv.description": "Стоимость выезда специалиста к вам домой. Взимается один раз за визит и зависит от тарифа специалиста. Процедуры оплачиваются отдельно."
+      "services.items.chaqiruv.description": "Стоимость выезда специалиста к вам домой. Взимается один раз за визит и зависит от тарифа специалиста. Процедуры оплачиваются отдельно.",
+      "services.items.korik.duration": "20–30 минут",
+      "services.items.parvarish.duration": "20–50 минут"
     },
     "en": {
       "stats.items.0": "Verified specialists",
@@ -601,7 +605,9 @@
       "footer.privacy": "Public offer · Privacy policy",
       "footer.rights": "© {year} ONLAYN HAMSHIRA LLC. All rights reserved.",
       "services.items.chaqiruv.title": "Call-out fee",
-      "services.items.chaqiruv.description": "The cost of a specialist coming to your home. It’s charged once per visit and depends on the specialist’s rate. Procedures are priced separately."
+      "services.items.chaqiruv.description": "The cost of a specialist coming to your home. It’s charged once per visit and depends on the specialist’s rate. Procedures are priced separately.",
+      "services.items.korik.duration": "20–30 min",
+      "services.items.parvarish.duration": "20–50 min"
     }
   },
   "why": {
