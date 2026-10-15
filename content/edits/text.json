@@ -183,7 +183,8 @@
       "reviews.items.2.name": "Xolmirzayev B.",
       "reviews.items.3.name": "Gulnoza E.",
       "reviews.items.5.name": "Malika A.",
-      "reviews.items.6.name": "Bekzod"
+      "reviews.items.6.name": "Bekzod",
+      "faq.items.9.a": "Mutaxassis odatda 30–90 daqiqada yetib keladi. Vaqt masofaga, shaharga va yo‘ldagi vaziyatga bog‘liq. Ilova orqali buyurtma bersangiz, mutaxassis yo‘lga chiqqanda va yetib kelganda sizga bildirishnoma keladi."
     },
     "ru": {
       "stats.items.0": "Проверенных специалистов",
@@ -361,7 +362,8 @@
       "reviews.items.2.name": "Бобур Х.",
       "reviews.items.3.name": "Гулноза Э.",
       "reviews.items.5.name": "Малика А.",
-      "reviews.items.6.name": "Бекзод"
+      "reviews.items.6.name": "Бекзод",
+      "faq.items.9.a": "Специалист обычно приезжает за 30–90 минут. Время зависит от расстояния, города и ситуации на дорогах. Если вы заказываете через приложение, вы получите уведомление, когда специалист выедет и когда прибудет."
     },
     "en": {
       "stats.items.0": "Verified specialists",
@@ -546,7 +548,8 @@
       "reviews.items.2.name": "Bobur K.",
       "reviews.items.3.name": "Gulnoza E.",
       "reviews.items.5.name": "Malika A.",
-      "reviews.items.6.name": "Bekzod"
+      "reviews.items.6.name": "Bekzod",
+      "faq.items.9.a": "The specialist usually arrives within 30–90 minutes. Timing depends on distance, the city and traffic. If you book through the app, you’ll get a notification when the specialist sets off and when they arrive."
     }
   },
   "why": {
