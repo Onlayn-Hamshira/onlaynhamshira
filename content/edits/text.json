@@ -662,7 +662,8 @@
       "blog.topics.nurse": "Nursing care",
       "blog.topics.family": "Mother & child",
       "blog.articles": "Company news",
-      "legacy.ctaText": "A specialist usually arrives within 30–90 minutes. We take orders 24/7."
+      "legacy.ctaText": "A specialist usually arrives within 30–90 minutes. We take orders 24/7.",
+      "join.mock.experience": "Experience"
     }
   },
   "why": {
@@ -696,7 +697,14 @@
       "benefits.items.1.text": "Buyurtma yakunlangach, to‘lovni kechiktirmasdan olasiz.",
       "benefits.items.2.title": "Yaqin buyurtmalar",
       "benefits.items.2.text": "Uyingizga yaqin manzillardagi buyurtmalarni tanlashingiz mumkin.",
-      "benefits.items.3.text": "Buyurtmalar, to‘lovlar va balans — mutaxassislar ilovasida."
+      "benefits.items.3.text": "Buyurtmalar, to‘lovlar va balans — mutaxassislar ilovasida.",
+      "benefits.label": "Afzalliklar",
+      "requirements.text": "Platformaga qo‘shilish uchun tibbiy ma’lumot, ish tajribasi va mas’uliyat kerak.",
+      "requirements.items.0.title": "Hujjatlar",
+      "requirements.items.0.text": "Diplom, sertifikatlar va shaxsni tasdiqlovchi hujjat (pasport yoki ID-karta).",
+      "requirements.items.1.text": "Ukol, tomchilatma (kapelnitsa) va boshqa muolajalarni mustaqil bajara olish.",
+      "requirements.items.2.text": "Tibbiyot sohasida kamida 5 yillik ish tajribasi.",
+      "requirements.items.3.text": "Belgilangan vaqtda kelish va bemorga e’tiborli bo‘lish."
     },
     "ru": {
       "eyebrow": "Станьте партнёром Onlayn Hamshira",
@@ -724,7 +732,13 @@
       "benefits.items.1.text": "Деньги без задержек после завершения заказа.",
       "benefits.items.2.title": "Заказы рядом",
       "benefits.items.2.text": "Можно выбирать заказы недалеко от дома.",
-      "benefits.items.3.text": "Заказы, оплата и баланс — в приложении для специалистов."
+      "benefits.items.3.text": "Заказы, оплата и баланс — в приложении для специалистов.",
+      "requirements.text": "Для подключения к платформе нужны медицинское образование, опыт работы и ответственность.",
+      "requirements.items.0.title": "Документы",
+      "requirements.items.0.text": "Диплом, сертификаты и документ, удостоверяющий личность (паспорт или ID-карта).",
+      "requirements.items.1.text": "Умение самостоятельно делать уколы, капельницы и другие процедуры.",
+      "requirements.items.2.text": "Не менее 5 лет в медицине.",
+      "requirements.items.3.text": "Приезжать вовремя и внимательно относиться к пациенту."
     },
     "en": {
       "eyebrow": "Partner with Onlayn Hamshira",
@@ -752,7 +766,13 @@
       "benefits.items.1.text": "Get paid promptly once an order is done.",
       "benefits.items.2.title": "Orders nearby",
       "benefits.items.2.text": "Choose orders close to where you live.",
-      "benefits.items.3.text": "Orders, payments and balance in the specialist app."
+      "benefits.items.3.text": "Orders, payments and balance in the specialist app.",
+      "requirements.text": "To join, you need a medical background, work experience and a responsible approach.",
+      "requirements.items.0.title": "Documents",
+      "requirements.items.0.text": "Diploma, certificates and photo ID (passport or ID card).",
+      "requirements.items.1.text": "Able to give injections, set up IV drips and perform other procedures independently.",
+      "requirements.items.2.text": "At least 5 years in healthcare.",
+      "requirements.items.3.text": "Arrive on time and treat every patient with care."
     }
   }
 }
