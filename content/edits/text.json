@@ -221,7 +221,8 @@
       "blog.principles.1.text": "“ONLAYN HAMSHIRA” MChJ davlat ro‘yxatidan o‘tgan (STIR 309 109 813). Hujjatlarni o‘zingiz tekshirishingiz mumkin.",
       "blog.docsLink": "Hujjatlarni ko‘rish",
       "blog.articles": "Kompaniya yangiliklari",
-      "legacy.ctaText": "Mutaxassis odatda 30–90 daqiqada yetib keladi. Buyurtmalarni kecha-kunduz qabul qilamiz."
+      "legacy.ctaText": "Mutaxassis odatda 30–90 daqiqada yetib keladi. Buyurtmalarni kecha-kunduz qabul qilamiz.",
+      "download.title": "Mutaxassislar ilovasini o‘rnatish uchun QR kodni skanerlang"
     },
     "ru": {
       "stats.items.0": "Проверенных специалистов",
@@ -439,7 +440,8 @@
       "blog.topics.nurse": "Услуги медсестры",
       "blog.topics.family": "Мама и ребёнок",
       "blog.articles": "Новости компании",
-      "legacy.ctaText": "Специалист обычно приезжает за 30–90 минут. Принимаем заказы круглосуточно."
+      "legacy.ctaText": "Специалист обычно приезжает за 30–90 минут. Принимаем заказы круглосуточно.",
+      "download.title": "Отсканируйте QR-код, чтобы установить приложение для специалистов"
     },
     "en": {
       "stats.items.0": "Verified specialists",
@@ -663,7 +665,8 @@
       "blog.topics.family": "Mother & child",
       "blog.articles": "Company news",
       "legacy.ctaText": "A specialist usually arrives within 30–90 minutes. We take orders 24/7.",
-      "join.mock.experience": "Experience"
+      "join.mock.experience": "Experience",
+      "download.title": "Scan the QR code to install the specialist app"
     }
   },
   "why": {
