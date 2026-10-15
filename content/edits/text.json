@@ -704,7 +704,10 @@
       "requirements.items.0.text": "Diplom, sertifikatlar va shaxsni tasdiqlovchi hujjat (pasport yoki ID-karta).",
       "requirements.items.1.text": "Ukol, tomchilatma (kapelnitsa) va boshqa muolajalarni mustaqil bajara olish.",
       "requirements.items.2.text": "Tibbiyot sohasida kamida 5 yillik ish tajribasi.",
-      "requirements.items.3.text": "Belgilangan vaqtda kelish va bemorga e’tiborli bo‘lish."
+      "requirements.items.3.text": "Belgilangan vaqtda kelish va bemorga e’tiborli bo‘lish.",
+      "income.title": "Daromadingiz qanday hisoblanadi",
+      "income.text": "Har bir bajarilgan buyurtmadan platforma 30% komissiya oladi. Qolgan 70% sizniki.",
+      "income.youGet": "Sizga"
     },
     "ru": {
       "eyebrow": "Станьте партнёром Onlayn Hamshira",
@@ -738,7 +741,10 @@
       "requirements.items.0.text": "Диплом, сертификаты и документ, удостоверяющий личность (паспорт или ID-карта).",
       "requirements.items.1.text": "Умение самостоятельно делать уколы, капельницы и другие процедуры.",
       "requirements.items.2.text": "Не менее 5 лет в медицине.",
-      "requirements.items.3.text": "Приезжать вовремя и внимательно относиться к пациенту."
+      "requirements.items.3.text": "Приезжать вовремя и внимательно относиться к пациенту.",
+      "income.title": "Как рассчитывается ваш доход",
+      "income.text": "С каждого выполненного заказа платформа берёт 30% комиссии. Остальные 70% — ваши.",
+      "income.youGet": "Вам"
     },
     "en": {
       "eyebrow": "Partner with Onlayn Hamshira",
@@ -772,7 +778,10 @@
       "requirements.items.0.text": "Diploma, certificates and photo ID (passport or ID card).",
       "requirements.items.1.text": "Able to give injections, set up IV drips and perform other procedures independently.",
       "requirements.items.2.text": "At least 5 years in healthcare.",
-      "requirements.items.3.text": "Arrive on time and treat every patient with care."
+      "requirements.items.3.text": "Arrive on time and treat every patient with care.",
+      "income.label": "Earnings and payments",
+      "income.title": "How your earnings work",
+      "income.text": "The platform takes a 30% commission on each completed order. The other 70% is yours."
     }
   }
 }
