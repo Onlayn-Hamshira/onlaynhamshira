@@ -192,7 +192,12 @@
       "contact.address": "Ofis manzili",
       "contact.hours": "Ish vaqti",
       "contact.hoursText": "Har kuni, kecha-kunduz",
-      "footer.tagline": "Onlayn Hamshira — mijozlar va mutaxassislarni bog‘lovchi raqamli platforma. Platforma tibbiy muassasa emas. Xizmatlarni platformaga hamkor sifatida qo‘shilgan mutaxassislar ko‘rsatadi."
+      "footer.tagline": "Onlayn Hamshira — mijozlar va mutaxassislarni bog‘lovchi raqamli platforma. Platforma tibbiy muassasa emas. Xizmatlarni platformaga hamkor sifatida qo‘shilgan mutaxassislar ko‘rsatadi.",
+      "footer.links.4": "Savol-javob\t\t",
+      "header.partner": "Mutaxassislarga",
+      "footer.links.1": "Biz haqimizda\t\t",
+      "header.nav.3": "Foydalanuvchilar fikri",
+      "reviews.label": "Foydalanuvchilar fikri"
     },
     "ru": {
       "stats.items.0": "Проверенных специалистов",
@@ -379,7 +384,11 @@
       "contact.address": "Адрес офиса",
       "contact.hours": "Время работы",
       "contact.hoursText": "Ежедневно, круглосуточно",
-      "footer.tagline": "Onlayn Hamshira — цифровая платформа, которая связывает клиентов и специалистов. Платформа не является медицинским учреждением. Услуги оказывают специалисты-партнёры платформы."
+      "footer.tagline": "Onlayn Hamshira — цифровая платформа, которая связывает клиентов и специалистов. Платформа не является медицинским учреждением. Услуги оказывают специалисты-партнёры платформы.",
+      "footer.links.4": "Вопросы и ответы",
+      "header.partner": "Специалистам",
+      "footer.links.1": "О нас",
+      "reviews.label": "Отзывы пользователей"
     },
     "en": {
       "stats.items.0": "Verified specialists",
@@ -490,7 +499,7 @@
       "join.mock.brand": "Partnership application",
       "join.mock.specialty": "SPECIALTY",
       "join.mock.experienceValue": "5+ years",
-      "reviews.label": "Customer reviews",
+      "reviews.label": "User reviews",
       "reviews.title": "Over 15,000 people have used our service",
       "reviews.text": "What patients and their families say. Reviews are taken from in-app ratings.",
       "news.label": "Blog",
@@ -573,7 +582,9 @@
       "contact.address": "Office address",
       "contact.hours": "Working hours",
       "contact.hoursText": "Daily, 24/7",
-      "footer.tagline": "Onlayn Hamshira is a digital platform connecting clients with specialists. It is not a medical institution. Services are provided by specialists who partner with the platform."
+      "footer.tagline": "Onlayn Hamshira is a digital platform connecting clients with specialists. It is not a medical institution. Services are provided by specialists who partner with the platform.",
+      "header.partner": "For specialists",
+      "footer.links.1": "About us"
     }
   },
   "why": {
