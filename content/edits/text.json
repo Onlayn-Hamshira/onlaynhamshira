@@ -702,7 +702,9 @@
       "forWho.2": "Kichik bolali oilalar",
       "forWho.3": "Klinikaga borishga vaqti yo‘q odamlar",
       "forWho.4": "Shifokor buyurgan muolajani uyda olmoqchi bo‘lganlar",
-      "stepWord": "1-QADAM\t\t"
+      "stepWord": "1-QADAM\t\t",
+      "steps.1": "Manzil, sana va vaqtni belgilang — hozirga yoki oldindan\t\t",
+      "steps.2": "Mutaxassis keladi va muolajani bajaradi. To‘lov — xizmatdan keyin."
     },
     "ru": {
       "brand": "Onlayn Hamshira",
@@ -735,7 +737,9 @@
       "forWho.2": "Семьям с маленькими детьми",
       "forWho.3": "Тем, у кого нет времени ехать в клинику",
       "forWho.4": "Тем, кто хочет получить назначенную врачом процедуру дома",
-      "stepWord": "ШАГ 1"
+      "stepWord": "ШАГ 1",
+      "steps.1": "Выберите адрес, дату и время — на сейчас или заранее",
+      "steps.2": "Специалист приезжает и выполняет процедуру. Оплата — после услуги."
     },
     "en": {
       "brand": "Onlayn Hamshira",
@@ -768,7 +772,10 @@
       "forWho.2": "Families with young children",
       "forWho.3": "People with no time to go to a clinic",
       "forWho.4": "Anyone who needs a prescribed procedure at home",
-      "stepWord": "STEP 1"
+      "stepWord": "STEP 1",
+      "steps.0": "Choose a service and specialist",
+      "steps.1": "Pick an adress, date and time — now or in advance",
+      "steps.2": "The specialist arrives and carries out the procedure. You pay afterwards."
     }
   },
   "expert": {
