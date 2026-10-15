@@ -686,7 +686,9 @@
       "steps.items.0.text": "hr.onlaynhamshira.uz saytida arizani to‘ldiring: shartlar bilan tanishasiz, saralash va o‘quv videodan o‘tasiz.",
       "steps.items.1.text": "Menejer bilan qisqa suhbat va hujjatlarni tekshirish.",
       "steps.items.2.title": "Ilovani o‘rnating",
-      "steps.items.2.text": "Mutaxassislar ilovasini yuklab oling va profilingizni to‘ldiring: ma’lumotingiz, tajribangiz, diplom va sertifikatlaringiz."
+      "steps.items.2.text": "Mutaxassislar ilovasini yuklab oling va profilingizni to‘ldiring: ma’lumotingiz, tajribangiz, diplom va sertifikatlaringiz.",
+      "steps.items.3.title": "Buyurtma qabul qiling",
+      "steps.items.3.text": "O‘zingizga mos buyurtmalarni tanlang va ishni boshlang."
     },
     "ru": {
       "eyebrow": "Станьте партнёром Onlayn Hamshira",
@@ -704,7 +706,9 @@
       "steps.items.1.title": "Пройдите собеседование",
       "steps.items.1.text": "Короткий разговор с менеджером и проверка документов.",
       "steps.items.2.title": "Установите приложение",
-      "steps.items.2.text": "Скачайте приложение для специалистов и заполните профиль: образование, опыт, диплом и сертификаты."
+      "steps.items.2.text": "Скачайте приложение для специалистов и заполните профиль: образование, опыт, диплом и сертификаты.",
+      "steps.items.3.title": "Принимайте заказы",
+      "steps.items.3.text": "Выбирайте подходящие заказы и начинайте работать."
     },
     "en": {
       "eyebrow": "Partner with Onlayn Hamshira",
@@ -722,7 +726,9 @@
       "steps.items.1.title": "Interview",
       "steps.items.1.text": "A short call with a manager and a document check.",
       "steps.items.2.title": "Install the app",
-      "steps.items.2.text": "Download the specialist app and complete your profile: education, experience, diploma and certificates."
+      "steps.items.2.text": "Download the specialist app and complete your profile: education, experience, diploma and certificates.",
+      "steps.items.3.title": "Take orders",
+      "steps.items.3.text": "Choose the orders that suit you and get started."
     }
   }
 }
