@@ -184,7 +184,11 @@
       "reviews.items.3.name": "Gulnoza E.",
       "reviews.items.5.name": "Malika A.",
       "reviews.items.6.name": "Bekzod",
-      "faq.items.9.a": "Mutaxassis odatda 30–90 daqiqada yetib keladi. Vaqt masofaga, shaharga va yo‘ldagi vaziyatga bog‘liq. Ilova orqali buyurtma bersangiz, mutaxassis yo‘lga chiqqanda va yetib kelganda sizga bildirishnoma keladi."
+      "faq.items.9.a": "Mutaxassis odatda 30–90 daqiqada yetib keladi. Vaqt masofaga, shaharga va yo‘ldagi vaziyatga bog‘liq. Ilova orqali buyurtma bersangiz, mutaxassis yo‘lga chiqqanda va yetib kelganda sizga bildirishnoma keladi.",
+      "faq.items.10.q": "Savolim bo‘lsa, qayerga murojaat qilsam bo‘ladi?",
+      "faq.items.9.q": "Mutaxassis odatda qancha vaqtda yetib keladi?\t\t",
+      "faq.items.7.q": "Shaxsiy ma’lumotlarim qanday saqlanadi?",
+      "faq.items.10.a": "Telegramda @Onlayn_Hamshira_Admin manziliga yozing yoki +998 78 113 96 16 raqamiga qo‘ng‘iroq qiling. Ilovadagi “Qo‘llab-quvvatlash” bo‘limi orqali ham murojaat qilishingiz mumkin."
     },
     "ru": {
       "stats.items.0": "Проверенных специалистов",
@@ -363,7 +367,11 @@
       "reviews.items.3.name": "Гулноза Э.",
       "reviews.items.5.name": "Малика А.",
       "reviews.items.6.name": "Бекзод",
-      "faq.items.9.a": "Специалист обычно приезжает за 30–90 минут. Время зависит от расстояния, города и ситуации на дорогах. Если вы заказываете через приложение, вы получите уведомление, когда специалист выедет и когда прибудет."
+      "faq.items.9.a": "Специалист обычно приезжает за 30–90 минут. Время зависит от расстояния, города и ситуации на дорогах. Если вы заказываете через приложение, вы получите уведомление, когда специалист выедет и когда прибудет.",
+      "faq.items.10.q": "Куда обратиться с вопросом?",
+      "faq.items.9.q": "Как быстро приезжает специалист?",
+      "faq.items.7.q": "Как хранятся мои персональные данные?",
+      "faq.items.10.a": "Напишите в Telegram @Onlayn_Hamshira_Admin или позвоните по номеру +998 78 113 96 16. Также можно обратиться через раздел «Служба поддержка» в приложении."
     },
     "en": {
       "stats.items.0": "Verified specialists",
@@ -549,7 +557,11 @@
       "reviews.items.3.name": "Gulnoza E.",
       "reviews.items.5.name": "Malika A.",
       "reviews.items.6.name": "Bekzod",
-      "faq.items.9.a": "The specialist usually arrives within 30–90 minutes. Timing depends on distance, the city and traffic. If you book through the app, you’ll get a notification when the specialist sets off and when they arrive."
+      "faq.items.9.a": "The specialist usually arrives within 30–90 minutes. Timing depends on distance, the city and traffic. If you book through the app, you’ll get a notification when the specialist sets off and when they arrive.",
+      "faq.items.10.q": "Where can I ask a question?",
+      "faq.items.9.q": "How soon does the specialist arrive?",
+      "faq.items.7.q": "How is my personal data handled?",
+      "faq.items.10.a": "Message us on Telegram at @Onlayn_Hamshira_Admin or call +998 78 113 96 16. You can also reach us through the Support service section in the app."
     }
   },
   "why": {
