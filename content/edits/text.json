@@ -688,7 +688,15 @@
       "steps.items.2.title": "Ilovani o‘rnating",
       "steps.items.2.text": "Mutaxassislar ilovasini yuklab oling va profilingizni to‘ldiring: ma’lumotingiz, tajribangiz, diplom va sertifikatlaringiz.",
       "steps.items.3.title": "Buyurtma qabul qiling",
-      "steps.items.3.text": "O‘zingizga mos buyurtmalarni tanlang va ishni boshlang."
+      "steps.items.3.text": "O‘zingizga mos buyurtmalarni tanlang va ishni boshlang.",
+      "benefits.title": "Hamkorlikning afzalliklari",
+      "benefits.items.0.title": "Erkin grafik",
+      "benefits.items.0.text": "Qachon ishlashni o‘zingiz hal qilasiz.",
+      "benefits.items.1.title": "Har bir buyurtma uchun to‘lov",
+      "benefits.items.1.text": "Buyurtma yakunlangach, to‘lovni kechiktirmasdan olasiz.",
+      "benefits.items.2.title": "Yaqin buyurtmalar",
+      "benefits.items.2.text": "Uyingizga yaqin manzillardagi buyurtmalarni tanlashingiz mumkin.",
+      "benefits.items.3.text": "Buyurtmalar, to‘lovlar va balans — mutaxassislar ilovasida."
     },
     "ru": {
       "eyebrow": "Станьте партнёром Onlayn Hamshira",
@@ -708,7 +716,15 @@
       "steps.items.2.title": "Установите приложение",
       "steps.items.2.text": "Скачайте приложение для специалистов и заполните профиль: образование, опыт, диплом и сертификаты.",
       "steps.items.3.title": "Принимайте заказы",
-      "steps.items.3.text": "Выбирайте подходящие заказы и начинайте работать."
+      "steps.items.3.text": "Выбирайте подходящие заказы и начинайте работать.",
+      "benefits.title": "Преимущества сотрудничества",
+      "benefits.items.0.title": "Свободный график",
+      "benefits.items.0.text": "Вы сами решаете, когда работать.",
+      "benefits.items.1.title": "Оплата за каждый заказ",
+      "benefits.items.1.text": "Деньги без задержек после завершения заказа.",
+      "benefits.items.2.title": "Заказы рядом",
+      "benefits.items.2.text": "Можно выбирать заказы недалеко от дома.",
+      "benefits.items.3.text": "Заказы, оплата и баланс — в приложении для специалистов."
     },
     "en": {
       "eyebrow": "Partner with Onlayn Hamshira",
@@ -728,7 +744,15 @@
       "steps.items.2.title": "Install the app",
       "steps.items.2.text": "Download the specialist app and complete your profile: education, experience, diploma and certificates.",
       "steps.items.3.title": "Take orders",
-      "steps.items.3.text": "Choose the orders that suit you and get started."
+      "steps.items.3.text": "Choose the orders that suit you and get started.",
+      "benefits.title": "Why partner with us",
+      "benefits.items.0.title": "Flexible hours",
+      "benefits.items.0.text": "You decide when to work.",
+      "benefits.items.1.title": "Pay for every order",
+      "benefits.items.1.text": "Get paid promptly once an order is done.",
+      "benefits.items.2.title": "Orders nearby",
+      "benefits.items.2.text": "Choose orders close to where you live.",
+      "benefits.items.3.text": "Orders, payments and balance in the specialist app."
     }
   }
 }
