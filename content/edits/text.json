@@ -671,8 +671,23 @@
     "en": {}
   },
   "expert": {
-    "uz": {},
-    "ru": {},
-    "en": {}
+    "uz": {
+      "eyebrow": "Onlayn Hamshira bilan hamkorlik qiling",
+      "lead": "Mijoz qidirishingiz shart emas: buyurtmalar ilovaga o‘zi keladi, siz esa faqat bemorga e’tibor qaratasiz.",
+      "apply": "Ariza qoldirish",
+      "applyTg": "yoki Telegramda yozing"
+    },
+    "ru": {
+      "eyebrow": "Станьте партнёром Onlayn Hamshira",
+      "lead": "Не нужно искать клиентов: заказы приходят в приложение, а вы занимаетесь только пациентом.",
+      "apply": "Подать заявку",
+      "applyTg": "или напишите в Telegram"
+    },
+    "en": {
+      "eyebrow": "Partner with Onlayn Hamshira",
+      "lead": "No need to look for clients: orders come to you in the app, so you can focus on your patients.",
+      "apply": "Apply now",
+      "applyTg": "or message us on Telegram"
+    }
   }
 }
