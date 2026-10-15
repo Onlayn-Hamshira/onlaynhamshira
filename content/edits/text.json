@@ -177,7 +177,13 @@
       "faq.items.7.a": "Ma’lumotlaringiz “Shaxsga doir ma’lumotlar to‘g‘risida”gi qonunga muvofiq ishlanadi. Ular faqat buyurtmani bajarish uchun ishlatiladi. Mutaxassis faqat tashrif uchun zarur ma’lumotlarni ko‘radi. Batafsil — Maxfiylik siyosatida.",
       "faq.items.8.q": "Xizmat sifati yoqmasa, nima qilishim kerak?",
       "faq.items.8.a": "Ilovada buyurtmani baholang yoki qo‘llab-quvvatlash xizmatiga yozing. Har bir shikoyatni ko‘rib chiqib, natijasini sizga xabar qilamiz.",
-      "join.mock.specialties.2": "Feldsher"
+      "join.mock.specialties.2": "Feldsher",
+      "reviews.items.0.name": "Nuriddin A.",
+      "reviews.items.1.name": "Nilufar Q.",
+      "reviews.items.2.name": "Xolmirzayev B.",
+      "reviews.items.3.name": "Gulnoza E.",
+      "reviews.items.5.name": "Malika A.",
+      "reviews.items.6.name": "Bekzod"
     },
     "ru": {
       "stats.items.0": "Проверенных специалистов",
@@ -349,7 +355,13 @@
       "faq.items.7.a": "Ваши данные обрабатываются в соответствии с Законом «О персональных данных». Они используются только для выполнения заказа. Специалист видит лишь то, что нужно для визита. Подробнее — в Политике конфиденциальности.",
       "faq.items.8.q": "Что делать, если качество услуги не устроило?",
       "faq.items.8.a": "Оцените заказ в приложении или напишите в поддержку. Мы рассмотрим каждую жалобу и сообщим вам результат.",
-      "join.mock.specialties.2": "Фельдшер"
+      "join.mock.specialties.2": "Фельдшер",
+      "reviews.items.0.name": "Нуриддин А.",
+      "reviews.items.1.name": "Нилуфар К.",
+      "reviews.items.2.name": "Бобур Х.",
+      "reviews.items.3.name": "Гулноза Э.",
+      "reviews.items.5.name": "Малика А.",
+      "reviews.items.6.name": "Бекзод"
     },
     "en": {
       "stats.items.0": "Verified specialists",
@@ -528,7 +540,13 @@
       "faq.items.7.a": "Your data is processed in line with Uzbekistan’s Law on Personal Data. It is used only to fulfil your order. The specialist sees only what is needed for the visit. Details are in our Privacy Policy.",
       "faq.items.8.q": "What if I’m not happy with the service?",
       "faq.items.8.a": "Rate the order in the app or contact support. We review every complaint and let you know the outcome.",
-      "join.mock.specialties.2": "Paramedic"
+      "join.mock.specialties.2": "Paramedic",
+      "reviews.items.0.name": "Nuriddin A.",
+      "reviews.items.1.name": "Nilufar Q.",
+      "reviews.items.2.name": "Bobur K.",
+      "reviews.items.3.name": "Gulnoza E.",
+      "reviews.items.5.name": "Malika A.",
+      "reviews.items.6.name": "Bekzod"
     }
   },
   "why": {
