@@ -201,7 +201,9 @@
       "footer.links.7": "Hujjatlar",
       "common.onlineApp": "Web-ilova",
       "footer.privacy": "Ommaviy oferta · Maxfiylik siyosati",
-      "footer.rights": "© {year} “ONLAYN HAMSHIRA” MChJ. Barcha huquqlar himoyalangan."
+      "footer.rights": "© {year} “ONLAYN HAMSHIRA” MChJ. Barcha huquqlar himoyalangan.",
+      "services.items.chaqiruv.title": "Chaqiruv narxi",
+      "services.items.chaqiruv.description": "Mutaxassisning uyingizga kelish narxi. U har bir tashrifga bir marta qo‘shiladi va mutaxassis tarifiga bog‘liq. Muolajalar narxi alohida hisoblanadi."
     },
     "ru": {
       "stats.items.0": "Проверенных специалистов",
@@ -396,7 +398,9 @@
       "footer.links.7": "Документы",
       "common.onlineApp": "Веб-приложение",
       "footer.privacy": "Публичная оферта · Политика конфиденциальности",
-      "footer.rights": "© {year} ООО “ONLAYN HAMSHIRA”. Все права защищены."
+      "footer.rights": "© {year} ООО “ONLAYN HAMSHIRA”. Все права защищены.",
+      "services.items.chaqiruv.title": "Стоимость вызова",
+      "services.items.chaqiruv.description": "Стоимость выезда специалиста к вам домой. Взимается один раз за визит и зависит от тарифа специалиста. Процедуры оплачиваются отдельно."
     },
     "en": {
       "stats.items.0": "Verified specialists",
@@ -595,7 +599,9 @@
       "footer.links.1": "About us",
       "footer.links.7": "Documents",
       "footer.privacy": "Public offer · Privacy policy",
-      "footer.rights": "© {year} ONLAYN HAMSHIRA LLC. All rights reserved."
+      "footer.rights": "© {year} ONLAYN HAMSHIRA LLC. All rights reserved.",
+      "services.items.chaqiruv.title": "Call-out fee",
+      "services.items.chaqiruv.description": "The cost of a specialist coming to your home. It’s charged once per visit and depends on the specialist’s rate. Procedures are priced separately."
     }
   },
   "why": {
