@@ -707,7 +707,18 @@
       "requirements.items.3.text": "Belgilangan vaqtda kelish va bemorga e’tiborli bo‘lish.",
       "income.title": "Daromadingiz qanday hisoblanadi",
       "income.text": "Har bir bajarilgan buyurtmadan platforma 30% komissiya oladi. Qolgan 70% sizniki.",
-      "income.youGet": "Sizga"
+      "income.youGet": "Sizga",
+      "income.items.0.title": "To‘lov — xizmatdan keyin",
+      "income.items.0.text": "Naqd to‘lovda pulni mijozdan olasiz. Karta orqali to‘lovda mablag‘ buyurtma yakunlangach hisobingizga o‘tadi.",
+      "income.items.1.title": "Komissiya — faqat bajarilgan buyurtmadan",
+      "income.items.1.text": "30% komissiya buyurtma yakunlangach balansingizdan avtomatik yechiladi.",
+      "income.items.2.title": "Ilovadagi balans",
+      "income.items.2.text": "Buyurtma qabul qilish uchun balansda komissiyaga yetarli mablag‘ bo‘lishi kerak.",
+      "income.items.3.title": "Shartlar oldindan ma’lum",
+      "income.items.3.text": "Komissiya va to‘lov tartibi bilan ariza bosqichidayoq tanishasiz.",
+      "faq.label": "Ko‘p beriladigan savollar",
+      "faq.text": "Hamkorlik haqida ko‘p so‘raladigan savollar.",
+      "faq.more": "Boshqa savolingiz bormi? Menejerimiz ro‘yxatdan o‘tishda yordam beradi."
     },
     "ru": {
       "eyebrow": "Станьте партнёром Onlayn Hamshira",
@@ -744,7 +755,18 @@
       "requirements.items.3.text": "Приезжать вовремя и внимательно относиться к пациенту.",
       "income.title": "Как рассчитывается ваш доход",
       "income.text": "С каждого выполненного заказа платформа берёт 30% комиссии. Остальные 70% — ваши.",
-      "income.youGet": "Вам"
+      "income.youGet": "Вам",
+      "income.items.0.title": "Оплата — после услуги",
+      "income.items.0.text": "При оплате наличными вы получаете деньги от клиента. При оплате картой средства поступают на ваш счёт после завершения заказа.",
+      "income.items.1.title": "Комиссия — только с выполненных заказов",
+      "income.items.1.text": " 30% списываются с баланса автоматически после завершения заказа.",
+      "income.items.2.title": "Баланс в приложении",
+      "income.items.2.text": "Чтобы принимать заказы, на балансе должно быть достаточно средств для комиссии.",
+      "income.items.3.title": "Условия известны заранее",
+      "income.items.3.text": "С комиссией и порядком оплаты вы знакомитесь уже на этапе заявки.",
+      "faq.label": "Частые вопросы",
+      "faq.text": "Частые вопросы о сотрудничестве.",
+      "faq.more": "Остались вопросы? Наш менеджер поможет с регистрацией."
     },
     "en": {
       "eyebrow": "Partner with Onlayn Hamshira",
@@ -781,7 +803,17 @@
       "requirements.items.3.text": "Arrive on time and treat every patient with care.",
       "income.label": "Earnings and payments",
       "income.title": "How your earnings work",
-      "income.text": "The platform takes a 30% commission on each completed order. The other 70% is yours."
+      "income.text": "The platform takes a 30% commission on each completed order. The other 70% is yours.",
+      "income.items.0.title": "Paid after the service",
+      "income.items.0.text": "For cash payments, the client pays you directly. For card payments, the money reaches your account once the order is complete.",
+      "income.items.1.title": "Commission only on completed orders",
+      "income.items.1.text": "30% is deducted from your balance automatically once the order is done.",
+      "income.items.2.title": "In-app balance",
+      "income.items.2.text": "To accept orders, your balance must cover the commission.",
+      "income.items.3.title": "Terms upfront",
+      "income.items.3.text": "You’ll see the commission and payment terms while applying.",
+      "faq.text": "Common questions about partnering with us.",
+      "faq.more": "Still have questions? Our manager will help you register."
     }
   }
 }
