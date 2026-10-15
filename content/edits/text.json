@@ -206,7 +206,7 @@
       "services.items.chaqiruv.description": "Mutaxassisning uyingizga kelish narxi. U har bir tashrifga bir marta qo‘shiladi va mutaxassis tarifiga bog‘liq. Muolajalar narxi alohida hisoblanadi.",
       "services.items.korik.duration": "20–30 daqiqa",
       "services.items.parvarish.duration": "20–50 daqiqa",
-      "blog.topics.news": "Foydali maqolalar",
+      "blog.topics.news": "Kompaniya yangiliklari",
       "blog.principles": [
         {
           "title": "Mas’uliyatli ma’lumot",
@@ -220,7 +220,8 @@
       "blog.principles.0.text": "Maqolalar shifokor maslahati o‘rnini bosmaydi. Davolash bo‘yicha qarorni faqat shifokor qabul qiladi.",
       "blog.principles.1.text": "“ONLAYN HAMSHIRA” MChJ davlat ro‘yxatidan o‘tgan (STIR 309 109 813). Hujjatlarni o‘zingiz tekshirishingiz mumkin.",
       "blog.docsLink": "Hujjatlarni ko‘rish",
-      "blog.articles": "Kompaniya yangiliklari"
+      "blog.articles": "Kompaniya yangiliklari",
+      "legacy.ctaText": "Mutaxassis odatda 30–90 daqiqada yetib keladi. Buyurtmalarni kecha-kunduz qabul qilamiz."
     },
     "ru": {
       "stats.items.0": "Проверенных специалистов",
@@ -420,7 +421,7 @@
       "services.items.chaqiruv.description": "Стоимость выезда специалиста к вам домой. Взимается один раз за визит и зависит от тарифа специалиста. Процедуры оплачиваются отдельно.",
       "services.items.korik.duration": "20–30 минут",
       "services.items.parvarish.duration": "20–50 минут",
-      "blog.topics.news": "Полезные статьи",
+      "blog.topics.news": "Новости компании",
       "blog.lead": "Понятные статьи об уходе на дому, профилактике и здоровом образе жизни.",
       "blog.principles": [
         {
@@ -437,7 +438,8 @@
       "blog.docsLink": "Посмотреть документы",
       "blog.topics.nurse": "Услуги медсестры",
       "blog.topics.family": "Мама и ребёнок",
-      "blog.articles": "Новости компании"
+      "blog.articles": "Новости компании",
+      "legacy.ctaText": "Специалист обычно приезжает за 30–90 минут. Принимаем заказы круглосуточно."
     },
     "en": {
       "stats.items.0": "Verified specialists",
@@ -641,7 +643,7 @@
       "services.items.chaqiruv.description": "The cost of a specialist coming to your home. It’s charged once per visit and depends on the specialist’s rate. Procedures are priced separately.",
       "services.items.korik.duration": "20–30 min",
       "services.items.parvarish.duration": "20–50 min",
-      "blog.topics.news": "Helpful articles",
+      "blog.topics.news": "Company news",
       "blog.lead": "Clear, practical articles on home care, prevention and healthy living.",
       "blog.principles": [
         {
@@ -659,7 +661,8 @@
       "blog.featured": "Featured",
       "blog.topics.nurse": "Nursing care",
       "blog.topics.family": "Mother & child",
-      "blog.articles": "Company news"
+      "blog.articles": "Company news",
+      "legacy.ctaText": "A specialist usually arrives within 30–90 minutes. We take orders 24/7."
     }
   },
   "why": {
