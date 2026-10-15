@@ -197,7 +197,9 @@
       "header.partner": "Mutaxassislarga",
       "footer.links.1": "Biz haqimizda\t\t",
       "header.nav.3": "Foydalanuvchilar fikri",
-      "reviews.label": "Foydalanuvchilar fikri"
+      "reviews.label": "Foydalanuvchilar fikri",
+      "footer.links.7": "Hujjatlar",
+      "common.onlineApp": "Web-ilova"
     },
     "ru": {
       "stats.items.0": "Проверенных специалистов",
@@ -388,7 +390,9 @@
       "footer.links.4": "Вопросы и ответы",
       "header.partner": "Специалистам",
       "footer.links.1": "О нас",
-      "reviews.label": "Отзывы пользователей"
+      "reviews.label": "Отзывы пользователей",
+      "footer.links.7": "Документы",
+      "common.onlineApp": "Веб-приложение"
     },
     "en": {
       "stats.items.0": "Verified specialists",
@@ -584,7 +588,8 @@
       "contact.hoursText": "Daily, 24/7",
       "footer.tagline": "Onlayn Hamshira is a digital platform connecting clients with specialists. It is not a medical institution. Services are provided by specialists who partner with the platform.",
       "header.partner": "For specialists",
-      "footer.links.1": "About us"
+      "footer.links.1": "About us",
+      "footer.links.7": "Documents"
     }
   },
   "why": {
