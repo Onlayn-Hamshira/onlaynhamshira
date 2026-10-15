@@ -217,7 +217,8 @@
           "text": "“ONLAYN HAMSHIRA” MCHJ davlat ro‘yxatidan o‘tgan — hujjatlarimizni o‘zingiz tekshira olasiz."
         }
       ],
-      "blog.principles.0.text": "Maqolalar shifokor maslahati o‘rnini bosmaydi. Davolash bo‘yicha qarorni faqat shifokor qabul qiladi."
+      "blog.principles.0.text": "Maqolalar shifokor maslahati o‘rnini bosmaydi. Davolash bo‘yicha qarorni faqat shifokor qabul qiladi.",
+      "blog.principles.1.text": "“ONLAYN HAMSHIRA” MChJ davlat ro‘yxatidan o‘tgan (STIR 309 109 813). Hujjatlarni o‘zingiz tekshirishingiz mumkin."
     },
     "ru": {
       "stats.items.0": "Проверенных специалистов",
@@ -429,7 +430,8 @@
           "text": "ООО «ONLAYN HAMSHIRA» прошло государственную регистрацию — документы можно проверить самостоятельно."
         }
       ],
-      "blog.principles.0.text": "Статьи не заменяют консультацию врача. Решение о лечении принимает только врач."
+      "blog.principles.0.text": "Статьи не заменяют консультацию врача. Решение о лечении принимает только врач.",
+      "blog.principles.1.text": "ООО “ONLAYN HAMSHIRA” зарегистрировано государством (ИНН 309 109 813). Документы можно проверить самостоятельно."
     },
     "en": {
       "stats.items.0": "Verified specialists",
@@ -645,7 +647,8 @@
           "text": "“ONLAYN HAMSHIRA” LLC is officially registered — you can verify our documents yourself."
         }
       ],
-      "blog.principles.0.text": "Our articles don’t replace medical advice. Only a doctor can make treatment decisions."
+      "blog.principles.0.text": "Our articles don’t replace medical advice. Only a doctor can make treatment decisions.",
+      "blog.principles.1.text": "ONLAYN HAMSHIRA LLC is officially registered (TIN 309 109 813). You can check our documents yourself."
     }
   },
   "why": {
