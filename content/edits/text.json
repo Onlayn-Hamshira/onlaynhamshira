@@ -2,7 +2,7 @@
   "dict": {
     "uz": {
       "news.label": "Blog",
-      "blog.lead": "Uyda parvarish, profilaktika va sog‘lom turmush tarzi haqida sodda tilda yozilgan maqolalar.\t\tClear, practical articles on home care, prevention and healthy living.",
+      "blog.lead": "Uyda parvarish, profilaktika va sog‘lom turmush tarzi haqida sodda tilda yozilgan maqolalar.\t",
       "hero.allDaySub": "dam olish va bayram kunlari ham",
       "stats.items.0": "Tekshirilgan mutaxassis",
       "hero.lead": "Onlayn Hamshira — uyga tibbiy mutaxassis chaqirish uchun raqamli platforma: biz sizni tekshirilgan hamshira, feldsher va shifokorlar bilan bog‘laymiz.",
@@ -638,7 +638,7 @@
       "services.items.korik.duration": "20–30 min",
       "services.items.parvarish.duration": "20–50 min",
       "blog.topics.news": "Helpful articles",
-      "blog.lead": "Понятные статьи об уходе на дому, профилактике и здоровом образе жизни.",
+      "blog.lead": "Clear, practical articles on home care, prevention and healthy living.",
       "blog.principles": [
         {
           "title": "Responsible information",
