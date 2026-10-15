@@ -2,7 +2,7 @@
   "dict": {
     "uz": {
       "news.label": "Blog",
-      "blog.lead": "Uyda parvarish, profilaktika va sog‘lom turmush bo‘yicha hamshiralarimiz tajribasiga asoslangan foydali maqolalar",
+      "blog.lead": "Uyda parvarish, profilaktika va sog‘lom turmush tarzi haqida sodda tilda yozilgan maqolalar.\t\tClear, practical articles on home care, prevention and healthy living.",
       "hero.allDaySub": "dam olish va bayram kunlari ham",
       "stats.items.0": "Tekshirilgan mutaxassis",
       "hero.lead": "Onlayn Hamshira — uyga tibbiy mutaxassis chaqirish uchun raqamli platforma: biz sizni tekshirilgan hamshira, feldsher va shifokorlar bilan bog‘laymiz.",
@@ -205,7 +205,19 @@
       "services.items.chaqiruv.title": "Chaqiruv narxi",
       "services.items.chaqiruv.description": "Mutaxassisning uyingizga kelish narxi. U har bir tashrifga bir marta qo‘shiladi va mutaxassis tarifiga bog‘liq. Muolajalar narxi alohida hisoblanadi.",
       "services.items.korik.duration": "20–30 daqiqa",
-      "services.items.parvarish.duration": "20–50 daqiqa"
+      "services.items.parvarish.duration": "20–50 daqiqa",
+      "blog.topics.news": "Foydali maqolalar",
+      "blog.principles": [
+        {
+          "title": "Mas’uliyatli ma’lumot",
+          "text": "Tashxis qo‘ymaymiz va dori buyurmaymiz — davolash bo‘yicha qarorni shifokor qabul qiladi."
+        },
+        {
+          "title": "Rasmiy kompaniya",
+          "text": "“ONLAYN HAMSHIRA” MCHJ davlat ro‘yxatidan o‘tgan — hujjatlarimizni o‘zingiz tekshira olasiz."
+        }
+      ],
+      "blog.principles.0.text": "Maqolalar shifokor maslahati o‘rnini bosmaydi. Davolash bo‘yicha qarorni faqat shifokor qabul qiladi."
     },
     "ru": {
       "stats.items.0": "Проверенных специалистов",
@@ -404,7 +416,20 @@
       "services.items.chaqiruv.title": "Стоимость вызова",
       "services.items.chaqiruv.description": "Стоимость выезда специалиста к вам домой. Взимается один раз за визит и зависит от тарифа специалиста. Процедуры оплачиваются отдельно.",
       "services.items.korik.duration": "20–30 минут",
-      "services.items.parvarish.duration": "20–50 минут"
+      "services.items.parvarish.duration": "20–50 минут",
+      "blog.topics.news": "Полезные статьи",
+      "blog.lead": "Понятные статьи об уходе на дому, профилактике и здоровом образе жизни.",
+      "blog.principles": [
+        {
+          "title": "Ответственная информация",
+          "text": "Мы не ставим диагнозы и не назначаем лекарства — решение о лечении принимает врач."
+        },
+        {
+          "title": "Официальная компания",
+          "text": "ООО «ONLAYN HAMSHIRA» прошло государственную регистрацию — документы можно проверить самостоятельно."
+        }
+      ],
+      "blog.principles.0.text": "Статьи не заменяют консультацию врача. Решение о лечении принимает только врач."
     },
     "en": {
       "stats.items.0": "Verified specialists",
@@ -607,7 +632,20 @@
       "services.items.chaqiruv.title": "Call-out fee",
       "services.items.chaqiruv.description": "The cost of a specialist coming to your home. It’s charged once per visit and depends on the specialist’s rate. Procedures are priced separately.",
       "services.items.korik.duration": "20–30 min",
-      "services.items.parvarish.duration": "20–50 min"
+      "services.items.parvarish.duration": "20–50 min",
+      "blog.topics.news": "Helpful articles",
+      "blog.lead": "Понятные статьи об уходе на дому, профилактике и здоровом образе жизни.",
+      "blog.principles": [
+        {
+          "title": "Responsible information",
+          "text": "We don’t diagnose or prescribe — treatment decisions are made by a doctor."
+        },
+        {
+          "title": "Registered company",
+          "text": "“ONLAYN HAMSHIRA” LLC is officially registered — you can verify our documents yourself."
+        }
+      ],
+      "blog.principles.0.text": "Our articles don’t replace medical advice. Only a doctor can make treatment decisions."
     }
   },
   "why": {
