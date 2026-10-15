@@ -722,7 +722,9 @@
       "faq.items.0.q": "Platformaga kimlar qo‘shila oladi?",
       "faq.items.0.a": "Tibbiy ma’lumotga va kamida 5 yillik ish tajribasiga ega hamshiralar, feldsherlar, shifokorlar va massajchilar. Diplom va sertifikatlar albatta tekshiriladi.",
       "faq.items.1.a": "hr.onlaynhamshira.uz saytida ariza qoldiring, menejer bilan suhbatdan o‘ting va mutaxassislar ilovasini o‘rnating. Batafsil — yuqoridagi “4 qadam” blokida.",
-      "faq.items.2.a": "Siz to‘lovni to‘g‘ridan-to‘g‘ri mijozdan olasiz, platforma har bir bajarilgan buyurtmadan 30% komissiya oladi, qolgan 70% sizniki. Komissiya ilovadagi balansingizdan avtomatik yechiladi.\t"
+      "faq.items.2.a": "Siz to‘lovni to‘g‘ridan-to‘g‘ri mijozdan olasiz, platforma har bir bajarilgan buyurtmadan 30% komissiya oladi, qolgan 70% sizniki. Komissiya ilovadagi balansingizdan avtomatik yechiladi.\t",
+      "faq.items.3.a": "Yo‘q. Qachon ishlashni o‘zingiz hal qilasiz va buyurtmalarni ilovada o‘zingiz tanlaysiz.",
+      "final.text": "Arizani hozir qoldiring. Istalgan bosqichda to‘xtab, keyin davom ettirishingiz mumkin."
     },
     "ru": {
       "eyebrow": "Станьте партнёром Onlayn Hamshira",
@@ -776,7 +778,9 @@
       "faq.items.1.q": "Как проходит регистрация?",
       "faq.items.1.a": "Подайте заявку на hr.onlaynhamshira.uz, пройдите собеседование с менеджером и установите приложение для специалистов. Подробнее — в блоке «4 шага» выше.",
       "faq.items.2.q": "Как рассчитывается доход?",
-      "faq.items.2.a": "Вы получаете оплату напрямую от клиента, платформа берёт 30% с каждого выполненного заказа, остальные 70% — ваши. Комиссия списывается с баланса в приложении автоматически."
+      "faq.items.2.a": "Вы получаете оплату напрямую от клиента, платформа берёт 30% с каждого выполненного заказа, остальные 70% — ваши. Комиссия списывается с баланса в приложении автоматически.",
+      "faq.items.3.a": "Нет. Вы сами решаете, когда работать, и сами выбираете заказы в приложении.",
+      "final.text": "Подайте заявку сейчас. Можно остановиться на любом этапе и продолжить позже."
     },
     "en": {
       "eyebrow": "Partner with Onlayn Hamshira",
@@ -829,7 +833,9 @@
       "faq.items.1.q": "How does registration work?",
       "faq.items.1.a": "Apply at hr.onlaynhamshira.uz, have a short interview with a manager and install the specialist app. See the 4 steps above for details.",
       "faq.items.2.q": "How are earnings calculated?",
-      "faq.items.2.a": "You receive payment directly from the client, the platform takes 30% of each completed order; you keep 70%. The commission is deducted from your in-app balance automatically."
+      "faq.items.2.a": "You receive payment directly from the client, the platform takes 30% of each completed order; you keep 70%. The commission is deducted from your in-app balance automatically.",
+      "faq.items.3.a": "No. You decide when to work and choose your orders in the app.",
+      "final.text": "Apply now. You can pause at any step and continue later."
     }
   }
 }
