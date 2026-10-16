@@ -225,7 +225,10 @@
       "download.title": "Mutaxassislar ilovasini o‘rnatish uchun QR kodni skanerlang",
       "certificates.lead": "“ONLAYN HAMSHIRA” MChJ — davlat ro‘yxatidan o‘tgan, soliq to‘lovchi kompaniya. Quyidagi guvohnomalar faoliyatimiz qonuniy ekanini va shaxsga doir ma’lumotlar bazamiz davlat reyestrida turganini tasdiqlaydi. Har birini rasmiy manbada o‘zingiz tekshirishingiz mumkin.\t\t",
       "certificates.facts.since": "2021 — ro‘yxatdan o‘tgan yil",
-      "certificates.facts.tin": "STIR"
+      "certificates.facts.tin": "STIR",
+      "certificates.listTitle": "Guvohnomalar",
+      "certificates.listText": "Davlat organlari va IT Park tomonidan berilgan rasmiy guvohnomalar.",
+      "certificates.items.1.kind": "Shaxsga doir ma’lumotlar"
     },
     "ru": {
       "stats.items.0": "Проверенных специалистов",
@@ -447,7 +450,10 @@
       "download.title": "Отсканируйте QR-код, чтобы установить приложение для специалистов",
       "certificates.lead": "ООО “ONLAYN HAMSHIRA” — зарегистрированная компания и налогоплательщик. Эти свидетельства подтверждают законность нашей деятельности и регистрацию нашей базы персональных данных в госреестре. Каждое можно проверить в официальном источнике.",
       "certificates.facts.since": "2021 — год регистрации",
-      "certificates.facts.tin": "ИНН"
+      "certificates.facts.tin": "ИНН",
+      "certificates.listTitle": "Свидетельства",
+      "certificates.listText": "Официальные свидетельства, выданные государственными органами и IT Park.",
+      "certificates.items.1.kind": "Персональные данные"
     },
     "en": {
       "stats.items.0": "Verified specialists",
@@ -675,7 +681,10 @@
       "download.title": "Scan the QR code to install the specialist app",
       "certificates.lead": "ONLAYN HAMSHIRA LLC is a registered, tax-paying company. These certificates confirm that we operate legally and that our personal-data database is listed in the state register. You can verify each one at the official source.",
       "certificates.facts.since": "2021 — year registered",
-      "certificates.facts.tin": "TIN"
+      "certificates.facts.tin": "TIN",
+      "certificates.listTitle": "Certificates",
+      "certificates.listText": "Official certificates issued by government bodies and IT Park.",
+      "certificates.items.1.kind": "Personal data"
     }
   },
   "why": {
