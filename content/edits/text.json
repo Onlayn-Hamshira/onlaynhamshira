@@ -233,7 +233,10 @@
       "certificates.items.1.text": "Ma’lumotlar bazamiz davlat reyestrida ro‘yxatdan o‘tgan. Ismingiz, telefon raqamingiz va boshqa ma’lumotlaringiz qonun talablari asosida ishlanadi.",
       "certificates.items.2.text": "“ONLAYN HAMSHIRA” MChJ 2025-yil 31-yanvardan IT Park rezidentlarining yagona reyestriga kiritilgan.",
       "legacy.ctaTitle": "Uyda muolaja kerakmi?",
-      "contactsPage.lead": "Savolingiz bormi yoki hamshira kerakmi? Qo‘ng‘iroq qiling yoki Telegramda yozing. Kunduzi operatorimiz darhol javob beradi, kechasi esa xabaringizga imkon qadar tez javob qaytaramiz."
+      "contactsPage.lead": "Savolingiz bormi yoki hamshira kerakmi? Qo‘ng‘iroq qiling yoki Telegramda yozing. Kunduzi operatorimiz darhol javob beradi, kechasi esa xabaringizga imkon qadar tez javob qaytaramiz.",
+      "contactsPage.methodsTitle": "Boshqa aloqa kanallari",
+      "contactsPage.telegramNote": "Savollar va buyurtmalar",
+      "contactsPage.instagramNote": "Yangiliklar va foydali postlar"
     },
     "ru": {
       "stats.items.0": "Проверенных специалистов",
@@ -464,7 +467,10 @@
       "certificates.items.2.kind": "Свидетельство о регистрации в качестве резидента IT Park",
       "certificates.items.2.text": "ООО “ONLAYN HAMSHIRA” внесено в единый реестр резидентов IT Park с 31 января 2025 года.",
       "legacy.ctaTitle": "Нужна процедура на дому?",
-      "contactsPage.lead": "Есть вопрос или нужна медсестра? Позвоните или напишите в Telegram. Днём оператор ответит сразу, ночью — как можно скорее."
+      "contactsPage.lead": "Есть вопрос или нужна медсестра? Позвоните или напишите в Telegram. Днём оператор ответит сразу, ночью — как можно скорее.",
+      "contactsPage.methodsTitle": "Другие каналы связи",
+      "contactsPage.telegramNote": "Вопросы и заказы",
+      "contactsPage.instagramNote": "Новости и полезные посты"
     },
     "en": {
       "stats.items.0": "Verified specialists",
@@ -701,7 +707,10 @@
       "certificates.items.2.kind": "Certificate of IT Park residency",
       "certificates.items.2.text": "ONLAYN HAMSHIRA LLC has been listed in the IT Park resident register since 31 January 2025.",
       "legacy.ctaTitle": "Need a procedure at home?",
-      "contactsPage.lead": "Have a question or need a nurse? Call us or message us on Telegram. During the day our operator answers right away; at night we’ll reply as soon as we can."
+      "contactsPage.lead": "Have a question or need a nurse? Call us or message us on Telegram. During the day our operator answers right away; at night we’ll reply as soon as we can.",
+      "contactsPage.methodsTitle": "Other ways to reach us",
+      "contactsPage.telegramNote": "Questions and orders",
+      "contactsPage.instagramNote": "News and helpful posts"
     }
   },
   "why": {
