@@ -457,7 +457,8 @@
       "certificates.listText": "Официальные свидетельства, выданные государственными органами и IT Park.",
       "certificates.items.1.kind": "Персональные данные",
       "certificates.items.0.text": "Подтверждает, что ООО “ONLAYN HAMSHIRA” официально зарегистрировано как юридическое лицо.",
-      "certificates.items.1.text": "Наша база данных зарегистрирована в госреестре. Ваше имя, телефон и другие данные обрабатываются в соответствии с законом."
+      "certificates.items.1.text": "Наша база данных зарегистрирована в госреестре. Ваше имя, телефон и другие данные обрабатываются в соответствии с законом.",
+      "certificates.items.2.kind": "Свидетельство о регистрации в качестве резидента IT Park"
     },
     "en": {
       "stats.items.0": "Verified specialists",
@@ -690,7 +691,8 @@
       "certificates.listText": "Official certificates issued by government bodies and IT Park.",
       "certificates.items.1.kind": "Personal data",
       "certificates.items.0.text": "Confirms that ONLAYN HAMSHIRA LLC is an officially registered legal entity.",
-      "certificates.items.1.text": "Our database is listed in the state register. Your name, phone number and other data are processed in line with the law."
+      "certificates.items.1.text": "Our database is listed in the state register. Your name, phone number and other data are processed in line with the law.",
+      "certificates.items.2.kind": "Certificate of IT Park residency"
     }
   },
   "why": {
