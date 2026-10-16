@@ -191,7 +191,7 @@
       "faq.items.10.a": "Telegramda @Onlayn_Hamshira_Admin manziliga yozing yoki +998 78 113 96 16 raqamiga qo‘ng‘iroq qiling. Ilovadagi “Qo‘llab-quvvatlash” bo‘limi orqali ham murojaat qilishingiz mumkin.",
       "contact.address": "Ofis manzili",
       "contact.hours": "Ish vaqti",
-      "contact.hoursText": "Har kuni, kecha-kunduz",
+      "contact.hoursText": "Operator: har kuni, 08:00–01:00. Telegramda istalgan vaqtda yozishingiz mumkin.\t\t",
       "footer.tagline": "Onlayn Hamshira — mijozlar va mutaxassislarni bog‘lovchi raqamli platforma. Platforma tibbiy muassasa emas. Xizmatlarni platformaga hamkor sifatida qo‘shilgan mutaxassislar ko‘rsatadi.",
       "footer.links.4": "Savol-javob\t\t",
       "header.partner": "Mutaxassislarga",
@@ -221,7 +221,7 @@
       "blog.principles.1.text": "“ONLAYN HAMSHIRA” MChJ davlat ro‘yxatidan o‘tgan (STIR 309 109 813). Hujjatlarni o‘zingiz tekshirishingiz mumkin.",
       "blog.docsLink": "Hujjatlarni ko‘rish",
       "blog.articles": "Kompaniya yangiliklari",
-      "legacy.ctaText": "Mutaxassis odatda 30–90 daqiqada yetib keladi. Buyurtmalarni kecha-kunduz qabul qilamiz.",
+      "legacy.ctaText": "Mutaxassis odatda 30–90 daqiqada yetib keladi. Uni oldindan, sizga qulay vaqtga ham chaqirishingiz mumkin.",
       "download.title": "Mutaxassislar ilovasini o‘rnatish uchun QR kodni skanerlang",
       "certificates.lead": "“ONLAYN HAMSHIRA” MChJ — davlat ro‘yxatidan o‘tgan, soliq to‘lovchi kompaniya. Quyidagi guvohnomalar faoliyatimiz qonuniy ekanini va shaxsga doir ma’lumotlar bazamiz davlat reyestrida turganini tasdiqlaydi. Har birini rasmiy manbada o‘zingiz tekshirishingiz mumkin.\t\t",
       "certificates.facts.since": "Ro‘yxatdan o‘tgan yil",
@@ -230,7 +230,10 @@
       "certificates.listText": "Davlat organlari va IT Park tomonidan berilgan rasmiy guvohnomalar.",
       "certificates.items.1.kind": "Shaxsga doir ma’lumotlar",
       "certificates.items.0.text": "“ONLAYN HAMSHIRA” MChJ rasman ro‘yxatdan o‘tgan yuridik shaxs ekanini tasdiqlaydi.",
-      "certificates.items.1.text": "Ma’lumotlar bazamiz davlat reyestrida ro‘yxatdan o‘tgan. Ismingiz, telefon raqamingiz va boshqa ma’lumotlaringiz qonun talablari asosida ishlanadi."
+      "certificates.items.1.text": "Ma’lumotlar bazamiz davlat reyestrida ro‘yxatdan o‘tgan. Ismingiz, telefon raqamingiz va boshqa ma’lumotlaringiz qonun talablari asosida ishlanadi.",
+      "certificates.items.2.text": "“ONLAYN HAMSHIRA” MChJ 2025-yil 31-yanvardan IT Park rezidentlarining yagona reyestriga kiritilgan.",
+      "legacy.ctaTitle": "Uyda muolaja kerakmi?",
+      "contactsPage.lead": "Savolingiz bormi yoki hamshira kerakmi? Qo‘ng‘iroq qiling yoki Telegramda yozing. Kunduzi operatorimiz darhol javob beradi, kechasi esa xabaringizga imkon qadar tez javob qaytaramiz."
     },
     "ru": {
       "stats.items.0": "Проверенных специалистов",
@@ -416,7 +419,7 @@
       "faq.items.10.a": "Напишите в Telegram @Onlayn_Hamshira_Admin или позвоните по номеру +998 78 113 96 16. Также можно обратиться через раздел «Служба поддержка» в приложении.",
       "contact.address": "Адрес офиса",
       "contact.hours": "Время работы",
-      "contact.hoursText": "Ежедневно, круглосуточно",
+      "contact.hoursText": "Оператор: ежедневно, 08:00–01:00. В Telegram можно писать в любое время.",
       "footer.tagline": "Onlayn Hamshira — цифровая платформа, которая связывает клиентов и специалистов. Платформа не является медицинским учреждением. Услуги оказывают специалисты-партнёры платформы.",
       "footer.links.4": "Вопросы и ответы",
       "header.partner": "Специалистам",
@@ -448,7 +451,7 @@
       "blog.topics.nurse": "Услуги медсестры",
       "blog.topics.family": "Мама и ребёнок",
       "blog.articles": "Новости компании",
-      "legacy.ctaText": "Специалист обычно приезжает за 30–90 минут. Принимаем заказы круглосуточно.",
+      "legacy.ctaText": "Специалист обычно приезжает за 30–90 минут. Можно заказать и заранее на удобное время.",
       "download.title": "Отсканируйте QR-код, чтобы установить приложение для специалистов",
       "certificates.lead": "ООО “ONLAYN HAMSHIRA” — зарегистрированная компания и налогоплательщик. Эти свидетельства подтверждают законность нашей деятельности и регистрацию нашей базы персональных данных в госреестре. Каждое можно проверить в официальном источнике.",
       "certificates.facts.since": "Год регистрации",
@@ -458,7 +461,10 @@
       "certificates.items.1.kind": "Персональные данные",
       "certificates.items.0.text": "Подтверждает, что ООО “ONLAYN HAMSHIRA” официально зарегистрировано как юридическое лицо.",
       "certificates.items.1.text": "Наша база данных зарегистрирована в госреестре. Ваше имя, телефон и другие данные обрабатываются в соответствии с законом.",
-      "certificates.items.2.kind": "Свидетельство о регистрации в качестве резидента IT Park"
+      "certificates.items.2.kind": "Свидетельство о регистрации в качестве резидента IT Park",
+      "certificates.items.2.text": "ООО “ONLAYN HAMSHIRA” внесено в единый реестр резидентов IT Park с 31 января 2025 года.",
+      "legacy.ctaTitle": "Нужна процедура на дому?",
+      "contactsPage.lead": "Есть вопрос или нужна медсестра? Позвоните или напишите в Telegram. Днём оператор ответит сразу, ночью — как можно скорее."
     },
     "en": {
       "stats.items.0": "Verified specialists",
@@ -651,7 +657,7 @@
       "faq.items.10.a": "Message us on Telegram at @Onlayn_Hamshira_Admin or call +998 78 113 96 16. You can also reach us through the Support service section in the app.",
       "contact.address": "Office address",
       "contact.hours": "Working hours",
-      "contact.hoursText": "Daily, 24/7",
+      "contact.hoursText": "Operator: daily, 08:00–01:00. You can message us on Telegram any time.",
       "footer.tagline": "Onlayn Hamshira is a digital platform connecting clients with specialists. It is not a medical institution. Services are provided by specialists who partner with the platform.",
       "header.partner": "For specialists",
       "footer.links.1": "About us",
@@ -681,7 +687,7 @@
       "blog.topics.nurse": "Nursing care",
       "blog.topics.family": "Mother & child",
       "blog.articles": "Company news",
-      "legacy.ctaText": "A specialist usually arrives within 30–90 minutes. We take orders 24/7.",
+      "legacy.ctaText": "A specialist usually arrives within 30–90 minutes. You can also book in advance for a time that suits you.",
       "join.mock.experience": "Experience",
       "download.title": "Scan the QR code to install the specialist app",
       "certificates.lead": "ONLAYN HAMSHIRA LLC is a registered, tax-paying company. These certificates confirm that we operate legally and that our personal-data database is listed in the state register. You can verify each one at the official source.",
@@ -692,7 +698,10 @@
       "certificates.items.1.kind": "Personal data",
       "certificates.items.0.text": "Confirms that ONLAYN HAMSHIRA LLC is an officially registered legal entity.",
       "certificates.items.1.text": "Our database is listed in the state register. Your name, phone number and other data are processed in line with the law.",
-      "certificates.items.2.kind": "Certificate of IT Park residency"
+      "certificates.items.2.kind": "Certificate of IT Park residency",
+      "certificates.items.2.text": "ONLAYN HAMSHIRA LLC has been listed in the IT Park resident register since 31 January 2025.",
+      "legacy.ctaTitle": "Need a procedure at home?",
+      "contactsPage.lead": "Have a question or need a nurse? Call us or message us on Telegram. During the day our operator answers right away; at night we’ll reply as soon as we can."
     }
   },
   "why": {
