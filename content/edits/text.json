@@ -93,7 +93,7 @@
       "safety.items.2.text": "Buyurtmadan keyin mutaxassisni baholaysiz. Past baho va shikoyatlarni har safar ko‘rib chiqamiz.\t\t",
       "safety.items.3.title": "24/7 qo‘llab-quvvatlash",
       "safety.items.3.text": "Savol yoki muammo bo‘lsa, operatorimiz bemorlarga ham, mutaxassislarga ham yordam beradi.",
-      "safety.certificates": "Hujjatlarni ko‘rish\t\t",
+      "safety.certificates": "Hujjatlarni ko‘rish",
       "specialists.label": "Mutaxassislar",
       "specialists.title": "Kerakli mutaxassisni tanlang",
       "specialists.text": "Hamshiralar, shifokorlar, massajchilar va enagalar platformaga hamkor sifatida qo‘shilgan. Yo‘nalishni tanlang — mutaxassis uyingizga keladi.",
@@ -222,7 +222,10 @@
       "blog.docsLink": "Hujjatlarni ko‘rish",
       "blog.articles": "Kompaniya yangiliklari",
       "legacy.ctaText": "Mutaxassis odatda 30–90 daqiqada yetib keladi. Buyurtmalarni kecha-kunduz qabul qilamiz.",
-      "download.title": "Mutaxassislar ilovasini o‘rnatish uchun QR kodni skanerlang"
+      "download.title": "Mutaxassislar ilovasini o‘rnatish uchun QR kodni skanerlang",
+      "certificates.lead": "“ONLAYN HAMSHIRA” MChJ — davlat ro‘yxatidan o‘tgan, soliq to‘lovchi kompaniya. Quyidagi guvohnomalar faoliyatimiz qonuniy ekanini va shaxsga doir ma’lumotlar bazamiz davlat reyestrida turganini tasdiqlaydi. Har birini rasmiy manbada o‘zingiz tekshirishingiz mumkin.\t\t",
+      "certificates.facts.since": "2021 — ro‘yxatdan o‘tgan yil",
+      "certificates.facts.tin": "STIR"
     },
     "ru": {
       "stats.items.0": "Проверенных специалистов",
@@ -311,7 +314,7 @@
       "safety.items.2.text": "После заказа вы оцениваете специалиста. Каждую низкую оценку и жалобу мы рассматриваем.",
       "safety.items.3.title": "Поддержка 24/7",
       "safety.items.3.text": "Если возник вопрос или проблема, оператор поможет и пациентам, и специалистам.",
-      "safety.certificates": "Посмотреть документы",
+      "safety.certificates": "Смотреть документы",
       "specialists.label": "Специалисты",
       "specialists.title": "Выберите нужного специалиста",
       "specialists.text": "Медсёстры, врачи, массажисты и няни подключены к платформе как партнёры. Выберите направление — специалист приедет к вам домой.",
@@ -441,7 +444,10 @@
       "blog.topics.family": "Мама и ребёнок",
       "blog.articles": "Новости компании",
       "legacy.ctaText": "Специалист обычно приезжает за 30–90 минут. Принимаем заказы круглосуточно.",
-      "download.title": "Отсканируйте QR-код, чтобы установить приложение для специалистов"
+      "download.title": "Отсканируйте QR-код, чтобы установить приложение для специалистов",
+      "certificates.lead": "ООО “ONLAYN HAMSHIRA” — зарегистрированная компания и налогоплательщик. Эти свидетельства подтверждают законность нашей деятельности и регистрацию нашей базы персональных данных в госреестре. Каждое можно проверить в официальном источнике.",
+      "certificates.facts.since": "2021 — год регистрации",
+      "certificates.facts.tin": "ИНН"
     },
     "en": {
       "stats.items.0": "Verified specialists",
@@ -666,7 +672,10 @@
       "blog.articles": "Company news",
       "legacy.ctaText": "A specialist usually arrives within 30–90 minutes. We take orders 24/7.",
       "join.mock.experience": "Experience",
-      "download.title": "Scan the QR code to install the specialist app"
+      "download.title": "Scan the QR code to install the specialist app",
+      "certificates.lead": "ONLAYN HAMSHIRA LLC is a registered, tax-paying company. These certificates confirm that we operate legally and that our personal-data database is listed in the state register. You can verify each one at the official source.",
+      "certificates.facts.since": "2021 — year registered",
+      "certificates.facts.tin": "TIN"
     }
   },
   "why": {
