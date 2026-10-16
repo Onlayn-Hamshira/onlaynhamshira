@@ -4,9 +4,9 @@
 
 export const SITE_URL = "https://onlaynhamshira.uz";
 
-/** Bosh sahifaning standart Open Graph rasmi (Tilda bilan bir xil) */
+/** Bosh sahifaning standart Open Graph rasmi — Tilda'dagi rasmning nusxasi (public/og/, docs/seo-baseline/tilda-images.json) */
 export const DEFAULT_OG_IMAGE =
-  "https://static.tildacdn.net/tild3462-3165-4335-b732-383031326461/photo.jpg";
+  "https://onlaynhamshira.uz/og/tild3462-3165-4335-b732-383031326461-photo.jpg";
 
 // ── Marketing / analitika ID'lari (Tilda saytidagi aynan o'sha kodlar) ──
 export const TRACKING = {

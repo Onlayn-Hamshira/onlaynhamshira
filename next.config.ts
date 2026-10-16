@@ -53,6 +53,7 @@ const nextConfig: NextConfig = {
       { source: "/badges/:path*", headers: cache },
       { source: "/logo-v2.svg", headers: cache },
       { source: "/legacy/:path*", headers: cache },
+      { source: "/og/:path*", headers: cache },
       // Admin paneldan yuklangan rasmlar — nomi har safar yangi (lib/edit/save.ts)
       { source: "/uploads/:path*", headers: cache },
     ];

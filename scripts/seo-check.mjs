@@ -16,6 +16,10 @@ const expected = JSON.parse(fs.readFileSync(new URL("../docs/seo-baseline/expect
 const approved = JSON.parse(fs.readFileSync(new URL("../content/edits/seo.json", import.meta.url)));
 for (const [p, fields] of Object.entries(approved)) if (expected[p]) Object.assign(expected[p], fields);
 const originalSitemap = fs.readFileSync(new URL("../docs/seo-baseline/sitemap-original.xml", import.meta.url), "utf8");
+// Sayt Tilda'ga bog'liq bo'lmasin (2026-10): Tilda CDN'dagi og:image rasmlari saytning o'ziga (public/og/) ko'chirilgan.
+// Kutilgan og:image — o'sha rasmning nusxasi; nusxa Tilda'dagi asl fayl bilan bayt-ma-bayt bir xil (sha256) tekshiriladi.
+const tildaImages = JSON.parse(fs.readFileSync(new URL("../docs/seo-baseline/tilda-images.json", import.meta.url)));
+const ownImage = (u) => (u && tildaImages[u] ? SITE + tildaImages[u].path : u);
 
 const decode = (s) =>
   s
@@ -62,7 +66,8 @@ for (const [p, exp] of Object.entries(expected)) {
   if (got.canonical !== abs(SITE + p)) fail(p, `canonical o'z URL'i emas: ${got.canonical}`);
   for (const k of ["title", "description", "keywords", "ogTitle", "ogDescription"]) if ((exp[k] || null) !== got[k]) fail(p, `${k}: kutilgan ${JSON.stringify(exp[k])} | bor ${JSON.stringify(got[k])}`);
   for (const k of ["canonical", "ogUrl"]) if (abs(exp[k]) !== got[k]) fail(p, `${k}: kutilgan ${exp[k]} | bor ${got[k]}`);
-  if (exp.ogImage && exp.ogImage !== got.ogImage) fail(p, `og:image: kutilgan ${exp.ogImage} | bor ${got.ogImage}`);
+  if (exp.ogImage && ownImage(exp.ogImage) !== got.ogImage) fail(p, `og:image: kutilgan ${ownImage(exp.ogImage)} | bor ${got.ogImage}`);
+  if (/tildacdn\.|tilda\.ws/i.test(html)) fail(p, "Tilda'ga havola qolgan (tildacdn / tilda.ws)");
   const expHl = Object.fromEntries(Object.entries(exp.hreflang).map(([k, v]) => [k, abs(v)]));
   if (JSON.stringify(Object.entries(expHl).sort()) !== JSON.stringify(Object.entries(got.hreflang).sort())) fail(p, `hreflang: kutilgan ${JSON.stringify(expHl)} | bor ${JSON.stringify(got.hreflang)}`);
   if (/<meta[^>]+name="robots"[^>]+noindex/i.test(html)) fail(p, "noindex qo'yilgan!");
@@ -90,6 +95,14 @@ for (const [url, h] of heads) {
     if (JSON.stringify(Object.entries(other.hreflang).sort()) !== JSON.stringify(Object.entries(h.hreflang).sort()))
       fail(p, `hreflang ${lang} → ${u} bilan ikki tomonlama emas`);
   }
+}
+
+// Tilda'dan ko'chirilgan rasmlar saytda bor va asli bilan bir xil
+const { createHash } = await import("node:crypto");
+for (const { path, sha256 } of Object.values(tildaImages)) {
+  const r = await fetch(BASE + path);
+  const hash = r.ok ? createHash("sha256").update(Buffer.from(await r.arrayBuffer())).digest("hex") : null;
+  if (hash !== sha256) fail(path, r.ok ? "rasm Tilda'dagi aslidan farq qiladi" : `rasm yo'q (${r.status})`);
 }
 
 // sitemap: asl 95 URL kamaymasligi kerak

@@ -50,7 +50,10 @@ Qiymatni o'zgartirish kerak bo'lsa (marketing qarori bilan), alohida va aniq ayt
 - `lib/seo/legacy.ts` — tashqi URL ↔ ichki yo'l. Ba'zi uz-prefikssiz URL'larda ru/en kontent bor
   (masalan `/home-detox` → ichkarida `/en/home-detox`) — bu ataylab, `<html lang>` to'g'ri bo'lishi uchun.
   `routes.ts` dagi URL uchun sahifa topilmasa build ataylab to'xtaydi.
-- Kontent rasmlari `public/legacy/` da (Tilda CDN'ga bog'liq emas). og:image esa Tilda'dagi URL'da qolgan.
+- Sayt Tilda'ga umuman bog'liq emas (domen Tilda'dan ko'chiriladi). Kontent rasmlari `public/legacy/` da, og:image
+  rasmlari — Tilda CDN'dagi asl fayllarning nusxalari `public/og/` da (`https://onlaynhamshira.uz/og/...`).
+  Tilda URL → nusxa xaritasi va sha256 — `docs/seo-baseline/tilda-images.json`; `seo:check` nusxa aslidan farq
+  qilmasligini va HTML'da `tildacdn`/`tilda.ws` havolasi yo'qligini tekshiradi. Tilda URL'ini qayta qo'shmang.
 - Asl Tilda ma'lumotlari: `docs/seo-baseline/` (README-SEO-MIGRATION.md — to'liq nazorat ro'yxati).
 
 ## Navigatsiya (header, mobil menyu, footer)
