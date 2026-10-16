@@ -236,7 +236,11 @@
       "contactsPage.lead": "Savolingiz bormi yoki hamshira kerakmi? Qo‘ng‘iroq qiling yoki Telegramda yozing. Kunduzi operatorimiz darhol javob beradi, kechasi esa xabaringizga imkon qadar tez javob qaytaramiz.",
       "contactsPage.methodsTitle": "Boshqa aloqa kanallari",
       "contactsPage.telegramNote": "Savollar va buyurtmalar",
-      "contactsPage.instagramNote": "Yangiliklar va foydali postlar"
+      "contactsPage.instagramNote": "Yangiliklar va foydali postlar",
+      "contactsPage.appText": "utaxassisni ilova orqali chaqiring. U yo‘lga chiqqanda va yetib kelganda sizga bildirishnoma keladi.",
+      "contactsPage.partnerText": "Platformaga hamkor sifatida qo‘shiling va o‘zingizga qulay vaqtda buyurtma qabul qiling.",
+      "contactsPage.partnerTitle": "Biz bilan hamkorlik qiling",
+      "how.screens.search.details": "Hamkorlik shartlari"
     },
     "ru": {
       "stats.items.0": "Проверенных специалистов",
@@ -470,7 +474,11 @@
       "contactsPage.lead": "Есть вопрос или нужна медсестра? Позвоните или напишите в Telegram. Днём оператор ответит сразу, ночью — как можно скорее.",
       "contactsPage.methodsTitle": "Другие каналы связи",
       "contactsPage.telegramNote": "Вопросы и заказы",
-      "contactsPage.instagramNote": "Новости и полезные посты"
+      "contactsPage.instagramNote": "Новости и полезные посты",
+      "contactsPage.appText": "Вызывайте специалиста через приложение. Вы получите уведомление, когда он выедет и когда прибудет.",
+      "contactsPage.partnerText": "Станьте партнёром платформы и принимайте заказы в удобное время.",
+      "contactsPage.partnerTitle": "Сотрудничайте с нами",
+      "how.screens.search.details": "Условия сотрудничества"
     },
     "en": {
       "stats.items.0": "Verified specialists",
@@ -710,7 +718,11 @@
       "contactsPage.lead": "Have a question or need a nurse? Call us or message us on Telegram. During the day our operator answers right away; at night we’ll reply as soon as we can.",
       "contactsPage.methodsTitle": "Other ways to reach us",
       "contactsPage.telegramNote": "Questions and orders",
-      "contactsPage.instagramNote": "News and helpful posts"
+      "contactsPage.instagramNote": "News and helpful posts",
+      "contactsPage.appText": "Book a specialist in the app and get notified when they set off and when they arrive.",
+      "contactsPage.partnerText": "Join the platform as a partner and take orders when it suits you.",
+      "contactsPage.partnerTitle": "Partner with us",
+      "how.screens.search.details": "Partnership terms"
     }
   },
   "why": {
