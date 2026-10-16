@@ -123,6 +123,11 @@ export const LEGACY_ROUTES: LegacyRoute[] = [
   { path: "/post-surgery-wound-care-tashkent", lang: "uz", group: "article", lastmod: "2026-10-04T12:06:29+00:00", status: "live" },
   { path: "/elderly-home-care-tashkent", lang: "uz", group: "article", lastmod: "2026-10-04T12:14:53+00:00", status: "live" },
   { path: "/babysitter-at-home-tashkent", lang: "uz", group: "article", lastmod: "2026-10-04T12:19:12+00:00", status: "live" },
+  // Tilda'da bo'lmagan yangi sahifalar: /contacts va /ilova ning ru/en nusxalari (til almashtirgich bosh sahifaga otmasin)
+  { path: "/ru/contacts", lang: "ru", group: "contacts", lastmod: "2026-10-16T00:00:00+00:00", status: "live" },
+  { path: "/en/contacts", lang: "en", group: "contacts", lastmod: "2026-10-16T00:00:00+00:00", status: "live" },
+  { path: "/ru/ilova", lang: "ru", group: "app", lastmod: "2026-10-16T00:00:00+00:00", status: "live" },
+  { path: "/en/ilova", lang: "en", group: "app", lastmod: "2026-10-16T00:00:00+00:00", status: "live" },
 ];
 
 /** Hozirda Next.js'da tayyor (sitemap'ga chiqadigan) yo'llar */

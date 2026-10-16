@@ -1,1 +1,5 @@
-{}
+{
+  "/certificates": { "title": "Hujjatlarimiz", "ogTitle": "Hujjatlarimiz" },
+  "/ru/certificates": { "title": "Наши документы", "ogTitle": "Наши документы" },
+  "/en/certificates": { "title": "Our documents", "ogTitle": "Our documents" }
+}

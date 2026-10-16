@@ -11,7 +11,7 @@ import { Logo, InstagramIcon, TelegramIcon, YoutubeIcon } from "./StoreIcons";
 import { StoreButtons } from "./DownloadModal";
 import { setScrollLock, useActiveSection } from "./Motion";
 
-const SECTION_IDS: SectionKey[] = ["about", "services", "specialists", "reviews", "faq"];
+const SECTION_IDS: SectionKey[] = ["about", "services", "prices", "reviews", "faq"];
 
 type Item = { key: NavKey; href: string; label: string };
 
@@ -39,6 +39,7 @@ export default function Header({
   const labels: Record<NavKey, string> = {
     about: t.nav[0],
     services: t.nav[1],
+    prices: t.prices,
     specialists: t.nav[2],
     reviews: t.nav[3],
     faq: t.nav[4],
@@ -81,7 +82,7 @@ export default function Header({
           scrolled ? "bg-white/85 shadow-[0_1px_0_var(--color-line)] backdrop-blur-xl" : "bg-transparent"
         }`}
       >
-        <div className="mx-auto flex h-[72px] max-w-[1320px] items-center gap-6 px-4 sm:px-6 lg:gap-3 xl:gap-6">
+        <div className="mx-auto flex h-[72px] max-w-[1320px] items-center gap-6 px-4 sm:px-6 lg:gap-3 xl:gap-4">
           <a href={home ?? "#top"} aria-label={t.homeLabel} className="shrink-0">
             <Logo className="h-9 sm:h-10" />
           </a>
@@ -156,8 +157,8 @@ export default function Header({
           </div>
           <nav className="mt-8" aria-label={t.mobileNav}>
             <ul data-oh-nav="primary" className="space-y-1">
-              {/* Mobilda faqat sahifa havolalari — bosh sahifa bo'limlariga skroll (NAV_MORE) kerak emas */}
-              {primary.map((n) => (
+              {/* Mobilda butun menyu bitta ro'yxatda, kompyuterdagi tartibda ("Yana" ichidagilar ham) */}
+              {[...primary, ...more].map((n) => (
                 <li key={n.key} data-oh-nav-key={n.key}>
                   <a
                     href={n.href}
@@ -200,7 +201,7 @@ export default function Header({
 
 const linkCls = (on: boolean) =>
   // 1024–1279px: ruscha nomlar uzunroq — punktlar ixchamroq, aks holda header sig'maydi
-  `relative block rounded-full px-2 py-2 text-[14px] whitespace-nowrap transition xl:px-3.5 xl:text-[15px] ${
+  `relative block rounded-full px-2 py-2 text-[14px] whitespace-nowrap transition xl:px-2.5 xl:text-[15px] ${
     on ? "bg-mint font-medium text-ink" : "text-ink-soft hover:bg-mist hover:text-ink"
   }`;
 

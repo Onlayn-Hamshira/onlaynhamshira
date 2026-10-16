@@ -41,6 +41,7 @@ const en: Dict = {
     more: "More",
     why: "Why Onlayn Hamshira?",
     whyShort: "Why us?",
+    prices: "Prices",
     certificates: "Certificates",
     contacts: "Contacts",
   },
@@ -296,7 +297,7 @@ const en: Dict = {
     ],
   },
   contact: {
-    heading: "Contacts",
+    heading: "Get in touch",
     phone: "Phone:",
     address: "Address:",
     addressText: "25 Shahrisabz St, U-Enter, Tashkent",
@@ -324,7 +325,6 @@ const en: Dict = {
     open: "Enlarge",
     openDoc: "{t} — enlarge",
     verify: "Verify at the official source",
-    verifyNote: "The QR code on the document leads to this same address.",
     items: [
       {
         kind: "State registration",
@@ -344,12 +344,6 @@ const en: Dict = {
         text: "Our nurse booking app and platform are recognized as a resident of Uzbekistan’s Technology Park.",
         issuer: "IT Park — Technology Park of Software Products and Information Technologies",
       },
-    ],
-    howTitle: "How to verify the documents",
-    how: [
-      "Press “Verify at the official source” or scan the QR code on the document with your phone camera.",
-      "The record in the government system opens — compare the company name and TIN.",
-      "Still have questions? Call us — we answer 24/7.",
     ],
     viewer: { label: "Document viewer", prev: "Previous document", next: "Next document", counter: "{n} / {total}" },
   },

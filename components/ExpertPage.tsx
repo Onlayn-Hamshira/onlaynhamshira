@@ -224,17 +224,17 @@ function Income({ t }: { t: ExpertDict }) {
             <h2 id="inc-h" className="mt-4 text-[clamp(28px,8.5vw,34px)] leading-[1.06] font-bold tracking-[-0.03em] text-balance sm:text-5xl">{m.title}</h2>
             <p className="mt-4 max-w-[46ch] text-lg leading-relaxed text-white/90">{m.text}</p>
 
-            {/* Taqsimot: mijoz to'lovi → sizga ~70%, komissiya ~30% */}
+            {/* Taqsimot: mijoz to'lovi → sizga 70%, komissiya 30% */}
             <div className="mt-8 rounded-[24px] bg-white/10 p-5 ring-1 ring-white/20 backdrop-blur sm:p-6">
               <div className="flex items-baseline justify-between text-sm text-white/85">
                 <span>{m.clientPays}</span><span className="font-semibold text-white">100%</span>
               </div>
               <div className="mt-3 flex h-14 overflow-hidden rounded-2xl text-sm font-semibold sm:h-16">
                 <div className="flex w-[70%] flex-col justify-center bg-white px-4 text-ink">
-                  <span className="text-xs font-medium text-ink-soft">{m.youGet}</span>~70%
+                  <span className="text-xs font-medium text-ink-soft">{m.youGet}</span>70%
                 </div>
                 <div className="flex w-[30%] flex-col justify-center bg-white/25 px-3">
-                  <span className="text-xs font-medium text-white/80">{m.commission}</span>~30%
+                  <span className="text-xs font-medium text-white/80">{m.commission}</span>30%
                 </div>
               </div>
             </div>

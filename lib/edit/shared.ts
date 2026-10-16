@@ -29,7 +29,7 @@ export const isLocked = (source: Source, path: string) => LOCKED[source].some((r
  * bog'langan (rasm, ikonka, narx — lib/data.ts), ularda element soni o'zgarsa dizayn buziladi.
  */
 export const LISTS: Record<Source, string[]> = {
-  dict: ["faq.items", "hero.perks", "services.perks", "blog.principles", "certificates.how", "join.steps"],
+  dict: ["faq.items", "hero.perks", "services.perks", "blog.principles", "join.steps"],
   why: ["highlights", "benefits", "steps", "faq"],
   expert: ["faq.items"],
 };

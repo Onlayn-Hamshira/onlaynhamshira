@@ -1,5 +1,5 @@
 import { preload } from "react-dom";
-import { ArrowDown, Building2, CalendarDays, ChevronRight, ExternalLink, Hash, Maximize2, QrCode, ShieldCheck, FileCheck2 } from "lucide-react";
+import { ArrowDown, Building2, CalendarDays, ChevronRight, ExternalLink, Hash, Maximize2, ShieldCheck, FileCheck2 } from "lucide-react";
 import { CERTIFICATES, COMPANY_TIN } from "@/lib/data";
 import type { Dict } from "@/lib/i18n/dictionaries/uz";
 import { fill } from "@/lib/i18n/format";
@@ -23,12 +23,12 @@ function parseImages(html: string): CertImage[] {
 const smallest = (img: CertImage) => img.srcSet?.split(",")[0].trim().split(" ")[0] ?? img.src;
 
 /**
- * /certificates, /ru/certificates, /en/certificates. H1 matni Tilda'dagidek (content JSON'dan),
- * metadata esa [...slug]/page.tsx da — bu yerda faqat sahifa tanasi.
+ * /certificates, /ru/certificates, /en/certificates. H1 matni content JSON'dan, breadcrumb'da esa
+ * menyudagi nom (crumb), metadata esa [...slug]/page.tsx da — bu yerda faqat sahifa tanasi.
  */
 export function CertificatesPage({
-  html, t, home, homeLabel, closeLabel,
-}: { html: string; t: Dict["certificates"]; home: string; homeLabel: string; closeLabel: string }) {
+  html, t, home, homeLabel, crumb, closeLabel,
+}: { html: string; t: Dict["certificates"]; home: string; homeLabel: string; crumb: string; closeLabel: string }) {
   const h1 = html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/)?.[1] ?? "";
   const images = parseImages(html);
   const docs = CERTIFICATES.slice(0, images.length).map((c, i) => ({ ...c, ...t.items[i], image: images[i] }));
@@ -67,7 +67,7 @@ export function CertificatesPage({
                 <ol className="flex flex-wrap items-center gap-1.5">
                   <li><a href={home} className="transition hover:text-ink">{homeLabel}</a></li>
                   <li aria-hidden><ChevronRight className="size-3.5" /></li>
-                  <li aria-current="page" className="font-medium text-ink">{h1}</li>
+                  <li aria-current="page" className="font-medium text-ink">{crumb}</li>
                 </ol>
               </nav>
 
@@ -221,37 +221,11 @@ export function CertificatesPage({
                       <Maximize2 className="size-4 text-brand-deep" /> {t.open}
                     </a>
                   </div>
-                  <p className="mt-3 flex items-center gap-1.5 text-sm text-ink-soft">
-                    <QrCode className="size-4 shrink-0" /> {t.verifyNote}
-                  </p>
                 </div>
               </li>
             );
           })}
         </ol>
-      </section>
-
-      {/* ── Qanday tekshirish ── */}
-      <section aria-labelledby="how-h" className="px-3 sm:px-4">
-        <div data-reveal className="relative mx-auto mb-12 max-w-[1400px] overflow-hidden rounded-[36px] bg-[linear-gradient(135deg,#fff_0%,var(--color-mist)_45%,#cdebfa_100%)] px-6 py-12 ring-1 ring-line sm:px-12 sm:py-16">
-          <div aria-hidden className="hero-pattern-wide pointer-events-none absolute inset-0" />
-          <div className="relative grid gap-8 lg:grid-cols-[0.8fr_2fr] lg:gap-12">
-            <div>
-              <h2 id="how-h" className="max-w-[22ch] text-3xl leading-tight font-semibold tracking-tight text-balance sm:text-4xl">{t.howTitle}</h2>
-              <p className="mt-5 inline-flex items-center gap-2 text-sm text-ink-soft">
-                <Building2 className="size-4 shrink-0" aria-hidden /> {t.company} · {t.facts.tin}: {COMPANY_TIN}
-              </p>
-            </div>
-            <ol className="grid gap-4 md:grid-cols-3">
-              {t.how.map((s, i) => (
-                <li key={s} className="rounded-2xl bg-white/85 p-5 shadow-[0_20px_40px_-28px_rgb(13_47_68/0.4)] ring-1 ring-white backdrop-blur sm:p-6">
-                  <span className="grid size-10 place-items-center rounded-full bg-brand-grad font-semibold text-white tabular-nums">{i + 1}</span>
-                  <p className="mt-4 leading-relaxed">{s}</p>
-                </li>
-              ))}
-            </ol>
-          </div>
-        </div>
       </section>
 
       <CertificateViewer

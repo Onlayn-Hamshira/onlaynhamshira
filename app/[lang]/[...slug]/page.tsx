@@ -181,7 +181,7 @@ export default async function LegacyRoute({ params }: PageProps<"/[lang]/[...slu
       ) : pg.group === "certificates" ? (
         // Sertifikatlar — boshqa yangi sahifalar bilan bir xil konteyner (hero 1400px, kontent 1320px)
         <main id="main">
-          <CertificatesPage html={pg.html} t={t.certificates} home={home} homeLabel={t.legacy.home} closeLabel={t.common.close} />
+          <CertificatesPage html={pg.html} t={t.certificates} home={home} homeLabel={t.legacy.home} crumb={t.header.certificates} closeLabel={t.common.close} />
           <div className="px-4 sm:px-6">
             <LegacyCta t={t.legacy} cta={t.common.callNurse} />
           </div>

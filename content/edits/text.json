@@ -6,7 +6,7 @@
       "hero.allDaySub": "dam olish va bayram kunlari ham",
       "stats.items.0": "Tekshirilgan mutaxassis",
       "hero.lead": "Onlayn Hamshira — uyga tibbiy mutaxassis chaqirish uchun raqamli platforma: biz sizni tekshirilgan hamshira, feldsher va shifokorlar bilan bog‘laymiz.",
-      "header.nav.4": "Ko‘p beriladigan savollar",
+      "header.nav.4": "Savol-javob",
       "header.partnerShort": "Mutaxassislarga",
       "header.certificates": "Hujjatlar",
       "header.contacts": "Aloqa",
@@ -246,7 +246,7 @@
     },
     "ru": {
       "stats.items.0": "Проверенных специалистов",
-      "header.nav.4": "Часто задаваемые вопросы",
+      "header.nav.4": "Вопросы и ответы",
       "header.partnerShort": "Специалистам",
       "header.certificates": "Документы",
       "hero.perks.0": "Специалисты с проверенным дипломом",
@@ -482,7 +482,7 @@
       "contactsPage.partnerTitle": "Сотрудничайте с нами",
       "how.screens.search.details": "Условия сотрудничества",
       "hero.allDay": "24/7",
-      "header.nav.0": "Приложении"
+      "header.nav.0": "Приложение"
     },
     "en": {
       "stats.items.0": "Verified specialists",

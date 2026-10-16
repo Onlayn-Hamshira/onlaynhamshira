@@ -42,6 +42,7 @@ const uz = {
     more: "Yana",
     why: "Nega Onlayn Hamshira?",
     whyShort: "Nega biz?",
+    prices: "Narxlar",
     certificates: "Sertifikatlar",
     contacts: "Kontaktlar",
   },
@@ -299,7 +300,7 @@ const uz = {
     ],
   },
   contact: {
-    heading: "Aloqa",
+    heading: "Biz bilan bog‘laning",
     phone: "Telefon:",
     address: "Manzil:",
     addressText: "Toshkent shahri, Shahrisabz ko‘chasi 25, U-Enter",
@@ -327,7 +328,6 @@ const uz = {
     open: "Kattalashtirish",
     openDoc: "{t} — kattalashtirish",
     verify: "Rasmiy manbada tekshirish",
-    verifyNote: "Hujjatdagi QR kod ham aynan shu manzilga olib boradi.",
     items: [
       {
         kind: "Davlat ro‘yxati",
@@ -347,12 +347,6 @@ const uz = {
         text: "Hamshira chaqirish ilovasi va platformamiz O‘zbekiston texnologik parki rezidenti sifatida tan olingan.",
         issuer: "IT Park — Dasturiy mahsulotlar va axborot texnologiyalari texnologik parki",
       },
-    ],
-    howTitle: "Hujjatlarni qanday tekshirish mumkin?",
-    how: [
-      "“Rasmiy manbada tekshirish” tugmasini bosing yoki hujjatdagi QR kodni telefon kamerasi bilan skanerlang.",
-      "Davlat tizimidagi yozuv ochiladi — kompaniya nomi va STIR raqamini solishtiring.",
-      "Savollaringiz qolsa, bizga qo‘ng‘iroq qiling — 24/7 javob beramiz.",
     ],
     viewer: { label: "Hujjatni ko‘rish", prev: "Oldingi hujjat", next: "Keyingi hujjat", counter: "{n} / {total}" },
   },

@@ -11,13 +11,12 @@ export const PAGES = {
   partner: { uz: "/expert", ru: "/ru/expert", en: "/en/expert" },
   certificates: { uz: "/certificates", ru: "/ru/certificates", en: "/en/certificates" },
   why: { uz: "/onlayn-hamshira-vs-ananaviy", ru: "/onlayn-uhod-vs-tradicionnyj", en: "/online-nursing-vs-traditional" },
-  // /contacts faqat o'zbekcha bor — ru/en uchun bosh sahifadagi aloqa bo'limi
-  contacts: { uz: "/contacts", ru: "/ru#contact", en: "/en#contact" },
+  contacts: { uz: "/contacts", ru: "/ru/contacts", en: "/en/contacts" },
   privacy: { uz: "/privacy-policy", ru: "/ru/privacy-policy", en: "/en/privacy-policy" },
 } satisfies Record<string, Record<Locale, string>>;
 
 export type PageKey = keyof typeof PAGES;
-export type SectionKey = "about" | "services" | "specialists" | "reviews" | "faq";
+export type SectionKey = "about" | "services" | "prices" | "specialists" | "reviews" | "faq";
 export type NavKey = SectionKey | PageKey;
 
 export const pageHref = (key: PageKey, lang: Locale) => PAGES[key][lang];
@@ -52,6 +51,14 @@ const TRANSLATIONS: Record<Locale, string>[] = [
   { uz: "/hamshirapolitic", ru: "/ru/politichamshira", en: "/nurse-politic" },
 ];
 
+/**
+ * Faqat til almashtirgich uchun juftliklar — hreflang'ga qo'shilmaydi. /contacts va /ilova Tilda'da faqat
+ * o'zbekcha edi, baseline'da (docs/seo-baseline/expected-head.json) ularning hreflang'i yo'q; ru/en nusxalari
+ * keyin qo'shilgan. hreflang qo'shish — alohida SEO qarori (baseline yangilanadi).
+ */
+const NO_HREFLANG = new Set<PageKey>(["contacts"]);
+const SWITCH_ONLY: Record<Locale, string>[] = [{ uz: "/ilova", ru: "/ru/ilova", en: "/en/ilova" }];
+
 // Juftligi yo'q maqola (faqat bir tilda) — boshqa til tanlansa o'sha tilning blogi (bosh sahifa emas)
 const BLOG_GROUPS = new Set(["blogIndex", "blogPost", "article"]);
 
@@ -63,6 +70,7 @@ const BLOG_GROUPS = new Set(["blogIndex", "blogPost", "article"]);
 export const pageAlternates = (path: string, group?: string): Record<Locale, string> | undefined =>
   Object.values(PAGES).find((p) => Object.values(p).includes(path)) ??
   TRANSLATIONS.find((t) => Object.values(t).includes(path)) ??
+  SWITCH_ONLY.find((t) => Object.values(t).includes(path)) ??
   (group && BLOG_GROUPS.has(group) ? PAGES.blog : undefined);
 
 /**
@@ -71,14 +79,15 @@ export const pageAlternates = (path: string, group?: string): Record<Locale, str
  * sahifa — hreflang yo'q (blogga zaxira yoki "/ru#contact" kabi bo'lim havolalari hreflang bo'la olmaydi).
  */
 export const hreflangAlternates = (path: string): Record<Locale | "x-default", string> | undefined => {
-  const set = [...Object.values(PAGES), ...TRANSLATIONS].find(
+  const pages = Object.entries(PAGES).filter(([k]) => !NO_HREFLANG.has(k as PageKey)).map(([, v]) => v);
+  const set = [...pages, ...TRANSLATIONS].find(
     (t) => Object.values(t).includes(path) && !Object.values(t).some((p) => p.includes("#")),
   );
   return set && { ...set, "x-default": set.uz };
 };
 
 /** Build vaqtida: TRANSLATIONS dagi har bir yo'l haqiqiy sahifa bo'lishi shart (xato yozilsa build to'xtaydi) */
-export const translationPaths = () => TRANSLATIONS.flatMap((t) => Object.values(t));
+export const translationPaths = () => [...TRANSLATIONS, ...SWITCH_ONLY].flatMap((t) => Object.values(t));
 
 /** Bosh sahifa bo'limi: bosh sahifaning o'zida "#faq", boshqa sahifalarda "/ru#faq" */
 export const sectionHref = (id: SectionKey, lang: Locale, onHome: boolean) =>
@@ -96,12 +105,12 @@ export const NAV_KEY_BY_GROUP: Partial<Record<string, NavKey>> = {
 };
 
 /**
- * Header tuzilishi: boshqa sahifaga olib boradigan havolalar ochiq turadi,
- * bosh sahifa bo'limlariga skroll qiladiganlari — "Yana" ochiladigan ro'yxatida
+ * Header menyusi — yagona tartib (marketing talabi, 2026-10): avval primary, keyin more.
+ * Kompyuterda primary ochiq turadi, more — "Yana" ochiladigan ro'yxatida; mobil menyuda hammasi shu tartibda.
  */
 export const BASE_NAV = {
-  primary: ["blog", "partner", "why", "certificates", "contacts"],
-  more: ["services", "about", "specialists", "reviews", "faq"],
+  primary: ["services", "prices", "why", "partner", "contacts"],
+  more: ["certificates", "reviews", "faq", "blog", "about"],
 } satisfies Record<string, NavKey[]>;
 
 /**
@@ -115,7 +124,7 @@ const ordered = (base: NavKey[], edit: unknown): NavKey[] =>
 export const NAV_PRIMARY: NavKey[] = ordered(BASE_NAV.primary, NAV_EDITS.primary);
 export const NAV_MORE: NavKey[] = ordered(BASE_NAV.more, NAV_EDITS.more);
 
-const SECTION_KEYS: SectionKey[] = ["about", "services", "specialists", "reviews", "faq"];
+const SECTION_KEYS: SectionKey[] = ["about", "services", "prices", "specialists", "reviews", "faq"];
 export const isSection = (k: NavKey): k is SectionKey => (SECTION_KEYS as string[]).includes(k);
 
 export const navHref = (k: NavKey, lang: Locale, onHome: boolean) =>

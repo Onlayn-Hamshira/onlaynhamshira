@@ -58,9 +58,10 @@ Qiymatni o'zgartirish kerak bo'lsa (marketing qarori bilan), alohida va aniq ayt
 Yagona manba — `lib/nav.ts`. Havolani komponentga qo'lda yozmang (`"/blog"` kabi): har til o'z
 sahifasiga olib borishi kerak (`pageHref("blog", lang)` → `/ru/blog`). Bosh sahifa bo'limlari —
 `sectionHref()` (bosh sahifada `#faq`, boshqa sahifalarda `/ru#faq`).
-- Header: boshqa sahifaga olib boradigan havolalar ochiq turadi (`NAV_PRIMARY`), bosh sahifa
-  bo'limlariga skroll qiladiganlari "Yana" ichida (`NAV_MORE`). Bu qoidani buzmang.
-- Mobil menyu: faqat `NAV_PRIMARY` (sahifa havolalari); bosh sahifa bo'limlari (`NAV_MORE`) mobilda ko'rsatilmaydi.
+- Menyu (marketing talabi, 2026-10): ochiq — Xizmatlar, Narxlar, Nega biz?, Mutaxassislarga, Aloqa (`NAV_PRIMARY`);
+  "Yana" ichida — Hujjatlar, Foydalanuvchilar fikri, Savol-javob, Blog, Ilova (`NAV_MORE`). Sahifa va bo'lim
+  havolalari aralash bo'lishi mumkin.
+- Mobil menyu: `NAV_PRIMARY` + `NAV_MORE` — hammasi, shu tartibda.
 - Ichki sahifada qaysi punkt faol bo'lishi — `NAV_KEY_BY_GROUP` (routes.ts dagi `group` bo'yicha).
 
 ## Yangi sahifa qo'shilsa
