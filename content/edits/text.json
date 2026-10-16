@@ -229,7 +229,8 @@
       "certificates.listTitle": "Guvohnomalar",
       "certificates.listText": "Davlat organlari va IT Park tomonidan berilgan rasmiy guvohnomalar.",
       "certificates.items.1.kind": "Shaxsga doir ma’lumotlar",
-      "certificates.items.0.text": "“ONLAYN HAMSHIRA” MChJ rasman ro‘yxatdan o‘tgan yuridik shaxs ekanini tasdiqlaydi."
+      "certificates.items.0.text": "“ONLAYN HAMSHIRA” MChJ rasman ro‘yxatdan o‘tgan yuridik shaxs ekanini tasdiqlaydi.",
+      "certificates.items.1.text": "Ma’lumotlar bazamiz davlat reyestrida ro‘yxatdan o‘tgan. Ismingiz, telefon raqamingiz va boshqa ma’lumotlaringiz qonun talablari asosida ishlanadi."
     },
     "ru": {
       "stats.items.0": "Проверенных специалистов",
@@ -455,7 +456,8 @@
       "certificates.listTitle": "Свидетельства",
       "certificates.listText": "Официальные свидетельства, выданные государственными органами и IT Park.",
       "certificates.items.1.kind": "Персональные данные",
-      "certificates.items.0.text": "Подтверждает, что ООО “ONLAYN HAMSHIRA” официально зарегистрировано как юридическое лицо."
+      "certificates.items.0.text": "Подтверждает, что ООО “ONLAYN HAMSHIRA” официально зарегистрировано как юридическое лицо.",
+      "certificates.items.1.text": "Наша база данных зарегистрирована в госреестре. Ваше имя, телефон и другие данные обрабатываются в соответствии с законом."
     },
     "en": {
       "stats.items.0": "Verified specialists",
@@ -687,7 +689,8 @@
       "certificates.listTitle": "Certificates",
       "certificates.listText": "Official certificates issued by government bodies and IT Park.",
       "certificates.items.1.kind": "Personal data",
-      "certificates.items.0.text": "Confirms that ONLAYN HAMSHIRA LLC is an officially registered legal entity."
+      "certificates.items.0.text": "Confirms that ONLAYN HAMSHIRA LLC is an officially registered legal entity.",
+      "certificates.items.1.text": "Our database is listed in the state register. Your name, phone number and other data are processed in line with the law."
     }
   },
   "why": {
