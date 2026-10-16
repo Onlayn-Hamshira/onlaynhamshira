@@ -241,7 +241,8 @@
       "contactsPage.partnerText": "Platformaga hamkor sifatida qo‘shiling va o‘zingizga qulay vaqtda buyurtma qabul qiling.",
       "contactsPage.partnerTitle": "Biz bilan hamkorlik qiling",
       "how.screens.search.details": "Hamkorlik shartlari",
-      "hero.allDay": "24/7"
+      "hero.allDay": "24/7",
+      "header.nav.0": "Ilova"
     },
     "ru": {
       "stats.items.0": "Проверенных специалистов",
@@ -480,7 +481,8 @@
       "contactsPage.partnerText": "Станьте партнёром платформы и принимайте заказы в удобное время.",
       "contactsPage.partnerTitle": "Сотрудничайте с нами",
       "how.screens.search.details": "Условия сотрудничества",
-      "hero.allDay": "24/7"
+      "hero.allDay": "24/7",
+      "header.nav.0": "Приложении"
     },
     "en": {
       "stats.items.0": "Verified specialists",
@@ -725,7 +727,8 @@
       "contactsPage.partnerText": "Join the platform as a partner and take orders when it suits you.",
       "contactsPage.partnerTitle": "Partner with us",
       "how.screens.search.details": "Partnership terms",
-      "hero.allDay": "24/7"
+      "hero.allDay": "24/7",
+      "header.nav.0": "App"
     }
   },
   "why": {
