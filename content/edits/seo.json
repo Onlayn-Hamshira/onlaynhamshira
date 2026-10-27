@@ -1,5 +1,19 @@
 {
-  "/certificates": { "title": "Hujjatlarimiz", "ogTitle": "Hujjatlarimiz" },
-  "/ru/certificates": { "title": "Наши документы", "ogTitle": "Наши документы" },
-  "/en/certificates": { "title": "Our documents", "ogTitle": "Our documents" }
+  "/certificates": {
+    "title": "Hujjatlarimiz",
+    "ogTitle": "Hujjatlarimiz"
+  },
+  "/ru/certificates": {
+    "title": "Наши документы",
+    "ogTitle": "Наши документы"
+  },
+  "/en/certificates": {
+    "title": "Our documents",
+    "ogTitle": "Our documents"
+  },
+  "/": {
+    "title": "Onlayn Hamshira - tibbiy yordam chaqirish | Tez, qulay, xavfsiz!",
+    "description": "Toshkent, Nukus, Farg‘ona, Samarqand va Marg‘ilonda uyga shifokor va hamshira chaqiring. Tibbiy yordam va hamshiralik xizmatlari.",
+    "ogTitle": "Onlayn Hamshira - tibbiy yordam chaqirish | Tez, qulay, xavfsiz!"
+  }
 }
